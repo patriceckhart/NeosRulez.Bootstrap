@@ -1,0 +1,121 @@
+prototype(Neos.Neos:Page) {
+
+    htmlTag = Neos.Fusion:Tag {
+        tagName = 'html'
+        omitClosingTag = TRUE
+        attributes {
+            lang.@if.languageDimensionExists = ${true}
+            lang.@if.onlyRenderWhenInLiveWorkspace = ${true}
+        }
+    }
+
+    head {
+
+        NeosRulezBootstrapMetaData = Neos.Fusion:Renderer {
+            @position = 'before stylesheets'
+            type = 'Neos.Fusion:Value'
+            element.value = '<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">'
+        }
+
+        NeosRulezBootstrapFontAwesome = Neos.Fusion:Tag {
+            @position = 'before stylesheets'
+            tagName = 'link'
+            attributes {
+                media = 'all'
+                rel = 'stylesheet'
+                href = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/Assets/font-awesome-4.7.0/css/font-awesome.min.css'
+                }
+            }
+        }
+
+        NeosRulezBootstrapCss = Neos.Fusion:Tag {
+            @position = 'before stylesheets'
+            tagName = 'link'
+            attributes {
+                media = 'all'
+                rel = 'stylesheet'
+                href = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/bootstrap.min.css'
+                }
+            }
+        }
+
+        NeosRulezBootstrapOverwriteCss = Neos.Fusion:Tag {
+            @position = 'before stylesheets'
+            tagName = 'link'
+            attributes {
+                media = 'all'
+                rel = 'stylesheet'
+                href = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/overwrite.css'
+                }
+            }
+        }
+
+        NeosRulezBootstrapBackendCss = Neos.Fusion:Tag {
+            @position = 'before stylesheets'
+            @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
+            tagName = 'link'
+            attributes {
+                media = 'all'
+                rel = 'stylesheet'
+                href = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/backend.css'
+                }
+            }
+        }
+
+        NeosRulezBootstrapJs = Neos.Fusion:Tag {
+            @position = 'end'
+            tagName = 'script'
+            attributes {
+                type = 'text/javascript'
+                src = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/bootstrap.min.js'
+                }
+            }
+        }
+
+        NeosRulezBootstrapPopperJs = Neos.Fusion:Tag {
+            @position = 'end'
+            tagName = 'script'
+            attributes {
+                type = 'text/javascript'
+                src = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/popper.min.js'
+                }
+            }
+        }
+
+        NeosRulezBootstrapOverwriteJs = Neos.Fusion:Tag {
+            @position = 'end'
+            tagName = 'script'
+            attributes {
+                type = 'text/javascript'
+                src = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/overwrite.js'
+                }
+            }
+        }
+
+        NeosRulezBootstrapJQuery = Neos.Fusion:Tag {
+            @position = 'end'
+            tagName = 'script'
+            attributes {
+                type = 'text/javascript'
+                src = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/jquery-3.2.1.slim.min.js'
+                }
+            }
+        }
+
+    }
+
+    #NeosRulezBootstrapScrollToTop = Neos.Fusion:Renderer {
+        #@position = 'after body'
+        #type = 'Neos.Fusion:Value'
+        #element.value = '<div class="topLink"><i class="fa fa-angle-up" aria-hidden="true"></i></div>'
+    #}
+
+}

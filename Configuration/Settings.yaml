@@ -1,0 +1,46 @@
+NeosRulez:
+  Bootstrap:
+    templateRootPath: 'resource://NeosRulez.Bootstrap/Private/Templates/'
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.Bootstrap:
+            - Main
+            - 'NodeTypes/*'
+      defaultLanguage: 'de'
+      inspector:
+        dataTypes:
+          'Neos\Media\Domain\Model\ImageInterface':
+            editorOptions:
+              features:
+                resize: TRUE
+      navigateComponent:
+        nodeTree:
+          loadingDepth: 999
+        structureTree:
+          loadingDepth: 999
+    nodeTypes:
+      groups:
+        bootstrapcomponents:
+          position: 'end'
+          label: NeosRulez.Bootstrap:Main:components
+        Bootstrap:
+          position: 'end'
+          label: NeosRulez.Bootstrap:Main:nodetypes
+    fusion:
+      autoInclude:
+        NeosRulez.Bootstrap: true
+  ContentRepository:
+    contentDimensions:
+      'language':
+        label: NeosRulez.Bootstrap:Main:language
+        icon: 'icon-language'
+        default: 'de'
+        defaultPreset: 'de'
+        presets:
+          'de':
+            label: 'Deutsch'
+            values: ['de']
+            uriSegment: 'de'

@@ -1,0 +1,33 @@
+'Neos.NodeTypes:Page':
+  superTypes:
+    'Neos.Neos:Document': TRUE
+  ui:
+    inspector:
+      groups:
+        settings:
+          label: NeosRulez.Bootstrap:Main:settings
+          icon: 'icon-cog'
+  properties:
+    noSubMenu:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: NeosRulez.Bootstrap:Main:nosubmenu
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    pageImage:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: NeosRulez.Bootstrap:Main:pageimage
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'document'
+          position: 1
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:Container': TRUE
+          '*': FALSE

@@ -1,0 +1,5 @@
+prototype(Site:Container) {
+    contentItems = ContentCollection {
+        nodePath = 'contentItems'
+    }
+}
