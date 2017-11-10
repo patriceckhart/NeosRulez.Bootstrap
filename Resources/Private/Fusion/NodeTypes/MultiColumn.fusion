@@ -1,0 +1,4 @@
+prototype(Neos.NodeTypes:MultiColumn) {
+    attributes.class = 'row'
+    columns.iterationName = 'multiColumnIteration'
+}

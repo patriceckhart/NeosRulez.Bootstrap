@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3593f5-90bb-44fe-8256-26111df31da1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Configuration/NodeTypes.MultiColumns.yaml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MultiColumn.fusion" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MultiColumnItem.fusion" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/NodeTypes.Container.yaml" afterPath="$PROJECT_DIR$/Configuration/NodeTypes.Container.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Container.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Container.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Public/Styles/overwrite.css" afterPath="$PROJECT_DIR$/Resources/Public/Styles/overwrite.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,51 +19,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Settings.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+      <file leaf-file-name="NodeTypes.MultiColumns.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.MultiColumns.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="90">
+              <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NodeTypes.Container.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Container.yaml">
+      <file leaf-file-name="MultiColumn.fusion" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MultiColumn.fusion">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="83" column="19" lean-forward="true" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Page.fusion" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion">
+      <file leaf-file-name="MultiColumnItem.fusion" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MultiColumnItem.fusion">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="overwrite.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/overwrite.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="49" lean-forward="false" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Container.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Container.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="63" lean-forward="false" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,9 +54,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>BootstrapNodeTypes</find>
+      <find>null</find>
     </findStrings>
     <replaceStrings>
       <replace>Bootstrap</replace>
+      <replace>FALSE</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -86,18 +71,23 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/Configuration/NodeTypes.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Divider.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Divider.html" />
         <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
-        <option value="$PROJECT_DIR$/Resources/Public/Styles/backend.css" />
         <option value="&lt;cc005294-ba46-48bb-baa8-942f3bb836a4&gt;/data/releases/current/Packages/Sites/Default.Site/Resources/Private/Templates/Page/Default.html" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.Container.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
+        <option value="$PROJECT_DIR$/Resources/Public/Styles/backend.css" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Container.html" />
         <option value="$PROJECT_DIR$/Resources/Public/Styles/overwrite.css" />
         <option value="&lt;9ed936d1-89e1-45d8-83b9-6c74613ce306&gt;/data/releases/current/Packages/Sites/Default.Site/Resources/Private/Templates/Page/Default.html" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.MultiColumn.yaml" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.Page.yaml" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.Columns.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MultiColumn.fusion" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MultiColumnItem.fusion" />
       </list>
     </option>
   </component>
@@ -271,16 +261,15 @@
       <workItem from="1510307852191" duration="359000" />
       <workItem from="1510308349793" duration="633000" />
       <workItem from="1510309495098" duration="1673000" />
-      <workItem from="1510334369394" duration="1418000" />
+      <workItem from="1510334369394" duration="5808000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4083000" />
+    <option name="totallyTimeSpent" value="8473000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -288,8 +277,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22678572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28809524" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22678572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -341,26 +330,36 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Divider.html" />
-    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.yaml" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Divider.fusion" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/backend.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Container.fusion">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="45">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/overwrite.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="57" lean-forward="false" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.MultiColumns.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="46" lean-forward="false" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -374,32 +373,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Container.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="83" column="19" lean-forward="true" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+        <state relative-caret-position="150">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Container.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="63" lean-forward="false" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+        <state relative-caret-position="105">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/overwrite.css">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="49" lean-forward="false" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
+        <state relative-caret-position="1080">
+          <caret line="72" column="40" lean-forward="true" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Page.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MultiColumnItem.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.MultiColumns.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MultiColumn.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>

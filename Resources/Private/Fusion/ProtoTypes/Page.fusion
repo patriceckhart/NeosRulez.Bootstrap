@@ -43,14 +43,13 @@ prototype(Neos.Neos:Page) {
 
         NeosRulezBootstrapOverwriteCss = Neos.Fusion:Tag {
             @position = 'before stylesheets'
-                tagName = 'link'
-                attributes {
-                    href = OpsDev.CacheBreaker:ResourceUri {
-                        package = 'CodeQ.Site'
-                        path = 'resource://NeosRulez.Bootstrap/Public/Styles/overwrite.css'
-                    }
-                    type = 'text/css'
-                    rel = 'stylesheet'
+            tagName = 'link'
+            attributes {
+                href = OpsDev.CacheBreaker:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/overwrite.css'
+                }
+                type = 'text/css'
+                rel = 'stylesheet'
             }
         }
 
@@ -59,11 +58,11 @@ prototype(Neos.Neos:Page) {
             @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
             tagName = 'link'
             attributes {
-                media = 'all'
-                rel = 'stylesheet'
-                href = Neos.Fusion:ResourceUri {
+                href = OpsDev.CacheBreaker:ResourceUri {
                     path = 'resource://NeosRulez.Bootstrap/Public/Styles/backend.css'
                 }
+                type = 'text/css'
+                rel = 'stylesheet'
             }
         }
 
