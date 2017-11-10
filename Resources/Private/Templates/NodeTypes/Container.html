@@ -3,6 +3,6 @@
 {namespace fusion=Neos\Fusion\ViewHelpers}
 <div{attributes -> f:format.raw()}{f:if(condition: '{backgroundColor}', then: ' style="background:{backgroundColor};"')}>
     <div class="{f:if(condition: '{fluid}', then: 'container-fluid', else: 'container')}{f:if(condition: '{padding}', then: ' padding')}">
-        {contentItems -> f:format.raw()}
+        <div class="row">{contentItems -> f:format.raw()}</div>
     </div>
 </div>

@@ -90,7 +90,7 @@
           group: 'settings'
     fluid:
       type: boolean
-      defaultValue: TRUE
+      defaultValue: FALSE
       ui:
         label: i18n
         reloadIfChanged: TRUE
