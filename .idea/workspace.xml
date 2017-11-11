@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3593f5-90bb-44fe-8256-26111df31da1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Button.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/CarouselItem.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/CarouselItem.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js" afterPath="$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,21 +83,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarouselItem.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CarouselItem.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/CarouselItem.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+            <state relative-caret-position="285">
+              <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overwrite.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="overwrite.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
+              <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -169,8 +165,8 @@
         <option value="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Button.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Carousel.html" />
-        <option value="$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/CarouselItem.html" />
+        <option value="$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js" />
       </list>
     </option>
   </component>
@@ -391,12 +387,12 @@
       <workItem from="1510334369394" duration="5808000" />
       <workItem from="1510344376226" duration="1240000" />
       <workItem from="1510394533389" duration="3504000" />
-      <workItem from="1510420182381" duration="5314000" />
+      <workItem from="1510420182381" duration="5435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18531000" />
+    <option name="totallyTimeSpent" value="18652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -804,14 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Carousel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -822,8 +810,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/CarouselItem.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
           <folding />
         </state>
       </provider>

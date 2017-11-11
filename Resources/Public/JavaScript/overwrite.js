@@ -1,1 +1,1 @@
-$('.carousel').carousel();
+//$('.carousel').carousel();
