@@ -1,0 +1,104 @@
+'NeosRulez.Bootstrap:Button':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    group: 'bootstrapnodetypes'
+    label: i18n
+    icon: 'icon-link'
+    inspector:
+      groups:
+        settings:
+          label: NeosRulez.Bootstrap:Main:settings
+          icon: 'icon-cog'
+  properties:
+    link:
+      type: reference
+      ui:
+        reloadIfChanged: TRUE
+        label: i18n
+        inspector:
+          group: 'settings'
+    text:
+      type: string
+      defaultValue: 'Button'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    style:
+      defaultValue: 'Primary'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'primary':
+                label: 'Primary'
+              'secondary':
+                label: 'Secondary'
+              'success':
+                label: 'Success'
+              'danger':
+                label: 'Danger'
+              'warning':
+                label: 'Warning'
+              'info':
+                label: 'Info'
+              'light':
+                label: 'Light'
+              'dark':
+                label: 'Dark'
+              'link':
+                label: 'Link'
+    size:
+      defaultValue: ''
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'lg':
+                label: i18n
+              'sm':
+                label: i18n
+    alignment:
+      defaultValue: 'left'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'left':
+                label: i18n
+              'center':
+                label: i18n
+              'right':
+                label: i18n
+    outline:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    fullwidth:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'

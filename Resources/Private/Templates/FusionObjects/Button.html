@@ -1,0 +1,18 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+<f:if condition="{alignment}==center">
+    <f:then>
+        <div class="text-center">
+            <f:render section="button" arguments="{all}" />
+        </div>
+    </f:then>
+    <f:else>
+        <f:render section="button" arguments="{all}" />
+    </f:else>
+</f:if>
+</div>
+<f:section name="button">
+    <neos:link.node node="{link}" class="btn {f:if(condition: '{outline}', then: 'btn-outline-', else: 'btn-')}{style}{f:if(condition: '{size}', then: ' btn-{size}')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}{f:if(condition: '{fullwidth}', then: ' btn-block')}">
+        {text}
+    </neos:link.node>
+</f:section>

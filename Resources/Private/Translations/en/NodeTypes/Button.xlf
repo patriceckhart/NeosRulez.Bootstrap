@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
+		<body>
+			<trans-unit id="ui.label" xml:space="preserve">
+				<source>Button with Link</source>
+			</trans-unit>
+			<trans-unit id="properties.link" xml:space="preserve">
+				<source>Target</source>
+			</trans-unit>
+			<trans-unit id="properties.text" xml:space="preserve">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="properties.style" xml:space="preserve">
+				<source>Style</source>
+			</trans-unit>
+			<trans-unit id="properties.size" xml:space="preserve">
+				<source>Size</source>
+			</trans-unit>
+			<trans-unit id="properties.alignment" xml:space="preserve">
+				<source>Alignment</source>
+			</trans-unit>
+            <trans-unit id="properties.outline" xml:space="preserve">
+				<source>Outline</source>
+			</trans-unit>
+            <trans-unit id="properties.fullwidth" xml:space="preserve">
+				<source>Full width</source>
+			</trans-unit>
+            <trans-unit id="properties.size.selectBoxEditor.values.lg" xml:space="preserve">
+                <source>Large</source>
+            </trans-unit>
+            <trans-unit id="properties.size.selectBoxEditor.values.sm" xml:space="preserve">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="properties.alignment.selectBoxEditor.values.left" xml:space="preserve">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="properties.alignment.selectBoxEditor.values.center" xml:space="preserve">
+                <source>Center</source>
+            </trans-unit>
+            <trans-unit id="properties.alignment.selectBoxEditor.values.right" xml:space="preserve">
+                <source>Right</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

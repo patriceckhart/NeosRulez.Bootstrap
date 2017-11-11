@@ -1,4 +1,7 @@
 .padding { padding-top:2em; padding-bottom:2em; }
-.p { margin-top:0.5em; margin-bottom:0.5em; }
-
+/*.p { margin-top:0.5em; margin-bottom:0.5em; }*/
 .neosrulez-bootstrap-container { float:left; width:100%; }
+.m-left { margin-left:1rem; }
+.m-right { margin-right:1rem; }
+.form-navigation { margin-top:1rem; }
+.form-navigation ul, .form-navigation ul li { display:block; margin:0; padding:0; }

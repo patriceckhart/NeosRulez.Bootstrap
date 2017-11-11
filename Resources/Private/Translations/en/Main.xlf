@@ -3,7 +3,7 @@
 	<file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
 		<body>
 			<trans-unit id="settings" xml:space="preserve">
-				<source>Einstellungen</source>
+				<source>Settings</source>
 			</trans-unit>
 			<trans-unit id="nosubmenu" xml:space="preserve">
 				<source>Do not display subpages in the main menu</source>
@@ -12,13 +12,16 @@
 				<source>Image</source>
 			</trans-unit>
 			<trans-unit id="components" xml:space="preserve">
-				<source>Components</source>
+				<source>Bootstrap Components</source>
 			</trans-unit>
 			<trans-unit id="nodetypes" xml:space="preserve">
-				<source>Content items</source>
+				<source>Bootstrap Content items</source>
 			</trans-unit>
 			<trans-unit id="language" xml:space="preserve">
 				<source>Language</source>
+			</trans-unit>
+			<trans-unit id="rounded" xml:space="preserve">
+				<source>Rounded</source>
 			</trans-unit>
 		</body>
 	</file>

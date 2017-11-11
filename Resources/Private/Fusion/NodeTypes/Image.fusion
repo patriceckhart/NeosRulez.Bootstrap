@@ -1,0 +1,4 @@
+prototype(Neos.NodeTypes:Image) {
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Image.html'
+    rounded = ${q(node).property('rounded')}
+}

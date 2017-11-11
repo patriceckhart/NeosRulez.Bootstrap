@@ -26,7 +26,7 @@ Neos:
         bootstrapcomponents:
           position: 'end'
           label: NeosRulez.Bootstrap:Main:components
-        Bootstrap:
+        bootstrapnodetypes:
           position: 'end'
           label: NeosRulez.Bootstrap:Main:nodetypes
     fusion:

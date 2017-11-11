@@ -1,0 +1,15 @@
+'NeosRulez.Bootstrap:Carousel':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  childNodes:
+    carouselItems:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': FALSE
+          'NeosRulez.Bootstrap:CarouselItem': TRUE
+  ui:
+    label: i18n
+    group: 'bootstrapcomponents'
+    icon: 'icon-picture'
+    inlineEditable: TRUE

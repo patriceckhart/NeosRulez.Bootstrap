@@ -1,0 +1,3 @@
+prototype(Neos.NodeTypes:TextWithImage) {
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/TextWithImage.html'
+}

@@ -1,0 +1,6 @@
+prototype(Site:Carousel) {
+    carouselItems = ContentCollection {
+        nodePath = 'carouselItems'
+        #attributes.class = 'slider'
+    }
+}

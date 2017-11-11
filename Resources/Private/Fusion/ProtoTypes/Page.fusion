@@ -112,6 +112,8 @@ prototype(Neos.Neos:Page) {
 
     }
 
+
+
     #NeosRulezBootstrapScrollToTop = Neos.Fusion:Renderer {
         #@position = 'after body'
         #type = 'Neos.Fusion:Value'

@@ -1,0 +1,21 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+<div class="carousel-item">
+    <f:if condition="{image}">
+        <f:then>
+            <media:image image="{image}" maximumWidth="1920" maximumHeight="1080" allowCropping="TRUE" allowUpScaling="TRUE" alt="" />
+        </f:then>
+        <f:else>
+            <f:security.ifAccess privilegeTarget="Neos.Neos:Backend.GeneralAccess">
+                <f:if condition="{node.context.workspace.name} != 'live'">
+                    <img src="{f:uri.resource(package: 'Neos.Neos', path: 'Images/dummy-image.svg')}" title="" alt="" class="neos-handle" />
+                </f:if>
+            </f:security.ifAccess>
+        </f:else>
+    </f:if>
+    <div class="carousel-caption d-none d-md-block">
+        <f:if condition="{title}"><h3>{title}</h3></f:if>
+        <f:if condition="{subTitle}"><p>{subTitle}</p></f:if>
+    </div>
+</div>
+

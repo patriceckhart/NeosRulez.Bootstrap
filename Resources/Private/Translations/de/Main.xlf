@@ -12,13 +12,16 @@
 				<source>Bild</source>
 			</trans-unit>
 			<trans-unit id="components" xml:space="preserve">
-				<source>Komponenten</source>
+				<source>Bootstrap Komponenten</source>
 			</trans-unit>
 			<trans-unit id="nodetypes" xml:space="preserve">
-				<source>Inhaltselemente</source>
+				<source>Bootstrap Inhaltselemente</source>
 			</trans-unit>
 			<trans-unit id="language" xml:space="preserve">
 				<source>Sprache</source>
+			</trans-unit>
+			<trans-unit id="rounded" xml:space="preserve">
+				<source>Abgerundet</source>
 			</trans-unit>
 		</body>
 	</file>

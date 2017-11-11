@@ -1,0 +1,3 @@
+prototype(Site:Divider) < prototype(Content) {
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/Divider.html'
+}
