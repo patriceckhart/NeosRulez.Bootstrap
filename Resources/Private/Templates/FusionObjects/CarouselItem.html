@@ -3,7 +3,7 @@
 <div class="carousel-item">
     <f:if condition="{image}">
         <f:then>
-            <media:image image="{image}" maximumWidth="1920" maximumHeight="1080" allowCropping="TRUE" allowUpScaling="TRUE" alt="" />
+            <media:image image="{image}" class="d-block w-100" maximumWidth="1920" maximumHeight="1080" allowCropping="TRUE" allowUpScaling="TRUE" alt="{f:if(condition: '{title}', then: '{title}')}" />
         </f:then>
         <f:else>
             <f:security.ifAccess privilegeTarget="Neos.Neos:Backend.GeneralAccess">
@@ -18,4 +18,3 @@
         <f:if condition="{subTitle}"><p>{subTitle}</p></f:if>
     </div>
 </div>
-

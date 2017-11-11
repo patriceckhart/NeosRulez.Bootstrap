@@ -66,50 +66,50 @@ prototype(Neos.Neos:Page) {
             }
         }
 
-        NeosRulezBootstrapJs = Neos.Fusion:Tag {
-            @position = 'end'
-            tagName = 'script'
-            attributes {
-                type = 'text/javascript'
-                src = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/bootstrap.min.js'
-                }
+    }
+
+    NeosRulezBootstrapJQuery = Neos.Fusion:Tag {
+        @position = 'end'
+        tagName = 'script'
+        attributes {
+            type = 'text/javascript'
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/jquery-3.2.1.slim.min.js'
             }
         }
+    }
 
-        NeosRulezBootstrapPopperJs = Neos.Fusion:Tag {
-            @position = 'end'
-            tagName = 'script'
-            attributes {
-                type = 'text/javascript'
-                src = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/popper.min.js'
-                }
+    NeosRulezBootstrapPopperJs = Neos.Fusion:Tag {
+        @position = 'end'
+        tagName = 'script'
+        attributes {
+            type = 'text/javascript'
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/popper.min.js'
             }
         }
+    }
 
-        NeosRulezBootstrapOverwriteJs = Neos.Fusion:Tag {
-            @position = 'end'
-            tagName = 'script'
-            attributes {
-                type = 'text/javascript'
-                src = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/overwrite.js'
-                }
+    NeosRulezBootstrapJs = Neos.Fusion:Tag {
+        @position = 'end'
+        tagName = 'script'
+        attributes {
+            type = 'text/javascript'
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/bootstrap.min.js'
             }
         }
+    }
 
-        NeosRulezBootstrapJQuery = Neos.Fusion:Tag {
-            @position = 'end'
-            tagName = 'script'
-            attributes {
-                type = 'text/javascript'
-                src = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/jquery-3.2.1.slim.min.js'
-                }
+    NeosRulezBootstrapOverwriteJs = Neos.Fusion:Tag {
+        @position = 'end'
+        tagName = 'script'
+        attributes {
+            type = 'text/javascript'
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/overwrite.js'
             }
         }
-
     }
 
 
