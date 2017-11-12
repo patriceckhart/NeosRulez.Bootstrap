@@ -5,3 +5,4 @@
 .m-right { margin-right:1rem; }
 .form-navigation { margin-top:1rem; }
 .form-navigation ul, .form-navigation ul li { display:block; margin:0; padding:0; }
+.carousel .carousel-item>img { width: 100%; height: auto; }

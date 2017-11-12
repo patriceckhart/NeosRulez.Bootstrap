@@ -1,17 +1,24 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 {namespace fusion=Neos\Fusion\ViewHelpers}
 <div{attributes -> f:format.raw()}>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            {carouselItems -> f:format.raw()}
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <div id="{node.identifier}" class="carousel slide" data-ride="carousel">
+        <f:if condition="{indicators}">
+        <ol class="carousel-indicators">
+            <f:for each="{carouselItemArray}" as="item" iteration="itemIterator">
+                <li data-target="#{node.identifier}" data-slide-to="{itemIterator.index}" class="{f:if(condition: itemIterator.isFirst, then: 'active')}"></li>
+            </f:for>
+        </ol>
+        </f:if>
+        {carouselItems -> f:format.raw()}
+        <f:if condition="{controls}">
+        <a class="carousel-control-prev" href="#{node.identifier}" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#{node.identifier}" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+        </f:if>
     </div>
 </div>

@@ -1,6 +1,9 @@
 prototype(Site:Carousel) {
     carouselItems = ContentCollection {
         nodePath = 'carouselItems'
-        #attributes.class = 'slider'
+        content.iterationName = 'carouselItemsIteration'
+        attributes.class = 'carousel-inner'
+        attributes.class.@process.collectionClass >
     }
+    carouselItemArray = ${q(node).children('carouselItems').children('[instanceof NeosRulez.Bootstrap:CarouselItem]')}
 }

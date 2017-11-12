@@ -1,9 +1,18 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 {namespace media=Neos\Media\ViewHelpers}
-<div class="carousel-item">
+<div{attributes -> f:format.raw()}>
     <f:if condition="{image}">
         <f:then>
-            <media:image image="{image}" class="d-block w-100" maximumWidth="1920" maximumHeight="1080" allowCropping="TRUE" allowUpScaling="TRUE" alt="{f:if(condition: '{title}', then: '{title}')}" />
+            <f:if condition="{link}">
+                <f:then>
+                    <neos:link.node node="{link}">
+                        <f:render section="image" arguments="{_all}" />
+                    </neos:link.node>
+                </f:then>
+                <f:else>
+                    <f:render section="image" arguments="{_all}" />
+                </f:else>
+            </f:if>
         </f:then>
         <f:else>
             <f:security.ifAccess privilegeTarget="Neos.Neos:Backend.GeneralAccess">
@@ -18,3 +27,6 @@
         <f:if condition="{subTitle}"><p>{subTitle}</p></f:if>
     </div>
 </div>
+<f:section name="image">
+    <media:image image="{image}" class="d-block" maximumWidth="1920" allowCropping="TRUE" allowUpScaling="TRUE" alt="{f:if(condition: '{title}', then: '{title}')}" />
+</f:section>
