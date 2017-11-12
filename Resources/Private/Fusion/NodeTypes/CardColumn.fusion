@@ -1,0 +1,8 @@
+prototype(Site:CardColumn) {
+    cardColumn = ContentCollection {
+        nodePath = 'cardColumn'
+        attributes.class = 'card-columns'
+        attributes.class.@process.collectionClass >
+    }
+}
+

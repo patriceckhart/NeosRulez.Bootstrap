@@ -2,7 +2,7 @@
   superTypes:
     'Neos.Neos:Content': TRUE
   ui:
-    group: 'bootstrapcomponents'
+    group: 'bootstrapnodetypes'
     label: i18n
     icon: 'icon-picture'
     inspector:

@@ -10,7 +10,7 @@
           'NeosRulez.Bootstrap:CarouselItem': TRUE
   ui:
     label: i18n
-    group: 'bootstrapcomponents'
+    group: 'bootstrapnodetypes'
     icon: 'icon-picture'
     inlineEditable: TRUE
     inspector:

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+		<body>
+			<trans-unit id="ui.label" xml:space="preserve">
+				<source>Carousel</source>
+			</trans-unit>
+			<trans-unit id="properties.indicators" xml:space="preserve">
+				<source>Indikatoren anzeigen</source>
+			</trans-unit>
+			<trans-unit id="properties.controls" xml:space="preserve">
+				<source>Links/Rechts Steuerelemente anzeigen</source>
+			</trans-unit>
+			<trans-unit id="content.next" xml:space="preserve">
+				<source>Weiter</source>
+			</trans-unit>
+			<trans-unit id="content.prev" xml:space="preserve">
+				<source>Zurück</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

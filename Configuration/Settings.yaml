@@ -23,9 +23,6 @@ Neos:
           loadingDepth: 999
     nodeTypes:
       groups:
-        bootstrapcomponents:
-          position: 'end'
-          label: NeosRulez.Bootstrap:Main:components
         bootstrapnodetypes:
           position: 'end'
           label: NeosRulez.Bootstrap:Main:nodetypes
