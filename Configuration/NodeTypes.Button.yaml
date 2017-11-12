@@ -27,7 +27,7 @@
         inspector:
           group: 'settings'
     style:
-      defaultValue: 'Primary'
+      defaultValue: 'primary'
       ui:
         label: i18n
         reloadIfChanged: TRUE

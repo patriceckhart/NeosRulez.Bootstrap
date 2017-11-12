@@ -1,8 +1,8 @@
 {namespace neos=Neos\Neos\ViewHelpers}
-{namespace media=Neos\Media\ViewHelpers}
 {namespace fusion=Neos\Fusion\ViewHelpers}
-<div{attributes -> f:format.raw()}{f:if(condition: '{backgroundColor}', then: ' style="background:{backgroundColor};"')}>
-    <div class="{f:if(condition: '{fluid}', then: 'container-fluid', else: 'container')}{f:if(condition: '{padding}', then: ' padding')}">
+{namespace media=Neos\Media\ViewHelpers}
+<div{attributes -> f:format.raw()}<f:if condition="{backgroundImage}"><f:then> style="background:url({media:uri.image(image: backgroundImage)}) no-repeat {backgroundColor} {backgroundPosition}; -webkit-background-size: {backgroundSize}; -moz-background-size: {backgroundSize}; -o-background-size: {backgroundSize}; background-size: {backgroundSize};"</f:then><f:else>{f:if(condition: '{backgroundColor}', then: ' style="background-color:{backgroundColor};"')}</f:else></f:if>>
+    <div class="{f:if(condition: '{fluid}', then: 'container-fluid', else: 'container')}{f:if(condition: '{padding}', then: ' padding')}{f:if(condition: '{textWhite}', then: ' text-white')}">
         {contentItems -> f:format.raw()}
     </div>
 </div>

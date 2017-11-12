@@ -23,6 +23,9 @@
 			<trans-unit id="rounded" xml:space="preserve">
 				<source>Abgerundet</source>
 			</trans-unit>
+            <trans-unit id="class" xml:space="preserve">
+				<source>CSS-Klasse</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

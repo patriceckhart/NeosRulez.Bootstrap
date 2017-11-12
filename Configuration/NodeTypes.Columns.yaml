@@ -1,7 +1,7 @@
 'Neos.NodeTypes:TwoColumn':
   properties:
     'layout':
-      defaultValue: '8-4'
+      defaultValue: '6-6'
       ui:
         inspector:
           editorOptions:

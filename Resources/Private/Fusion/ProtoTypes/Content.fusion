@@ -1,0 +1,3 @@
+prototype(Neos.Neos:Content)  {
+    attributes.class.@process.addClass = ${value + (q(node).property('addClass') ? ' '+q(node).property('addClass') : '' )}
+}

@@ -1,6 +1,6 @@
 {
     "description": "A basic package to start building awesome Neos CMS websites based on Bootstrap v4",
-    "type": "neos-plugin",
+    "type": "neos-package",
     "name": "neosrulez/Bootstrap",
     "require": {
         "neos/neos": "*"

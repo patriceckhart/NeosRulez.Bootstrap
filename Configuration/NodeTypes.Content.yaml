@@ -1,0 +1,15 @@
+'Neos.Neos:Content':
+  ui:
+    inspector:
+      groups:
+        settings:
+          label: NeosRulez.Bootstrap:Main:settings
+          icon: 'icon-cog'
+  properties:
+    class:
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:class
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
