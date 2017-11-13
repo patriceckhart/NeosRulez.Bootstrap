@@ -3,7 +3,7 @@
 {namespace media=Neos\Media\ViewHelpers}
 <f:render section="itemList" arguments="{items: items, site: site, headerLogoPath: headerLogoPath, headerLogoPackage: headerLogoPackage, headerLogoAltText: headerLogoAltText}" />
 <f:section name="itemList">
-    <div class="container no-padding">
+    <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="{neos:uri.node(node: '~')}"><img src="{f:uri.resource(path: '{headerLogoPath}', package: '{headerLogoPackage}')}" alt="{headerLogoAltText}" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
