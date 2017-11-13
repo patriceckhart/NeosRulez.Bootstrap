@@ -1,3 +1,4 @@
 prototype(Neos.Neos:Content)  {
-    attributes.class.@process.addClass = ${value + (q(node).property('addClass') ? ' '+q(node).property('addClass') : '' )}
+    attributes.class.@process.class = ${value + (q(node).property('class') ? ' '+q(node).property('class') : '' )}
+    attributes.id.@process.id = ${value + (q(node).property('id') ? ''+q(node).property('id') : '' )}
 }

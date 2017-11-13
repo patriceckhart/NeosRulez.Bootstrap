@@ -26,6 +26,9 @@
             <trans-unit id="class" xml:space="preserve">
 				<source>CSS-Class</source>
 			</trans-unit>
+            <trans-unit id="id" xml:space="preserve">
+				<source>ID</source>
+			</trans-unit>
             <trans-unit id="extended" xml:space="preserve">
 				<source>Extended</source>
 			</trans-unit>

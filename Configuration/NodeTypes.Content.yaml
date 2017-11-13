@@ -13,3 +13,10 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
+    id:
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:id
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
