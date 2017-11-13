@@ -14,10 +14,17 @@
                 <f:for each="{items}" as="item" iteration="menuItemIterator">
                     <f:if condition="{item.subItems}">
                         <f:then>
-                            <li class="nav-item dropdown">
-                                <neos:link.node class="nav-link dropdown-toggle" node="{item.node}" additionalAttributes="{role: 'button', data-toggle: 'dropdown', aria-haspopup: 'true', aria-expanded: 'false'}">{item.label}</neos:link.node>
-                                <f:render section="subList" arguments="{items: item.subItems}" />
-                            </li>
+                            <f:if condition="{item.node.properties.noSubMenu}">
+                                <f:then>
+                                    <neos:link.node class="nav-link" node="{item.node}">{item.label}</neos:link.node>
+                                </f:then>
+                                <f:else>
+                                    <li class="nav-item dropdown">
+                                        <neos:link.node class="nav-link dropdown-toggle" node="{item.node}" additionalAttributes="{role: 'button', data-toggle: 'dropdown', aria-haspopup: 'true', aria-expanded: 'false'}">{item.label}</neos:link.node>
+                                        <f:render section="subList" arguments="{items: item.subItems}" />
+                                    </li>
+                                </f:else>
+                            </f:if>
                         </f:then>
                         <f:else>
                             <li class="nav-item">
