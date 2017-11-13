@@ -26,6 +26,15 @@
             <trans-unit id="class" xml:space="preserve">
 				<source>CSS-Class</source>
 			</trans-unit>
+            <trans-unit id="extended" xml:space="preserve">
+				<source>Extended</source>
+			</trans-unit>
+            <trans-unit id="choosefiles" xml:space="preserve">
+				<source>Please select photos in the Inspector.</source>
+			</trans-unit>
+            <trans-unit id="socialmedia" xml:space="preserve">
+				<source>Social media</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

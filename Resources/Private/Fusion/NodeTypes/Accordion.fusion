@@ -1,0 +1,6 @@
+prototype(Site:Accordion) {
+    accordionItems = ContentCollection {
+        nodePath = 'accordionItems'
+        attributes.class = 'accordion'
+    }
+}

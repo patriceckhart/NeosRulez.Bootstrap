@@ -53,6 +53,18 @@ prototype(Neos.Neos:Page) {
             }
         }
 
+        NeosRulezBootstrapMagnificPopupCss = Neos.Fusion:Tag {
+            @position = 'before stylesheets'
+            tagName = 'link'
+            attributes {
+                media = 'all'
+                rel = 'stylesheet'
+                href = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/magnific-popup.css'
+                }
+            }
+        }
+
         NeosRulezBootstrapBackendCss = Neos.Fusion:Tag {
             @position = 'before stylesheets'
             @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
@@ -108,6 +120,17 @@ prototype(Neos.Neos:Page) {
             type = 'text/javascript'
             src = Neos.Fusion:ResourceUri {
                 path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/overwrite.js'
+            }
+        }
+    }
+
+    NeosRulezBootstrapMagnificPopupJs = Neos.Fusion:Tag {
+        @position = 'end'
+        tagName = 'script'
+        attributes {
+            type = 'text/javascript'
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/jquery.magnific-popup.min.js'
             }
         }
     }

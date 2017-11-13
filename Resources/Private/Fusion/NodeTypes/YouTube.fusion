@@ -1,0 +1,3 @@
+prototype(Site:YouTube) < prototype(Content) {
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/YouTube.html'
+}

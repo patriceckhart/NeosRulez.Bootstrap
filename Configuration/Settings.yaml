@@ -26,6 +26,12 @@ Neos:
         bootstrapnodetypes:
           position: 'end'
           label: NeosRulez.Bootstrap:Main:nodetypes
+        extended:
+          position: 'end'
+          label: NeosRulez.Bootstrap:Main:extended
+        socialmedia:
+          position: 'end'
+          label: NeosRulez.Bootstrap:Main:socialmedia
     fusion:
       autoInclude:
         NeosRulez.Bootstrap: true

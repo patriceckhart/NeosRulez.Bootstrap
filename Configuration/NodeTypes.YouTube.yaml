@@ -1,0 +1,21 @@
+'NeosRulez.Bootstrap:YouTube':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    group: 'socialmedia'
+    label: i18n
+    icon: 'icon-youtube-play'
+    inspector:
+      groups:
+        settings:
+          label: NeosRulez.Bootstrap:Main:settings
+          icon: 'icon-cog'
+  properties:
+    link:
+      type: string
+      defaultValue: 'https://www.youtube.com/embed/YOUTUBEID'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'

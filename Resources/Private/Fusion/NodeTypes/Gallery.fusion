@@ -1,0 +1,3 @@
+prototype(Site:Gallery) < prototype(Content) {
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/Gallery.html'
+}

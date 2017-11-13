@@ -1,0 +1,15 @@
+'NeosRulez.Bootstrap:Accordion':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  childNodes:
+    accordionItems:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': TRUE
+  ui:
+    label: i18n
+    group: 'bootstrapnodetypes'
+    icon: 'icon-list-alt'
+    inlineEditable: TRUE
