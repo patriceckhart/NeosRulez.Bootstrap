@@ -2,10 +2,22 @@
 {namespace fusion=Neos\Fusion\ViewHelpers}
 {namespace media=Neos\Media\ViewHelpers}
 <div class="card<f:if condition="{style}">{f:if(condition: '{outline}', then: ' border-{style}', else: ' bg-{style}')}</f:if>">
-<f:if condition="{header}"><h4 class="card-header">{header}</h4></f:if>
-<f:if condition="{image}">
-    <media:image image="{image}" class="card-img-top" width="318px" height="180px" allowCropping="TRUE" allowUpScaling="TRUE" alt="" />
+<f:if condition="{link}">
+    <f:then>
+        <neos:link.node node="{link}" class="card-item-action">
+            <f:render section="card" arguments="{_all}" />
+        </neos:link.node>
+    </f:then>
+    <f:else>
+        <f:render section="card" arguments="{_all}" />
+    </f:else>
 </f:if>
-{cardBody -> f:format.raw()}
-<f:if condition="{footer}"><div class="card-footer">{footer}</div></f:if>
 </div>
+<f:section name="card">
+    <f:if condition="{header}"><h4 class="card-header">{header}</h4></f:if>
+    <f:if condition="{image}">
+        <media:image image="{image}" class="card-img-top" width="318px" height="180px" allowCropping="TRUE" allowUpScaling="TRUE" alt="" />
+    </f:if>
+    {cardBody -> f:format.raw()}
+    <f:if condition="{footer}"><div class="card-footer">{footer}</div></f:if>
+</f:section>

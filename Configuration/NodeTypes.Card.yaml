@@ -79,3 +79,10 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
+    link:
+      type: reference
+      ui:
+        reloadIfChanged: TRUE
+        label: i18n
+        inspector:
+          group: 'settings'
