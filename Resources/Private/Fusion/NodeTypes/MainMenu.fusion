@@ -2,4 +2,7 @@ prototype(Site:MainMenu) < prototype(Menu) {
     entryLevel = 1
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/MainMenu.html'
     maximumLevels = 3
+    headerLogoPath = ${Configuration.setting('NeosRulez.Bootstrap.headerLogoPath')}
+    headerLogoPackage = ${Configuration.setting('NeosRulez.Bootstrap.headerLogoPackage')}
+    headerLogoAltText = ${Configuration.setting('NeosRulez.Bootstrap.headerLogoAltText')}
 }

@@ -1,6 +1,8 @@
 NeosRulez:
   Bootstrap:
-    templateRootPath: 'resource://NeosRulez.Bootstrap/Private/Templates/'
+    headerLogoPath: 'Images/Logo.png'
+    headerLogoPackage: 'Default.Site'
+    headerLogoAltText: 'Default'
 Neos:
   Neos:
     userInterface:
