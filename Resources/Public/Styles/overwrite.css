@@ -9,8 +9,7 @@
 .card-img-top { height:auto; }
 .neosrulez-bootstrap-gallery .img-thumbnail { width:100%; height:auto; margin-right:15px; margin-bottom:15px; }
 .neosrulez-bootstrap-gallery a { outline:0; }
-.neosrulez-bootstrap-youtube { position: relative; padding-bottom: 56.25%; /* Default for 1600x900 videos 16:9 ratio*/ padding-top: 0px; height: 0; overflow: hidden; }
-.neosrulez-bootstrap-youtube iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
 .topLink { display:none; position: fixed; right:0; bottom:0; z-index:99; font-size:2em; background:rgba(0,0,0,0.2); width:1.5em; height:1.5em; line-height:1.5em; box-sizing: border-box; text-align: center; margin-right:1em; margin-bottom:1em; cursor: pointer;
     -webkit-border-radius: 8px;/*Safari, Chrome*/
     -moz-border-radius: 8px;/*Firefox*/
@@ -18,6 +17,7 @@
 }
 .topLink:hover { background:rgba(0,0,0,0.3); }
 .topLink i { line-height:normal; margin:0; padding:0; color:#FFF; }
+
 .navbar-expand-lg .navbar-toggler { outline:0; cursor: pointer; }
 
 #cookie-bar { position: fixed; width:100%; bottom:0; z-index:98; background:rgba(0,0,0,0.8); padding:1rem; }
