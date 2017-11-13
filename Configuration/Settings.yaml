@@ -46,3 +46,26 @@ Neos:
             label: 'Deutsch'
             values: ['de']
             uriSegment: 'de'
+  Form:
+    presets:
+      default:
+        formElementTypes:
+          'Neos.Form:Base':
+            renderingOptions:
+              layoutPathPattern: 'resource://NeosRulez.Bootstrap/Private/Form/{@type}.html'
+          'Neos.Form:FormElement':
+            properties:
+              containerClassAttribute: input
+              elementClassAttribute: 'form-control'
+              elementErrorClassAttribute: error
+            renderingOptions:
+              renderableNameInTemplate: element
+          'Neos.Form:MultiLineText':
+            properties:
+              elementClassAttribute: form-control
+          'Neos.Form:MultipleSelectDropdown':
+            properties:
+              elementClassAttribute: form-control
+          'Neos.Form:Checkbox':
+            properties:
+              elementClassAttribute: form-check-input
