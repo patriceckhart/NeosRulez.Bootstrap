@@ -1,4 +1,3 @@
 prototype(Neos.Neos:Content)  {
     attributes.class.@process.class = ${value + (q(node).property('class') ? ' '+q(node).property('class') : '' )}
-    attributes.id.@process.id = ${value + (q(node).property('id') ? ''+q(node).property('id') : '' )}
 }

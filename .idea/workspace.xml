@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3593f5-90bb-44fe-8256-26111df31da1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/jquery-3.2.1.slim.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/NodeTypes.Content.yaml" afterPath="$PROJECT_DIR$/Configuration/NodeTypes.Content.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Content.fusion" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Content.fusion" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,7 +79,6 @@
         <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
         <option value="$PROJECT_DIR$/Resources/Public/Styles/backend.css" />
         <option value="$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js" />
-        <option value="$PROJECT_DIR$/Resources/Public/Styles/overwrite.css" />
         <option value="&lt;9ed936d1-89e1-45d8-83b9-6c74613ce306&gt;/data/releases/current/Packages/Sites/Default.Site/Resources/Private/Fusion/Root.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/MainMenu.html" />
         <option value="&lt;9ed936d1-89e1-45d8-83b9-6c74613ce306&gt;/data/releases/current/Packages/Sites/Default.Site/Resources/Private/Templates/Page/Default.html" />
@@ -90,11 +92,12 @@
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Downloads.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Downloads.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
-        <option value="$PROJECT_DIR$/Configuration/NodeTypes.Content.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
+        <option value="$PROJECT_DIR$/Resources/Public/Styles/overwrite.css" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Content.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
-        <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Content.fusion" />
-        <option value="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
+        <option value="$PROJECT_DIR$/Configuration/NodeTypes.Content.yaml" />
       </list>
     </option>
   </component>
@@ -331,12 +334,12 @@
       <workItem from="1510572514094" duration="64000" />
       <workItem from="1510572672520" duration="58000" />
       <workItem from="1510573324923" duration="11000" />
-      <workItem from="1510588557064" duration="3934000" />
+      <workItem from="1510588557064" duration="5153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48374000" />
+    <option name="totallyTimeSpent" value="49593000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -613,14 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/overwrite.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Page.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -661,14 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Divider.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Downloads.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -689,14 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Button.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -749,42 +728,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Button.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/overwrite.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Content.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <caret line="26" column="64" lean-forward="false" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Content.fusion">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="15">
+          <caret line="1" column="114" lean-forward="false" selection-start-line="1" selection-start-column="114" selection-end-line="1" selection-end-column="114" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="405">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Content.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Divider.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding />
         </state>
       </provider>
