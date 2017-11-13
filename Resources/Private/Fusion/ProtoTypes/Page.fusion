@@ -141,4 +141,7 @@ prototype(Neos.Neos:Page) {
         }
     }
 
+    head.@process.compression >
+    body.@process.compression >
+
 }

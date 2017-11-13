@@ -30,7 +30,10 @@
 				<source>Extended</source>
 			</trans-unit>
             <trans-unit id="choosefiles" xml:space="preserve">
-				<source>Please select photos in the Inspector.</source>
+				<source>Please select or upload media in the Inspector.</source>
+			</trans-unit>
+            <trans-unit id="filesize" xml:space="preserve">
+				<source>Filesize</source>
 			</trans-unit>
 		</body>
 	</file>
