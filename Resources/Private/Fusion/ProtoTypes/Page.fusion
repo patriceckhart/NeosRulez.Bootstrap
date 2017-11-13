@@ -80,13 +80,19 @@ prototype(Neos.Neos:Page) {
 
     }
 
+    NeosRulezBootstrapScrollToTop = Neos.Fusion:Renderer {
+        @position = 'end'
+        type = 'Neos.Fusion:Value'
+        element.value = '<div class="topLink"><i class="fa fa-angle-up" aria-hidden="true"></i></div>'
+    }
+
     NeosRulezBootstrapJQuery = Neos.Fusion:Tag {
         @position = 'end'
         tagName = 'script'
         attributes {
             type = 'text/javascript'
             src = Neos.Fusion:ResourceUri {
-                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/jquery-3.2.1.slim.min.js'
+                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/jquery-3.2.1.min.js'
             }
         }
     }
@@ -113,17 +119,6 @@ prototype(Neos.Neos:Page) {
         }
     }
 
-    NeosRulezBootstrapOverwriteJs = Neos.Fusion:Tag {
-        @position = 'end'
-        tagName = 'script'
-        attributes {
-            type = 'text/javascript'
-            src = Neos.Fusion:ResourceUri {
-                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/overwrite.js'
-            }
-        }
-    }
-
     NeosRulezBootstrapMagnificPopupJs = Neos.Fusion:Tag {
         @position = 'end'
         tagName = 'script'
@@ -135,12 +130,15 @@ prototype(Neos.Neos:Page) {
         }
     }
 
-
-
-    #NeosRulezBootstrapScrollToTop = Neos.Fusion:Renderer {
-        #@position = 'after body'
-        #type = 'Neos.Fusion:Value'
-        #element.value = '<div class="topLink"><i class="fa fa-angle-up" aria-hidden="true"></i></div>'
-    #}
+    NeosRulezBootstrapOverwriteJs = Neos.Fusion:Tag {
+        @position = 'end'
+        tagName = 'script'
+        attributes {
+            type = 'text/javascript'
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/overwrite.js'
+            }
+        }
+    }
 
 }

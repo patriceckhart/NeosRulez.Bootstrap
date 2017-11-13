@@ -29,5 +29,5 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'NeosRulez.Bootstrap:Container': TRUE
           '*': FALSE
+          'NeosRulez.Bootstrap:Container': TRUE

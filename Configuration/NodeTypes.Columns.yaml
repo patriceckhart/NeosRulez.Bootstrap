@@ -1,3 +1,43 @@
+'Neos.NodeTypes:Column':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  childNodes:
+    column0:
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:CarouselItem': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes:Form': FALSE
+          'Neos.NodeTypes:Menu': FALSE
+          'Neos.Neos:PluginView': FALSE
+    column1:
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:CarouselItem': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes:Form': FALSE
+          'Neos.NodeTypes:Menu': FALSE
+          'Neos.Neos:PluginView': FALSE
+    column2:
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:CarouselItem': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes:Form': FALSE
+          'Neos.NodeTypes:Menu': FALSE
+          'Neos.Neos:PluginView': FALSE
+    column3:
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:CarouselItem': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes:Form': FALSE
+          'Neos.NodeTypes:Menu': FALSE
+          'Neos.Neos:PluginView': FALSE
 'Neos.NodeTypes:TwoColumn':
   properties:
     'layout':

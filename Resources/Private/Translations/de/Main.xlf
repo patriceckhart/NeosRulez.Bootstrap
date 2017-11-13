@@ -32,9 +32,6 @@
             <trans-unit id="choosefiles" xml:space="preserve">
 				<source>Bitte Fotos im Inspector auswählen.</source>
 			</trans-unit>
-            <trans-unit id="socialmedia" xml:space="preserve">
-				<source>Social Media</source>
-			</trans-unit>
 		</body>
 	</file>
 </xliff>

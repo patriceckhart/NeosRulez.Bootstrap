@@ -2,7 +2,7 @@
   superTypes:
     'Neos.Neos:Content': TRUE
   ui:
-    group: 'socialmedia'
+    group: 'extended'
     label: i18n
     icon: 'icon-youtube-play'
     inspector:

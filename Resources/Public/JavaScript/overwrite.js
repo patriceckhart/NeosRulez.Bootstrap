@@ -16,3 +16,14 @@ $(function() {
         }
     });
 });
+$('.topLink').click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+});
+var $win = $(window).scroll(function() {
+    if($win.scrollTop() > 200) {
+        $('.topLink').css('display','block');
+    } else {
+        $('.topLink').css('display','none');
+    }
+});
