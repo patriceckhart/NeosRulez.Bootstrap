@@ -1,16 +1,36 @@
 $(function() {
+    var sitelang = document.documentElement.lang;
+    if(sitelang=='de'){
+        var loadingtext = 'Lade Bild #%curr%...';
+        var errorloadingtext = '<a href="%url%">Das Bild #%curr%</a> konnte nicht geladen werden.';
+        var prev = 'Zurück (Linke Pfeiltaste)';
+        var next = 'Weiter (Rechte Pfeiltaste)';
+        var counter = '%curr% von %total%';
+        var close = 'Schließen (ESC)';
+    } else {
+        var loadingtext = 'Loading image #%curr%...';
+        var errorloadingtext = '<a href="%url%">The image #%curr%</a> could not be loaded.';
+        var prev = 'Previous (Left arrow key)';
+        var next = 'Next (Right arrow key)';
+        var counter = '%curr% of %total%';
+        var close = 'Close (ESC)';
+    }
     $('.lightbox').magnificPopup({
         delegate: 'a',
         type: 'image',
-        tLoading: 'Loading image #%curr%...',
+        tLoading: loadingtext,
         mainClass: 'mfp-img-mobile',
         gallery: {
             enabled: true,
             navigateByImgClick: true,
-            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+            preload: [0,1],
+            tPrev: prev,
+            tNext: next,
+            tCounter: counter,
+            tClose: close
         },
         image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            tError: errorloadingtext,
         }
     });
 });
