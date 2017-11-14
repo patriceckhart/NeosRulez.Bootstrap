@@ -1,0 +1,22 @@
+{namespace form=Neos\Form\ViewHelpers}
+
+<f:form.validationResults for="{element.identifier}">
+	<div class="{element.properties.containerClassAttribute}{f:if(condition: validationResults.flattenedErrors, then: element.properties.elementErrorClassAttribute)}"<f:if condition="{element.rootForm.renderingOptions.previewMode}"> data-element="{form:form.formElementRootlinePath(renderable:element)}"</f:if>>
+		<div class="{element.properties.containerInnerClassAttribute}">
+			<div class="form-check">
+				<label for="{element.uniqueIdentifier}" class="form-check-label">
+					<f:if condition="{element.required}">
+						<f:then>
+							<f:form.checkbox class="form-check-input" property="{element.identifier}" id="{element.uniqueIdentifier}" value="{element.properties.value}" errorClass="{element.properties.elementErrorClassAttribute}" additionalAttributes="{required: element.required}" />
+						</f:then>
+						<f:else>
+							<f:form.checkbox class="form-check-input" property="{element.identifier}" id="{element.uniqueIdentifier}" value="{element.properties.value}" errorClass="{element.properties.elementErrorClassAttribute}" />
+						</f:else>
+					</f:if>
+					{f:translate(id: 'form.label.{element.identifier}', source: '{element.renderingOptions.translationSource}', package: '{element.renderingOptions.translationPackage}', value: '{element.label -> f:format.nl2br()}')}
+				</label>
+			</div>
+		</div>
+	</div>
+</f:form.validationResults>
+

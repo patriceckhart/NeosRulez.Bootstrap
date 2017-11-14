@@ -52,20 +52,36 @@ Neos:
         formElementTypes:
           'Neos.Form:Base':
             renderingOptions:
-              layoutPathPattern: 'resource://NeosRulez.Bootstrap/Private/Form/{@type}.html'
+              templatePathPattern: 'resource://NeosRulez.Bootstrap/Private/Templates/Form/{@type}.html'
+              partialPathPattern: 'resource://NeosRulez.Bootstrap/Private/Templates/Form/Partials/{@type}.html'
+              layoutPathPattern: 'resource://NeosRulez.Bootstrap/Private/Templates/Form/Layouts/{@type}.html'
+              translationPackage: NeosRulez.Bootstrap
+              translationSource: Form
+          'Neos.Form:Form':
+            renderingOptions:
+              formClassAttribute: form-horizontal
+              formPrevButtonClassAttribute: 'btn btn-cancel'
+              formNextButtonClassAttribute: 'btn btn-primary'
+              formSubmitButtonClassAttribute: 'btn btn-primary'
+              containerClassAttribute: pull-left
           'Neos.Form:FormElement':
             properties:
-              containerClassAttribute: input
-              elementClassAttribute: 'form-control'
-              elementErrorClassAttribute: error
-            renderingOptions:
-              renderableNameInTemplate: element
+              containerClassAttribute: form-group
+              elementClassAttribute: form-control
+              elementErrorClassAttribute: is-invalid
           'Neos.Form:MultiLineText':
             properties:
               elementClassAttribute: form-control
+          'Neos.Form:SingleSelectRadiobuttons':
+            properties:
+              elementListClassAttrbiute: list-unstyled
           'Neos.Form:MultipleSelectDropdown':
             properties:
               elementClassAttribute: form-control
-          'Neos.Form:Checkbox':
+          'Neos.Form:DatePicker':
             properties:
-              elementClassAttribute: form-check-input
+              elementClassAttribute: form-control
+          'Neos.Form:PasswordWithConfirmation':
+            properties:
+              elementClassAttribute: form-control
+              confirmationClassAttribute: form-control

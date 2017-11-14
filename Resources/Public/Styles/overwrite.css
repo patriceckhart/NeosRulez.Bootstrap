@@ -32,6 +32,7 @@ header, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, main, 
 .card-item-action:hover { background:#f8f9fa; color:#212529; text-decoration: none; }
 
 .card { margin-bottom:2rem; }
+.accordion .card { margin-bottom:0; }
 
 @media only screen and (max-width:575px) {
     #cookie-bar .btn { width:100%; margin-top:1rem; }

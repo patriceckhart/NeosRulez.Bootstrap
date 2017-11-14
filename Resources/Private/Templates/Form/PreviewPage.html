@@ -1,0 +1,51 @@
+{namespace form=Neos\Form\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+<fieldset>
+	<f:if condition="{page.label}">
+		<legend>{f:translate(id: 'forms.pages.{page.identifier}.label', package: '{page.renderingOptions.translationPackage}', value: page.label)}</legend>
+	</f:if>
+	<output>
+		<table>
+			<tr>
+				<th style="width: 170px">{f:translate(id: 'forms.pages.labelTitle', package: '{page.renderingOptions.translationPackage}', value: 'Label')}</th>
+				<th>{f:translate(id: 'forms.pages.valueTitle', package: '{page.renderingOptions.translationPackage}', value: 'Value')}</th>
+			</tr>
+			<form:renderValues formRuntime="{form}">
+				<tr>
+					<th>{formValue.element.label}</th>
+					<td>
+						<f:if condition="{formValue.value}">
+							<f:then>
+								<f:if condition="{0: formValue.element.type} == {0: 'Neos.Form:ImageUpload'}">
+									<f:then>
+										<a href="{media:uri.image(image: formValue.value, maximumWidth: 600)}" rel="lightbox">
+											<media:image image="{formValue.value}" maximumWidth="100" alt="{formValue.processedValue}" />
+										</a>
+									</f:then>
+									<f:else>
+										<f:if condition="{formValue.isMultiValue}">
+											<f:then>
+												{formValue.processedValue -> f:debug()}
+												<ul>
+													<f:for each="{formValue.processedValue}" as="value">
+														<li>{value}</li>
+													</f:for>
+												</ul>
+											</f:then>
+											<f:else>
+												{formValue.processedValue}
+											</f:else>
+										</f:if>
+									</f:else>
+								</f:if>
+							</f:then>
+							<f:else>
+								-
+							</f:else>
+						</f:if>
+					</td>
+				</tr>
+			</form:renderValues>
+		</table>
+	</output>
+</fieldset>
