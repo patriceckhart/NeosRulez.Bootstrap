@@ -1,9 +1,10 @@
 {
     "description": "A basic package to start building awesome Neos CMS websites based on Bootstrap v4",
-    "type": "neos-package",
-    "name": "neosrulez/Bootstrap",
+    "type": "neos-plugin",
+    "name": "neosrulez/bootstrap",
     "require": {
-        "neos/neos": "*"
+        "neos/neos": "*",
+        "neos/nodetypes": "*"
     },
     "autoload": {
         "psr-4": {
