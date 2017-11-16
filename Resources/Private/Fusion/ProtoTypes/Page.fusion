@@ -41,18 +41,6 @@ prototype(Neos.Neos:Page) {
             }
         }
 
-        NeosRulezBootstrapOverwriteCss = Neos.Fusion:Tag {
-            @position = 'before stylesheets'
-            tagName = 'link'
-            attributes {
-                href = OpsDev.CacheBreaker:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/overwrite.css'
-                }
-                type = 'text/css'
-                rel = 'stylesheet'
-            }
-        }
-
         NeosRulezBootstrapMagnificPopupCss = Neos.Fusion:Tag {
             @position = 'before stylesheets'
             tagName = 'link'
@@ -62,6 +50,18 @@ prototype(Neos.Neos:Page) {
                 href = Neos.Fusion:ResourceUri {
                     path = 'resource://NeosRulez.Bootstrap/Public/Styles/magnific-popup.css'
                 }
+            }
+        }
+
+        NeosRulezBootstrapOverwriteCss = Neos.Fusion:Tag {
+            @position = 'before stylesheets'
+            tagName = 'link'
+            attributes {
+                href = OpsDev.CacheBreaker:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/overwrite.css'
+                }
+                type = 'text/css'
+                rel = 'stylesheet'
             }
         }
 
