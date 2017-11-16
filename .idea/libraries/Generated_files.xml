@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/Resources/Public/JavaScript/main.min.js" />
+        <item url="file://$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.min.js" />
+      <root url="file://$PROJECT_DIR$/Resources/Private/JavaScript/overwrite.min.js" />
+      <root url="file://$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.min.js" />
+      <root url="file://$PROJECT_DIR$/Resources/Private/JavaScript/overwrite.min.js" />
+      <root url="file://$PROJECT_DIR$/Resources/Public/JavaScript/main.min.js" />
+      <root url="file://$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
