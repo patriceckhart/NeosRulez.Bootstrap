@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3593f5-90bb-44fe-8256-26111df31da1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Styles/_bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Resources/Private/Styles/styles.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/jquery-3.2.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/jquery.magnific-popup.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/popper.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Resources/Public/Styles/bootstrap.min.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/Public/Styles/magnific-popup.css" afterPath="$PROJECT_DIR$/Resources/Private/Styles/_magnific-popup.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Resources/Public/Styles/overwrite.css" afterPath="$PROJECT_DIR$/Resources/Private/Styles/_overwrite.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Downloads.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Downloads.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -74,7 +60,6 @@
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Downloads.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Downloads.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Downloads.xlf" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Downloads.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Content.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
@@ -98,7 +83,6 @@
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/SingleSelectRadiobuttons.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/Checkbox.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/MultipleSelectCheckboxes.html" />
-        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/Layouts/Field.html" />
         <option value="$PROJECT_DIR$/Resources/Public/Styles/overwrite.css" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/DatePicker.html" />
@@ -117,6 +101,8 @@
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Styles/_overwrite.scss" />
         <option value="$PROJECT_DIR$/Resources/Private/Styles/styles.scss" />
+        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Downloads.html" />
       </list>
     </option>
   </component>
@@ -127,8 +113,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="577" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="1343" />
@@ -151,6 +136,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -174,35 +160,10 @@
               <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Configuration" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Fusion" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,26 +247,26 @@
       <workItem from="1510829727200" duration="1000" />
       <workItem from="1510832994275" duration="238000" />
       <workItem from="1510833334011" duration="3975000" />
+      <workItem from="1510838014569" duration="54000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65461000" />
+    <option name="totallyTimeSpent" value="65515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1343" extended-state="6" />
     <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18427323" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19698173" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14823718" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14823718" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18427323" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19539317" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -315,6 +276,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -354,37 +316,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/ValidationErrors.xlf" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/ValidationErrors.xlf" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="43" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/Form.xlf" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Form/PasswordWithConfirmation.html" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Form/SingleSelectRadiobuttons.html" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Form/Checkbox.html" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Form/MultipleSelectCheckboxes.html" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/Form.xlf" />
-    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/overwrite.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="37" lean-forward="false" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/overwrite.css" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Form/Layouts/Field.html" />
-    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="70" column="52" lean-forward="false" selection-start-line="70" selection-start-column="52" selection-end-line="70" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Content.fusion">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -423,13 +358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Container.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Carousel.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -453,13 +381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -467,70 +388,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/jquery.magnific-popup.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="3" column="7616" lean-forward="false" selection-start-line="3" selection-start-column="7616" selection-end-line="3" selection-end-column="7616" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/jquery-3.2.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/popper.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/bootstrap.min.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/jquery.magnific-popup.min.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/jquery-3.2.1.min.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/popper.min.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/bootstrap.min.css" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/_magnific-popup.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1584">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/main.min.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/main.min.min.css" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="911">
           <caret line="7751" column="36" lean-forward="false" selection-start-line="7751" selection-start-column="36" selection-end-line="7751" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -538,100 +413,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/main.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/overwrite.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/jquery-3.2.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="1" column="9050" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="22484" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/popper.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="5" column="5256" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/jquery.magnific-popup.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="20087" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/overwrite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="215" column="35" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="263" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/main.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="0" column="86696" lean-forward="false" selection-start-line="0" selection-start-column="86690" selection-end-line="0" selection-end-column="86696" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/main.min.css" />
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/overwrite.min.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/overwrite.min.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/jquery-3.2.1.min.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/popper.min.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/bootstrap.min.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/jquery.magnific-popup.min.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/overwrite.js" />
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/main.min.js" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2877">
           <caret line="283" column="3" lean-forward="false" selection-start-line="283" selection-start-column="3" selection-end-line="283" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#86667#86803#0" expanded="false" />
-            <element signature="e#105903#106147#0" expanded="false" />
-            <marker date="1510836248000" expanded="true" signature="166165:166171" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="58" column="58" lean-forward="true" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -639,9 +436,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
           <caret line="3980" column="28" lean-forward="true" selection-start-line="3980" selection-start-column="28" selection-end-line="3980" selection-end-column="28" />
-          <folding>
-            <element signature="e#81876#82119#2" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -649,7 +443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,7 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -665,7 +457,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,6 +464,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8887">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="86" column="54" lean-forward="false" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="911">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Container.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Image.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/TextWithImage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Accordion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/AccordionItem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Divider.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Downloads.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
           <folding />
         </state>
       </provider>
