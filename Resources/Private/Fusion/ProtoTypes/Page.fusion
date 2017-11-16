@@ -36,32 +36,8 @@ prototype(Neos.Neos:Page) {
                 media = 'all'
                 rel = 'stylesheet'
                 href = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/bootstrap.min.css'
+                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/styles.min.css'
                 }
-            }
-        }
-
-        NeosRulezBootstrapMagnificPopupCss = Neos.Fusion:Tag {
-            @position = 'before stylesheets'
-            tagName = 'link'
-            attributes {
-                media = 'all'
-                rel = 'stylesheet'
-                href = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/magnific-popup.css'
-                }
-            }
-        }
-
-        NeosRulezBootstrapOverwriteCss = Neos.Fusion:Tag {
-            @position = 'before stylesheets'
-            tagName = 'link'
-            attributes {
-                href = OpsDev.CacheBreaker:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/overwrite.css'
-                }
-                type = 'text/css'
-                rel = 'stylesheet'
             }
         }
 
@@ -86,57 +62,13 @@ prototype(Neos.Neos:Page) {
         element.value = '<div class="topLink"><i class="fa fa-angle-up" aria-hidden="true"></i></div>'
     }
 
-    NeosRulezBootstrapJQuery = Neos.Fusion:Tag {
+    NeosRulezBootstrapJs= Neos.Fusion:Tag {
         @position = 'end'
         tagName = 'script'
         attributes {
             type = 'text/javascript'
             src = Neos.Fusion:ResourceUri {
-                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/jquery-3.2.1.min.js'
-            }
-        }
-    }
-
-    NeosRulezBootstrapPopperJs = Neos.Fusion:Tag {
-        @position = 'end'
-        tagName = 'script'
-        attributes {
-            type = 'text/javascript'
-            src = Neos.Fusion:ResourceUri {
-                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/popper.min.js'
-            }
-        }
-    }
-
-    NeosRulezBootstrapJs = Neos.Fusion:Tag {
-        @position = 'end'
-        tagName = 'script'
-        attributes {
-            type = 'text/javascript'
-            src = Neos.Fusion:ResourceUri {
-                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/bootstrap.min.js'
-            }
-        }
-    }
-
-    NeosRulezBootstrapMagnificPopupJs = Neos.Fusion:Tag {
-        @position = 'end'
-        tagName = 'script'
-        attributes {
-            type = 'text/javascript'
-            src = Neos.Fusion:ResourceUri {
-                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/jquery.magnific-popup.min.js'
-            }
-        }
-    }
-
-    NeosRulezBootstrapOverwriteJs = Neos.Fusion:Tag {
-        @position = 'end'
-        tagName = 'script'
-        attributes {
-            type = 'text/javascript'
-            src = Neos.Fusion:ResourceUri {
-                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/overwrite.js'
+                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/scripts.min.js'
             }
         }
     }
