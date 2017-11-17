@@ -7,8 +7,10 @@
         nodeTypes:
           'NeosRulez.Bootstrap:CarouselItem': FALSE
           'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'NeosRulez.Bootstrap:ImageWithContent': FALSE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
+          'NeosRulez.Bootstrap:Container': FALSE
           'Neos.NodeTypes:AssetList': FALSE
-          'Neos.NodeTypes:Form': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
     column1:
@@ -16,8 +18,10 @@
         nodeTypes:
           'NeosRulez.Bootstrap:CarouselItem': FALSE
           'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'NeosRulez.Bootstrap:ImageWithContent': FALSE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
+          'NeosRulez.Bootstrap:Container': FALSE
           'Neos.NodeTypes:AssetList': FALSE
-          'Neos.NodeTypes:Form': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
     column2:
@@ -25,8 +29,10 @@
         nodeTypes:
           'NeosRulez.Bootstrap:CarouselItem': FALSE
           'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'NeosRulez.Bootstrap:ImageWithContent': FALSE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
+          'NeosRulez.Bootstrap:Container': FALSE
           'Neos.NodeTypes:AssetList': FALSE
-          'Neos.NodeTypes:Form': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
     column3:
@@ -34,8 +40,10 @@
         nodeTypes:
           'NeosRulez.Bootstrap:CarouselItem': FALSE
           'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'NeosRulez.Bootstrap:ImageWithContent': FALSE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
+          'NeosRulez.Bootstrap:Container': FALSE
           'Neos.NodeTypes:AssetList': FALSE
-          'Neos.NodeTypes:Form': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
 'Neos.NodeTypes:TwoColumn':

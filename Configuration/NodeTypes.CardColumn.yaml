@@ -9,8 +9,10 @@
           '*': TRUE
           'NeosRulez.Bootstrap:CarouselItem': FALSE
           'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'NeosRulez.Bootstrap:ImageWithContent': FALSE
+          'NeosRulez.Bootstrap:Container': FALSE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
           'Neos.NodeTypes:AssetList': FALSE
-          'Neos.NodeTypes:Form': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
   ui:

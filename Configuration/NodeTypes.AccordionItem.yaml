@@ -9,7 +9,6 @@
           'NeosRulez.Bootstrap:CarouselItem': FALSE
           'NeosRulez.Bootstrap:AccordionItem': FALSE
           'Neos.NodeTypes:AssetList': FALSE
-          'Neos.NodeTypes:Form': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
   ui:
