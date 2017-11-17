@@ -1,0 +1,32 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+<div class="row">
+    <f:if condition="{position}==left">
+        <f:then>
+            <f:render section="image" />
+            <f:render section="content" />
+        </f:then>
+        <f:else>
+            <f:render section="content" />
+            <f:render section="image" />
+        </f:else>
+    </f:if>
+</div>
+</div>
+<f:section name="image">
+    <div class="col-md-6 contentimage"
+    <f:if condition="{backgroundImage}">
+        <f:then>
+            style="background:url({media:uri.image(image: backgroundImage, maximumWidth:1200, maximumHeight:900, allowCropping:TRUE)}) no-repeat {backgroundColor} center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;"
+        </f:then>
+        <f:else>
+            {f:if(condition: '{backgroundColor}', then: ' style="background-color:{backgroundColor};"')}
+        </f:else>
+    </f:if>
+    ></div>
+</f:section>
+<f:section name="content">
+    <div class="align-self-center col-md-6 contentitems">{contentItems -> f:format.raw()}</div>
+</f:section>

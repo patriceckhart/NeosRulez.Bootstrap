@@ -7744,9 +7744,21 @@ header, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, main, 
 .accordion .card {
   margin-bottom: 0; }
 
+.neosrulez-bootstrap-imagewithcontent .contentimage {
+  min-height: 400px; }
+
+.neosrulez-bootstrap-imagewithcontent .contentitems {
+  padding: 5rem; }
+
+@media only screen and (max-width: 1200px) {
+  .neosrulez-bootstrap-imagewithcontent .contentitems {
+    padding: 3rem; } }
 @media only screen and (max-width: 575px) {
   #cookie-bar .btn {
     width: 100%;
-    margin-top: 1rem; } }
+    margin-top: 1rem; }
+
+  .neosrulez-bootstrap-imagewithcontent .contentitems {
+    padding: 2rem; } }
 
 /*# sourceMappingURL=styles.css.map */

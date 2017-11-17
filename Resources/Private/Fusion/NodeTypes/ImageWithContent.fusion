@@ -1,0 +1,7 @@
+prototype(Site:ImageWithContent) {
+    contentItems = ContentCollection {
+        nodePath = 'contentItems'
+    }
+    attributes.class = 'container-fluid'
+    attributes.class.@process.collectionClass >
+}
