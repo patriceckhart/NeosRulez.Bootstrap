@@ -46,11 +46,11 @@ prototype(Neos.Neos:Page) {
             @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
             tagName = 'link'
             attributes {
-                href = OpsDev.CacheBreaker:ResourceUri {
+                media = 'all'
+                rel = 'stylesheet'
+                href = Neos.Fusion:ResourceUri {
                     path = 'resource://NeosRulez.Bootstrap/Public/Styles/backend.css'
                 }
-                type = 'text/css'
-                rel = 'stylesheet'
             }
         }
 
