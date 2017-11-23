@@ -21,7 +21,7 @@
 				<source>Language</source>
 			</trans-unit>
 			<trans-unit id="rounded" xml:space="preserve">
-				<source>Rounded</source>
+				<source>Rounded corners</source>
 			</trans-unit>
             <trans-unit id="class" xml:space="preserve">
 				<source>CSS-Class</source>
