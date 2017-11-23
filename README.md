@@ -9,7 +9,7 @@ The NeosRulez.Bootstrap package is listed on packagist (https://packagist.org/pa
 Just add the following line to your require section:
 
 ```
-"neosrulez/bootstrap": "*"
+"neosrulez/bootstrap": "1.*"
 ```
 
 And the run this command to fetch the plugin:
