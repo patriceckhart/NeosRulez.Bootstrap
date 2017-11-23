@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3593f5-90bb-44fe-8256-26111df31da1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/NodeTypes.Mixins.yaml" afterPath="$PROJECT_DIR$/Configuration/NodeTypes.Mixins.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,10 +102,10 @@
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.Columns.yaml" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.CardColumn.yaml" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.ImageWithContent.yaml" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.Mixins.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -401,12 +398,12 @@
       <workItem from="1510901046978" duration="534000" />
       <workItem from="1510901656061" duration="1844000" />
       <workItem from="1511194711597" duration="12000" />
-      <workItem from="1511458523056" duration="186000" />
+      <workItem from="1511458523056" duration="302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74301000" />
+    <option name="totallyTimeSpent" value="74417000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -763,16 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ImageWithContent.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -802,6 +789,17 @@
         <state relative-caret-position="345">
           <caret line="23" column="41" lean-forward="false" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
