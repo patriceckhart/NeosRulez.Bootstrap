@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3593f5-90bb-44fe-8256-26111df31da1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Styles/_overwrite.scss" afterPath="$PROJECT_DIR$/Resources/Private/Styles/_overwrite.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Styles/styles.css" afterPath="$PROJECT_DIR$/Resources/Private/Styles/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Styles/styles.css.map" afterPath="$PROJECT_DIR$/Resources/Private/Styles/styles.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" afterPath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" afterPath="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
     </list>
     <manually-removed-from-ignored>
       <directory path=".idea/" />
@@ -101,7 +99,6 @@
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ImageWithContent.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/ImageWithContent.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/ImageWithContent.html" />
-        <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.Container.yaml" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.Columns.yaml" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.CardColumn.yaml" />
@@ -112,6 +109,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Resources/Private/Styles/_overwrite.scss" />
+        <option value="$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
       </list>
     </option>
   </component>
@@ -145,17 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="NeosRulez.Bootstrap" type="cbb8eebc:String" user="NeosRulez.Bootstrap" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -280,31 +267,22 @@
               <item name="en" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="NodeTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="JavaScript" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Styles" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="NeosRulez.Bootstrap" type="cbb8eebc:String" user="NeosRulez.Bootstrap" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -407,11 +385,12 @@
       <workItem from="1511458523056" duration="358000" />
       <workItem from="1511459153381" duration="353000" />
       <workItem from="1511463370120" duration="102000" />
+      <workItem from="1511694534368" duration="181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74928000" />
+    <option name="totallyTimeSpent" value="75109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="969" extended-state="0" />
@@ -420,7 +399,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16276477" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287891" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277592" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1838761" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21666667" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -659,13 +638,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/ImageWithContent.html" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="79" lean-forward="false" selection-start-line="38" selection-start-column="79" selection-end-line="38" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.AccordionItem.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -746,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ImageWithContent.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -788,7 +753,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="153">
             <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -799,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,6 +770,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-27">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding />
         </state>
       </provider>
