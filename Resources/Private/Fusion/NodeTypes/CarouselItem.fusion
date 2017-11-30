@@ -3,5 +3,4 @@ prototype(Site:CarouselItem) < prototype(Content) {
     attributes.class >
     attributes.class = ${'carousel-item' + (carouselItemsIteration.isFirst ? ' active' : '')}
     iteration = ${carouselItemsIteration}
-
 }
