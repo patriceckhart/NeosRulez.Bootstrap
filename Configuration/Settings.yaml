@@ -48,40 +48,201 @@ Neos:
             uriSegment: 'de'
   Form:
     presets:
-      default:
+      bootstrap:
+        title: 'Bootstrap Form'
+        stylesheets: {  }
+        javaScripts: {  }
         formElementTypes:
           'Neos.Form:Base':
             renderingOptions:
               templatePathPattern: 'resource://NeosRulez.Bootstrap/Private/Templates/Form/{@type}.html'
               partialPathPattern: 'resource://NeosRulez.Bootstrap/Private/Templates/Form/Partials/{@type}.html'
               layoutPathPattern: 'resource://NeosRulez.Bootstrap/Private/Templates/Form/Layouts/{@type}.html'
+              skipUnknownElements: false
               translationPackage: NeosRulez.Bootstrap
-              translationSource: Form
+              validationErrorTranslationPackage: Neos.Flow
           'Neos.Form:Form':
+            superTypes:
+              'Neos.Form:Base': true
+            rendererClassName: Neos\Form\Core\Renderer\FluidFormRenderer
             renderingOptions:
-              formClassAttribute: form-horizontal
-              formPrevButtonClassAttribute: 'btn btn-cancel'
-              formNextButtonClassAttribute: 'btn btn-primary'
-              formSubmitButtonClassAttribute: 'btn btn-primary'
-              containerClassAttribute: pull-left
+              renderableNameInTemplate: form
+              previousButtonClassAttribute: 'btn btn-cancel'
+              nextButtonClassAttribute: 'btn btn-primary'
+              submitButtonClassAttribute: 'btn btn-primary'
+          'Neos.Form:FormEditMode':
+            superTypes:
+              'Neos.Form:Form': true
+          'Neos.Form:RemovableMixin': {  }
+          'Neos.Form:ReadOnlyFormElement':
+            superTypes:
+              'Neos.Form:Base': true
+              'Neos.Form:RemovableMixin': true
+            implementationClassName: Neos\Form\FormElements\GenericFormElement
+            renderingOptions:
+              renderableNameInTemplate: element
           'Neos.Form:FormElement':
+            superTypes:
+              'Neos.Form:Base': true
+              'Neos.Form:RemovableMixin': true
+            implementationClassName: Neos\Form\FormElements\GenericFormElement
             properties:
               containerClassAttribute: form-group
-              elementClassAttribute: form-control
+              elementClassAttribute: ''
               elementErrorClassAttribute: is-invalid
-          'Neos.Form:MultiLineText':
+            renderingOptions:
+              renderableNameInTemplate: element
+          'Neos.Form:Page':
+            superTypes:
+              'Neos.Form:Base': true
+              'Neos.Form:RemovableMixin': true
+            implementationClassName: Neos\Form\Core\Model\Page
+            renderingOptions:
+              renderableNameInTemplate: page
+          'Neos.Form:PreviewPage':
+            superTypes:
+              'Neos.Form:Page': true
+          'Neos.Form:Section':
+            superTypes:
+              'Neos.Form:FormElement': true
+            implementationClassName: Neos\Form\FormElements\Section
+            renderingOptions:
+              renderableNameInTemplate: section
+          'Neos.Form:TextMixin': {  }
+          'Neos.Form:SingleLineText':
+            superTypes:
+              'Neos.Form:FormElement': true
+              'Neos.Form:TextMixin': true
             properties:
               elementClassAttribute: form-control
-          'Neos.Form:SingleSelectRadiobuttons':
-            properties:
-              elementListClassAttrbiute: list-unstyled
-          'Neos.Form:MultipleSelectDropdown':
-            properties:
-              elementClassAttribute: form-control
-          'Neos.Form:DatePicker':
+          'Neos.Form:Password':
+            superTypes:
+              'Neos.Form:FormElement': true
+              'Neos.Form:TextMixin': true
             properties:
               elementClassAttribute: form-control
           'Neos.Form:PasswordWithConfirmation':
+            superTypes:
+              'Neos.Form:Password': true
+            implementationClassName: Neos\Form\FormElements\PasswordWithConfirmation
             properties:
               elementClassAttribute: form-control
+              confirmationLabel: Confirmation
               confirmationClassAttribute: form-control
+          'Neos.Form:MultiLineText':
+            superTypes:
+              'Neos.Form:FormElement': true
+              'Neos.Form:TextMixin': true
+            properties:
+              elementClassAttribute: form-control
+          'Neos.Form:SelectionMixin': {  }
+          'Neos.Form:SingleSelectionMixin':
+            superTypes:
+              'Neos.Form:SelectionMixin': true
+            properties:
+              elementClassAttribute: form-control
+          'Neos.Form:MultiSelectionMixin':
+            superTypes:
+              'Neos.Form:SelectionMixin': true
+          'Neos.Form:Checkbox':
+            superTypes:
+              'Neos.Form:FormElement': true
+            properties:
+              elementClassAttribute: form-control
+              value: 1
+          'Neos.Form:MultipleSelectCheckboxes':
+            superTypes:
+              'Neos.Form:FormElement': true
+              'Neos.Form:MultiSelectionMixin': true
+          'Neos.Form:MultipleSelectDropdown':
+            superTypes:
+              'Neos.Form:FormElement': true
+              'Neos.Form:MultiSelectionMixin': true
+            properties:
+              elementClassAttribute: form-control
+          'Neos.Form:SingleSelectRadiobuttons':
+            superTypes:
+              'Neos.Form:FormElement': true
+              'Neos.Form:SingleSelectionMixin': true
+            properties:
+              elementClassAttribute: list-unstyled
+          'Neos.Form:SingleSelectDropdown':
+            superTypes:
+              'Neos.Form:FormElement': true
+              'Neos.Form:SingleSelectionMixin': true
+          'Neos.Form:DatePicker':
+            superTypes:
+              'Neos.Form:FormElement': true
+            implementationClassName: Neos\Form\FormElements\DatePicker
+            properties:
+              elementClassAttribute: form-control
+              timeSelectorClassAttribute: mini
+              dateFormat: Y-m-d
+              enableDatePicker: true
+              displayTimeSelector: false
+          'Neos.Form:FileUpload':
+            superTypes:
+              'Neos.Form:FormElement': true
+            implementationClassName: Neos\Form\FormElements\FileUpload
+            properties:
+              allowedExtensions:
+                - pdf
+                - doc
+              elementClassAttribute: form-control
+          'Neos.Form:ImageUpload':
+            superTypes:
+              'Neos.Form:FormElement': true
+            implementationClassName: Neos\Form\FormElements\ImageUpload
+            properties:
+              allowedTypes:
+                - jpeg
+                - png
+                - bmp
+              elementClassAttribute: form-control
+          'Neos.Form:StaticText':
+            superTypes:
+              'Neos.Form:ReadOnlyFormElement': true
+            properties:
+              text: ''
+          'Neos.Form:HiddenField':
+            superTypes:
+              'Neos.Form:FormElement': true
+        finisherPresets:
+          'Neos.Form:Closure':
+            implementationClassName: Neos\Form\Finishers\ClosureFinisher
+            options: {  }
+          'Neos.Form:Confirmation':
+            implementationClassName: Neos\Form\Finishers\ConfirmationFinisher
+            options: {  }
+          'Neos.Form:Email':
+            implementationClassName: Neos\Form\Finishers\EmailFinisher
+            options: {  }
+          'Neos.Form:FlashMessage':
+            implementationClassName: Neos\Form\Finishers\FlashMessageFinisher
+            options: {  }
+          'Neos.Form:Redirect':
+            implementationClassName: Neos\Form\Finishers\RedirectFinisher
+            options: {  }
+        validatorPresets:
+          'Neos.Flow:NotEmpty':
+            implementationClassName: Neos\Flow\Validation\Validator\NotEmptyValidator
+          'Neos.Flow:DateTimeRange':
+            implementationClassName: Neos\Flow\Validation\Validator\DateTimeRangeValidator
+          'Neos.Flow:Alphanumeric':
+            implementationClassName: Neos\Flow\Validation\Validator\AlphanumericValidator
+          'Neos.Flow:Text':
+            implementationClassName: Neos\Flow\Validation\Validator\TextValidator
+          'Neos.Flow:StringLength':
+            implementationClassName: Neos\Flow\Validation\Validator\StringLengthValidator
+          'Neos.Flow:EmailAddress':
+            implementationClassName: Neos\Flow\Validation\Validator\EmailAddressValidator
+          'Neos.Flow:Integer':
+            implementationClassName: Neos\Flow\Validation\Validator\IntegerValidator
+          'Neos.Flow:Float':
+            implementationClassName: Neos\Flow\Validation\Validator\FloatValidator
+          'Neos.Flow:NumberRange':
+            implementationClassName: Neos\Flow\Validation\Validator\NumberRangeValidator
+          'Neos.Flow:RegularExpression':
+            implementationClassName: Neos\Flow\Validation\Validator\RegularExpressionValidator
+          'Neos.Flow:Count':
+            implementationClassName: Neos\Flow\Validation\Validator\CountValidator
