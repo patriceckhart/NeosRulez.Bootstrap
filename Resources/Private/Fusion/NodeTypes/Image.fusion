@@ -1,4 +1,7 @@
 prototype(Neos.NodeTypes:Image) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Image.html'
     rounded = ${q(node).property('rounded')}
+    lightbox = ${q(node).property('lightbox')}
+    magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
+    magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
 }

@@ -13,6 +13,9 @@
           'Neos.NodeTypes:AssetList': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes:TwoColumn': FALSE
+          'Neos.NodeTypes:ThreeColumn': FALSE
+          'Neos.NodeTypes:FourColumn': FALSE
     column1:
       constraints:
         nodeTypes:
@@ -24,6 +27,9 @@
           'Neos.NodeTypes:AssetList': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes:TwoColumn': FALSE
+          'Neos.NodeTypes:ThreeColumn': FALSE
+          'Neos.NodeTypes:FourColumn': FALSE
     column2:
       constraints:
         nodeTypes:
@@ -35,6 +41,9 @@
           'Neos.NodeTypes:AssetList': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes:TwoColumn': FALSE
+          'Neos.NodeTypes:ThreeColumn': FALSE
+          'Neos.NodeTypes:FourColumn': FALSE
     column3:
       constraints:
         nodeTypes:
@@ -46,6 +55,9 @@
           'Neos.NodeTypes:AssetList': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes:TwoColumn': FALSE
+          'Neos.NodeTypes:ThreeColumn': FALSE
+          'Neos.NodeTypes:FourColumn': FALSE
 'Neos.NodeTypes:TwoColumn':
   properties:
     'layout':

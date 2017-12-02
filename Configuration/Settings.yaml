@@ -3,6 +3,10 @@ NeosRulez:
     headerLogoPath: 'Images/Logo.png'
     headerLogoPackage: 'Default.Site'
     headerLogoAltText: 'Default'
+    magnificPopupWidth: '800'
+    magnificPopupHeight: '600'
+    thumbImageWidth: '255'
+    thumbImageHeight: '255'
 Neos:
   Neos:
     userInterface:

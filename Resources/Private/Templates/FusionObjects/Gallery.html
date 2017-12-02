@@ -32,10 +32,10 @@
                 <div class="col-sm-3">
                     <f:if condition="{lightbox}">
                         <f:then>
-                            <a href="{media:uri.image(image: asset, maximumWidth:800, maximumHeight:600, allowCropping:FALSE)}"><media:image image="{asset}" width="255" maximumHeight="255" allowCropping="FALSE" allowUpScaling="TRUE" class="img-thumbnail" alt="" /></a>
+                            <a href="{media:uri.image(image: asset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}"><media:image image="{asset}" width="{thumbImageWidth}" maximumHeight="{thumbImageHeight}" allowCropping="FALSE" allowUpScaling="TRUE" class="img-thumbnail" alt="" /></a>
                         </f:then>
                         <f:else>
-                            <media:image image="{asset}" width="255" maximumHeight="255" allowCropping="FALSE" allowUpScaling="TRUE" class="img-thumbnail" alt="" />
+                            <media:image image="{asset}" width="{thumbImageWidth}" maximumHeight="{thumbImageHeight}" allowCropping="FALSE" allowUpScaling="TRUE" class="img-thumbnail" alt="" />
                         </f:else>
                     </f:if>
                 </div>
@@ -44,10 +44,10 @@
                 <div class="col-sm-3">
                     <f:if condition="{lightbox}">
                         <f:then>
-                            <a href="{media:uri.image(image: asset, maximumWidth:800, maximumHeight:600, allowCropping:FALSE)}"><media:image image="{asset}" width="255" height="255" allowCropping="TRUE" allowUpScaling="TRUE" class="img-thumbnail" alt="" /></a>
+                            <a href="{media:uri.image(image: asset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}"><media:image image="{asset}" width="{thumbImageWidth}" height="{thumbImageHeight}" allowCropping="TRUE" allowUpScaling="TRUE" class="img-thumbnail" alt="" /></a>
                         </f:then>
                         <f:else>
-                            <media:image image="{asset}" width="255" height="255" allowCropping="TRUE" allowUpScaling="TRUE" class="img-thumbnail" alt="" />
+                            <media:image image="{asset}" width="{thumbImageWidth}" height="{thumbImageHeight}" allowCropping="TRUE" allowUpScaling="TRUE" class="img-thumbnail" alt="" />
                         </f:else>
                     </f:if>
                 </div>

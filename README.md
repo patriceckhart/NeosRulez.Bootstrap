@@ -45,6 +45,10 @@ NeosRulez:
     headerLogoPath: 'Images/Logo.png'
     headerLogoPackage: 'Your.Site'
     headerLogoAltText: 'YourAwesomeSite'
+    magnificPopupWidth: '800'
+    magnificPopupHeight: '600'
+    thumbImageWidth: '255'
+    thumbImageHeight: '255'
 ```
 
 ## Use Neos.Form or Neos.Form.Builder

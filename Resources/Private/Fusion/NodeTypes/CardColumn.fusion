@@ -5,4 +5,3 @@ prototype(Site:CardColumn) {
         attributes.class.@process.collectionClass >
     }
 }
-

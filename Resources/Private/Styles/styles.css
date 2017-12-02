@@ -7643,12 +7643,6 @@ header, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, main, 
   float: left;
   width: 100%; }
 
-.m-left {
-  margin-left: 1rem; }
-
-.m-right {
-  margin-right: 1rem; }
-
 .form-navigation {
   margin-top: 1rem; }
 
@@ -7671,6 +7665,9 @@ header, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, main, 
   margin-bottom: 15px; }
 
 .neosrulez-bootstrap-gallery a {
+  outline: 0; }
+
+.singlelightbox a {
   outline: 0; }
 
 .topLink {
@@ -7745,6 +7742,13 @@ header, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, main, 
 
 .neosrulez-bootstrap-imagewithcontent .contentitems {
   padding: 5rem; }
+
+.neos-nodetypes-textwithimage {
+  float: left;
+  width: 100%; }
+
+.neos-nodetypes-textwithimage p {
+  -webkit-margin-before: -1.2em; }
 
 @media only screen and (max-width: 1200px) {
   .neosrulez-bootstrap-imagewithcontent .contentitems {

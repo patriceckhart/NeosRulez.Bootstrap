@@ -53,6 +53,24 @@ $(function() {
             tError: errorloadingtext,
         }
     });
+    $('.singlelightbox').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: loadingtext,
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: false,
+            navigateByImgClick: true,
+            preload: [0,1],
+            tPrev: prev,
+            tNext: next,
+            tCounter: counter,
+            tClose: close
+        },
+        image: {
+            tError: errorloadingtext,
+        }
+    });
 });
 $('.topLink').click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
