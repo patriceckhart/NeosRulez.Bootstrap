@@ -31,4 +31,3 @@
         nodeTypes:
           '*': FALSE
           'NeosRulez.Bootstrap:Container': TRUE
-          'NeosRulez.Bootstrap:ImageWithContent': TRUE

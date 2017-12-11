@@ -8,7 +8,6 @@
         nodeTypes:
           'NeosRulez.Bootstrap:CarouselItem': FALSE
           'NeosRulez.Bootstrap:AccordionItem': FALSE
-          'NeosRulez.Bootstrap:ImageWithContent': FALSE
           'Neos.NodeTypes:AssetList': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE

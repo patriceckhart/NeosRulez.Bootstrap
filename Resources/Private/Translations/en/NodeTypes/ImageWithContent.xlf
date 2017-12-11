@@ -3,7 +3,7 @@
 	<file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
 		<body>
 			<trans-unit id="ui.label" xml:space="preserve">
-				<source>Image with content</source>
+				<source>Content with Image</source>
 			</trans-unit>
             <trans-unit id="properties.backgroundColor" xml:space="preserve">
 				<source>Backgroundcolor</source>
