@@ -1,7 +1,7 @@
 NeosRulez:
   Bootstrap:
     headerLogoPath: 'Images/Logo.png'
-    headerLogoPackage: 'Default.Site'
+    headerLogoPackage: 'Raw.Site'
     headerLogoAltText: 'Default'
     magnificPopupWidth: '800'
     magnificPopupHeight: '600'
