@@ -63,7 +63,7 @@ Neos:
               partialPathPattern: 'resource://NeosRulez.Bootstrap/Private/Templates/Form/Partials/{@type}.html'
               layoutPathPattern: 'resource://NeosRulez.Bootstrap/Private/Templates/Form/Layouts/{@type}.html'
               skipUnknownElements: false
-              translationPackage: NeosRulez.Bootstrap
+              translationPackage: Neos.Form
               validationErrorTranslationPackage: Neos.Flow
           'Neos.Form:Form':
             superTypes:

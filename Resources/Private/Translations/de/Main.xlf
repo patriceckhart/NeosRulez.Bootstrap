@@ -35,6 +35,9 @@
             <trans-unit id="filesize" xml:space="preserve">
 				<source>Dateigröße</source>
 			</trans-unit>
+            <trans-unit id="submitlabel" xml:space="preserve">
+				<source>Senden</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
