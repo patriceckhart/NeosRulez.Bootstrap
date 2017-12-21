@@ -11,6 +11,7 @@
           'Neos.NodeTypes:AssetList': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes:Column': FALSE
   ui:
     label: i18n
     group: 'bootstrapnodetypes'

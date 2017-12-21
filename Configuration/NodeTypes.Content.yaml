@@ -9,7 +9,7 @@
     class:
       type: string
       ui:
-        label: NeosRulez.Bootstrap:class
+        label: NeosRulez.Bootstrap:Main:class
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'

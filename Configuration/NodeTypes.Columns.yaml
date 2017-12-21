@@ -16,6 +16,7 @@
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
+          'Neos.NodeTypes:Column': FALSE
     column1:
       constraints:
         nodeTypes:
@@ -30,6 +31,7 @@
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
+          'Neos.NodeTypes:Column': FALSE
     column2:
       constraints:
         nodeTypes:
@@ -44,6 +46,7 @@
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
+          'Neos.NodeTypes:Column': FALSE
     column3:
       constraints:
         nodeTypes:
@@ -58,6 +61,7 @@
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
+          'Neos.NodeTypes:Column': FALSE
 'Neos.NodeTypes:TwoColumn':
   properties:
     'layout':
