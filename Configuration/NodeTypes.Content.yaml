@@ -13,7 +13,7 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
-    alignment:
+    valignment:
       defaultValue: ''
       type: string
       ui:

@@ -23,5 +23,5 @@
 <f:section name="imageRendering">
 	<media:image image="{image}" alt="{alternativeText}" title="{title}" width="{width}"
 				 maximumWidth="{maximumWidth}" height="{height}" maximumHeight="{maximumHeight}"
-				 allowUpScaling="{allowUpScaling}" allowCropping="{allowCropping}" class="figure-img img-fluid {f:if(condition: '{rounded}', then: 'rounded')}{f:if(condition: '{imageClassName}==typo3-neos-alignment-center', then: ' mx-auto d-block')}{f:if(condition: '{imageClassName}==typo3-neos-alignment-left', then: ' float-left mr-3 mb-3')}{f:if(condition: '{imageClassName}==typo3-neos-alignment-right', then: ' float-right ml-3 mb-3')}"/>
+				 allowUpScaling="{allowUpScaling}" allowCropping="{allowCropping}" class="figure-img img-fluid {f:if(condition: '{rounded}', then: 'rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}"/>
 </f:section>
