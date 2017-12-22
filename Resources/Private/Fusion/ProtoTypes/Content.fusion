@@ -1,3 +1,3 @@
 prototype(Neos.Neos:Content)  {
-    attributes.class.@process.class = ${value + (q(node).property('class') ? ' '+q(node).property('class') : '' )}
+    attributes.class.@process.class = ${value + (q(node).property('alignment') ? ' '+q(node).property('alignment') : '' ) + (q(node).property('mt') ? ' '+q(node).property('mt') : '' ) + (q(node).property('mb') ? ' '+q(node).property('mb') : '' ) + (q(node).property('ml') ? ' '+q(node).property('ml') : '' ) + (q(node).property('mr') ? ' '+q(node).property('mr') : '' ) + (q(node).property('class') ? ' '+q(node).property('class') : '' )}
 }

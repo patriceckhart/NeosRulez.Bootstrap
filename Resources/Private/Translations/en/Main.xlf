@@ -24,7 +24,7 @@
 				<source>Rounded corners</source>
 			</trans-unit>
             <trans-unit id="class" xml:space="preserve">
-				<source>CSS-Class</source>
+				<source>Own CSS-Class</source>
 			</trans-unit>
             <trans-unit id="extended" xml:space="preserve">
 				<source>Extended</source>
@@ -37,6 +37,30 @@
 			</trans-unit>
             <trans-unit id="submitlabel" xml:space="preserve">
 				<source>Submit</source>
+			</trans-unit>
+            <trans-unit id="alignment" xml:space="preserve">
+				<source>Vertical alignment</source>
+			</trans-unit>
+            <trans-unit id="alignmentstart" xml:space="preserve">
+				<source>Top</source>
+			</trans-unit>
+            <trans-unit id="alignmentcenter" xml:space="preserve">
+				<source>Center</source>
+			</trans-unit>
+            <trans-unit id="alignmentend" xml:space="preserve">
+				<source>Bottom</source>
+			</trans-unit>
+            <trans-unit id="mt" xml:space="preserve">
+				<source>Margin top</source>
+			</trans-unit>
+            <trans-unit id="mb" xml:space="preserve">
+				<source>Margin bottom</source>
+			</trans-unit>
+            <trans-unit id="ml" xml:space="preserve">
+				<source>Margin left</source>
+			</trans-unit>
+            <trans-unit id="mr" xml:space="preserve">
+				<source>Margin right</source>
 			</trans-unit>
 		</body>
 	</file>

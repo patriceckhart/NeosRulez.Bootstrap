@@ -24,7 +24,7 @@
 				<source>Abgerundete Ecken</source>
 			</trans-unit>
             <trans-unit id="class" xml:space="preserve">
-				<source>CSS-Klasse</source>
+				<source>Eigene CSS-Klasse</source>
 			</trans-unit>
             <trans-unit id="extended" xml:space="preserve">
 				<source>Erweitert</source>
@@ -37,6 +37,30 @@
 			</trans-unit>
             <trans-unit id="submitlabel" xml:space="preserve">
 				<source>Senden</source>
+			</trans-unit>
+            <trans-unit id="alignment" xml:space="preserve">
+				<source>Vertikale Ausrichtung</source>
+			</trans-unit>
+            <trans-unit id="alignmentstart" xml:space="preserve">
+				<source>Oben</source>
+			</trans-unit>
+            <trans-unit id="alignmentcenter" xml:space="preserve">
+				<source>Mittig</source>
+			</trans-unit>
+            <trans-unit id="alignmentend" xml:space="preserve">
+				<source>Unten</source>
+			</trans-unit>
+            <trans-unit id="mt" xml:space="preserve">
+				<source>Abstand davor</source>
+			</trans-unit>
+            <trans-unit id="mb" xml:space="preserve">
+				<source>Abstand danach</source>
+			</trans-unit>
+            <trans-unit id="ml" xml:space="preserve">
+				<source>Abstand links</source>
+			</trans-unit>
+            <trans-unit id="mr" xml:space="preserve">
+				<source>Abstand rechts</source>
 			</trans-unit>
 		</body>
 	</file>

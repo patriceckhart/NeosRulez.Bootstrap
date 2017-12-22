@@ -1,4 +1,4 @@
-'Neos.NodeTypes:Column':
+'Neos.NodeTypes.ColumnLayouts:Column':
   superTypes:
     'Neos.Neos:Content': TRUE
   childNodes:
@@ -62,7 +62,7 @@
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
           'Neos.NodeTypes:Column': FALSE
-'Neos.NodeTypes:TwoColumn':
+'Neos.NodeTypes.ColumnLayouts:TwoColumn':
   properties:
     'layout':
       defaultValue: '6-6'
@@ -81,7 +81,7 @@
                 label: '66% / 33%'
               '4-8':
                 label: '33% / 66%'
-'Neos.NodeTypes:ThreeColumn':
+'Neos.NodeTypes.ColumnLayouts:ThreeColumn':
   properties:
     'layout':
       defaultValue: '4-4-4'
@@ -101,7 +101,7 @@
                 label: '25% / 50% / 25%'
               '3-3-6':
                 label: '25% / 25% / 50%'
-'Neos.NodeTypes:FourColumn':
+'Neos.NodeTypes.ColumnLayouts:FourColumn':
   properties:
     'layout':
       defaultValue: '3-3-3-3'

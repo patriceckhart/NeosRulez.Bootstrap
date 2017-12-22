@@ -13,3 +13,114 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
+    alignment:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:alignment
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'align-items-start':
+                label: NeosRulez.Bootstrap:Main:alignmentstart
+              'align-items-center':
+                label: NeosRulez.Bootstrap:Main:alignmentcenter
+              'align-items-end':
+                label: NeosRulez.Bootstrap:Main:alignmentend
+    mt:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:mt
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'mt-1':
+                label: '0.25'
+              'mt-2':
+                label: '0.5'
+              'mt-3':
+                label: '1'
+              'mt-4':
+                label: '1.5'
+              'mt-5':
+                label: '3'
+    mb:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:mb
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'mb-1':
+                label: '0.25'
+              'mb-2':
+                label: '0.5'
+              'mb-3':
+                label: '1'
+              'mb-4':
+                label: '1.5'
+              'mb-5':
+                label: '3'
+    ml:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:ml
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'ml-1':
+                label: '0.25'
+              'ml-2':
+                label: '0.5'
+              'ml-3':
+                label: '1'
+              'ml-4':
+                label: '1.5'
+              'ml-5':
+                label: '3'
+    mr:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:mr
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'mr-1':
+                label: '0.25'
+              'mr-2':
+                label: '0.5'
+              'mr-3':
+                label: '1'
+              'mr-4':
+                label: '1.5'
+              'mr-5':
+                label: '3'

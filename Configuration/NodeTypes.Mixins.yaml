@@ -31,3 +31,30 @@
         inspector:
           group: 'image'
           position: 500
+'Neos.NodeTypes:TitleMixin':
+  properties:
+    title:
+      ui:
+        aloha:
+          'format':
+            'h4': TRUE
+            'h5': TRUE
+            'h6': TRUE
+            'left': TRUE
+            'right': TRUE
+            'center': TRUE
+'Neos.NodeTypes:TextMixin':
+  properties:
+    text:
+      ui:
+        aloha:
+          'format':
+            'u': TRUE
+            'sub': TRUE
+            'sup': TRUE
+            'h4': TRUE
+            'h5': TRUE
+            'h6': TRUE
+            'left': TRUE
+            'right': TRUE
+            'center': TRUE
