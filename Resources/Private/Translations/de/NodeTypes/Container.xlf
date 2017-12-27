@@ -6,7 +6,7 @@
 				<source>Container</source>
 			</trans-unit>
             <trans-unit id="properties.backgroundColor" xml:space="preserve">
-				<source>Hintergrundfarbe</source>
+				<source>Hintergrundfarbe (HEX-Wert: #000)</source>
 			</trans-unit>
             <trans-unit id="properties.backgroundImage" xml:space="preserve">
 				<source>Hintergrundbild</source>
