@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ec3593f5-90bb-44fe-8256-26111df31da1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" afterPath="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Styles/_bootstrap.scss" afterPath="$PROJECT_DIR$/Resources/Private/Styles/_bootstrap.scss" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Styles/styles.css" afterPath="$PROJECT_DIR$/Resources/Private/Styles/styles.css" />
-      <change beforePath="$PROJECT_DIR$/Resources/Private/Styles/styles.css.map" afterPath="$PROJECT_DIR$/Resources/Private/Styles/styles.css.map" />
-      <change beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" afterPath="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" />
-      <change beforePath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" afterPath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
+      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
     </list>
     <manually-removed-from-ignored>
       <directory path=".idea/" />
@@ -113,7 +107,6 @@
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ImageWithContent.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ImageWithContent.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/Partials/Form/Navigation.html" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="&lt;9ed936d1-89e1-45d8-83b9-6c74613ce306&gt;/data/releases/current/Packages/Sites/Raw.Site/composer.json" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
@@ -130,6 +123,7 @@
         <option value="&lt;9ed936d1-89e1-45d8-83b9-6c74613ce306&gt;/data/releases/current/Packages/Sites/Raw.Site/Resources/Private/Templates/Page/Default.html" />
         <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
         <option value="&lt;9ed936d1-89e1-45d8-83b9-6c74613ce306&gt;/data/releases/current/Packages/Sites/Raw.Site/Resources/Private/Fusion/Root.fusion" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -387,12 +381,12 @@
       <workItem from="1515234979890" duration="201000" />
       <workItem from="1516373153055" duration="150000" />
       <workItem from="1516373332246" duration="876000" />
-      <workItem from="1516375303683" duration="185000" />
+      <workItem from="1516375303683" duration="386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92712000" />
+    <option name="totallyTimeSpent" value="92913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="969" extended-state="0" />
@@ -403,8 +397,8 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32772437" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18333334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19642857" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18333334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19642857" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -483,13 +477,6 @@
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/Form.xlf" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Form/Partials/Form/Navigation.html" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/Form.xlf" />
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Accordion.fusion">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -742,6 +729,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
           <folding />
         </state>
       </provider>

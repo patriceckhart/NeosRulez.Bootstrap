@@ -1,6 +1,6 @@
 {
     "description": "A basic package to start building awesome Neos CMS websites based on Bootstrap v4",
-    "license": "GPL-3.0+",
+    "license": "GPL-3.0-or-later",
     "type": "neos-plugin",
     "name": "neosrulez/bootstrap",
     "authors": [
