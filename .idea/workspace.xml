@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3593f5-90bb-44fe-8256-26111df31da1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Container.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Container.xlf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Container.xlf" afterPath="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Container.xlf" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" afterPath="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" />
+      <change beforePath="$PROJECT_DIR$/Resources/Private/Styles/_bootstrap.scss" afterPath="$PROJECT_DIR$/Resources/Private/Styles/_bootstrap.scss" />
+      <change beforePath="$PROJECT_DIR$/Resources/Private/Styles/styles.css" afterPath="$PROJECT_DIR$/Resources/Private/Styles/styles.css" />
+      <change beforePath="$PROJECT_DIR$/Resources/Private/Styles/styles.css.map" afterPath="$PROJECT_DIR$/Resources/Private/Styles/styles.css.map" />
+      <change beforePath="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" afterPath="$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js" />
+      <change beforePath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" afterPath="$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
     </list>
     <manually-removed-from-ignored>
       <directory path=".idea/" />
@@ -18,7 +23,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -74,9 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/SingleSelectRadiobuttons.html" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/Checkbox.html" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/MultipleSelectCheckboxes.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/Layouts/Field.html" />
         <option value="$PROJECT_DIR$/Resources/Public/Styles/overwrite.css" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/DatePicker.html" />
@@ -105,14 +107,12 @@
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Gallery.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Gallery.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Image.fusion" />
-        <option value="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Partials/Image.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Styles/_overwrite.scss" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.Page.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/ImageWithContent.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/ImageWithContent.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Form/Partials/Form/Navigation.html" />
-        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="&lt;9ed936d1-89e1-45d8-83b9-6c74613ce306&gt;/data/releases/current/Packages/Sites/Raw.Site/composer.json" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
@@ -125,6 +125,11 @@
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.Mixins.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Container.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Container.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Styles/_bootstrap.scss" />
+        <option value="$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" />
+        <option value="&lt;9ed936d1-89e1-45d8-83b9-6c74613ce306&gt;/data/releases/current/Packages/Sites/Raw.Site/Resources/Private/Templates/Page/Default.html" />
+        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
+        <option value="&lt;9ed936d1-89e1-45d8-83b9-6c74613ce306&gt;/data/releases/current/Packages/Sites/Raw.Site/Resources/Private/Fusion/Root.fusion" />
       </list>
     </option>
   </component>
@@ -155,17 +160,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="NeosRulez.Bootstrap" type="cbb8eebc:String" user="NeosRulez.Bootstrap" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,7 +211,14 @@
               <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="JavaScript" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Styles" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
@@ -225,57 +226,6 @@
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="NodeTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="NodeTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Partials" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="de" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="NodeTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="en" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Translations" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="en" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="NodeTypes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
@@ -283,11 +233,36 @@
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="JavaScript" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NeosRulez.Bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NeosRulez.Bootstrap" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Styles" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="NeosRulez.Bootstrap" type="cbb8eebc:String" user="NeosRulez.Bootstrap" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,6 +307,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -406,24 +384,30 @@
       <workItem from="1513926758559" duration="612000" />
       <workItem from="1513960187623" duration="1192000" />
       <workItem from="1514114062649" duration="1000" />
+      <workItem from="1515234979890" duration="201000" />
+      <workItem from="1516373153055" duration="150000" />
+      <workItem from="1516373332246" duration="876000" />
+      <workItem from="1516375303683" duration="185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91300000" />
+    <option name="totallyTimeSpent" value="92712000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="969" extended-state="0" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1838761" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19642857" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11148272" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32772437" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18333334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19642857" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -433,7 +417,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11148272" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -474,32 +457,8 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/ProtoTypes/Page.fusion" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Downloads.fusion" />
-    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Gallery.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="510">
-            <caret line="49" column="4" lean-forward="false" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/AccordionItem.fusion" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Carousel.fusion" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/YouTube.fusion" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/TextWithImage.fusion" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MultiColumnItem.fusion" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MultiColumn.fusion" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Gallery.fusion" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/FusionObjects/Gallery.html" />
     <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/styles.min.css" />
@@ -511,7 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/_overwrite.scss" />
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Headline.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -525,13 +483,6 @@
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/Form.xlf" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Form/Partials/Form/Navigation.html" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/Form.xlf" />
-    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -711,6 +662,87 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="37" lean-forward="true" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Carousel.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Carousel.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/_bootstrap.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="820">
+          <caret line="8974" column="41" lean-forward="false" selection-start-line="8974" selection-start-column="41" selection-end-line="8974" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/_overwrite.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Styles/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/JavaScript/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/scripts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.Card.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
