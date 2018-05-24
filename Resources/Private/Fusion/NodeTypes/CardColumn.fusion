@@ -1,7 +1,7 @@
 prototype(Site:CardColumn) {
+    attributes.class.@process.class = ${value + (q(node).property('columntype') ? ' '+q(node).property('columntype') : '' )}
     cardColumn = ContentCollection {
         nodePath = 'cardColumn'
-        attributes.class = 'card-columns'
-        attributes.class.@process.collectionClass >
+        #attributes.class.@process.collectionClass >
     }
 }

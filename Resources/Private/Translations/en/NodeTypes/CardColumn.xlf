@@ -5,6 +5,18 @@
 			<trans-unit id="ui.label" xml:space="preserve">
 				<source>Card Container</source>
 			</trans-unit>
+			<trans-unit id="properties.columntype" xml:space="preserve">
+				<source>Columntype</source>
+			</trans-unit>
+			<trans-unit id="properties.columntype.selectBoxEditor.values.card-deck" xml:space="preserve">
+				<source>Card Deck</source>
+			</trans-unit>
+			<trans-unit id="properties.columntype.selectBoxEditor.values.card-columns" xml:space="preserve">
+				<source>Card Columns</source>
+			</trans-unit>
+			<trans-unit id="properties.columntype.selectBoxEditor.values.card-group" xml:space="preserve">
+				<source>Card Group</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

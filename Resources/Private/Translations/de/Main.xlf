@@ -41,6 +41,9 @@
             <trans-unit id="alignment" xml:space="preserve">
 				<source>Vertikale Ausrichtung</source>
 			</trans-unit>
+			<trans-unit id="alignmentdefault" xml:space="preserve">
+				<source>Standard</source>
+			</trans-unit>
             <trans-unit id="alignmentstart" xml:space="preserve">
 				<source>Oben</source>
 			</trans-unit>
@@ -61,6 +64,12 @@
 			</trans-unit>
             <trans-unit id="mr" xml:space="preserve">
 				<source>Abstand rechts</source>
+			</trans-unit>
+			<trans-unit id="animation" xml:space="preserve">
+				<source>Animation</source>
+			</trans-unit>
+			<trans-unit id="delay" xml:space="preserve">
+				<source>Verzögerung der Animation (in Sekunden)</source>
 			</trans-unit>
 		</body>
 	</file>

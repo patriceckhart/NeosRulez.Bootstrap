@@ -13,6 +13,204 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
+    animation:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:animation
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'bounce':
+                label: 'bounce'
+              'shake':
+                label: 'shake'
+              'wobble':
+                label: 'wobble'
+              'bounceInLeft':
+                label: 'bounceInLeft'
+              'bounceOutDown':
+                label: 'bounceOutDown'
+              'fadeIn':
+                label: 'fadeIn'
+              'fadeInLeftBig':
+                label: 'fadeInLeftBig'
+              'fadeInUpBig':
+                label: 'fadeInUpBig'
+              'fadeOutLeft':
+                label: 'fadeOutLeft'
+              'fadeOutUp':
+                label: 'fadeOutUp'
+              'flipOutX':
+                label: 'flipOutX'
+              'rotateIn':
+                label: 'rotateIn'
+              'rotateInUpRight':
+                label: 'rotateInUpRight'
+              'rotateOutUpLeft':
+                label: 'rotateOutUpLeft'
+              'rollIn':
+                label: 'rollIn'
+              'zoomInLeft':
+                label: 'zoomInLeft'
+              'zoomOutDown':
+                label: 'zoomOutDown'
+              'slideInDown':
+                label: 'slideInDown'
+              'slideOutDown':
+                label: 'slideOutDown'
+              'flash':
+                label: 'flash'
+              'headShake':
+                label: 'headShake'
+              'jello':
+                label: 'jello'
+              'bounceInRight':
+                label: 'bounceInRight'
+              'bounceOutLeft':
+                label: 'bounceOutLeft'
+              'fadeInDown':
+                label: 'fadeInDown'
+              'fadeInRight':
+                label: 'fadeInRight'
+              'fadeOut':
+                label: 'fadeOut'
+              'fadeOutLeftBig':
+                label: 'fadeOutLeftBig'
+              'fadeOutUpBig':
+                label: 'fadeOutUpBig'
+              'flipOutY':
+                label: 'flipOutY'
+              'rotateInDownLeft':
+                label: 'rotateInDownLeft'
+              'rotateOut':
+                label: 'rotateOut'
+              'rotateOutUpRight':
+                label: 'rotateOutUpRight'
+              'rollOut':
+                label: 'rollOut'
+              'zoomInRight':
+                label: 'zoomInRight'
+              'zoomOutLeft':
+                label: 'zoomOutLeft'
+              'slideInLeft':
+                label: 'slideInLeft'
+              'slideOutLeft':
+                label: 'slideOutLeft'
+              'pulse':
+                label: 'pulse'
+              'swing':
+                label: 'swing'
+              'bounceIn':
+                label: 'bounceIn'
+              'bounceInUp':
+                label: 'bounceInUp'
+              'bounceOutRight':
+                label: 'bounceOutRight'
+              'fadeInDownBig':
+                label: 'fadeInDownBig'
+              'fadeInRightBig':
+                label: 'fadeInRightBig'
+              'fadeOutDown':
+                label: 'fadeOutDown'
+              'fadeOutRight':
+                label: 'fadeOutRight'
+              'flipInX':
+                label: 'flipInX'
+              'lightSpeedIn':
+                label: 'lightSpeedIn'
+              'rotateInDownRight':
+                label: 'rotateInDownRight'
+              'rotateOutDownLeft':
+                label: 'rotateOutDownLeft'
+              'hinge':
+                label: 'hinge'
+              'zoomIn':
+                label: 'zoomIn'
+              'zoomInUp':
+                label: 'zoomInUp'
+              'zoomOutRight':
+                label: 'zoomOutRight'
+              'slideInRight':
+                label: 'slideInRight'
+              'slideOutRight':
+                label: 'slideOutRight'
+              'rubberBand':
+                label: 'rubberBand'
+              'tada':
+                label: 'tada'
+              'bounceInDown':
+                label: 'bounceInDown'
+              'bounceOut':
+                label: 'bounceOut'
+              'bounceOutUp':
+                label: 'bounceOutUp'
+              'fadeInLeft':
+                label: 'fadeInLeft'
+              'fadeInUp':
+                label: 'fadeInUp'
+              'fadeOutDownBig':
+                label: 'fadeOutDownBig'
+              'fadeOutRightBig':
+                label: 'fadeOutRightBig'
+              'flipInY':
+                label: 'flipInY'
+              'lightSpeedOut':
+                label: 'lightSpeedOut'
+              'rotateInUpLeft':
+                label: 'rotateInUpLeft'
+              'rotateOutDownRight':
+                label: 'rotateOutDownRight'
+              'jackInTheBox':
+                label: 'jackInTheBox'
+              'zoomInDown':
+                label: 'zoomInDown'
+              'zoomOut':
+                label: 'zoomOut'
+              'zoomOutUp':
+                label: 'zoomOutUp'
+              'slideInUp':
+                label: 'slideInUp'
+              'slideOutUp':
+                label: 'slideOutUp'
+    delay:
+      defaultValue: '0'
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:delay
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '0':
+                label: '0.0'
+              '0.5':
+                label: '0.5'
+              '1':
+                label: '1.0'
+              '1.5':
+                label: '1.5'
+              '2':
+                label: '2.0'
+              '2.5':
+                label: '2.5'
+              '3':
+                label: '3.0'
+              '3.5':
+                label: '3.5'
+              '4':
+                label: '4.0'
+              '4.5':
+                label: '4.5'
+              '5':
+                label: '5.0'
     valignment:
       defaultValue: ''
       type: string
@@ -25,7 +223,7 @@
           editorOptions:
             values:
               '':
-                label: ''
+                label: NeosRulez.Bootstrap:Main:alignmentdefault
               'align-items-start':
                 label: NeosRulez.Bootstrap:Main:alignmentstart
               'align-items-center':
