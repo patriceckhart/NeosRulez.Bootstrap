@@ -1,7 +1,7 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 {namespace fusion=Neos\Fusion\ViewHelpers}
 {namespace media=Neos\Media\ViewHelpers}
-<div{attributes -> f:format.raw()}<f:if condition="{backgroundImage}"><f:then> style="background:url({media:uri.image(image: backgroundImage)}) no-repeat {backgroundColor} {backgroundPosition}; -webkit-background-size: {backgroundSize}; -moz-background-size: {backgroundSize}; -o-background-size: {backgroundSize}; background-size: {backgroundSize};"</f:then><f:else>{f:if(condition: '{backgroundColor}', then: ' style="background-color:{backgroundColor};"')}</f:else></f:if>>
+<div{attributes -> f:format.raw()}<f:if condition="{backgroundImage}"><f:then> style="background:url({media:uri.image(image: backgroundImage, maximumWidth: 2000)}) no-repeat {backgroundColor} {backgroundPosition}; -webkit-background-size: {backgroundSize}; -moz-background-size: {backgroundSize}; -o-background-size: {backgroundSize}; background-size: {backgroundSize};"</f:then><f:else>{f:if(condition: '{backgroundColor}', then: ' style="background-color:{backgroundColor};"')}</f:else></f:if>>
     <div class="{f:if(condition: '{fluid}', then: 'container-fluid', else: 'container')}{f:if(condition: '{padding}', then: ' padding')}{f:if(condition: '{textWhite}', then: ' text-white')}">
         <div class="row{f:if(condition: '{fluid}', then: '', else: ' ml-3 mr-3')}"><div class="w-100">{contentItems -> f:format.raw()}</div></div>
     </div>

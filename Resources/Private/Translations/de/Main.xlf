@@ -23,6 +23,9 @@
 			<trans-unit id="rounded" xml:space="preserve">
 				<source>Abgerundete Ecken</source>
 			</trans-unit>
+			<trans-unit id="lightbox" xml:space="preserve">
+				<source>Vergrößerung</source>
+			</trans-unit>
             <trans-unit id="class" xml:space="preserve">
 				<source>Eigene CSS-Klasse</source>
 			</trans-unit>

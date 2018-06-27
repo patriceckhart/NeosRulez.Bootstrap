@@ -31,6 +31,15 @@
         inspector:
           group: 'image'
           position: 500
+    lightbox:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: NeosRulez.Bootstrap:Main:lightbox
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'image'
+          position: 600
 'Neos.NodeTypes:TitleMixin':
   properties:
     title:
