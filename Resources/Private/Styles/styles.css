@@ -10623,9 +10623,20 @@ header, hr, html, i, iframe, img, input, ins, kbd, keygen, label, legend, main, 
 .os-animation.animated {
   opacity: 1; }
 
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%; }
+
 @media only screen and (max-width: 1200px) {
   .neosrulez-bootstrap-imagewithcontent .contentitems {
     padding: 3rem; } }
+@media only screen and (max-width: 1024px) {
+  .parallax {
+    background-attachment: scroll; } }
 @media only screen and (max-width: 575px) {
   #cookie-bar .btn {
     width: 100%;

@@ -1,15 +1,16 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 {namespace media=Neos\Media\ViewHelpers}
+<f:if condition="{lightbox}"><div class="lightbox"></f:if>
 <f:if condition="{image}">
 	<f:then>
 		<f:if condition="{link}">
 			<f:then>
 				<a href="{link}">
-					<f:render section="imageRendering" arguments="{_all}" />
+					<f:render section="lightboxRendering" arguments="{_all}" />
 				</a>
 			</f:then>
 			<f:else>
-				<f:render section="imageRendering" arguments="{_all}" />
+				<f:render section="lightboxRendering" arguments="{_all}" />
 			</f:else>
 		</f:if>
 	</f:then>
@@ -19,6 +20,19 @@
 		</f:if>
 	</f:else>
 </f:if>
+<f:if condition="{lightbox}"></div></f:if>
+<f:section name="lightboxRendering">
+	<f:if condition="{lightbox}">
+		<f:then>
+			<a href="{media:uri.image(image: image, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}">
+				<f:render section="imageRendering" arguments="{_all}" />
+			</a>
+		</f:then>
+		<f:else>
+			<f:render section="imageRendering" arguments="{_all}" />
+		</f:else>
+	</f:if>
+</f:section>
 
 <f:section name="imageRendering">
 	<media:image image="{image}" alt="{alternativeText}" title="{title}" width="{width}"

@@ -62,6 +62,9 @@
             <trans-unit id="properties.backgroundPosition.selectBoxEditor.values.right center" xml:space="preserve">
                 <source>rechts mittig</source>
             </trans-unit>
+            <trans-unit id="properties.parallax" xml:space="preserve">
+				<source>Parallax Effekt</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
