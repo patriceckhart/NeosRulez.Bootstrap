@@ -114,8 +114,8 @@ function onScrollInit( items, trigger ) {
         });
     });
 }
-
 onScrollInit( $('.os-animation') );
+
 onScrollInit( $('.staggered-animation'), $('.staggered-animation-container') );
 
 function isInViewport(node) {
@@ -125,7 +125,7 @@ function isInViewport(node) {
         rect.bottom >= 0 &&
         rect.right >= 0 &&
         rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.left <= (window.innerWidth || document.documentElement.clientWidth);
+        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
     )
 }
 
@@ -142,7 +142,6 @@ $(document).ready(function(){
             var initY = $(this).offset().top;
             var height = $(this).height();
             var endY  = initY + $(this).height();
-
             var visible = isInViewport(this);
             if(visible) {
                 var diff = scrolled - initY;
