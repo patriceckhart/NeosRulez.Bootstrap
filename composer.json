@@ -13,8 +13,7 @@
     ],
     "require": {
         "neos/neos": "*",
-        "neos/nodetypes": "*",
-        "neosrulez/cookieconsent": "*"
+        "neos/nodetypes": "*"
     },
     "autoload": {
         "psr-4": {
