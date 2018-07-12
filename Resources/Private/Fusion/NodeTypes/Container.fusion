@@ -1,4 +1,4 @@
-prototype(Site:Container) {
+prototype(Bootstrap:Container) {
     contentItems = ContentCollection {
         nodePath = 'contentItems'
     }

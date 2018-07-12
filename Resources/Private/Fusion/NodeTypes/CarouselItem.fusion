@@ -1,4 +1,4 @@
-prototype(Site:CarouselItem) < prototype(Content) {
+prototype(Bootstrap:CarouselItem) < prototype(Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/CarouselItem.html'
     attributes.class >
     attributes.class = ${'carousel-item' + (carouselItemsIteration.isFirst ? ' active' : '')}

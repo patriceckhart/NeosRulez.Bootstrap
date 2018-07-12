@@ -1,4 +1,4 @@
-prototype(Site:CardColumn) {
+prototype(Bootstrap:CardColumn) {
     attributes.class.@process.class = ${value + (q(node).property('columntype') ? ' '+q(node).property('columntype') : '' )}
     cardColumn = ContentCollection {
         nodePath = 'cardColumn'

@@ -1,4 +1,4 @@
-prototype(Site:AccordionItem) < prototype(Content) {
+prototype(Bootstrap:AccordionItem) < prototype(Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/AccordionItem.html'
     accordionItems = ContentCollection {
         nodePath = 'accordionItems'
