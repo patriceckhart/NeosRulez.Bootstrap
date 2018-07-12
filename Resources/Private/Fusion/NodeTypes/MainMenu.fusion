@@ -1,4 +1,4 @@
-prototype(Bootstrap:MainMenu) < prototype(Menu) {
+prototype(Bootstrap:MainMenu) < prototype(Neos.Neos:Menu) {
     entryLevel = 1
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/MainMenu.html'
     maximumLevels = 3
