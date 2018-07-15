@@ -1,5 +1,5 @@
-prototype(Bootstrap:Accordion) {
-    accordionItems = ContentCollection {
+prototype(NeosRulez.Bootstrap:Accordion) {
+    accordionItems = Neos.Neos:ContentCollection {
         nodePath = 'accordionItems'
         attributes.class = 'accordion'
     }

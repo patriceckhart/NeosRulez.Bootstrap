@@ -1,4 +1,4 @@
-prototype(Bootstrap:Gallery) < prototype(Content) {
+prototype(NeosRulez.Bootstrap:Gallery) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/Gallery.html'
     magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
     magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}

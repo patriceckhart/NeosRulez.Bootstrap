@@ -1,5 +1,5 @@
-prototype(Bootstrap:Container) {
-    contentItems = ContentCollection {
+prototype(NeosRulez.Bootstrap:Container) {
+    contentItems = Neos.Neos:ContentCollection {
         nodePath = 'contentItems'
     }
 }

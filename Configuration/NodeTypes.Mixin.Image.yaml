@@ -7,6 +7,7 @@
           label: i18n
           position: 5
           icon: 'icon-image'
+
   properties:
     image:
       type: Neos\Media\Domain\Model\ImageInterface

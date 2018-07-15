@@ -1,4 +1,4 @@
-prototype(Bootstrap:YouTube) < prototype(Content) {
+prototype(NeosRulez.Bootstrap:YouTube) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/YouTube.html'
     attributes.class = 'embed-responsive embed-responsive-16by9'
 }

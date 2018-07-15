@@ -1,6 +1,6 @@
-prototype(Bootstrap:CardColumn) {
+prototype(NeosRulez.Bootstrap:CardColumn) {
     attributes.class.@process.class = ${value + (q(node).property('columntype') ? ' '+q(node).property('columntype') : '' )}
-    cardColumn = ContentCollection {
+    cardColumn = Neos.Neos:ContentCollection {
         nodePath = 'cardColumn'
         #attributes.class.@process.collectionClass >
     }

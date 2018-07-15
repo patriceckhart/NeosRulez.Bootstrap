@@ -1,5 +1,5 @@
-prototype(Bootstrap:Carousel) {
-    carouselItems = ContentCollection {
+prototype(NeosRulez.Bootstrap:Carousel) {
+    carouselItems = Neos.Neos:ContentCollection {
         nodePath = 'carouselItems'
         content.iterationName = 'carouselItemsIteration'
         attributes.class = 'carousel-inner'

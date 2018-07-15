@@ -1,5 +1,5 @@
-prototype(Bootstrap:ImageWithContent) {
-    contentItems = ContentCollection {
+prototype(NeosRulez.Bootstrap:ImageWithContent) {
+    contentItems = Neos.Neos:ContentCollection {
         nodePath = 'contentItems'
     }
     attributes.class = 'container-fluid'

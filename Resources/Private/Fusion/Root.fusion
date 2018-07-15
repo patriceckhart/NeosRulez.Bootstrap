@@ -1,3 +1,2 @@
-namespace: Bootstrap=NeosRulez.Bootstrap
 include: ProtoTypes/*
 include: NodeTypes/*

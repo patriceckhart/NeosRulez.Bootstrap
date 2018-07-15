@@ -1,5 +1,5 @@
-prototype(Bootstrap:Card) {
-    cardBody = ContentCollection {
+prototype(NeosRulez.Bootstrap:Card) {
+    cardBody = Neos.Neos:ContentCollection {
         nodePath = 'cardBody'
         attributes.class = 'card-body'
         attributes.class.@process.collectionClass >

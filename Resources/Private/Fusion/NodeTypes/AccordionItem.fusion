@@ -1,6 +1,6 @@
-prototype(Bootstrap:AccordionItem) < prototype(Content) {
+prototype(NeosRulez.Bootstrap:AccordionItem) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/AccordionItem.html'
-    accordionItems = ContentCollection {
+    accordionItems = Neos.Neos:ContentCollection {
         nodePath = 'accordionItems'
     }
 }

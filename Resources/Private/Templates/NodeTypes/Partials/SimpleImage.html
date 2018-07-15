@@ -24,9 +24,16 @@
 <f:section name="lightboxRendering">
 	<f:if condition="{lightbox}">
 		<f:then>
-			<a href="{media:uri.image(image: image, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}">
-				<f:render section="imageRendering" arguments="{_all}" />
-			</a>
+			<f:if condition="{node.context.workspace.name} != 'live'">
+				<f:then>
+					<f:render section="imageRendering" arguments="{_all}" />
+				</f:then>
+				<f:else>
+					<a href="{media:uri.thumbnail(asset: image, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}">
+						<f:render section="imageRendering" arguments="{_all}" />
+					</a>
+				</f:else>
+			</f:if>
 		</f:then>
 		<f:else>
 			<f:render section="imageRendering" arguments="{_all}" />
