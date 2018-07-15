@@ -29,7 +29,7 @@
 					<f:render section="imageRendering" arguments="{_all}" />
 				</f:then>
 				<f:else>
-					<a href="{media:uri.thumbnail(asset: image, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}">
+					<a href="{media:uri.thumbnail(asset: image, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE, allowUpScaling:FALSE)}">
 						<f:render section="imageRendering" arguments="{_all}" />
 					</a>
 				</f:else>
@@ -42,7 +42,23 @@
 </f:section>
 
 <f:section name="imageRendering">
-	<media:image image="{image}" alt="{alternativeText}" title="{title}" width="{width}"
-				 maximumWidth="{maximumWidth}" height="{height}" maximumHeight="{maximumHeight}"
-				 allowUpScaling="{allowUpScaling}" allowCropping="{allowCropping}" class="figure-img img-fluid {f:if(condition: '{rounded}', then: 'rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}"/>
+	<noscript>
+		<media:thumbnail asset="{image}" preset="{presetLg}" alt="{alternativeText}" title="{title}"
+						 allowCropping="{allowCropping}" allowUpScaling="{allowUpScaling}" />
+	</noscript>
+	<img src="{media:uri.thumbnail(asset: image, preset: presetLg,
+        allowCropping: TRUE, allowUpScaling: FALSE)}"
+		 class="figure-img img-fluid {f:if(condition: '{rounded}', then: 'rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')} lazyload" title="{title}"  alt="{alternativeText}"
+		 srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+		 data-srcset="{media:uri.thumbnail(asset: image, preset: presetLg,
+          allowCropping: TRUE, allowUpScaling: FALSE)} 1200w,
+        {media:uri.thumbnail(asset: image, preset: presetSm,
+          allowCropping: TRUE, allowUpScaling: FALSE)} 940w,
+        {media:uri.thumbnail(asset: image, preset: presetXs,
+          allowCropping: TRUE, allowUpScaling: FALSE)} 720w,
+        {media:uri.thumbnail(asset: image, preset: presetXxs,
+          allowCropping: TRUE, allowUpScaling: FALSE)} 450w"
+		 data-sizes="auto"
+		 data-aspectratio="{image.width}/{image.height}"/>
+
 </f:section>

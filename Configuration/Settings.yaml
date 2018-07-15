@@ -21,7 +21,7 @@ Neos:
           'Neos\Media\Domain\Model\ImageInterface':
             editorOptions:
               features:
-                resize: TRUE
+                resize: FALSE
       navigateComponent:
         nodeTree:
           loadingDepth: 999
@@ -250,3 +250,17 @@ Neos:
             implementationClassName: Neos\Flow\Validation\Validator\RegularExpressionValidator
           'Neos.Flow:Count':
             implementationClassName: Neos\Flow\Validation\Validator\CountValidator
+  Media:
+    thumbnailPresets:
+      'NeosRulez.Bootstrap:presetLg':
+        maximumWidth: 1200
+        maximumHeight: 800
+      'NeosRulez.Bootstrap:presetSm':
+        maximumWidth: 940
+        maximumHeight: 627
+      'NeosRulez.Bootstrap:presetXs':
+        maximumWidth: 720
+        maximumHeight: 480
+      'NeosRulez.Bootstrap:presetXxs':
+        maximumWidth: 450
+        maximumHeight: 300
