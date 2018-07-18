@@ -31,7 +31,7 @@ You can use the Bootstrap Navbar. Just use **NeosRulez.Bootstrap:MainMenu** in y
 ```
 page.body {
     parts {
-        menu = Bootstrap:MainMenu
+        menu = NeosRulez.Bootstrap:MainMenu
     }
 ```
 
