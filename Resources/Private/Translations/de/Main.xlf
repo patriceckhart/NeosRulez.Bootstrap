@@ -74,6 +74,9 @@
 			<trans-unit id="delay" xml:space="preserve">
 				<source>Verzögerung der Animation (in Sekunden)</source>
 			</trans-unit>
+			<trans-unit id="nogutters" xml:space="preserve">
+				<source>Kein Spaltenabstand</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

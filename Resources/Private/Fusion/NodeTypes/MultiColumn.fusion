@@ -1,4 +1,4 @@
 prototype(Neos.NodeTypes:MultiColumn) {
-    attributes.class = 'row'
+    attributes.class.@process.class = ${'row' + (q(node).property('nogutters') ? ' ' + ' no-gutters' : '' )}
     columns.iterationName = 'multiColumnIteration'
 }

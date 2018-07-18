@@ -74,6 +74,9 @@
 			<trans-unit id="delay" xml:space="preserve">
 				<source>Delay of the animation (in seconds)</source>
 			</trans-unit>
+			<trans-unit id="nogutters" xml:space="preserve">
+				<source>No Gutters</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

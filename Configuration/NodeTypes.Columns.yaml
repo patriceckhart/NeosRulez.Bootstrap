@@ -11,7 +11,6 @@
           'NeosRulez.Bootstrap:CardColumn': FALSE
           'NeosRulez.Bootstrap:Container': FALSE
           'Neos.NodeTypes:AssetList': FALSE
-          'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
@@ -26,7 +25,6 @@
           'NeosRulez.Bootstrap:CardColumn': FALSE
           'NeosRulez.Bootstrap:Container': FALSE
           'Neos.NodeTypes:AssetList': FALSE
-          'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
@@ -41,7 +39,6 @@
           'NeosRulez.Bootstrap:CardColumn': FALSE
           'NeosRulez.Bootstrap:Container': FALSE
           'Neos.NodeTypes:AssetList': FALSE
-          'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
@@ -56,12 +53,20 @@
           'NeosRulez.Bootstrap:CardColumn': FALSE
           'NeosRulez.Bootstrap:Container': FALSE
           'Neos.NodeTypes:AssetList': FALSE
-          'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
           'Neos.NodeTypes:Column': FALSE
+  properties:
+    nogutters:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: NeosRulez.Bootstrap:Main:nogutters
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
 'Neos.NodeTypes.ColumnLayouts:TwoColumn':
   properties:
     'layout':
