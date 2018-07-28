@@ -1,0 +1,15 @@
+'Neos.NodeTypes.BaseMixins:TitleMixin':
+  abstract: true
+  properties:
+    title:
+      type: string
+      defaultValue: '<h1>Enter headline here</h1>'
+      ui:
+        inlineEditable: true
+        aloha:
+          'format':
+            'left': true
+            'center': true
+            'right': true
+          'link':
+            'a': true
