@@ -1,13 +1,13 @@
 <f:layout name="Neos.Form:Field" />
 <f:section name="field">
-	<div id="{element.uniqueIdentifier}">
+	<ul class="inputs-list" id="{element.uniqueIdentifier}">
 		<f:for each="{element.properties.options}" as="label" key="value">
-			<div class="form-check">
-				<label class="form-check-label">
-					<f:form.radio property="{element.identifier}" class="{element.properties.elementClassAttribute} form-check-input" value="{value}" errorClass="{element.properties.elementErrorClassAttribute}" />
+			<li>
+				<label>
+					<f:form.radio property="{element.identifier}" class="{element.properties.elementClassAttribute}" value="{value}" errorClass="{element.properties.elementErrorClassAttribute}" />
 					<span>{f:translate(id: 'forms.elements.{element.identifier}.options.{value}', package: '{element.renderingOptions.translationPackage}', value: label)}</span>
 				</label>
-			</div>
+			</li>
 		</f:for>
-	</div>
+	</ul>
 </f:section>

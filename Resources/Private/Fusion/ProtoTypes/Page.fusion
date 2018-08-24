@@ -24,7 +24,7 @@ prototype(Neos.Neos:Page) {
                 media = 'all'
                 rel = 'stylesheet'
                 href = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/Assets/font-awesome-5.0.13/css/fontawesome-all.min.css'
+                    path = 'resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-5.2.0-web/css/all.min.css'
                 }
             }
         }

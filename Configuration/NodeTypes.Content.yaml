@@ -211,25 +211,6 @@
                 label: '4.5'
               '5':
                 label: '5.0'
-    valignment:
-      defaultValue: ''
-      type: string
-      ui:
-        label: NeosRulez.Bootstrap:Main:alignment
-        reloadIfChanged: TRUE
-        inspector:
-          group: 'settings'
-          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
-          editorOptions:
-            values:
-              '':
-                label: NeosRulez.Bootstrap:Main:alignmentdefault
-              'align-items-start':
-                label: NeosRulez.Bootstrap:Main:alignmentstart
-              'align-items-center':
-                label: NeosRulez.Bootstrap:Main:alignmentcenter
-              'align-items-end':
-                label: NeosRulez.Bootstrap:Main:alignmentend
     mt:
       defaultValue: ''
       type: string

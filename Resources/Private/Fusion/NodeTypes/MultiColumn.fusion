@@ -1,4 +1,4 @@
 prototype(Neos.NodeTypes:MultiColumn) {
-    attributes.class.@process.class = ${'row' + (q(node).property('nogutters') ? ' ' + ' no-gutters' : '' )}
+    attributes.class.@process.class = ${'row' + (q(node).property('nogutters') ? ' ' + ' no-gutters' : '' ) + (q(node).property('valignment') ? ' ' + q(node).property('valignment') : '' )}
     columns.iterationName = 'multiColumnIteration'
 }
