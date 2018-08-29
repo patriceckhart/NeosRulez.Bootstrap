@@ -5,7 +5,7 @@
       <paths name="NeosRulez.Bootstrap">
         <serverdata>
           <mappings>
-            <mapping deploy="/data/releases/current/Packages/Plugins/NeosRulez.Bootstrap" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
