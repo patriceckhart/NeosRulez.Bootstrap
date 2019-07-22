@@ -26,6 +26,9 @@
 			<trans-unit id="lightbox" xml:space="preserve">
 				<source>Lightbox</source>
 			</trans-unit>
+			<trans-unit id="imgfullwidth" xml:space="preserve">
+				<source>Adjust image width to container</source>
+			</trans-unit>
             <trans-unit id="class" xml:space="preserve">
 				<source>Own CSS-Class</source>
 			</trans-unit>

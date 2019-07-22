@@ -1,41 +1,41 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 {namespace fusion=Neos\Fusion\ViewHelpers}
 {namespace media=Neos\Media\ViewHelpers}
-<f:render section="itemList" arguments="{items: items, site: site, headerLogoPath: headerLogoPath, headerLogoPackage: headerLogoPackage, headerLogoAltText: headerLogoAltText}" />
+<f:render section="itemList" arguments="{items: items, site: site, headerLogoPath: headerLogoPath, headerLogoPackage: headerLogoPackage, headerLogoAltText: headerLogoAltText, navbarFluid: navbarFluid, navbarSticky: navbarSticky, navbarBreakpoint: navbarBreakpoint}" />
 <f:section name="itemList">
-    <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="{neos:uri.node(node: '~')}"><img src="{f:uri.resource(path: '{headerLogoPath}', package: '{headerLogoPackage}')}" alt="{headerLogoAltText}" /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <f:for each="{items}" as="item" iteration="menuItemIterator">
-                    <f:if condition="{item.subItems}">
-                        <f:then>
-                            <f:if condition="{item.node.properties.noSubMenu}">
-                                <f:then>
+    <div class="{f:if(condition: '{navbarFluid}', then: 'container-fluid', else: 'container')}">
+        <nav class="row navbar navbar-expand-{navbarBreakpoint} navbar-light">
+            <a class="navbar-brand" href="{neos:uri.node(node: '~')}"><img src="{f:uri.resource(path: '{headerLogoPath}', package: '{headerLogoPackage}')}" alt="{headerLogoAltText}" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <f:for each="{items}" as="item" iteration="menuItemIterator">
+                        <f:if condition="{item.subItems}">
+                            <f:then>
+                                <f:if condition="{item.node.properties.noSubMenu}">
+                                    <f:then>
+                                        <neos:link.node class="nav-link" node="{item.node}">{item.label}</neos:link.node>
+                                    </f:then>
+                                    <f:else>
+                                        <li class="nav-item dropdown">
+                                            <neos:link.node class="nav-link dropdown-toggle" node="{item.node}" additionalAttributes="{role: 'button', data-toggle: 'dropdown', aria-haspopup: 'true', aria-expanded: 'false'}">{item.label}</neos:link.node>
+                                            <f:render section="subList" arguments="{items: item.subItems}" />
+                                        </li>
+                                    </f:else>
+                                </f:if>
+                            </f:then>
+                            <f:else>
+                                <li class="nav-item">
                                     <neos:link.node class="nav-link" node="{item.node}">{item.label}</neos:link.node>
-                                </f:then>
-                                <f:else>
-                                    <li class="nav-item dropdown">
-                                        <neos:link.node class="nav-link dropdown-toggle" node="{item.node}" additionalAttributes="{role: 'button', data-toggle: 'dropdown', aria-haspopup: 'true', aria-expanded: 'false'}">{item.label}</neos:link.node>
-                                        <f:render section="subList" arguments="{items: item.subItems}" />
-                                    </li>
-                                </f:else>
-                            </f:if>
-                        </f:then>
-                        <f:else>
-                            <li class="nav-item">
-                                <neos:link.node class="nav-link" node="{item.node}">{item.label}</neos:link.node>
-                            </li>
-                        </f:else>
-                    </f:if>
-                </f:for>
-            </ul>
-        </div>
-    </nav>
+                                </li>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </ul>
+            </div>
+        </nav>
     </div>
 </f:section>
 <f:section name="subList">

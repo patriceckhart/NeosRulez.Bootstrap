@@ -1,12 +1,15 @@
 NeosRulez:
   Bootstrap:
     headerLogoPath: 'Images/Logo.png'
-    headerLogoPackage: 'Raw.Site'
-    headerLogoAltText: 'Default'
-    magnificPopupWidth: '800'
-    magnificPopupHeight: '600'
+    headerLogoPackage: 'NeosRulez.Bootstrap'
+    headerLogoAltText: 'NeosRulez.Bootstrap'
+    magnificPopupWidth: '1280'
+    magnificPopupHeight: '720'
     thumbImageWidth: '255'
     thumbImageHeight: '255'
+    navbarFluid: FALSE
+    navbarSticky: TRUE
+    navbarBreakpoint: 'lg'
 Neos:
   Neos:
     userInterface:
@@ -21,7 +24,7 @@ Neos:
           'Neos\Media\Domain\Model\ImageInterface':
             editorOptions:
               features:
-                resize: FALSE
+                resize: TRUE
       navigateComponent:
         nodeTree:
           loadingDepth: 999

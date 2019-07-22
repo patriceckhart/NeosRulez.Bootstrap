@@ -8,21 +8,7 @@
             <f:for each="{assets}" as="asset">
                 <li class="media my-4">
                     <a href="{f:uri.resource(resource: asset.resource)}" target="_blank" class="align-self-center mr-3">
-                        <f:if condition="{asset.resource.mediatype}=='application/pdf'"><img src="{f:uri.resource(path: 'Images/Icons/pdf.png', package: 'NeosRulez.Bootstrap')}" width="39px" alt="" /></f:if>
-
-                        <f:if condition="{asset.resource.mediatype}=='application/zip'"><img src="{f:uri.resource(path: 'Images/Icons/zip.png', package: 'NeosRulez.Bootstrap')}" width="39px" alt="" /></f:if>
-
-                        <f:if condition="{asset.resource.mediatype}=='image/jpeg'"><img src="{f:uri.resource(path: 'Images/Icons/jpg.png', package: 'NeosRulez.Bootstrap')}" width="39px" alt="" /></f:if>
-
-                        <f:if condition="{asset.resource.mediatype}=='image/png'"><img src="{f:uri.resource(path: 'Images/Icons/png.png', package: 'NeosRulez.Bootstrap')}" width="39px" alt="" /></f:if>
-
-                        <f:if condition="{asset.resource.mediatype}=='application/vnd.ms-excel'"><img src="{f:uri.resource(path: 'Images/Icons/xls.png', package: 'NeosRulez.Bootstrap')}" width="39px" alt="" /></f:if>
-
-                        <f:if condition="{asset.resource.mediatype}=='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'"><img src="{f:uri.resource(path: 'Images/Icons/xls.png', package: 'NeosRulez.Bootstrap')}" width="39px" alt="" /></f:if>
-
-                        <f:if condition="{asset.resource.mediatype}=='application/vnd.openxmlformats-officedocument.wordprocessingml.document'"><img src="{f:uri.resource(path: 'Images/Icons/doc.png', package: 'NeosRulez.Bootstrap')}" width="39px" alt="" /></f:if>
-
-                        <f:if condition="{asset.resource.mediatype}=='application/application/msword'"><img src="{f:uri.resource(path: 'Images/Icons/doc.png', package: 'NeosRulez.Bootstrap')}" width="39px" alt="" /></f:if>
+                        <media:fileTypeIcon asset="{asset}" width="24" />
                     </a>
                     <div class="media-body">
                         <h5 class="mt-0 mb-1"><a href="{f:uri.resource(resource: asset.resource)}" target="_blank">{f:if(condition: '{asset.title}', then: '{asset.title}', else: '{asset.resource.filename}')}</a></h5>

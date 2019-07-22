@@ -29,7 +29,7 @@
 					<f:render section="imageRendering" arguments="{_all}" />
 				</f:then>
 				<f:else>
-					<a href="{media:uri.thumbnail(asset: image, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE, allowUpScaling:FALSE)}">
+					<a href="{media:uri.thumbnail(asset: image.originalasset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE, allowUpScaling:FALSE)}">
 						<f:render section="imageRendering" arguments="{_all}" />
 					</a>
 				</f:else>
@@ -48,7 +48,7 @@
 	</noscript>
 	<img src="{media:uri.thumbnail(asset: image, preset: presetLg,
         allowCropping: TRUE, allowUpScaling: FALSE)}"
-		 class="figure-img img-fluid {f:if(condition: '{rounded}', then: 'rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')} lazyload" title="{title}"  alt="{alternativeText}"
+		 class="figure-img img-fluid{f:if(condition: '{imgfullwidth}', then: ' img-fullwidth')}{f:if(condition: '{rounded}', then: ' rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')} lazyload" title="{title}"  alt="{alternativeText}"
 		 srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
 		 data-srcset="{media:uri.thumbnail(asset: image, preset: presetLg,
           allowCropping: TRUE, allowUpScaling: FALSE)} 1200w,

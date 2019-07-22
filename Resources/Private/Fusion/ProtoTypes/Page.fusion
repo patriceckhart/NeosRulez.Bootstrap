@@ -24,21 +24,18 @@ prototype(Neos.Neos:Page) {
                 media = 'all'
                 rel = 'stylesheet'
                 href = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-5.2.0-web/css/all.min.css'
+                    path = 'resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-5.9.0-web/css/all.min.css'
                 }
             }
         }
 
-        NeosRulezBootstrapCss = Neos.Fusion:Tag {
+        NeosRulezBootstrapCss = NeosRulez.ScssParser:ScssFile
+        NeosRulezBootstrapCss {
             @position = 'before stylesheets'
-            tagName = 'link'
-            attributes {
-                media = 'all'
-                rel = 'stylesheet'
-                href = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/styles.min.css'
-                }
-            }
+            source = 'resource://NeosRulez.Bootstrap/Private/Styles/styles.scss'
+            inline = FALSE
+            format = 'compressed'
+            outputFolder = 'resource://NeosRulez.Bootstrap/Public/Styles/'
         }
 
         NeosRulezBootstrapBackendCss = Neos.Fusion:Tag {
@@ -62,15 +59,12 @@ prototype(Neos.Neos:Page) {
         element.value = '<div class="topLink"><i class="fa fa-angle-up" aria-hidden="true"></i></div>'
     }
 
-    NeosRulezBootstrapJs= Neos.Fusion:Tag {
+    NeosRulezBootstrapJs = NeosRulez.JsMinifier:JsFile
+    NeosRulezBootstrapJs {
         @position = 'end'
-        tagName = 'script'
-        attributes {
-            type = 'text/javascript'
-            src = Neos.Fusion:ResourceUri {
-                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/scripts.min.js'
-            }
-        }
+        source = 'resource://NeosRulez.Bootstrap/Private/JavaScript/scripts.js'
+        inline = FALSE
+        outputFolder = 'resource://NeosRulez.Bootstrap/Public/JavaScript/'
     }
 
     #head.@process.compression >

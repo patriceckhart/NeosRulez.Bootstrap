@@ -13,7 +13,9 @@
     ],
     "require": {
         "neos/neos": "*",
-        "neos/nodetypes": "*"
+        "neos/nodetypes": "*",
+        "neosrulez/scssparser": "*",
+        "neosrulez/jsminifier": "*"
     },
     "autoload": {
         "psr-4": {

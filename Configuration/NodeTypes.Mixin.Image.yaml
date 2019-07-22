@@ -7,7 +7,6 @@
           label: i18n
           position: 5
           icon: 'icon-image'
-
   properties:
     image:
       type: Neos\Media\Domain\Model\ImageInterface
@@ -51,3 +50,12 @@
         inspector:
           group: 'image'
           position: 250
+    imgfullwidth:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: NeosRulez.Bootstrap:Main:imgfullwidth
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'image'
+          position: 300
