@@ -15,13 +15,18 @@
     <f:if condition="!{node.context.inBackend}">
         <f:then>
             <neos:link.node node="{link}" class="btn {f:if(condition: '{outline}', then: 'btn-outline-', else: 'btn-')}{style}{f:if(condition: '{size}', then: ' btn-{size}')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}{f:if(condition: '{fullwidth}', then: ' btn-block')} mb-3">
-                {text}
+                <f:if condition="{faicon}"><f:render section="fontAwesomeIcon" arguments="{icon: faicon}" /></f:if><f:if condition="!{onlyicon}">{text}</f:if>
             </neos:link.node>
         </f:then>
         <f:else>
             <div class="btn {f:if(condition: '{outline}', then: 'btn-outline-', else: 'btn-')}{style}{f:if(condition: '{size}', then: ' btn-{size}')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}{f:if(condition: '{fullwidth}', then: ' btn-block')} mb-3">
-                {text}
+                <f:if condition="{faicon}"><f:render section="fontAwesomeIcon" arguments="{icon: faicon}" /></f:if><f:if condition="!{onlyicon}">{text}</f:if>
             </div>
         </f:else>
+    </f:if>
+</f:section>
+<f:section name="fontAwesomeIcon">
+    <f:if condition="{icon}">
+        <i class="{icon}"></i>
     </f:if>
 </f:section>

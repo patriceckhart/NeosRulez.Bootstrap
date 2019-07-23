@@ -102,3 +102,19 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
+    faicon:
+      type: string
+      defaultValue: ''
+      ui:
+        label: NeosRulez.Bootstrap:Main:faicon
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    onlyicon:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: NeosRulez.Bootstrap:Main:onlyicon
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
