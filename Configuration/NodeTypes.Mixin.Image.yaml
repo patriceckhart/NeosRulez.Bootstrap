@@ -52,7 +52,7 @@
           position: 250
     imgfullwidth:
       type: boolean
-      defaultValue: FALSE
+      defaultValue: TRUE
       ui:
         label: NeosRulez.Bootstrap:Main:imgfullwidth
         reloadIfChanged: TRUE

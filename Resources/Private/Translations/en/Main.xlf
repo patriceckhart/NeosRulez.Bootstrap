@@ -8,6 +8,12 @@
 			<trans-unit id="nosubmenu" xml:space="preserve">
 				<source>Do not display subpages in the main menu</source>
 			</trans-unit>
+			<trans-unit id="faicon" xml:space="preserve">
+				<source>Font Awesome (fas fa-star)</source>
+			</trans-unit>
+			<trans-unit id="onlyicon" xml:space="preserve">
+				<source>Show only Font Awesome Icon</source>
+			</trans-unit>
 			<trans-unit id="pageimage" xml:space="preserve">
 				<source>Image</source>
 			</trans-unit>

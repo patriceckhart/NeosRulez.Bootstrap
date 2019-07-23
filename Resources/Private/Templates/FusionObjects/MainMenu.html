@@ -16,7 +16,7 @@
                             <f:then>
                                 <f:if condition="{item.node.properties.noSubMenu}">
                                     <f:then>
-                                        <neos:link.node class="nav-link" node="{item.node}">{item.label}</neos:link.node>
+                                        <neos:link.node class="nav-link" node="{item.node}"><f:render section="fontAwesomeIcon" arguments="{icon: item.node.properties.faicon}" /><f:if condition="!{item.node.properties.onlyicon}">{item.label}</f:if></neos:link.node>
                                     </f:then>
                                     <f:else>
                                         <li class="nav-item dropdown">
@@ -28,7 +28,7 @@
                             </f:then>
                             <f:else>
                                 <li class="nav-item">
-                                    <neos:link.node class="nav-link" node="{item.node}">{item.label}</neos:link.node>
+                                    <neos:link.node class="nav-link" node="{item.node}"><f:render section="fontAwesomeIcon" arguments="{icon: item.node.properties.faicon}" /><f:if condition="!{item.node.properties.onlyicon}">{item.label}</f:if></neos:link.node>
                                 </li>
                             </f:else>
                         </f:if>
@@ -44,4 +44,9 @@
             <neos:link.node class="dropdown-item" node="{item.node}">{item.label}</neos:link.node>
         </f:for>
     </div>
+</f:section>
+<f:section name="fontAwesomeIcon">
+    <f:if condition="{icon}">
+        <i class="{icon} mr-1"></i>
+    </f:if>
 </f:section>

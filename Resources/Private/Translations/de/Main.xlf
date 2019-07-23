@@ -8,6 +8,12 @@
 			<trans-unit id="nosubmenu" xml:space="preserve">
 				<source>Unterseiten nicht im Hauptmenü anzeigen</source>
 			</trans-unit>
+			<trans-unit id="faicon" xml:space="preserve">
+				<source>Font Awesome (fas fa-star)</source>
+			</trans-unit>
+			<trans-unit id="onlyicon" xml:space="preserve">
+				<source>Nur Font Awesome Icon anzeigen</source>
+			</trans-unit>
 			<trans-unit id="pageimage" xml:space="preserve">
 				<source>Bild</source>
 			</trans-unit>
