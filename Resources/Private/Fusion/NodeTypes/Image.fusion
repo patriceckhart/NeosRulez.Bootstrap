@@ -1,8 +1,31 @@
 prototype(Neos.NodeTypes:Image) {
+    sectionName = 'Main'
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Image.html'
+
+    @context.config = ${Configuration.setting('Onedrop.ImageSrcset')}
+    @context.maximumWidth = ${this.maximumWidth}
+
+    srcset = Neos.Fusion:Collection {
+        collection = ${config.sizes}
+        itemName = 'size'
+        itemRenderer = Neos.Neos:ImageUri {
+            asset = ${q(node).property('image')}
+            maximumWidth = ${size}
+            maximumHeight = ${size}
+            @process.wrapSrc = ${(size <= maximumWidth ? (value + ' ' + size + 'w' + (iterator.isLast ? '' : ', ')) : '')}
+        }
+    }
+
+    sizes = ${'(max-width: ' + maximumWidth + 'px) 100vw, ' + maximumWidth + 'px'}
+
     rounded = ${q(node).property('rounded')}
     lightbox = ${q(node).property('lightbox')}
     imgfullwidth = ${q(node).property('imgfullwidth')}
     magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
     magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
+}
+
+prototype(Neos.NodeTypes:TextWithImage) {
+    sectionName = 'Main'
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/TextWithImage.html'
 }

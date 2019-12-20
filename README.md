@@ -49,6 +49,17 @@ NeosRulez:
     magnificPopupHeight: '600'
     thumbImageWidth: '255'
     thumbImageHeight: '255'
+    colors:
+      primary: '#007bff'
+      secondary: '#6c757d'
+      success: '#28a745'
+      danger: '#dc3545'
+      warning: '#d39e00'
+      info: '#17a2b8'
+      light: '#f8f9fa'
+      dark: '#343a40'
+      muted: '#6c757d'
+      white: '#fff'
 ```
 
 ## Use Neos.Form or Neos.Form.Builder

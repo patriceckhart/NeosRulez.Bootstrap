@@ -1,5 +1,6 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 {namespace media=Neos\Media\ViewHelpers}
+<f:section name="Main">
 <f:if condition="{lightbox}"><div class="singlelightbox"></f:if>
 <f:if condition="{image}">
 	<f:then>
@@ -21,6 +22,7 @@
 	</f:else>
 </f:if>
 <f:if condition="{lightbox}"></div></f:if>
+</f:section>
 <f:section name="lightboxRendering">
 	<f:if condition="{lightbox}">
 		<f:then>
@@ -42,22 +44,15 @@
 </f:section>
 
 <f:section name="imageRendering">
-	<noscript>
-		<media:thumbnail asset="{image}" preset="{presetLg}" alt="{alternativeText}" title="{title}"
-						 allowCropping="{allowCropping}" allowUpScaling="{allowUpScaling}" />
-	</noscript>
-	<img src="{media:uri.thumbnail(asset: image, preset: presetLg,
-        allowCropping: TRUE, allowUpScaling: FALSE)}"
-		 class="figure-img img-fluid{f:if(condition: '{imgfullwidth}', then: ' img-fullwidth')}{f:if(condition: '{rounded}', then: ' rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')} lazyload" title="{title}"  alt="{alternativeText}"
-		 srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-		 data-srcset="{media:uri.thumbnail(asset: image, preset: presetLg,
-          allowCropping: TRUE, allowUpScaling: FALSE)} 1200w,
-        {media:uri.thumbnail(asset: image, preset: presetSm,
-          allowCropping: TRUE, allowUpScaling: FALSE)} 940w,
-        {media:uri.thumbnail(asset: image, preset: presetXs,
-          allowCropping: TRUE, allowUpScaling: FALSE)} 720w,
-        {media:uri.thumbnail(asset: image, preset: presetXxs,
-          allowCropping: TRUE, allowUpScaling: FALSE)} 450w"
-		 data-sizes="(min-width: 1000px) 930px, 90vw"
-		 data-aspectratio="{image.width}/{image.height}"/>
+	<media:image image="{image}"
+				 alt="{alternativeText}"
+				 title="{title}"
+				 class="figure-img img-fluid{f:if(condition: '{imgfullwidth}', then: ' img-fullwidth')}{f:if(condition: '{rounded}', then: ' rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}"
+				 width="{width}"
+				 height="{height}"
+				 maximumWidth="{maximumWidth}"
+				 maximumHeight="{maximumHeight}"
+				 allowUpScaling="{allowUpScaling}"
+				 allowCropping="{allowCropping}"
+				 additionalAttributes="{'srcset': '{srcset}', 'sizes': '{sizes}'}"/>
 </f:section>

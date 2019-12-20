@@ -1,7 +1,11 @@
-prototype(NeosRulez.Bootstrap:Gallery) {
+prototype(NeosRulez.Bootstrap:Gallery) < prototype(Neos.Neos:Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/Gallery.html'
     magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
     magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
     thumbImageWidth = ${Configuration.setting('NeosRulez.Bootstrap.thumbImageWidth')}
     thumbImageHeight = ${Configuration.setting('NeosRulez.Bootstrap.thumbImageHeight')}
+
+    assets = ${q(node).property('assets')}
+    lightbox = ${q(node).property('lightbox')}
+    crop = ${q(node).property('crop')}
 }

@@ -1,0 +1,11 @@
+privilegeTargets:
+  Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    'NeosRulez.Bootstrap:ThemeControllerActions':
+      matcher: 'method(NeosRulez\Bootstrap\Controller\ThemeController->.*Action())'
+
+roles:
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'NeosRulez.Bootstrap:ThemeControllerActions'
+        permission: GRANT

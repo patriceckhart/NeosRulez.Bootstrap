@@ -1,5 +1,9 @@
-prototype(NeosRulez.Bootstrap:CarouselItem) {
+prototype(NeosRulez.Bootstrap:CarouselItem) < prototype(Neos.Neos:Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/CarouselItem.html'
+    image = ${q(node).property('image')}
+    title = ${q(node).property('title')}
+    subTitle = ${q(node).property('subTitle')}
+    link = ${q(node).property('link')}
     attributes.class >
     attributes.class = ${'carousel-item' + (carouselItemsIteration.isFirst ? ' active' : '')}
     iteration = ${carouselItemsIteration}

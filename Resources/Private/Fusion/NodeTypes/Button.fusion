@@ -1,3 +1,12 @@
-prototype(NeosRulez.Bootstrap:Button) {
+prototype(NeosRulez.Bootstrap:Button) < prototype(Neos.Neos:Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/Button.html'
+    text = ${q(node).property('text')}
+    link = ${q(node).property('link')}
+    style = ${q(node).property('style')}
+    size = ${q(node).property('size')}
+    alignment = ${q(node).property('alignment')}
+    outline = ${q(node).property('outline')}
+    fullwidth = ${q(node).property('fullwidth')}
+    faicon = ${q(node).property('faicon')}
+    onlyicon = ${q(node).property('onlyicon')}
 }

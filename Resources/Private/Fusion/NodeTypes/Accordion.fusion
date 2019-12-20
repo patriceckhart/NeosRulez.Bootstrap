@@ -1,4 +1,5 @@
-prototype(NeosRulez.Bootstrap:Accordion) {
+prototype(NeosRulez.Bootstrap:Accordion) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Accordion.html'
     accordionItems = Neos.Neos:ContentCollection {
         nodePath = 'accordionItems'
         attributes.class = 'accordion'

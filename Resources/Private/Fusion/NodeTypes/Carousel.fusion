@@ -1,4 +1,7 @@
-prototype(NeosRulez.Bootstrap:Carousel) {
+prototype(NeosRulez.Bootstrap:Carousel) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Carousel.html'
+    indicators = ${q(node).property('indicators')}
+    controls = ${q(node).property('controls')}
     carouselItems = Neos.Neos:ContentCollection {
         nodePath = 'carouselItems'
         content.iterationName = 'carouselItemsIteration'

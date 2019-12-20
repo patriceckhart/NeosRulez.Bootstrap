@@ -1,9 +1,11 @@
 {namespace neos=Neos\Neos\ViewHelpers}
+<f:section name="Main">
 <figure{f:if(condition: imageClassName, then: ' class="{imageClassName}"')}>
-	<f:render partial="SimpleImage" arguments="{_all}" />
+	<f:render partial="SimpleImage" arguments="{_all}" section="Main" />
 	<f:if condition="{hasCaption}">
 		<figcaption class="figure-caption">
 			{neos:contentElement.editable(property: 'caption', node: node)}
 		</figcaption>
 	</f:if>
 </figure>
+</f:section>

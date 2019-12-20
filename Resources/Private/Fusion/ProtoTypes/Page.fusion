@@ -1,5 +1,7 @@
 prototype(Neos.Neos:Page) {
 
+    NeosRulezBootstrapTheme = NeosRulez.Bootstrap:Theme
+
     htmlTag = Neos.Fusion:Tag {
         tagName = 'html'
         omitClosingTag = TRUE
@@ -24,7 +26,7 @@ prototype(Neos.Neos:Page) {
                 media = 'all'
                 rel = 'stylesheet'
                 href = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-5.9.0-web/css/all.min.css'
+                    path = 'resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-5.11.2-web/css/all.min.css'
                 }
             }
         }
@@ -70,4 +72,18 @@ prototype(Neos.Neos:Page) {
     #head.@process.compression >
     #body.@process.compression >
 
+}
+
+prototype(NeosRulez.Bootstrap:Theme) < prototype(Neos.Neos:Plugin)
+prototype(NeosRulez.Bootstrap:Theme) {
+    package = 'NeosRulez.Bootstrap'
+    controller = 'Theme'
+    action = 'generateTheme'
+    @cache {
+        mode = 'uncached'
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
 }

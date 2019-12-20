@@ -1,4 +1,8 @@
-prototype(NeosRulez.Bootstrap:ImageWithContent) {
+prototype(NeosRulez.Bootstrap:ImageWithContent) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/ImageWithContent.html'
+    backgroundImage = ${q(node).property('backgroundImage')}
+    backgroundColor = ${q(node).property('backgroundColor')}
+    position = ${q(node).property('position')}
     contentItems = Neos.Neos:ContentCollection {
         nodePath = 'contentItems'
     }

@@ -24,7 +24,7 @@
   properties:
     title:
       type: string
-      defaultValue: ''
+      defaultValue: Title
       ui:
         label: i18n
         inlineEditable: TRUE

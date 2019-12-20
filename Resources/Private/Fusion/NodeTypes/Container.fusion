@@ -1,4 +1,13 @@
-prototype(NeosRulez.Bootstrap:Container) {
+prototype(NeosRulez.Bootstrap:Container) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Container.html'
+    backgroundColor = ${q(node).property('backgroundColor')}
+    backgroundImage = ${q(node).property('backgroundImage')}
+    backgroundSize = ${q(node).property('backgroundSize')}
+    backgroundPosition = ${q(node).property('backgroundPosition')}
+    padding = ${q(node).property('padding')}
+    fluid = ${q(node).property('fluid')}
+    textWhite = ${q(node).property('textWhite')}
+    parallax = ${q(node).property('parallax')}
     contentItems = Neos.Neos:ContentCollection {
         nodePath = 'contentItems'
     }

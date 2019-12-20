@@ -1,5 +1,7 @@
 {namespace neos=Neos\Neos\ViewHelpers}
+<f:section name="Main">
 <div{attributes -> f:format.raw()}>
-	<f:render partial="Image" arguments="{_all}" />
+	<f:render partial="Image" arguments="{_all}" section="Main" />
 	{neos:contentElement.editable(property: 'text')}
 </div>
+</f:section>

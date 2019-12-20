@@ -10,6 +10,24 @@ NeosRulez:
     navbarFluid: FALSE
     navbarSticky: TRUE
     navbarBreakpoint: 'lg'
+    maxSize: 2560   # maximum image size (should generally be identical with the largest value in the sizes array)
+    sizes:          # dynamic array of sizes generated for the srcset attribute
+      full: 2560
+      large: 1280
+      medium: 768
+      small: 420
+      tiny: 240
+    colors:
+      primary: '#007bff'
+      secondary: '#6c757d'
+      success: '#28a745'
+      danger: '#dc3545'
+      warning: '#d39e00'
+      info: '#17a2b8'
+      light: '#f8f9fa'
+      dark: '#343a40'
+      muted: '#6c757d'
+      white: '#fff'
 Neos:
   Neos:
     userInterface:
@@ -253,17 +271,3 @@ Neos:
             implementationClassName: Neos\Flow\Validation\Validator\RegularExpressionValidator
           'Neos.Flow:Count':
             implementationClassName: Neos\Flow\Validation\Validator\CountValidator
-  Media:
-    thumbnailPresets:
-      'NeosRulez.Bootstrap:presetLg':
-        maximumWidth: 1200
-        maximumHeight: 800
-      'NeosRulez.Bootstrap:presetSm':
-        maximumWidth: 940
-        maximumHeight: 627
-      'NeosRulez.Bootstrap:presetXs':
-        maximumWidth: 720
-        maximumHeight: 480
-      'NeosRulez.Bootstrap:presetXxs':
-        maximumWidth: 450
-        maximumHeight: 300

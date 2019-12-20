@@ -3,7 +3,7 @@
 	<file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
 		<body>
 			<trans-unit id="ui.label" xml:space="preserve">
-				<source>Teaserkarten Container</source>
+				<source>Card Container</source>
 			</trans-unit>
 			<trans-unit id="properties.columntype" xml:space="preserve">
 				<source>Spaltentyp</source>
