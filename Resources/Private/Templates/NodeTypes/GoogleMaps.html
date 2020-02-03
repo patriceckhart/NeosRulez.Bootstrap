@@ -1,0 +1,8 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+<f:render section="Map" arguments="{_all}" />
+</div>
+
+<f:section name="Map">
+    <iframe class="embed-responsive-item google-map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAEpcE4tniLTPaCDTm9e9-7h9dPBQVLzbw&q={address}" allowfullscreen></iframe>
+</f:section>

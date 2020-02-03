@@ -13,6 +13,7 @@
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes:Column': FALSE
           'Neos.NodeTypes:TextWithImage': FALSE
+          'Neos.NodeTypes:Form': FALSE
   ui:
     label: i18n
     group: 'bootstrapnodetypes'

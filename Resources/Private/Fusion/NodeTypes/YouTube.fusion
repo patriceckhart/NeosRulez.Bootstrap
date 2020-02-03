@@ -1,5 +1,14 @@
-prototype(NeosRulez.Bootstrap:YouTube) < prototype(Neos.Neos:Content) {
-    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/YouTube.html'
+prototype(NeosRulez.Bootstrap:YouTube) < prototype(Neos.Neos:Plugin) {
+    package = 'NeosRulez.Bootstrap'
+    controller = 'Frontend'
+    action = 'youTube'
     link = ${q(node).property('link')}
     attributes.class = 'embed-responsive embed-responsive-16by9'
+    @cache {
+        mode = 'uncached'
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
 }

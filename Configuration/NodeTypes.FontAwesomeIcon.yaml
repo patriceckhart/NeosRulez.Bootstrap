@@ -1,0 +1,10 @@
+'NeosRulez.Bootstrap:Icon':
+  superTypes:
+    'Neos.Neos:Content': true
+    'NeosRulez.Bootstrap:IconMixin': true
+    'NeosRulez.Bootstrap:IconBackgroundMixin': true
+  ui:
+    label: i18n
+    icon: 'fas fa-flag'
+    group: 'extended'
+    inlineEditable: false

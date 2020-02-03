@@ -44,6 +44,19 @@
 </f:section>
 
 <f:section name="imageRendering">
+	<f:comment>
+		<media:image image="{image}"
+					 alt="{alternativeText}"
+					 title="{title}"
+					 class="figure-img img-fluid{f:if(condition: '{imgfullwidth}', then: ' img-fullwidth')}{f:if(condition: '{rounded}', then: ' rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}"
+					 width="{width}"
+					 height="{height}"
+					 maximumWidth="{maximumWidth}"
+					 maximumHeight="{maximumHeight}"
+					 allowUpScaling="{allowUpScaling}"
+					 allowCropping="{allowCropping}"
+					 additionalAttributes="{'srcset': '{srcset}', 'sizes': '{sizes}'}"/>
+	</f:comment>
 	<media:image image="{image}"
 				 alt="{alternativeText}"
 				 title="{title}"

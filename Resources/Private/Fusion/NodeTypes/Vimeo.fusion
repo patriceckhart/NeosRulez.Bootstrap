@@ -1,0 +1,19 @@
+prototype(NeosRulez.Bootstrap:Vimeo) < prototype(Neos.Neos:Plugin) {
+    package = 'NeosRulez.Bootstrap'
+    controller = 'Frontend'
+    action = 'vimeo'
+    link = ${q(node).property('link')}
+    autoplay = ${q(node).property('autoplay')}
+    loop = ${q(node).property('loop')}
+    introImage = ${q(node).property('introImage')}
+    introTitle = ${q(node).property('introTitle')}
+    introAuthor = ${q(node).property('introAuthor')}
+    attributes.class = 'embed-responsive embed-responsive-16by9'
+    @cache {
+        mode = 'uncached'
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
+}

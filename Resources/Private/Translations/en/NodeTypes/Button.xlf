@@ -3,7 +3,7 @@
 	<file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
 		<body>
 			<trans-unit id="ui.label" xml:space="preserve">
-				<source>Button with Link</source>
+				<source>Button</source>
 			</trans-unit>
 			<trans-unit id="properties.link" xml:space="preserve">
 				<source>Target</source>

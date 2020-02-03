@@ -1,0 +1,4 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+    <iframe class="embed-responsive-item" src="{link}?{f:if(condition: '{autoplay}', then: 'autoplay=1', else:'autoplay=0')}&{f:if(condition: '{loop}', then: 'loop=1', else:'loop=0')}&{f:if(condition: '{introTitle}', then: 'title=1', else:'title=0')}&{f:if(condition: '{introImage}', then: 'portrait=1', else:'portrait=0')}&{f:if(condition: '{introAuthor}', then: 'byline=1', else:'byline=0')}" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>

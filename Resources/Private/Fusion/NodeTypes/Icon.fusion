@@ -1,0 +1,49 @@
+prototype(NeosRulez.Bootstrap:Icon) < prototype(Neos.Neos:ContentComponent) {
+
+	icon = ${q(node).property('icon')}
+	size = ${q(node).property('iconSize')}
+	alignment = ${q(node).property('alignment')}
+
+	iconInversed = ${q(node).property('iconInversed')}
+	hasBorder = ${q(node).property('hasBorder')}
+	backgroundIcon = ${q(node).property('backgroundIcon')}
+
+	class = Neos.Fusion:RawArray
+
+	renderer = Neos.Fusion:Case {
+		stacked {
+			condition = ${q(node).property('backgroundIcon')}
+			renderer = afx`
+				<div class="neosrulez-bootstrap-fontawesome-icon">
+					<NeosRulez.Bootstrap:StackedIconComponent
+						class={props.class}
+						icon={props.icon}
+						size={props.size}
+						alignment={props.alignment}
+						hasBorder={props.hasBorder}
+						iconInversed={props.iconInversed}
+						backgroundIcon={props.backgroundIcon}
+					/>
+				</div>
+			`
+		}
+
+		default {
+			condition = ${true}
+			renderer = afx`
+				<div class="neosrulez-bootstrap-fontawesome-icon">
+					<NeosRulez.Bootstrap:IconComponent
+						class={props.class}
+						icon={props.icon}
+						size={props.size}
+						alignment={props.alignment}
+						hasBorder={props.hasBorder}
+					/>
+				</div>
+			`
+		}
+
+	}
+
+
+}

@@ -3882,6 +3882,9 @@ img.mfp-img {
 
 .img-fullwidth { width:100%; height:auto; }
 
+figure { margin:0; }
+.figure-img { margin:0; }
+
 @media only screen and (max-width:1200px) {
   .neosrulez-bootstrap-imagewithcontent .contentitems { padding:3rem; }
 }

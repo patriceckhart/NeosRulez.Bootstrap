@@ -1,5 +1,5 @@
 prototype(Neos.Neos:Content) {
-    attributes.class.@process.class = ${value + (q(node).property('mt') ? ' ' + q(node).property('mt') : '' ) + (q(node).property('mb') ? ' ' + q(node).property('mb') : '' ) + (q(node).property('ml') ? ' ' + q(node).property('ml') : '' ) + (q(node).property('mr') ? ' ' + q(node).property('mr') : '' ) + (q(node).property('class') ? ' ' + q(node).property('class') : '' ) + (q(node).property('animation') ? ' ' + 'os-animation' : '' ) + (q(node).property('parallax') ? ' ' + ' parallax' : '' ) + ' neosrulez-content'}
+    attributes.class.@process.class = ${value + (q(node).property('mt') ? ' ' + q(node).property('mt') : '' ) + (q(node).property('mb') ? ' ' + q(node).property('mb') : '' ) + (q(node).property('ml') ? ' ' + q(node).property('ml') : '' ) + (q(node).property('mr') ? ' ' + q(node).property('mr') : '' ) + (q(node).property('pt') ? ' ' + q(node).property('pt') : '' ) + (q(node).property('pb') ? ' ' + q(node).property('pb') : '' ) + (q(node).property('pl') ? ' ' + q(node).property('pl') : '' ) + (q(node).property('pr') ? ' ' + q(node).property('pr') : '' ) + (q(node).property('class') ? ' ' + q(node).property('class') : '' ) + (q(node).property('animation') ? ' ' + 'os-animation' : '' ) + (q(node).property('parallax') ? ' ' + ' parallax' : '' ) + ' neosrulez-content'}
     attributes.data-os-animation.@process.value = ${value + (q(node).property('animation') ? '' + q(node).property('animation') : 'none' )}
     attributes.data-os-animation-delay.@process.value = ${value + (q(node).property('delay') ? '' + q(node).property('delay') + 's' : '0s' )}
     animation = ${q(node).property('animation')}
@@ -8,4 +8,8 @@ prototype(Neos.Neos:Content) {
     mb = ${q(node).property('mb')}
     ml = ${q(node).property('ml')}
     mr = ${q(node).property('mr')}
+    pt = ${q(node).property('pt')}
+    pb = ${q(node).property('pb')}
+    pl = ${q(node).property('pl')}
+    pr = ${q(node).property('pr')}
 }

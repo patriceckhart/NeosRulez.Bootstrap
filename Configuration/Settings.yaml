@@ -17,6 +17,9 @@ NeosRulez:
       medium: 768
       small: 420
       tiny: 240
+    fontawesome:
+      licence: free #pro
+      version: 5.11.2
     colors:
       primary: '#007bff'
       secondary: '#6c757d'

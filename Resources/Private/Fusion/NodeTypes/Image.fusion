@@ -2,7 +2,7 @@ prototype(Neos.NodeTypes:Image) {
     sectionName = 'Main'
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Image.html'
 
-    @context.config = ${Configuration.setting('Onedrop.ImageSrcset')}
+    @context.config = ${Configuration.setting('NeosRulez.Bootstrap')}
     @context.maximumWidth = ${this.maximumWidth}
 
     srcset = Neos.Fusion:Collection {

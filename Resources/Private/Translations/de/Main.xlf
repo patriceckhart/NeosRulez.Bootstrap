@@ -77,6 +77,18 @@
             <trans-unit id="mr" xml:space="preserve">
 				<source>Abstand rechts</source>
 			</trans-unit>
+			<trans-unit id="pt" xml:space="preserve">
+				<source>Abstand innen oben</source>
+			</trans-unit>
+			<trans-unit id="pb" xml:space="preserve">
+				<source>Abstand innen unten</source>
+			</trans-unit>
+			<trans-unit id="pl" xml:space="preserve">
+				<source>Abstand innen links</source>
+			</trans-unit>
+			<trans-unit id="pr" xml:space="preserve">
+				<source>Abstand innen rechts</source>
+			</trans-unit>
 			<trans-unit id="animation" xml:space="preserve">
 				<source>Animation</source>
 			</trans-unit>
@@ -85,6 +97,9 @@
 			</trans-unit>
 			<trans-unit id="nogutters" xml:space="preserve">
 				<source>Kein Spaltenabstand</source>
+			</trans-unit>
+			<trans-unit id="noaddress" xml:space="preserve">
+				<source>Standort-Daten im Inspektor eingeben</source>
 			</trans-unit>
 		</body>
 	</file>

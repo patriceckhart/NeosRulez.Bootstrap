@@ -1,0 +1,12 @@
+-
+  requestFilter: 'isPackage("NeosRulez.Bootstrap") && isController("Frontend") && isAction("youTube")'
+  options:
+    templatePathAndFilename: 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/YouTube.html'
+-
+  requestFilter: 'isPackage("NeosRulez.Bootstrap") && isController("Frontend") && isAction("vimeo")'
+  options:
+    templatePathAndFilename: 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Vimeo.html'
+-
+  requestFilter: 'isPackage("NeosRulez.Bootstrap") && isController("Frontend") && isAction("googleMaps")'
+  options:
+    templatePathAndFilename: 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/GoogleMaps.html'

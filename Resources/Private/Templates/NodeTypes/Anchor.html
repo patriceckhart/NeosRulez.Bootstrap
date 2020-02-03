@@ -1,0 +1,8 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+<a id="{title}"></a>
+<f:if condition="{node.context.inBackend}">
+    <code>{f:translate(id: 'ui.label', package: 'NeosRulez.Bootstrap', source: 'NodeTypes/Anchor')}: #{title}</code>
+</f:if>
+</div>

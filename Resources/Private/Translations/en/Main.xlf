@@ -77,6 +77,18 @@
             <trans-unit id="mr" xml:space="preserve">
 				<source>Margin right</source>
 			</trans-unit>
+			<trans-unit id="pt" xml:space="preserve">
+				<source>Padding top</source>
+			</trans-unit>
+			<trans-unit id="pb" xml:space="preserve">
+				<source>Padding bottom</source>
+			</trans-unit>
+			<trans-unit id="pl" xml:space="preserve">
+				<source>Padding left</source>
+			</trans-unit>
+			<trans-unit id="pr" xml:space="preserve">
+				<source>Padding right</source>
+			</trans-unit>
 			<trans-unit id="animation" xml:space="preserve">
 				<source>Animation</source>
 			</trans-unit>
@@ -85,6 +97,9 @@
 			</trans-unit>
 			<trans-unit id="nogutters" xml:space="preserve">
 				<source>No Gutters</source>
+			</trans-unit>
+			<trans-unit id="noaddress" xml:space="preserve">
+				<source>Enter location data in inspector</source>
 			</trans-unit>
 		</body>
 	</file>

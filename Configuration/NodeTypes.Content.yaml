@@ -302,4 +302,95 @@
               'mr-4':
                 label: '1.5'
               'mr-5':
+    pt:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:pt
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'pt-1':
+                label: '0.25'
+              'pt-2':
+                label: '0.5'
+              'pt-3':
+                label: '1'
+              'pt-4':
+                label: '1.5'
+              'pt-5':
+                label: '3'
+    pb:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:pb
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'pb-1':
+                label: '0.25'
+              'pb-2':
+                label: '0.5'
+              'pb-3':
+                label: '1'
+              'pb-4':
+                label: '1.5'
+              'pb-5':
+                label: '3'
+    pl:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:pl
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'pl-1':
+                label: '0.25'
+              'pl-2':
+                label: '0.5'
+              'pl-3':
+                label: '1'
+              'pl-4':
+                label: '1.5'
+              'pl-5':
+                label: '3'
+    pr:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:pr
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'pr-1':
+                label: '0.25'
+              'pr-2':
+                label: '0.5'
+              'pr-3':
+                label: '1'
+              'pr-4':
+                label: '1.5'
+              'pr-5':
                 label: '3'

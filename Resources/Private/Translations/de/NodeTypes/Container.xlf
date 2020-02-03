@@ -18,13 +18,13 @@
 				<source>Position des Hintergrundbilds</source>
 			</trans-unit>
             <trans-unit id="properties.padding" xml:space="preserve">
-				<source>Rand</source>
+				<source>Innerer Abstand oben/unten (autom.)</source>
 			</trans-unit>
             <trans-unit id="properties.fluid" xml:space="preserve">
 				<source>Volle Breite</source>
 			</trans-unit>
 			<trans-unit id="properties.textWhite" xml:space="preserve">
-                <source>Heller Text</source>
+                <source>Textfarbe umkehren</source>
             </trans-unit>
             <trans-unit id="properties.backgroundSize.selectBoxEditor.values.cover" xml:space="preserve">
                 <source>Vollflächig</source>
