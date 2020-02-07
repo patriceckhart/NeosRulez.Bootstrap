@@ -15,7 +15,7 @@
 				<source>Show only Font Awesome Icon</source>
 			</trans-unit>
 			<trans-unit id="pageimage" xml:space="preserve">
-				<source>Image</source>
+				<source>Page image</source>
 			</trans-unit>
 			<trans-unit id="components" xml:space="preserve">
 				<source>Bootstrap Components</source>

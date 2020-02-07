@@ -31,9 +31,11 @@
 					<f:render section="imageRendering" arguments="{_all}" />
 				</f:then>
 				<f:else>
-					<a href="{media:uri.thumbnail(asset: image.originalasset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE, allowUpScaling:FALSE)}">
-						<f:render section="imageRendering" arguments="{_all}" />
-					</a>
+					<f:if condition="{image.fileextension}!='gif' || {image.fileextension}!='GIF'">
+						<a href="{media:uri.thumbnail(asset: image.originalasset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE, allowUpScaling:FALSE)}">
+							<f:render section="imageRendering" arguments="{_all}" />
+						</a>
+					</f:if>
 				</f:else>
 			</f:if>
 		</f:then>
@@ -44,28 +46,22 @@
 </f:section>
 
 <f:section name="imageRendering">
-	<f:comment>
-		<media:image image="{image}"
-					 alt="{alternativeText}"
-					 title="{title}"
-					 class="figure-img img-fluid{f:if(condition: '{imgfullwidth}', then: ' img-fullwidth')}{f:if(condition: '{rounded}', then: ' rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}"
-					 width="{width}"
-					 height="{height}"
-					 maximumWidth="{maximumWidth}"
-					 maximumHeight="{maximumHeight}"
-					 allowUpScaling="{allowUpScaling}"
-					 allowCropping="{allowCropping}"
-					 additionalAttributes="{'srcset': '{srcset}', 'sizes': '{sizes}'}"/>
-	</f:comment>
-	<media:image image="{image}"
-				 alt="{alternativeText}"
-				 title="{title}"
-				 class="figure-img img-fluid{f:if(condition: '{imgfullwidth}', then: ' img-fullwidth')}{f:if(condition: '{rounded}', then: ' rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}"
-				 width="{width}"
-				 height="{height}"
-				 maximumWidth="{maximumWidth}"
-				 maximumHeight="{maximumHeight}"
-				 allowUpScaling="{allowUpScaling}"
-				 allowCropping="{allowCropping}"
-				 additionalAttributes="{'srcset': '{srcset}', 'sizes': '{sizes}'}"/>
+	<f:if condition="{image.fileextension}=='gif' || {image.fileextension}=='GIF'">
+		<f:then>
+			<img src="{neos.media:uri.image(image: image)}" class="figure-img img-fluid{f:if(condition: '{imgfullwidth}', then: ' img-fullwidth')}{f:if(condition: '{rounded}', then: ' rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}" title="{title}" alt="{alternativeText}" />
+		</f:then>
+		<f:else>
+			<media:image image="{image}"
+						 alt="{alternativeText}"
+						 title="{title}"
+						 class="figure-img img-fluid{f:if(condition: '{imgfullwidth}', then: ' img-fullwidth')}{f:if(condition: '{rounded}', then: ' rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}"
+						 width="{width}"
+						 height="{height}"
+						 maximumWidth="{maximumWidth}"
+						 maximumHeight="{maximumHeight}"
+						 allowUpScaling="{allowUpScaling}"
+						 allowCropping="{allowCropping}"
+						 additionalAttributes="{'srcset': '{srcset}', 'sizes': '{sizes}'}" />
+		</f:else>
+	</f:if>
 </f:section>

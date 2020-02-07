@@ -3,7 +3,7 @@
 	<file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
 		<body>
 			<trans-unit id="ui.label" xml:space="preserve">
-				<source>Carousel</source>
+				<source>Slider (Image-Carousel)</source>
 			</trans-unit>
 			<trans-unit id="properties.indicators" xml:space="preserve">
 				<source>Show indicators</source>
