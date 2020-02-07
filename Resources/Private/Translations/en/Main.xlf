@@ -101,6 +101,27 @@
 			<trans-unit id="noaddress" xml:space="preserve">
 				<source>Enter location data in inspector</source>
 			</trans-unit>
+			<trans-unit id="tooltiptext" xml:space="preserve">
+				<source>Tooltip text</source>
+			</trans-unit>
+			<trans-unit id="tooltipposition" xml:space="preserve">
+				<source>Tooltip position</source>
+			</trans-unit>
+			<trans-unit id="tooltipposition" xml:space="preserve">
+				<source>Tooltip-Position</source>
+			</trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.top" xml:space="preserve">
+                <source>Top</source>
+            </trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.right" xml:space="preserve">
+                <source>Right</source>
+            </trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.bottom" xml:space="preserve">
+                <source>Bottom</source>
+            </trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.left" xml:space="preserve">
+                <source>Left</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

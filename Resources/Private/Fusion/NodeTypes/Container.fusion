@@ -12,4 +12,13 @@ prototype(NeosRulez.Bootstrap:Container) < prototype(Neos.Neos:Content) {
     contentItems = Neos.Neos:ContentCollection {
         nodePath = 'contentItems'
     }
+
+    tooltiptext = ${q(node).property('tooltiptext')}
+    tooltipposition = ${q(node).property('tooltipposition')}
+
+    attributes.title.@process.title = ${(q(node).property('tooltiptext') ? '' + q(node).property('tooltiptext') : '' )}
+    attributes.data-toggle.@process.data-toggle = ${('tooltip')}
+    attributes.data-placement.@process.data-placement = ${(q(node).property('tooltipposition') ? '' + q(node).property('tooltipposition') : '' )}
+    attributes.title.@if.cond1 = ${q(node).property('tooltiptext')}
+    attributes.data-toggle.@if.cond2 = ${!node.context.inBackend}
 }

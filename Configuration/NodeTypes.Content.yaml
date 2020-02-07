@@ -395,3 +395,29 @@
                 label: '1.5'
               'pr-5':
                 label: '3'
+    tooltiptext:
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:tooltiptext
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    tooltipposition:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:tooltipposition
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'top':
+                label: NeosRulez.Bootstrap:Main:properties.tooltipposition.selectBoxEditor.values.top
+              'right':
+                label: NeosRulez.Bootstrap:Main:properties.tooltipposition.selectBoxEditor.values.right
+              'bottom':
+                label: NeosRulez.Bootstrap:Main:properties.tooltipposition.selectBoxEditor.values.bottom
+              'left':
+                label: NeosRulez.Bootstrap:Main:properties.tooltipposition.selectBoxEditor.values.left

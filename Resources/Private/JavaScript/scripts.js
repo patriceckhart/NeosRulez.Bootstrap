@@ -176,5 +176,8 @@ $(document).ready(function(){
             scrollTop: ($(window.location.hash).offset().top)
         },500);
     }
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
     lazySizes.init();
 });

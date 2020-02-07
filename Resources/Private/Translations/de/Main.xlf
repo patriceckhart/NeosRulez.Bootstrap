@@ -101,6 +101,21 @@
 			<trans-unit id="noaddress" xml:space="preserve">
 				<source>Standort-Daten im Inspektor eingeben</source>
 			</trans-unit>
+			<trans-unit id="tooltiptext" xml:space="preserve">
+				<source>Tooltip-Text</source>
+			</trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.top" xml:space="preserve">
+                <source>Oben</source>
+            </trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.right" xml:space="preserve">
+                <source>Rechts</source>
+            </trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.bottom" xml:space="preserve">
+                <source>Unten</source>
+            </trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.left" xml:space="preserve">
+                <source>Links</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>
