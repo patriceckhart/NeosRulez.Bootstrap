@@ -16,14 +16,24 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
+    #faicon:
+      #type: string
+      #defaultValue: ''
+      #ui:
+        #label: NeosRulez.Bootstrap:Main:faicon
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
     faicon:
       type: string
-      defaultValue: ''
+      defaultValue: ~
       ui:
         label: NeosRulez.Bootstrap:Main:faicon
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'settings'
+          group: settings
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+        values: []
     onlyicon:
       type: boolean
       defaultValue: FALSE
@@ -47,3 +57,9 @@
         nodeTypes:
           '*': FALSE
           'NeosRulez.Bootstrap:Container': TRUE
+  postprocessors:
+    FontAwesomeIconsNodeTypePostprocessor:
+      postprocessor: NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor
+      postprocessorOptions:
+        properties:
+          faicon: 'faicon'
