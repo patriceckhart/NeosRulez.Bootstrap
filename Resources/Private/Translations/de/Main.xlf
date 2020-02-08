@@ -6,7 +6,7 @@
 				<source>Einstellungen</source>
 			</trans-unit>
 			<trans-unit id="nosubmenu" xml:space="preserve">
-				<source>Unterseiten nicht im Hauptmenü anzeigen</source>
+				<source>Unterseiten im Hauptmenü verbergen</source>
 			</trans-unit>
 			<trans-unit id="faicon" xml:space="preserve">
 				<source>Font Awesome (fas fa-star)</source>
