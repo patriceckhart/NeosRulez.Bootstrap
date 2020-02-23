@@ -70,11 +70,11 @@
     hasBorder:
       type: boolean
       defaultValue: false
-      ui:
-        label: i18n
-        reloadIfChanged: true
-        inspector:
-          group: style
+      ui: ~
+        #label: i18n
+        #reloadIfChanged: true
+        #inspector:
+          #group: style
   postprocessors:
     FontAwesomeIconsNodeTypePostprocessor:
       postprocessor: NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor

@@ -74,9 +74,14 @@ class FrontendController extends ActionController
         $zip = $this->request->getInternalArgument('__zip');
         $city = $this->request->getInternalArgument('__city');
         $country = $this->request->getInternalArgument('__country');
-        $sendAddress = $address.'+'.$zip.' '.$city.'+'.$country;
-        $sendAddress = str_replace(' ', '+', $sendAddress);
-        $this->view->assign('address',$sendAddress);
+        $source = $this->request->getInternalArgument('__source');
+        if(!empty($source)) {
+            $this->view->assign('source',$source);
+        } else {
+            $sendAddress = $address.'+'.$zip.' '.$city.'+'.$country;
+            $sendAddress = str_replace(' ', '+', $sendAddress);
+            $this->view->assign('address',$sendAddress);
+        }
         $this->view->assign('attributes',$this->request->getInternalArgument('__attributes'));
     }
 

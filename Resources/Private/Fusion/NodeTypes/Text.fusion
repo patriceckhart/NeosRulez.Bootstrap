@@ -1,0 +1,12 @@
+prototype(Neos.NodeTypes:Text) < prototype(Neos.Neos:Content) {
+  attributes.class.@process.class = ${value + (q(node).property('mt') ? ' ' + q(node).property('mt') : '' ) + (q(node).property('mb') ? ' ' + q(node).property('mb') : '' ) + (q(node).property('ml') ? ' ' + q(node).property('ml') : '' ) + (q(node).property('mr') ? ' ' + q(node).property('mr') : '' ) + (q(node).property('pt') ? ' ' + q(node).property('pt') : '' ) + (q(node).property('pb') ? ' ' + q(node).property('pb') : '' ) + (q(node).property('pl') ? ' ' + q(node).property('pl') : '' ) + (q(node).property('pr') ? ' ' + q(node).property('pr') : '' ) + (q(node).property('class') ? ' ' + q(node).property('class') : '' ) + (q(node).property('animation') ? ' ' + 'os-animation' : '' ) + (q(node).property('textBsColor') ? ' ' + q(node).property('textBsColor') : '' )}
+
+  tooltiptext = ${q(node).property('tooltiptext')}
+  tooltipposition = ${q(node).property('tooltipposition')}
+
+  attributes.title.@process.title = ${(q(node).property('tooltiptext') ? '' + q(node).property('tooltiptext') : '' )}
+  attributes.data-toggle.@process.data-toggle = ${('tooltip')}
+  attributes.data-placement.@process.data-placement = ${(q(node).property('tooltipposition') ? '' + q(node).property('tooltipposition') : '' )}
+  attributes.title.@if.cond1 = ${q(node).property('tooltiptext')}
+  attributes.data-toggle.@if.cond2 = ${!node.context.inBackend}
+}

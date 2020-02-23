@@ -17,6 +17,9 @@
 			<trans-unit id="properties.country" xml:space="preserve">
 				<source>Land</source>
 			</trans-unit>
+			<trans-unit id="properties.source" xml:space="preserve">
+				<source>... oder Einbettungscode</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

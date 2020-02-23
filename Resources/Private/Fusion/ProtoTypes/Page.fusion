@@ -73,17 +73,3 @@ prototype(Neos.Neos:Page) {
     #body.@process.compression >
 
 }
-
-prototype(NeosRulez.Bootstrap:Theme) < prototype(Neos.Neos:Plugin)
-prototype(NeosRulez.Bootstrap:Theme) {
-    package = 'NeosRulez.Bootstrap'
-    controller = 'Theme'
-    action = 'generateTheme'
-    @cache {
-        mode = 'uncached'
-        context {
-            1 = 'node'
-            2 = 'documentNode'
-        }
-    }
-}
