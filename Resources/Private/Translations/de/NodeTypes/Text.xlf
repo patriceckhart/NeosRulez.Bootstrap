@@ -35,6 +35,36 @@
             <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-white" xml:space="preserve">
                 <source>White</source>
             </trans-unit>
+            <trans-unit id="properties.backgroundBsColor" xml:space="preserve">
+				<source>Hintergrundfarbe</source>
+			</trans-unit>
+            <trans-unit id="properties.backgroundBsColor.selectBoxEditor.values.bg-primary" xml:space="preserve">
+                <source>Primary</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundBsColor.selectBoxEditor.values.bg-secondary" xml:space="preserve">
+                <source>Secondary</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundBsColor.selectBoxEditor.values.bg-success" xml:space="preserve">
+                <source>Success</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundBsColor.selectBoxEditor.values.bg-danger" xml:space="preserve">
+                <source>Danger</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundBsColor.selectBoxEditor.values.bg-warning" xml:space="preserve">
+                <source>Warning</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundBsColor.selectBoxEditor.values.bg-info" xml:space="preserve">
+                <source>Info</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundBsColor.selectBoxEditor.values.bg-light" xml:space="preserve">
+                <source>Light</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundBsColor.selectBoxEditor.values.bg-dark" xml:space="preserve">
+                <source>Dark</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundBsColor.selectBoxEditor.values.bg-white" xml:space="preserve">
+                <source>White</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
