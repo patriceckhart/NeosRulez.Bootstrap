@@ -1,0 +1,7 @@
+'Neos.Neos:ContentCollection':
+  constraints:
+    nodeTypes:
+      '*': true
+      'Neos.Neos:Document': false
+      'Neos.NodeTypes.Form:Form': false
+      'Neos.NodeTypes:TextWithImage': false

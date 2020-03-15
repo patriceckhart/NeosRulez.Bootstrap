@@ -7,20 +7,22 @@
         </div>
     </f:then>
     <f:else>
-        <f:render section="button" arguments="{_all}" />
+        <div class="text-{alignment}">
+            <f:render section="button" arguments="{_all}" />
+        </div>
     </f:else>
 </f:if>
 </div>
 <f:section name="button">
     <f:if condition="!{node.context.inBackend}">
         <f:then>
-            <neos:link.node node="{link}" class="btn {f:if(condition: '{outline}', then: 'btn-outline-', else: 'btn-')}{style}{f:if(condition: '{size}', then: ' btn-{size}')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}{f:if(condition: '{fullwidth}', then: ' btn-block')} mb-3">
+            <a href="{link}" class="btn {f:if(condition: '{outline}', then: 'btn-outline-', else: 'btn-')}{style}{f:if(condition: '{size}', then: ' btn-{size}')}{f:if(condition: '{fullwidth}', then: ' btn-block')}">
                 <f:if condition="{faicon}"><f:render section="fontAwesomeIcon" arguments="{icon: faicon}" /></f:if><f:if condition="!{onlyicon}">{text}</f:if>
-            </neos:link.node>
+            </a>
         </f:then>
         <f:else>
-            <div class="btn {f:if(condition: '{outline}', then: 'btn-outline-', else: 'btn-')}{style}{f:if(condition: '{size}', then: ' btn-{size}')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}{f:if(condition: '{fullwidth}', then: ' btn-block')} mb-3">
-                <f:if condition="{faicon}"><f:render section="fontAwesomeIcon" arguments="{icon: faicon}" /></f:if><f:if condition="!{onlyicon}">{text}</f:if>
+            <div class="btn {f:if(condition: '{outline}', then: 'btn-outline-', else: 'btn-')}{style}{f:if(condition: '{size}', then: ' btn-{size}')}{f:if(condition: '{fullwidth}', then: ' btn-block')}">
+                <f:if condition="{faicon}"><f:render section="fontAwesomeIcon" arguments="{icon: faicon}" /></f:if><f:if condition="!{onlyicon}">{neos:contentElement.editable(property: 'text', tag: 'span')}</f:if>
             </div>
         </f:else>
     </f:if>

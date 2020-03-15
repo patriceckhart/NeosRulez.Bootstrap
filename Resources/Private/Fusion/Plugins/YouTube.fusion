@@ -3,7 +3,7 @@ prototype(NeosRulez.Bootstrap:YouTube) < prototype(Neos.Neos:Plugin) {
     controller = 'Frontend'
     action = 'youTube'
     link = ${q(node).property('link')}
-    attributes.class = 'embed-responsive embed-responsive-16by9'
+
     @cache {
         mode = 'uncached'
         context {

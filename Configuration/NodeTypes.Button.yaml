@@ -12,20 +12,22 @@
           icon: 'icon-cog'
   properties:
     link:
-      type: reference
+      type: string
       ui:
         reloadIfChanged: TRUE
         label: i18n
         inspector:
           group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          editorOptions:
+            assets: TRUE
     text:
       type: string
       defaultValue: 'Button'
       ui:
         label: i18n
         reloadIfChanged: TRUE
-        inspector:
-          group: 'settings'
+        inlineEditable: TRUE
     style:
       defaultValue: 'primary'
       ui:
@@ -102,14 +104,32 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
+    #faicon:
+      #type: string
+      #defaultValue: ''
+      #ui:
+        #label: NeosRulez.Bootstrap:Main:faicon
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
     faicon:
       type: string
-      defaultValue: ''
+      defaultValue: ~
       ui:
         label: NeosRulez.Bootstrap:Main:faicon
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'settings'
+          group: settings
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+        values: []
+      onlyicon:
+        type: boolean
+        defaultValue: FALSE
+        ui:
+          label: NeosRulez.Bootstrap:Main:onlyicon
+          reloadIfChanged: TRUE
+          inspector:
+            group: 'settings'
     onlyicon:
       type: boolean
       defaultValue: FALSE
@@ -118,3 +138,9 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
+  postprocessors:
+    FontAwesomeIconsNodeTypePostprocessor:
+      postprocessor: NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor
+      postprocessorOptions:
+        properties:
+          faicon: 'faicon'

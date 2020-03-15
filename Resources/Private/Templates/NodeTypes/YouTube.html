@@ -1,4 +1,6 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 <div{attributes -> f:format.raw()}>
-    <iframe class="embed-responsive-item" src="{link}" allowfullscreen></iframe>
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="{link}" allowfullscreen></iframe>
+    </div>
 </div>

@@ -130,11 +130,12 @@ function isInViewport(node) {
     )
 }
 $(document).ready(function(){
-    $('.parallax').each(function(index) {
+    $('.parallax').each(function() {
         var imageSrc = $(this).data('image-src');
-        var imageHeight = $(this).data('height');
-        $(this).css('background-image','url(' + imageSrc + ')');
-        $(this).css('height', imageHeight);
+        // var imageHeight = $(this).data('height');
+        var imageHeight = $(this).outerHeight();
+            $(this).css('background-image','url(' + imageSrc + ')');
+        $(this).css('min-height', imageHeight);
     });
     $(window).scroll(function() {
         var scrolled = $(window).scrollTop();
@@ -176,6 +177,7 @@ $(document).ready(function(){
             scrollTop: ($(window.location.hash).offset().top)
         },500);
     }
+    $('.windowheight').height($(window).height());
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });

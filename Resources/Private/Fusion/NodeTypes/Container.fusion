@@ -1,6 +1,13 @@
 prototype(NeosRulez.Bootstrap:Container) < prototype(Neos.Neos:Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Container.html'
-    attributes.class.@process.class = ${value + (q(node).property('mt') ? ' ' + q(node).property('mt') : '' ) + (q(node).property('mb') ? ' ' + q(node).property('mb') : '' ) + (q(node).property('ml') ? ' ' + q(node).property('ml') : '' ) + (q(node).property('mr') ? ' ' + q(node).property('mr') : '' ) + (q(node).property('pt') ? ' ' + q(node).property('pt') : '' ) + (q(node).property('pb') ? ' ' + q(node).property('pb') : '' ) + (q(node).property('pl') ? ' ' + q(node).property('pl') : '' ) + (q(node).property('pr') ? ' ' + q(node).property('pr') : '' ) + (q(node).property('class') ? ' ' + q(node).property('class') : '' ) + (q(node).property('animation') ? ' ' + 'os-animation' : '' ) + (q(node).property('parallax') ? ' ' + ' parallax' : '' ) + (q(node).property('backgroundBsColor') ? ' ' + q(node).property('backgroundBsColor') : '' ) + (q(node).property('textBsColor') ? ' ' + q(node).property('textBsColor') : '' )}
+
+    valignment = ${q(node).property('valignment')}
+
+    @context.container = ${(q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? 'container-fluid ' : ''}
+
+    attributesInner = Neos.Fusion:Attributes
+    attributesInner.class = ${(q(node).property('containerwidth')) + (q(node).property('valignment') ? '' + ' h-100' : '' )}
+
     backgroundColor = ${q(node).property('backgroundColor')}
     backgroundImage = ${q(node).property('backgroundImage')}
     backgroundSize = ${q(node).property('backgroundSize')}
@@ -9,6 +16,8 @@ prototype(NeosRulez.Bootstrap:Container) < prototype(Neos.Neos:Content) {
     fluid = ${q(node).property('fluid')}
     textWhite = ${q(node).property('textWhite')}
     parallax = ${q(node).property('parallax')}
+    parallax.@if.condition = ${!node.context.inBackend}
+
     contentItems = Neos.Neos:ContentCollection {
         nodePath = 'contentItems'
     }

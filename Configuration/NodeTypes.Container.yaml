@@ -13,7 +13,7 @@
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes:Column': FALSE
           'Neos.NodeTypes:TextWithImage': FALSE
-          'Neos.NodeTypes:Form': FALSE
+          'Neos.NodeTypes.Form:Form': FALSE
   ui:
     label: i18n
     group: 'bootstrapnodetypes'
@@ -166,14 +166,14 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
-    textWhite:
-      type: boolean
-      defaultValue: FALSE
-      ui:
-        label: i18n
-        reloadIfChanged: TRUE
-        inspector:
-          group: 'settings'
+    #textWhite:
+      #type: boolean
+      #defaultValue: FALSE
+      #ui:
+        #label: i18n
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
     parallax:
       type: boolean
       defaultValue: FALSE
@@ -182,3 +182,43 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'settings'
+    masterclass:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          position: 'start'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'jumbotron':
+                label: i18n
+              'hero':
+                label: i18n
+              'windowheight':
+                label: i18n
+    valignment:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:alignment
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          position: 'start'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'align-items-start':
+                label: NeosRulez.Bootstrap:Main:alignmentstart
+              'align-items-center':
+                label: NeosRulez.Bootstrap:Main:alignmentcenter
+              'align-items-end':
+                label: NeosRulez.Bootstrap:Main:alignmentend

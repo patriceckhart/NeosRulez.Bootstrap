@@ -116,6 +116,36 @@
 			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.left" xml:space="preserve">
                 <source>Links</source>
             </trans-unit>
+			<trans-unit id="containerwidth" xml:space="preserve">
+                <source>Breite des Elements</source>
+            </trans-unit>
+			<trans-unit id="properties.containerwidth.selectBoxEditor.values.container" xml:space="preserve">
+                <source>Inhaltsbreite</source>
+            </trans-unit>
+			<trans-unit id="properties.containerwidth.selectBoxEditor.values.container-fluid" xml:space="preserve">
+                <source>Volle Breite</source>
+            </trans-unit>
+			<trans-unit id="distance" xml:space="preserve">
+                <source>Abstände</source>
+            </trans-unit>
+			<trans-unit id="marginsettings" xml:space="preserve">
+                <source>Äußerer Abstand</source>
+            </trans-unit>
+			<trans-unit id="paddingsettings" xml:space="preserve">
+                <source>Innerer Abstand</source>
+            </trans-unit>
+			<trans-unit id="animation" xml:space="preserve">
+                <source>Animation</source>
+            </trans-unit>
+			<trans-unit id="animationsettings" xml:space="preserve">
+                <source>Animations-Einstellungen</source>
+            </trans-unit>
+			<trans-unit id="tooltip" xml:space="preserve">
+                <source>Tooltips</source>
+            </trans-unit>
+			<trans-unit id="tooltipsettings" xml:space="preserve">
+                <source>Tooltip Einstellungen</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

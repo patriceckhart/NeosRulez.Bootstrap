@@ -1,6 +1,6 @@
 NeosRulez:
   Bootstrap:
-    headerLogoPath: 'Images/Logo.png'
+    headerLogoPath: 'Images/Logo.svg'
     headerLogoPackage: 'NeosRulez.Bootstrap'
     headerLogoAltText: 'NeosRulez.Bootstrap'
     magnificPopupWidth: '1280'

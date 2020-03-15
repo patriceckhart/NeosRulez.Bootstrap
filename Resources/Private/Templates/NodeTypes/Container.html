@@ -1,8 +1,19 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 {namespace fusion=Neos\Fusion\ViewHelpers}
 {namespace media=Neos\Media\ViewHelpers}
-<div{attributes -> f:format.raw()}<f:if condition="{parallax}"><f:then><f:if condition="{backgroundImage}">data-image-src="{media:uri.image(image: backgroundImage, maximumWidth: 2000)}"</f:if></f:then><f:else><f:if condition="{backgroundImage}"><f:then> style="background:url({media:uri.image(image: backgroundImage, maximumWidth: 2000)}) no-repeat {backgroundColor} {backgroundPosition}; -webkit-background-size: {backgroundSize}; -moz-background-size: {backgroundSize}; -o-background-size: {backgroundSize}; background-size: {backgroundSize};"</f:then><f:else>{f:if(condition: '{backgroundColor}', then: ' style="background-color:{backgroundColor};"')}</f:else></f:if></f:else></f:if>>
-    <div class="{f:if(condition: '{fluid}', then: 'container-fluid', else: 'container')}{f:if(condition: '{padding}', then: ' py-5')}{f:if(condition: '{textWhite}', then: ' text-white')}">
-        <div class="row"><div class="col-12">{contentItems -> f:format.raw()}</div></div>
+<div{attributes -> f:format.raw()}<f:if condition="{parallax}"><f:then><f:if condition="{backgroundImage}"> data-image-src="{media:uri.image(image: backgroundImage, maximumWidth: 2000)}"</f:if></f:then><f:else><f:if condition="{backgroundImage}"><f:then> style="background:url({media:uri.image(image: backgroundImage, maximumWidth: 2000)}) no-repeat {backgroundColor} {backgroundPosition}; -webkit-background-size: {backgroundSize}; -moz-background-size: {backgroundSize}; -o-background-size: {backgroundSize}; background-size: {backgroundSize};"</f:then><f:else>{f:if(condition: '{backgroundColor}', then: ' style="background-color:{backgroundColor};"')}</f:else></f:if></f:else></f:if>>
+    <div{attributesInner -> f:format.raw()}>
+        <f:if condition="{valignment}">
+            <f:then>
+                <div class="d-flex h-100 {valignment}">
+                    <div class="d-block w-100">
+                        {contentItems -> f:format.raw()}
+                    </div>
+                </div>
+            </f:then>
+            <f:else>
+                {contentItems -> f:format.raw()}
+            </f:else>
+        </f:if>
     </div>
 </div>

@@ -8,7 +8,7 @@ prototype(NeosRulez.Bootstrap:Vimeo) < prototype(Neos.Neos:Plugin) {
     introImage = ${q(node).property('introImage')}
     introTitle = ${q(node).property('introTitle')}
     introAuthor = ${q(node).property('introAuthor')}
-    attributes.class = 'embed-responsive embed-responsive-16by9'
+
     @cache {
         mode = 'uncached'
         context {

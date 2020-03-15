@@ -125,6 +125,18 @@
             <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-white" xml:space="preserve">
                 <source>White</source>
             </trans-unit>
+            <trans-unit id="properties.masterclass" xml:space="preserve">
+                <source>Container-Optik</source>
+            </trans-unit>
+            <trans-unit id="properties.masterclass.selectBoxEditor.values.jumbotron" xml:space="preserve">
+                <source>800 Pixel hoch</source>
+            </trans-unit>
+            <trans-unit id="properties.masterclass.selectBoxEditor.values.hero" xml:space="preserve">
+                <source>400 Pixel hoch</source>
+            </trans-unit>
+            <trans-unit id="properties.masterclass.selectBoxEditor.values.windowheight" xml:space="preserve">
+                <source>An Fensterhöhe anpassen</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

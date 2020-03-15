@@ -7,7 +7,7 @@ prototype(NeosRulez.Bootstrap:GoogleMaps) < prototype(Neos.Neos:Plugin) {
     city = ${q(node).property('city')}
     country = ${q(node).property('country')}
     source = ${q(node).property('source')}
-    attributes.class = 'embed-responsive embed-responsive-16by9'
+
     @cache {
         mode = 'uncached'
         context {

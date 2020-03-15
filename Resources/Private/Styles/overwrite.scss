@@ -3846,7 +3846,7 @@ img.mfp-img {
 
 .padding { padding-top: 3rem; padding-bottom: 3rem; }
 .no-padding { padding:0; }
-.neosrulez-bootstrap-container { float:left; width:100%; }
+/*.neosrulez-bootstrap-container { float:left; width:100%; }*/
 .form-navigation { margin-top:1rem; }
 .form-navigation ul, .form-navigation ul li { display:block; margin:0; padding:0; }
 .carousel .carousel-item>img { width: 100%; height: auto; }
@@ -3870,20 +3870,29 @@ img.mfp-img {
 .neosrulez-bootstrap-imagewithcontent .contentimage { min-height:400px; }
 .neosrulez-bootstrap-imagewithcontent .contentitems { padding:5rem; }
 
-.neos-nodetypes-textwithimage { float:left; width:100%; }
+/*.neos-nodetypes-textwithimage { float:left; width:100%; }*/
 
 .neos-nodetypes-textwithimage p { -webkit-margin-before: -1.2em; }
+
+.neos-nodetypes-textwithimage {
+  figure, p, div { display:table-cell; }
+}
 
 .os-animation { opacity: 0; }
 
 .os-animation.animated { opacity: 1; }
 
-.parallax { position: relative; background-attachment: fixed; background-position: center 0; background-repeat: no-repeat; background-size: cover; height: 100%; }
+.parallax, .bparallax { position: relative; background-attachment: fixed; background-position: center 0; background-repeat: no-repeat; background-size: cover; height: 300px; }
 
 .img-fullwidth { width:100%; height:auto; }
 
+.navbar { padding-left:0; padding-right:0; }
+
 figure { margin:0; }
 .figure-img { margin:0; }
+
+.jumbotron { height:800px; }
+.hero { height:400px; }
 
 @media only screen and (max-width:1200px) {
   .neosrulez-bootstrap-imagewithcontent .contentitems { padding:3rem; }

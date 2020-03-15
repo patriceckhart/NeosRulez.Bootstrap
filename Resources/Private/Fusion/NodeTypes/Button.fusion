@@ -2,6 +2,9 @@ prototype(NeosRulez.Bootstrap:Button) < prototype(Neos.Neos:Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/Button.html'
     text = ${q(node).property('text')}
     link = ${q(node).property('link')}
+    link.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
     style = ${q(node).property('style')}
     size = ${q(node).property('size')}
     alignment = ${q(node).property('alignment')}

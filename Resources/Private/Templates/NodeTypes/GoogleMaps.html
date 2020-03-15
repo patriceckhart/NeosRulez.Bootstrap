@@ -1,6 +1,8 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 <div{attributes -> f:format.raw()}>
-<f:render section="Map" arguments="{_all}" />
+    <div class="embed-responsive embed-responsive-16by9">
+        <f:render section="Map" arguments="{_all}" />
+    </div>
 </div>
 
 <f:section name="Map">

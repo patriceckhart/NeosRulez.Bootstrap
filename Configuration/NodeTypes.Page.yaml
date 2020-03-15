@@ -55,8 +55,15 @@
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          '*': FALSE
+          '*': TRUE
           'NeosRulez.Bootstrap:Container': TRUE
+          'NeosRulez.Bootstrap:CarouselItem': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'NeosRulez.Bootstrap:ImageWithContent': FALSE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
+          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes.Form:Form': FALSE
   postprocessors:
     FontAwesomeIconsNodeTypePostprocessor:
       postprocessor: NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor

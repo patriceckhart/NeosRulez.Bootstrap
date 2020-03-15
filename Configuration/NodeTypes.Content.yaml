@@ -1,10 +1,41 @@
 'Neos.Neos:Content':
   ui:
     inspector:
+      tabs:
+        distance:
+          label: NeosRulez.Bootstrap:Main:distances
+          position: 11
+          icon: 'icon-arrows-v'
+        animation:
+          label: NeosRulez.Bootstrap:Main:animation
+          position: 12
+          icon: 'icon-star'
+        tooltip:
+          label: NeosRulez.Bootstrap:Main:tooltip
+          position: 13
+          icon: 'icon-window-minimize'
       groups:
         settings:
           label: NeosRulez.Bootstrap:Main:settings
           icon: 'icon-cog'
+        marginsettings:
+          label: NeosRulez.Bootstrap:Main:marginsettings
+          icon: 'icon-arrows-v'
+          tab: 'distance'
+          position: 100
+        paddingsettings:
+          label: NeosRulez.Bootstrap:Main:paddingsettings
+          icon: 'icon-arrows-v'
+          tab: 'distance'
+          position: 110
+        animationsettings:
+          label: NeosRulez.Bootstrap:Main:animationsettings
+          icon: 'icon-star'
+          tab: 'animation'
+        tooltipsettings:
+          label: NeosRulez.Bootstrap:Main:tooltipsettings
+          icon: 'icon-window-minimize'
+          tab: 'tooltip'
   properties:
     class:
       type: string
@@ -20,7 +51,7 @@
         label: NeosRulez.Bootstrap:Main:animation
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'animationsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
@@ -185,7 +216,7 @@
         label: NeosRulez.Bootstrap:Main:delay
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'animationsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
@@ -218,7 +249,7 @@
         label: NeosRulez.Bootstrap:Main:mt
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'marginsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
@@ -241,7 +272,7 @@
         label: NeosRulez.Bootstrap:Main:mb
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'marginsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
@@ -264,7 +295,7 @@
         label: NeosRulez.Bootstrap:Main:ml
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'marginsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
@@ -287,7 +318,7 @@
         label: NeosRulez.Bootstrap:Main:mr
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'marginsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
@@ -310,7 +341,7 @@
         label: NeosRulez.Bootstrap:Main:pt
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'paddingsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
@@ -333,7 +364,7 @@
         label: NeosRulez.Bootstrap:Main:pb
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'paddingsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
@@ -356,7 +387,7 @@
         label: NeosRulez.Bootstrap:Main:pl
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'paddingsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
@@ -379,7 +410,7 @@
         label: NeosRulez.Bootstrap:Main:pr
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'paddingsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
@@ -401,7 +432,7 @@
         label: NeosRulez.Bootstrap:Main:tooltiptext
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'tooltipsettings'
     tooltipposition:
       defaultValue: ''
       type: string
@@ -409,10 +440,12 @@
         label: NeosRulez.Bootstrap:Main:tooltipposition
         reloadIfChanged: TRUE
         inspector:
-          group: 'settings'
+          group: 'tooltipsettings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
+              '':
+                label: ''
               'top':
                 label: NeosRulez.Bootstrap:Main:properties.tooltipposition.selectBoxEditor.values.top
               'right':
@@ -421,3 +454,19 @@
                 label: NeosRulez.Bootstrap:Main:properties.tooltipposition.selectBoxEditor.values.bottom
               'left':
                 label: NeosRulez.Bootstrap:Main:properties.tooltipposition.selectBoxEditor.values.left
+    containerwidth:
+      defaultValue: 'container'
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:containerwidth
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          position: 'start'
+          editorOptions:
+            values:
+              'container':
+                label: NeosRulez.Bootstrap:Main:properties.containerwidth.selectBoxEditor.values.container
+              'container-fluid':
+                label: NeosRulez.Bootstrap:Main:properties.containerwidth.selectBoxEditor.values.container-fluid
