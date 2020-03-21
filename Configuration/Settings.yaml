@@ -7,9 +7,12 @@ NeosRulez:
     magnificPopupHeight: '720'
     thumbImageWidth: '255'
     thumbImageHeight: '255'
+    navbarAlignment: 'right'
     navbarFluid: FALSE
     navbarSticky: TRUE
+    navbarBackground: 'bg-white'
     navbarBreakpoint: 'lg'
+    navbarHover: TRUE
     maxSize: 2560   # maximum image size (should generally be identical with the largest value in the sizes array)
     sizes:          # dynamic array of sizes generated for the srcset attribute
       full: 2560
@@ -21,7 +24,7 @@ NeosRulez:
       licence: free #pro
       version: 5.11.2
     colors:
-      primary: '#007bff'
+      primary: '#563D7C'
       secondary: '#6c757d'
       success: '#28a745'
       danger: '#dc3545'
@@ -77,7 +80,7 @@ Neos:
   Form:
     presets:
       bootstrap:
-        title: 'Bootstrap Form'
+        title: 'Bootstrap'
         stylesheets: {  }
         javaScripts: {  }
         formElementTypes:

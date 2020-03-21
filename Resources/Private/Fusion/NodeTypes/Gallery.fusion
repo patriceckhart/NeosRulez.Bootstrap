@@ -1,5 +1,5 @@
 prototype(NeosRulez.Bootstrap:Gallery) < prototype(Neos.Neos:Content) {
-    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/Gallery.html'
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Gallery.html'
     magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
     magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
     thumbImageWidth = ${Configuration.setting('NeosRulez.Bootstrap.thumbImageWidth')}

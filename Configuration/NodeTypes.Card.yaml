@@ -12,7 +12,7 @@
           'NeosRulez.Bootstrap:Container': FALSE
           'Neos.NodeTypes:Column': FALSE
           'Neos.NodeTypes.Form:Form': FALSE
-          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
   ui: ~
     #label: i18n
     #group: 'bootstrapnodetypes'

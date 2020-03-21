@@ -29,7 +29,7 @@
     <f:for each="{assets}" as="asset">
         <f:if condition="{crop}">
             <f:then>
-                <div class="col-sm-3">
+                <div class="col-md-3 col-6">
                     <f:if condition="{lightbox}">
                         <f:then>
                             <a href="{media:uri.image(image: asset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}"><media:image image="{asset}" width="{thumbImageWidth}" maximumHeight="{thumbImageHeight}" allowCropping="FALSE" allowUpScaling="TRUE" class="img-thumbnail" alt="" /></a>
@@ -41,7 +41,7 @@
                 </div>
             </f:then>
             <f:else>
-                <div class="col-sm-3">
+                <div class="col-md-3 col-6">
                     <f:if condition="{lightbox}">
                         <f:then>
                             <a href="{media:uri.image(image: asset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}"><media:image image="{asset}" width="{thumbImageWidth}" height="{thumbImageHeight}" allowCropping="TRUE" allowUpScaling="TRUE" class="img-thumbnail" alt="" /></a>

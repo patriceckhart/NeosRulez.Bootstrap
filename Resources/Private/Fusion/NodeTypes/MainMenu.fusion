@@ -8,4 +8,15 @@ prototype(NeosRulez.Bootstrap:MainMenu) < prototype(Neos.Neos:Menu) {
     navbarFluid = ${Configuration.setting('NeosRulez.Bootstrap.navbarFluid')}
     navbarSticky = ${Configuration.setting('NeosRulez.Bootstrap.navbarSticky')}
     navbarBreakpoint = ${Configuration.setting('NeosRulez.Bootstrap.navbarBreakpoint')}
+    navbarAlignment = ${Configuration.setting('NeosRulez.Bootstrap.navbarAlignment')}
+    navbarBackground = ${Configuration.setting('NeosRulez.Bootstrap.navbarBackground')}
+    navbarHover = ${Configuration.setting('NeosRulez.Bootstrap.navbarHover')}
+    attributes.class = ${'neosrulez-navigation' + (Configuration.setting('NeosRulez.Bootstrap.navbarSticky') ? ' ' + 'sticky-top' : '' ) + (Configuration.setting('NeosRulez.Bootstrap.navbarHover') ? ' ' + 'navbar-hover' : '' ) + (Configuration.setting('NeosRulez.Bootstrap.navbarBackground') ? ' ' + Configuration.setting('NeosRulez.Bootstrap.navbarBackground') : '' )}
+    @cache {
+        mode = 'uncached'
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
 }

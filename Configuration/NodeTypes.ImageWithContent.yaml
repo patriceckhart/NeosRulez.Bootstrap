@@ -11,7 +11,7 @@
           'NeosRulez.Bootstrap:ImageWithContent': FALSE
           'NeosRulez.Bootstrap:Container': FALSE
           'NeosRulez.Bootstrap:CardColumn': FALSE
-          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
           'Neos.NodeTypes:Menu': FALSE
           'Neos.Neos:PluginView': FALSE
   ui:

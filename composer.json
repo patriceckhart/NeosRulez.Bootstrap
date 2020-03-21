@@ -15,7 +15,8 @@
         "neos/neos": "*",
         "neos/nodetypes": "*",
         "neosrulez/scssparser": "*",
-        "neosrulez/jsminifier": "*"
+        "neosrulez/jsminifier": "*",
+        "shel/neos-colorpicker": "^1.3"
     },
     "autoload": {
         "psr-4": {

@@ -10,7 +10,7 @@
           'NeosRulez.Bootstrap:ImageWithContent': FALSE
           'NeosRulez.Bootstrap:CardColumn': FALSE
           'NeosRulez.Bootstrap:Container': FALSE
-          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
@@ -24,7 +24,7 @@
           'NeosRulez.Bootstrap:ImageWithContent': FALSE
           'NeosRulez.Bootstrap:CardColumn': FALSE
           'NeosRulez.Bootstrap:Container': FALSE
-          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
@@ -38,7 +38,7 @@
           'NeosRulez.Bootstrap:ImageWithContent': FALSE
           'NeosRulez.Bootstrap:CardColumn': FALSE
           'NeosRulez.Bootstrap:Container': FALSE
-          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE
@@ -52,7 +52,7 @@
           'NeosRulez.Bootstrap:ImageWithContent': FALSE
           'NeosRulez.Bootstrap:CardColumn': FALSE
           'NeosRulez.Bootstrap:Container': FALSE
-          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes:TwoColumn': FALSE
           'Neos.NodeTypes:ThreeColumn': FALSE

@@ -152,6 +152,66 @@
 			<trans-unit id="tooltipsettings" xml:space="preserve">
                 <source>Tooltip Settings</source>
             </trans-unit>
+			<trans-unit id="backgroundColorHelpText" xml:space="preserve">
+				<source>If you select a fixed background color (field below) in addition to this option, this setting will be overwritten.</source>
+			</trans-unit>
+			<trans-unit id="navbaralignment" xml:space="preserve">
+				<source>Navigation Alignment</source>
+			</trans-unit>
+			<trans-unit id="alignleft" xml:space="preserve">
+                <source>Navigation left, Logo left</source>
+            </trans-unit>
+			<trans-unit id="alignright" xml:space="preserve">
+                <source>Navigation right, Logo right</source>
+            </trans-unit>
+			<trans-unit id="aligncenter" xml:space="preserve">
+                <source>Navigation left and right, Logo centered</source>
+            </trans-unit>
+			<trans-unit id="collapsed" xml:space="preserve">
+                <source>Hamburger Navigation</source>
+            </trans-unit>
+			<trans-unit id="navbarsticky" xml:space="preserve">
+				<source>Navigation "Sticky"</source>
+			</trans-unit>
+			<trans-unit id="navbarfluid" xml:space="preserve">
+				<source>Navigation full width</source>
+			</trans-unit>
+			<trans-unit id="logoabsolute" xml:space="preserve">
+				<source>Logo floating</source>
+			</trans-unit>
+			<trans-unit id="navbarBackground" xml:space="preserve">
+				<source>Navigation Backgroundcolor</source>
+			</trans-unit>
+			<trans-unit id="bg-primary" xml:space="preserve">
+                <source>Primary</source>
+            </trans-unit>
+			<trans-unit id="bg-secondary" xml:space="preserve">
+                <source>Secondary</source>
+            </trans-unit>
+			<trans-unit id="bg-success" xml:space="preserve">
+                <source>Success</source>
+            </trans-unit>
+			<trans-unit id="bg-danger" xml:space="preserve">
+                <source>Danger</source>
+            </trans-unit>
+			<trans-unit id="bg-warning" xml:space="preserve">
+                <source>Warning</source>
+            </trans-unit>
+			<trans-unit id="bg-info" xml:space="preserve">
+                <source>Info</source>
+            </trans-unit>
+			<trans-unit id="bg-light" xml:space="preserve">
+                <source>Light</source>
+            </trans-unit>
+			<trans-unit id="bg-dark" xml:space="preserve">
+                <source>Dark</source>
+            </trans-unit>
+			<trans-unit id="bg-white" xml:space="preserve">
+                <source>White</source>
+            </trans-unit>
+			<trans-unit id="alignmentsettings" xml:space="preserve">
+                <source>Navigation</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

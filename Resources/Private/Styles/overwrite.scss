@@ -3846,12 +3846,12 @@ img.mfp-img {
 
 .padding { padding-top: 3rem; padding-bottom: 3rem; }
 .no-padding { padding:0; }
-/*.neosrulez-bootstrap-container { float:left; width:100%; }*/
+
 .form-navigation { margin-top:1rem; }
 .form-navigation ul, .form-navigation ul li { display:block; margin:0; padding:0; }
 .carousel .carousel-item>img { width: 100%; height: auto; }
 .card-img-top { height:auto; }
-.neosrulez-bootstrap-gallery .img-thumbnail { width:100%; height:auto; margin-right:15px; margin-bottom:15px; }
+.neosrulez-bootstrap-gallery .img-thumbnail { width:100%; height:auto; margin-top:15px; margin-bottom:15px; padding:0; background: $primary; border:0; border-radius:0; }
 .neosrulez-bootstrap-gallery a { outline:0; }
 .singlelightbox a { outline:0; }
 
@@ -3886,13 +3886,22 @@ img.mfp-img {
 
 .img-fullwidth { width:100%; height:auto; }
 
-/*.navbar { padding-left:0; padding-right:0; }*/
-
 figure { margin:0; }
 .figure-img { margin:0; }
 
 .jumbotron { height:800px; }
 .hero { height:400px; }
+
+::-moz-selection { background: $primary; text-shadow: none; color:#FFF; }
+::selection { background: $primary; text-shadow: none; color:#FFF; }
+
+.navbar-hover {
+  .dropdown-menu { margin-top:-0.1em; }
+  .dropdown:hover>.dropdown-menu { display: block; top: 100%; }
+  .dropdown>.dropdown-toggle:active { pointer-events: none; }
+}
+
+div[role="tabpanel"] { outline:0; }
 
 @media only screen and (max-width:1200px) {
   .neosrulez-bootstrap-imagewithcontent .contentitems { padding:3rem; }

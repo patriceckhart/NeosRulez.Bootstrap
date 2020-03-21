@@ -10,7 +10,7 @@
           'NeosRulez.Bootstrap:AccordionItem': FALSE
           'NeosRulez.Bootstrap:ImageWithContent': FALSE
           'NeosRulez.Bootstrap:CardColumn': FALSE
-          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes.Form:Form': FALSE
     footer:
@@ -23,6 +23,6 @@
           'NeosRulez.Bootstrap:AccordionItem': FALSE
           'NeosRulez.Bootstrap:ImageWithContent': FALSE
           'NeosRulez.Bootstrap:CardColumn': FALSE
-          'Neos.NodeTypes:AssetList': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes.Form:Form': FALSE

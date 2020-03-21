@@ -1,7 +1,9 @@
 'Neos.Neos:ContentCollection':
   constraints:
     nodeTypes:
-      '*': true
-      'Neos.Neos:Document': false
-      'Neos.NodeTypes.Form:Form': false
-      'Neos.NodeTypes:TextWithImage': false
+      '*': TRUE
+      'Neos.Neos:Document': FALSE
+      'Neos.NodeTypes.Form:Form': FALSE
+      'Neos.NodeTypes:TextWithImage': FALSE
+      'Neos.NodeTypes.AssetList:AssetList': FALSE
+      #'NeosRulez.Bootstrap:Containerwidth': FALSE
