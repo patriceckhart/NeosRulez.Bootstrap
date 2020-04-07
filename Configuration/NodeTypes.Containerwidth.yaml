@@ -8,6 +8,8 @@
         label: NeosRulez.Bootstrap:Main:containerwidth
         reloadIfChanged: TRUE
         inspector:
+          hidden: 'ClientEval:node.depth >= 7'
+          #hidden: 'ClientEval:console.info(node)'
           group: 'settings'
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           position: 'start'

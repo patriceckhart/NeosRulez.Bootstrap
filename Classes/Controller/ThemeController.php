@@ -37,10 +37,22 @@ class ThemeController extends ActionController
      * @return void
      */
     public function generateThemeAction() {
+        $rounded = $this->settings['enableRounded'];
+        $responsiveFonts = $this->settings['enableResponsiveFontSizes'];
         $colors = $this->settings['colors'];
         $scss = '';
         foreach($colors as $key=>$data) {
             $scss .= '$'.$key.': '.$data.'; ';
+        }
+        if($rounded==true) {
+            $scss .= '$enable-rounded: true; ';
+        } else {
+            $scss .= '$enable-rounded: false; ';
+        }
+        if($responsiveFonts==true) {
+            $scss .= '$enable-responsive-font-sizes: true; ';
+        } else {
+            $scss .= '$enable-responsive-font-sizes: false; ';
         }
         $styleFile = 'resource://NeosRulez.Bootstrap/Private/Styles/styles.scss';
         $themeFile = 'resource://NeosRulez.Bootstrap/Private/Styles/theme.scss';

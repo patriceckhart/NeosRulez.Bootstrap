@@ -13,6 +13,8 @@ NeosRulez:
     navbarBackground: 'bg-white'
     navbarBreakpoint: 'lg'
     navbarHover: TRUE
+    enableRounded: FALSE
+    enableResponsiveFontSizes: TRUE
     maxSize: 2560   # maximum image size (should generally be identical with the largest value in the sizes array)
     sizes:          # dynamic array of sizes generated for the srcset attribute
       full: 2560

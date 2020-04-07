@@ -13,11 +13,14 @@
             <f:render section="toggler" arguments="{_all}" />
             <f:render section="brand" arguments="{_all}" />
         </f:if>
+        <f:if condition="{navbarAlignment}=='center'">
+            <f:render section="navbarCentered" arguments="{_all}" />
+        </f:if>
     </nav>
 </header>
 
 <f:section name="brand">
-    <a class="navbar-brand" href="/"><img src="{f:uri.resource(path: '{headerLogoPath}', package: '{headerLogoPackage}')}" alt="{headerLogoAltText}" /></a>
+    <a class="navbar-brand{f:if(condition:'{navbarAlignment}==center', then: ' mr-0')}{f:if(condition:'{navbarAlignment}==left', then: ' mr-0 ml-3')}" href="/"><img src="{f:uri.resource(path: '{headerLogoPath}', package: '{headerLogoPackage}')}" alt="{headerLogoAltText}" /></a>
 </f:section>
 
 <f:section name="toggler">
@@ -30,29 +33,64 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav{f:if(condition:'{navbarAlignment}==right', then: ' ml-auto')}{f:if(condition:'{navbarAlignment}==left', then: ' mr-auto')}">
             <f:for each="{items}" as="item" iteration="menuItemIterator">
-                <f:if condition="{item.subItems}">
-                    <f:then>
-                        <f:if condition="{item.node.properties.noSubMenu}">
-                            <f:then>
-                                <neos:link.node class="nav-link" node="{item.node}"><f:render section="fontAwesomeIcon" arguments="{icon: item.node.properties.faicon}" /><f:if condition="!{item.node.properties.onlyicon}">{item.label}</f:if></neos:link.node>
-                            </f:then>
-                            <f:else>
-                                <li class="nav-item dropdown">
-                                    <neos:link.node class="nav-link dropdown-toggle" node="{item.node}" additionalAttributes="{role: 'button', data-toggle: 'dropdown', aria-haspopup: 'true', aria-expanded: 'false'}">{item.label}</neos:link.node>
-                                    <f:render section="subList" arguments="{items: item.subItems}" />
-                                </li>
-                            </f:else>
-                        </f:if>
-                    </f:then>
-                    <f:else>
-                        <li class="nav-item">
-                            <neos:link.node class="nav-link" node="{item.node}"><f:render section="fontAwesomeIcon" arguments="{icon: item.node.properties.faicon}" /><f:if condition="!{item.node.properties.onlyicon}">{item.label}</f:if></neos:link.node>
-                        </li>
-                    </f:else>
-                </f:if>
+                <f:render section="list" arguments="{_all}" />
             </f:for>
         </ul>
     </div>
+</f:section>
+
+<f:section name="navbarCentered">
+    <ul class="navbar-nav navbar-nav-left d-none d-lg-flex flex-fill w-100 flex-nowrap">
+        <f:for each="{items}" as="item" iteration="firstMenuIterator">
+            <f:if condition="{firstMenuIterator.index}<{itemcount}">
+                <f:render section="list" arguments="{_all}" />
+            </f:if>
+        </f:for>
+    </ul>
+    <ul class="navbar-nav mx-auto flex-fill">
+        <f:render section="brand" arguments="{_all}" />
+    </ul>
+    <ul class="navbar-nav navbar-nav-right d-none d-lg-flex flex-fill w-100 flex-nowrap justify-content-end">
+        <f:for each="{items}" as="item" iteration="secondMenuIterator">
+            <f:if condition="{secondMenuIterator.index}>{itemcount}">
+                <f:render section="list" arguments="{_all}" />
+            </f:if>
+        </f:for>
+    </ul>
+    <f:render section="toggler" arguments="{_all}" />
+    <div class="d-md-block d-lg-none w-100">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <f:for each="{items}" as="item" iteration="menuItemIterator">
+                    <f:render section="list" arguments="{_all}" />
+                </f:for>
+            </ul>
+        </div>
+    </div>
+
+</f:section>
+
+<f:section name="list">
+    <f:if condition="{item.subItems}">
+        <f:then>
+            <f:if condition="{item.node.properties.noSubMenu}">
+                <f:then>
+                    <neos:link.node class="nav-link" node="{item.node}"><f:render section="fontAwesomeIcon" arguments="{icon: item.node.properties.faicon}" /><f:if condition="!{item.node.properties.onlyicon}">{item.label}</f:if></neos:link.node>
+                </f:then>
+                <f:else>
+                    <li class="nav-item dropdown">
+                        <neos:link.node class="nav-link dropdown-toggle" node="{item.node}" additionalAttributes="{role: 'button', data-toggle: 'dropdown', aria-haspopup: 'true', aria-expanded: 'false'}">{item.label}</neos:link.node>
+                        <f:render section="subList" arguments="{items: item.subItems}" />
+                    </li>
+                </f:else>
+            </f:if>
+        </f:then>
+        <f:else>
+            <li class="nav-item">
+                <neos:link.node class="nav-link" node="{item.node}"><f:render section="fontAwesomeIcon" arguments="{icon: item.node.properties.faicon}" /><f:if condition="!{item.node.properties.onlyicon}">{item.label}</f:if></neos:link.node>
+            </li>
+        </f:else>
+    </f:if>
 </f:section>
 
 <f:section name="subList">

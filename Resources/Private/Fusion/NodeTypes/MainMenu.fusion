@@ -12,11 +12,13 @@ prototype(NeosRulez.Bootstrap:MainMenu) < prototype(Neos.Neos:Menu) {
     navbarBackground = ${Configuration.setting('NeosRulez.Bootstrap.navbarBackground')}
     navbarHover = ${Configuration.setting('NeosRulez.Bootstrap.navbarHover')}
     attributes.class = ${'neosrulez-navigation' + (Configuration.setting('NeosRulez.Bootstrap.navbarSticky') ? ' ' + 'sticky-top' : '' ) + (Configuration.setting('NeosRulez.Bootstrap.navbarHover') ? ' ' + 'navbar-hover' : '' ) + (Configuration.setting('NeosRulez.Bootstrap.navbarBackground') ? ' ' + Configuration.setting('NeosRulez.Bootstrap.navbarBackground') : '' )}
+    itemcount = ${Array.length(this.items)/2}
     @cache {
         mode = 'uncached'
         context {
-            1 = 'node'
-            2 = 'documentNode'
+            1 = 'site'
+            2 = 'node'
+            3 = 'documentNode'
         }
     }
 }
