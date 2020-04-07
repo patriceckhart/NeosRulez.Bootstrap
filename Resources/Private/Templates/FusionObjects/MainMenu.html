@@ -42,7 +42,7 @@
 <f:section name="navbarCentered">
     <ul class="navbar-nav navbar-nav-left d-none d-lg-flex flex-fill w-100 flex-nowrap">
         <f:for each="{items}" as="item" iteration="firstMenuIterator">
-            <f:if condition="{firstMenuIterator.index}<{itemcount}">
+            <f:if condition="{firstMenuIterator.index}<={itemcount}">
                 <f:render section="list" arguments="{_all}" />
             </f:if>
         </f:for>
@@ -52,7 +52,7 @@
     </ul>
     <ul class="navbar-nav navbar-nav-right d-none d-lg-flex flex-fill w-100 flex-nowrap justify-content-end">
         <f:for each="{items}" as="item" iteration="secondMenuIterator">
-            <f:if condition="{secondMenuIterator.index}>{itemcount}">
+            <f:if condition="{secondMenuIterator.index}>={itemcount}">
                 <f:render section="list" arguments="{_all}" />
             </f:if>
         </f:for>
@@ -67,7 +67,6 @@
             </ul>
         </div>
     </div>
-
 </f:section>
 
 <f:section name="list">
