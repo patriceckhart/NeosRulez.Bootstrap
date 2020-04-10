@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.textBsColor" xml:space="preserve">
+				<source>Textfarbe</source>
+			</trans-unit>
+            <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-primary" xml:space="preserve">
+                <source>Primary</source>
+            </trans-unit>
+            <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-secondary" xml:space="preserve">
+                <source>Secondary</source>
+            </trans-unit>
+            <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-success" xml:space="preserve">
+                <source>Success</source>
+            </trans-unit>
+            <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-danger" xml:space="preserve">
+                <source>Danger</source>
+            </trans-unit>
+            <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-warning" xml:space="preserve">
+                <source>Warning</source>
+            </trans-unit>
+            <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-info" xml:space="preserve">
+                <source>Info</source>
+            </trans-unit>
+            <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-light" xml:space="preserve">
+                <source>Light</source>
+            </trans-unit>
+            <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-dark" xml:space="preserve">
+                <source>Dark</source>
+            </trans-unit>
+            <trans-unit id="properties.textBsColor.selectBoxEditor.values.text-white" xml:space="preserve">
+                <source>White</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

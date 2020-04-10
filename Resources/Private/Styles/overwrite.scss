@@ -3903,6 +3903,12 @@ figure { margin:0; }
 
 div[role="tabpanel"] { outline:0; }
 
+.bg-primary {
+  a { color:$white;
+    &:hover { color:$white; }
+  }
+}
+
 @media only screen and (max-width:1200px) {
   .neosrulez-bootstrap-imagewithcontent .contentitems { padding:3rem; }
 }

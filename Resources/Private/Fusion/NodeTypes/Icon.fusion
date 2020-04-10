@@ -1,4 +1,12 @@
-prototype(NeosRulez.Bootstrap:Icon) < prototype(Neos.Neos:ContentComponent) {
+prototype(NeosRulez.Bootstrap:Icon) < prototype(Neos.Neos:Content) {
+	templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Icon.html'
+	icon = ${q(node).property('icon')}
+	iconSize = ${q(node).property('iconSize')}
+	alignment = ${q(node).property('alignment')}
+}
+
+
+prototype(NeosRulez.Bootstrap:xIcon) < prototype(Neos.Neos:ContentComponent) {
 
 	icon = ${q(node).property('icon')}
 	size = ${q(node).property('iconSize')}

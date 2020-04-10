@@ -1,6 +1,8 @@
 'NeosRulez.Bootstrap:LinkContainer':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
+    'NeosRulez.Bootstrap:TextColor': true
+    'NeosRulez.Bootstrap:BackgroundColor': true
   childNodes:
     linkedItems:
       type: 'Neos.Neos:ContentCollection'
@@ -19,9 +21,12 @@
           icon: 'icon-cog'
   properties:
     link:
-      type: reference
+      type: string
       ui:
         reloadIfChanged: TRUE
         label: i18n
         inspector:
           group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          editorOptions:
+            assets: TRUE

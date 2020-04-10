@@ -17,7 +17,6 @@ prototype(NeosRulez.Bootstrap:StackedIconComponent) < prototype(Neos.Fusion:Comp
 	`
 }
 
-
 prototype(NeosRulez.Bootstrap:IconWrapper) < prototype(Neos.Fusion:Component) {
 
 	@context {

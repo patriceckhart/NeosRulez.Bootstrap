@@ -1,0 +1,17 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+    <f:render section="IconWrap" arguments="{_all}" />
+</div>
+<f:section name="IconWrap">
+    <f:if condition="{icon}">
+        <f:then>
+            <div class="d-block text-{alignment}">
+                <f:render section="Icon" arguments="{_all}" />
+            </div>
+        </f:then>
+    </f:if>
+</f:section>
+<f:section name="Icon">
+    <i class="{icon}{f:if(condition: '{iconSize}', then: ' fa-{iconSize}')}"></i>
+</f:section>
