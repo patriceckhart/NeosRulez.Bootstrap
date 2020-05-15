@@ -6,9 +6,20 @@
 <f:section name="IconWrap">
     <f:if condition="{icon}">
         <f:then>
-            <div class="d-block text-{alignment}">
-                <f:render section="Icon" arguments="{_all}" />
-            </div>
+            <f:if condition="{link}">
+                <f:then>
+                    <a href="{link}" {f:if(condition: '{linktarget}', then: ' target="_blank"')}>
+                        <div class="d-block text-{alignment}">
+                            <f:render section="Icon" arguments="{_all}" />
+                        </div>
+                    </a>
+                </f:then>
+                <f:else>
+                    <div class="d-block text-{alignment}">
+                        <f:render section="Icon" arguments="{_all}" />
+                    </div>
+                </f:else>
+            </f:if>
         </f:then>
     </f:if>
 </f:section>

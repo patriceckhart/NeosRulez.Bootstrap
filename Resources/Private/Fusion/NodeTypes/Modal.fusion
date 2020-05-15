@@ -1,0 +1,24 @@
+prototype(NeosRulez.Bootstrap:Modal) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Modal.html'
+    @context.nodeidentifier = ${node.identifier}
+    button = NeosRulez.Bootstrap:Button {
+        @context.container = ${(q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? '' : ''}
+        templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/ModalButton.html'
+        text = ${q(node).property('text')}
+        style = ${q(node).property('style')}
+        size = ${q(node).property('size')}
+        alignment = ${q(node).property('alignment')}
+        outline = ${q(node).property('outline')}
+        fullwidth = ${q(node).property('fullwidth')}
+        faicon = ${q(node).property('faicon')}
+        onlyicon = ${q(node).property('onlyicon')}
+        identifier = ${nodeidentifier}
+    }
+    identifier = ${nodeidentifier}
+    title = ${q(node).property('title')}
+    modalsize = ${q(node).property('modalsize')}
+    modalcenter = ${q(node).property('modalcenter')}
+    modalContent = Neos.Neos:ContentCollection {
+        nodePath = 'modalContent'
+    }
+}

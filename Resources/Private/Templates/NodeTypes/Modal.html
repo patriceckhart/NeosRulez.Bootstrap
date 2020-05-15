@@ -1,0 +1,20 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+    {button -> f:format.raw()}
+    <div class="modal fade" id="modal-{identifier}" tabindex="-1" role="dialog" aria-labelledby="modal-{identifier}-label" aria-hidden="true">
+        <div class="modal-dialog{f:if(condition: '{modalsize}', then: ' modal-{modalsize}')}{f:if(condition: '{modalcenter}', then: ' modal-dialog-centered')}">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-{identifier}-label">{neos:contentElement.editable(property: 'title')}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {modalContent -> f:format.raw()}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

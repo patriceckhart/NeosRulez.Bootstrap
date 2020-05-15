@@ -3,9 +3,9 @@
 <div{attributes -> f:format.raw()}>
 <f:if condition="!{node.context.inBackend}">
     <f:then>
-        <neos:link.node node="{link}">
+        <a href="{link}" {f:if(condition: '{linktarget}', then: ' target="_blank"')}>
             {linkedItems -> f:format.raw()}
-        </neos:link.node>
+        </a>
     </f:then>
     <f:else>
         <div>{linkedItems -> f:format.raw()}</div>

@@ -3,6 +3,7 @@
     'Neos.Neos:Content': true
     'NeosRulez.Bootstrap:TextColor': true
     'NeosRulez.Bootstrap:BackgroundColor': true
+    'NeosRulez.Bootstrap:LinkEditorTarget': true
   childNodes:
     linkedItems:
       type: 'Neos.Neos:ContentCollection'

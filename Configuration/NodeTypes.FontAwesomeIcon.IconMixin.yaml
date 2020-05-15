@@ -75,6 +75,17 @@
         #reloadIfChanged: true
         #inspector:
           #group: style
+    link:
+      type: string
+      ui:
+        reloadIfChanged: TRUE
+        label: i18n
+        inspector:
+          group: 'settings'
+          position: 'end'
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          editorOptions:
+            assets: TRUE
   postprocessors:
     FontAwesomeIconsNodeTypePostprocessor:
       postprocessor: NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor

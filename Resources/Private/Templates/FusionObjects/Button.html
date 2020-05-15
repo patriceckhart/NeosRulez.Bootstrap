@@ -16,8 +16,8 @@
 <f:section name="button">
     <f:if condition="!{node.context.inBackend}">
         <f:then>
-            <a href="{link}" class="btn {f:if(condition: '{outline}', then: 'btn-outline-', else: 'btn-')}{style}{f:if(condition: '{size}', then: ' btn-{size}')}{f:if(condition: '{fullwidth}', then: ' btn-block')}">
-                <f:if condition="{faicon}"><f:render section="fontAwesomeIcon" arguments="{icon: faicon}" /></f:if><f:if condition="!{onlyicon}">{text}</f:if>
+            <a href="{link}" {f:if(condition: '{linktarget}', then: ' target="_blank" ')}class="btn {f:if(condition: '{outline}', then: 'btn-outline-', else: 'btn-')}{style}{f:if(condition: '{size}', then: ' btn-{size}')}{f:if(condition: '{fullwidth}', then: ' btn-block')}">
+                <f:if condition="{faicon}"><f:render section="fontAwesomeIcon" arguments="{icon: faicon}" /></f:if><f:if condition="!{onlyicon}">{text -> f:format.raw()}</f:if>
             </a>
         </f:then>
         <f:else>

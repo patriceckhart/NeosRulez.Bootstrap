@@ -1,0 +1,25 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+<f:if condition="{alignment}==center">
+    <f:then>
+        <div class="text-center">
+            <f:render section="button" arguments="{_all}" />
+        </div>
+    </f:then>
+    <f:else>
+        <div class="text-{alignment}">
+            <f:render section="button" arguments="{_all}" />
+        </div>
+    </f:else>
+</f:if>
+</div>
+<f:section name="button">
+    <div class="btn {f:if(condition: '{outline}', then: 'btn-outline-', else: 'btn-')}{style}{f:if(condition: '{size}', then: ' btn-{size}')}{f:if(condition: '{fullwidth}', then: ' btn-block')}" data-toggle="modal" data-target="#modal-{identifier}">
+        <f:if condition="{faicon}"><f:render section="fontAwesomeIcon" arguments="{icon: faicon}" /></f:if><f:if condition="!{onlyicon}">{neos:contentElement.editable(property: 'text', tag: 'span')}</f:if>
+    </div>
+</f:section>
+<f:section name="fontAwesomeIcon">
+    <f:if condition="{icon}">
+        <i class="{icon}"></i>
+    </f:if>
+</f:section>

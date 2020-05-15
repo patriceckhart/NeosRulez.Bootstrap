@@ -12,4 +12,5 @@ prototype(NeosRulez.Bootstrap:Button) < prototype(Neos.Neos:Content) {
     fullwidth = ${q(node).property('fullwidth')}
     faicon = ${q(node).property('faicon')}
     onlyicon = ${q(node).property('onlyicon')}
+    linktarget = ${q(node).property('linktarget')}
 }

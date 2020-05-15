@@ -1,6 +1,7 @@
 'NeosRulez.Bootstrap:Button':
   superTypes:
     'Neos.Neos:Content': TRUE
+    'NeosRulez.Bootstrap:LinkEditorTarget': TRUE
   ui:
     group: 'bootstrapnodetypes'
     label: i18n

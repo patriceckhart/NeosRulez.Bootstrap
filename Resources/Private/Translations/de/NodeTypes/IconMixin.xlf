@@ -26,6 +26,9 @@
 			<trans-unit id="properties.alignment.selectBoxEditor.values.right" xml:space="preserve">
                 <source>Rechts</source>
             </trans-unit>
+			<trans-unit id="properties.link" xml:space="preserve">
+				<source>Zielseite</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

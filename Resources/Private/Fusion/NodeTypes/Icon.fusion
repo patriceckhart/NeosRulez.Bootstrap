@@ -3,8 +3,12 @@ prototype(NeosRulez.Bootstrap:Icon) < prototype(Neos.Neos:Content) {
 	icon = ${q(node).property('icon')}
 	iconSize = ${q(node).property('iconSize')}
 	alignment = ${q(node).property('alignment')}
+	link = ${q(node).property('link')}
+	link.@process.convertUris = Neos.Neos:ConvertUris {
+		forceConversion = true
+	}
+	linktarget = ${q(node).property('linktarget')}
 }
-
 
 prototype(NeosRulez.Bootstrap:xIcon) < prototype(Neos.Neos:ContentComponent) {
 
