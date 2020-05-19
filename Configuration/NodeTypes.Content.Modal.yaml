@@ -1,0 +1,97 @@
+'NeosRulez.Bootstrap:Modal':
+  superTypes:
+    #'Neos.Neos:Content': true
+    #'NeosRulez.Bootstrap:TextColor': true
+    #'NeosRulez.Bootstrap:BackgroundColor': true
+    #'NeosRulez.Bootstrap:LinkEditorTarget': true
+    'NeosRulez.Bootstrap:Button': true
+    'NeosRulez.Bootstrap:LinkEditorTarget': false
+  childNodes:
+    modalContent:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:Container': FALSE
+          'NeosRulez.Bootstrap:Modal': FALSE
+  ui:
+    label: i18n
+    group: 'bootstrapnodetypes'
+    icon: 'fas fa-vector-square'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        settings:
+          label: NeosRulez.Bootstrap:Main:settings
+          icon: 'icon-cog'
+  properties:
+    title:
+      type: string
+      ui:
+        label: i18n
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: 'Enter Text here'
+            autoparagraph: false
+            linking:
+              anchor: false
+              title: false
+              relNofollow: false
+              targetBlank: false
+            formatting:
+              strong: false
+              em: true
+              u: false
+              sub: true
+              sup: true
+              del: false
+              p: false
+              h1: false
+              h2: false
+              h3: false
+              h4: false
+              h5: false
+              h6: false
+              pre: false
+              underline: false
+              strikethrough: false
+              removeFormat: true
+              left: false
+              right: false
+              center: false
+              justify: false
+              table: false
+              ol: false
+              ul: false
+              a: false
+    modalsize:
+      defaultValue: ''
+      ui:
+        label: i18n
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'sm':
+                label: i18n
+              'lg':
+                label: i18n
+              'xl':
+                label: i18n
+    modalcenter:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          position: 'after modalsize'
+    containerwidth:
+      ui: ~
+    link:
+      ui: ~

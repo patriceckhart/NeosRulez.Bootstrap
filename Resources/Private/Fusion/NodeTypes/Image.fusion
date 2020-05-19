@@ -23,6 +23,8 @@ prototype(Neos.NodeTypes:Image) {
     imgfullwidth = ${q(node).property('imgfullwidth')}
     magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
     magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
+
+    linktarget = ${q(node).property('linktarget')}
 }
 
 prototype(Neos.NodeTypes:TextWithImage) {

@@ -1,0 +1,237 @@
+'NeosRulez.Bootstrap:Container':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  childNodes:
+    contentItems:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:CarouselItem': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
+          'Neos.NodeTypes:Menu': FALSE
+          'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes:Column': FALSE
+          'Neos.NodeTypes:TextWithImage': FALSE
+          'Neos.NodeTypes.Form:Form': FALSE
+  ui:
+    label: i18n
+    group: 'bootstrapnodetypes'
+    icon: 'icon-square-o'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        settings:
+          label: NeosRulez.Bootstrap:Main:settings
+          icon: 'icon-cog'
+  properties:
+    backgroundColor:
+      type: string
+      defaultValue: ''
+      ui:
+        label: i18n
+        help:
+          message: NeosRulez.Bootstrap:Main:backgroundColorHelpText
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Shel.Neos.ColorPicker/ColorPickerEditor'
+          editorOptions:
+            mode: 'hex'
+            picker: true
+            fields: true
+            presetColors: []
+    backgroundBsColor:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'bg-primary':
+                label: i18n
+              'bg-secondary':
+                label: i18n
+              'bg-success':
+                label: i18n
+              'bg-danger':
+                label: i18n
+              'bg-warning':
+                label: i18n
+              'bg-info':
+                label: i18n
+              'bg-light':
+                label: i18n
+              'bg-dark':
+                label: i18n
+              'bg-white':
+                label: i18n
+    textBsColor:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'text-primary':
+                label: i18n
+              'text-secondary':
+                label: i18n
+              'text-success':
+                label: i18n
+              'text-danger':
+                label: i18n
+              'text-warning':
+                label: i18n
+              'text-info':
+                label: i18n
+              'text-light':
+                label: i18n
+              'text-dark':
+                label: i18n
+              'text-white':
+                label: i18n
+    backgroundImage:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    backgroundSize:
+      defaultValue: 'cover'
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: cover
+            values:
+              'cover':
+                label: i18n
+              'contain':
+                label: i18n
+              'auto':
+                label: i18n
+    backgroundPosition:
+      defaultValue: 'center center'
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            placeholder: left top
+            values:
+              'left top':
+                label: i18n
+              'left bottom':
+                label: i18n
+              'left center':
+                label: i18n
+              'center top':
+                label: i18n
+              'center bottom':
+                label: i18n
+              'center center':
+                label: i18n
+              'right top':
+                label: i18n
+              'right bottom':
+                label: i18n
+              'right center':
+                label: i18n
+    #padding:
+      #type: boolean
+      #defaultValue: TRUE
+      #ui: ~
+        #label: i18n
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
+    #fluid:
+      #type: boolean
+      #defaultValue: FALSE
+      #ui:
+        #label: i18n
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
+    #textWhite:
+      #type: boolean
+      #defaultValue: FALSE
+      #ui:
+        #label: i18n
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
+    parallax:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: i18n
+        #reloadIfChanged: TRUE
+        reloadPageIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    masterclass:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          position: 'start'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'jumbotron':
+                label: i18n
+              'hero':
+                label: i18n
+              'windowheight':
+                label: i18n
+    valignment:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:alignment
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          position: 'start'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'align-items-start':
+                label: NeosRulez.Bootstrap:Main:alignmentstart
+              'align-items-center':
+                label: NeosRulez.Bootstrap:Main:alignmentcenter
+              'align-items-end':
+                label: NeosRulez.Bootstrap:Main:alignmentend
+    pt:
+      defaultValue: 'pt-5'
+    pb:
+      defaultValue: 'pb-5'

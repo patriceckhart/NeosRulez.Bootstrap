@@ -1,0 +1,119 @@
+'Neos.NodeTypes.ColumnLayouts:Column':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  childNodes:
+    column0:
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:CarouselItem': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'NeosRulez.Bootstrap:ImageWithContent': FALSE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
+          'NeosRulez.Bootstrap:Container': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
+          'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes:TwoColumn': FALSE
+          'Neos.NodeTypes:ThreeColumn': FALSE
+          'Neos.NodeTypes:FourColumn': FALSE
+          'Neos.NodeTypes:Column': FALSE
+    column1:
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:CarouselItem': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'NeosRulez.Bootstrap:ImageWithContent': FALSE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
+          'NeosRulez.Bootstrap:Container': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
+          'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes:TwoColumn': FALSE
+          'Neos.NodeTypes:ThreeColumn': FALSE
+          'Neos.NodeTypes:FourColumn': FALSE
+          'Neos.NodeTypes:Column': FALSE
+    column2:
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:CarouselItem': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'NeosRulez.Bootstrap:ImageWithContent': FALSE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
+          'NeosRulez.Bootstrap:Container': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
+          'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes:TwoColumn': FALSE
+          'Neos.NodeTypes:ThreeColumn': FALSE
+          'Neos.NodeTypes:FourColumn': FALSE
+          'Neos.NodeTypes:Column': FALSE
+    column3:
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:CarouselItem': FALSE
+          'NeosRulez.Bootstrap:AccordionItem': FALSE
+          'NeosRulez.Bootstrap:ImageWithContent': FALSE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
+          'NeosRulez.Bootstrap:Container': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
+          'Neos.Neos:PluginView': FALSE
+          'Neos.NodeTypes:TwoColumn': FALSE
+          'Neos.NodeTypes:ThreeColumn': FALSE
+          'Neos.NodeTypes:FourColumn': FALSE
+          'Neos.NodeTypes:Column': FALSE
+  properties:
+    nogutters:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: NeosRulez.Bootstrap:Main:nogutters
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+'Neos.NodeTypes.ColumnLayouts:TwoColumn':
+  properties:
+    'layout':
+      defaultValue: '6-6'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '50-50': ~
+              '75-25': ~
+              '25-75': ~
+              '66-33': ~
+              '33-66': ~
+              '6-6':
+                label: '50% / 50%'
+              '8-4':
+                label: '66% / 33%'
+              '4-8':
+                label: '33% / 66%'
+'Neos.NodeTypes.ColumnLayouts:ThreeColumn':
+  properties:
+    'layout':
+      defaultValue: '4-4-4'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '33-33-33': ~
+              '50-25-25': ~
+              '25-50-25': ~
+              '25-25-50': ~
+              '4-4-4':
+                label: '33% / 33% / 33%'
+              '6-3-3':
+                label: '50% / 25% / 33%'
+              '3-6-3':
+                label: '25% / 50% / 25%'
+              '3-3-6':
+                label: '25% / 25% / 50%'
+'Neos.NodeTypes.ColumnLayouts:FourColumn':
+  properties:
+    'layout':
+      defaultValue: '3-3-3-3'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '25-25-25-25': ~
+              '3-3-3-3':
+                label: '25% / 25% / 25% / 25%'

@@ -1,5 +1,7 @@
 'Neos.NodeTypes.BaseMixins:ImageMixin':
   abstract: true
+  superTypes:
+    'NeosRulez.Bootstrap:LinkEditorTarget': TRUE
   ui:
     inspector:
       groups:
@@ -59,3 +61,8 @@
         inspector:
           group: 'image'
           position: 300
+    linktarget:
+       ui:
+         inspector:
+           group: 'image'
+           position: 'after link'

@@ -1,24 +1,10 @@
 <?php
-namespace NeosRulez\Bootstrap\Controller;
-
-/*
- * This file is part of the NeosRulez.Bootstrap package.
- */
+namespace NeosRulez\Bootstrap\Fusion;
 
 use Neos\Flow\Annotations as Flow;
-use Neos\Flow\Mvc\Controller\ActionController;
-use Neos\Flow\ResourceManagement\Streams\StreamWrapperAdapter;
-use Neos\Eel\FlowQuery\FlowQuery;
-use Neos\Eel\FlowQuery\Operations;
+use Neos\Fusion\FusionObjects\AbstractFusionObject;
 
-class ThemeController extends ActionController
-{
-
-    /**
-     * @Flow\Inject
-     * @var \NeosRulez\Bootstrap\Domain\Repository\ThemeRepository
-     */
-    protected $themeRepository;
+class ThemeImplementation extends AbstractFusionObject {
 
     /**
      * @var array
@@ -34,12 +20,12 @@ class ThemeController extends ActionController
     }
 
     /**
-     * @return void
+     * @return string
      */
-    public function generateThemeAction() {
+    public function evaluate() {
+        $colors = $this->settings['colors'];
         $rounded = $this->settings['enableRounded'];
         $responsiveFonts = $this->settings['enableResponsiveFontSizes'];
-        $colors = $this->settings['colors'];
         $scss = '';
         foreach($colors as $key=>$data) {
             $scss .= '$'.$key.': '.$data.'; ';
@@ -64,5 +50,4 @@ class ThemeController extends ActionController
         }
         return '';
     }
-
 }

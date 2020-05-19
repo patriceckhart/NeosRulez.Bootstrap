@@ -1,6 +1,7 @@
 <f:layout name="Neos.Form:Field" />
 <f:section name="field">
-	<label class="{element.properties.elementClassAttribute}">
-		<f:form.checkbox property="{element.identifier}" id="{element.uniqueIdentifier}" class="{element.properties.elementClassAttribute}" value="{element.properties.value}" errorClass="{element.properties.elementErrorClassAttribute}" />
-	</label>
+	<div class="custom-control custom-checkbox">
+		<f:form.checkbox property="{element.identifier}" id="{element.uniqueIdentifier}" class="custom-control-input" value="{element.properties.value}" errorClass="{element.properties.elementErrorClassAttribute}" />
+		<label class="custom-control-label" for="{element.uniqueIdentifier}">{element -> form:translateElementProperty(property: 'label') -> f:format.nl2br()}</label>
+	</div>
 </f:section>

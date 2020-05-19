@@ -1,0 +1,95 @@
+'NeosRulez.Bootstrap:IconMixin':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        style:
+          label: i18n
+  properties:
+    icon:
+      type: string
+      defaultValue: ~
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: style
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+        values: []
+    iconSize:
+      type: string
+      defaultValue: lg
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: style
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              xs:
+                label: xs
+              sm:
+                label: sm
+              lg:
+                label: lg
+              2x:
+                label: 2x
+              3x:
+                label: 3x
+              4x:
+                label: 4x
+              5x:
+                label: 5x
+              6x:
+                label: 6x
+              7x:
+                label: 7x
+              8x:
+                label: 8x
+              9x:
+                label: 9x
+              10x:
+                label: 10x
+    alignment:
+      defaultValue: 'left'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: style
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'left':
+                label: i18n
+              'center':
+                label: i18n
+              'right':
+                label: i18n
+    hasBorder:
+      type: boolean
+      defaultValue: false
+      ui: ~
+        #label: i18n
+        #reloadIfChanged: true
+        #inspector:
+          #group: style
+    link:
+      type: string
+      ui:
+        reloadIfChanged: TRUE
+        label: i18n
+        inspector:
+          group: 'settings'
+          position: 'end'
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          editorOptions:
+            assets: TRUE
+  postprocessors:
+    FontAwesomeIconsNodeTypePostprocessor:
+      postprocessor: NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor
+      postprocessorOptions:
+        properties:
+          icon: 'icon'
+

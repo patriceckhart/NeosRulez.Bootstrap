@@ -1,18 +1,12 @@
 privilegeTargets:
   Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
-    'NeosRulez.Bootstrap:ThemeControllerActions':
-      matcher: 'method(NeosRulez\Bootstrap\Controller\ThemeController->.*Action())'
     'NeosRulez.Bootstrap:FrontendControllerActions':
       matcher: 'method(NeosRulez\Bootstrap\Controller\FrontendController->.*Action())'
     'NeosRulez.Bootstrap:FontAwesomeIconsNodeTypePostprocessorActions':
       matcher: 'method(NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor->.*Action())'
-
 roles:
   'Neos.Flow:Everybody':
     privileges:
-      -
-        privilegeTarget: 'NeosRulez.Bootstrap:ThemeControllerActions'
-        permission: GRANT
       -
         privilegeTarget: 'NeosRulez.Bootstrap:FrontendControllerActions'
         permission: GRANT

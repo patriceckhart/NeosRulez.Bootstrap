@@ -1,6 +1,0 @@
-prototype(Neos.Form.Builder:NodeBasedValidator) < prototype(Neos.Fusion:Renderer) {
-    element {
-        @context.validator = ${this}
-        options >
-    }
-}

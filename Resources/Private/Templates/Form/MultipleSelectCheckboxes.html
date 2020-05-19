@@ -1,13 +1,11 @@
 <f:layout name="Neos.Form:Field" />
 <f:section name="field">
-	<ul class="inputs-list" id="{element.uniqueIdentifier}">
-		<f:for each="{element.properties.options}" as="label" key="value">
-			<li>
-				<label>
-					<f:form.checkbox property="{element.identifier}" multiple="1" class="{element.properties.elementClassAttribute}" value="{value}" errorClass="{element.properties.elementErrorClassAttribute}" />
-					<span>{f:translate(id: 'forms.elements.{element.identifier}.options.{value}', package: '{element.renderingOptions.translationPackage}', value: label)}</span>
-				</label>
-			</li>
+	<div class="inputs-list" id="{element.uniqueIdentifier}">
+		<f:for each="{element.properties.options}" as="label" key="value" iteration="checkiterator">
+			<div class="custom-control custom-checkbox">
+				<f:form.checkbox property="{element.identifier}" id="{element.identifier}-{checkiterator.index}" multiple="1" class="custom-control-input" value="{value}" errorClass="{element.properties.elementErrorClassAttribute}" />
+				<label class="custom-control-label" for="{element.identifier}-{checkiterator.index}">{f:translate(id: 'forms.elements.{element.identifier}.options.{value}', package: '{element.renderingOptions.translationPackage}', value: label)}</label>
+			</div>
 		</f:for>
-	</ul>
+	</div>
 </f:section>

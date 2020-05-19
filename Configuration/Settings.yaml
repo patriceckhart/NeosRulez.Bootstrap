@@ -49,6 +49,7 @@ Neos:
         dataTypes:
           'Neos\Media\Domain\Model\ImageInterface':
             editorOptions:
+              accept: 'image/png,image/jpeg,image/gif'
               features:
                 resize: TRUE
       navigateComponent:

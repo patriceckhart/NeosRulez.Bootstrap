@@ -15,12 +15,6 @@ class FrontendController extends ActionController
 {
 
     /**
-     * @Flow\Inject
-     * @var \NeosRulez\Bootstrap\Domain\Repository\FrontendRepository
-     */
-    protected $frontendRepository;
-
-    /**
      * @var array
      */
     protected $settings;

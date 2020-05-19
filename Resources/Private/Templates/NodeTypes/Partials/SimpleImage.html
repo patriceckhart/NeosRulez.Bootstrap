@@ -6,9 +6,16 @@
 	<f:then>
 		<f:if condition="{link}">
 			<f:then>
-				<a href="{link}">
-					<f:render section="lightboxRendering" arguments="{_all}" />
-				</a>
+				<f:if condition="{node.context.workspace.name} != 'live'">
+					<f:then>
+						<f:render section="lightboxRendering" arguments="{_all}" />
+					</f:then>
+					<f:else>
+						<a href="{link}"{f:if(condition: '{linktarget}', then: ' target="_blank" ')}>
+							<f:render section="lightboxRendering" arguments="{_all}" />
+						</a>
+					</f:else>
+				</f:if>
 			</f:then>
 			<f:else>
 				<f:render section="lightboxRendering" arguments="{_all}" />
@@ -17,7 +24,7 @@
 	</f:then>
 	<f:else>
 		<f:if condition="{neos:rendering.inEditMode()}">
-			<img src="{f:uri.resource(package: 'Neos.Neos', path: 'Images/dummy-image.svg')}" title="Dummy image" alt="Dummy image" class="neos-handle" />
+			<img src="{f:uri.resource(package: 'Neos.Neos', path: 'Images/dummy-image.svg')}" title="Dummy image" alt="Dummy image" class="neos-handle img-fluid" />
 		</f:if>
 	</f:else>
 </f:if>
@@ -48,7 +55,7 @@
 <f:section name="imageRendering">
 	<f:if condition="{image.fileextension}=='gif' || {image.fileextension}=='GIF'">
 		<f:then>
-			<img src="{neos.media:uri.image(image: image)}" class="figure-img img-fluid{f:if(condition: '{imgfullwidth}', then: ' img-fullwidth')}{f:if(condition: '{rounded}', then: ' rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}" title="{title}" alt="{alternativeText}" />
+			<img src="{neos.media:uri.image(image: image)}" width="{image.width}" height="{image.height}" class="figure-img img-fluid{f:if(condition: '{imgfullwidth}', then: ' img-fullwidth')}{f:if(condition: '{rounded}', then: ' rounded')}{f:if(condition: '{alignment}==center', then: ' mx-auto d-block')}{f:if(condition: '{alignment}==left', then: ' float-left')}{f:if(condition: '{alignment}==right', then: ' float-right')}" title="{title}" alt="{alternativeText}" />
 		</f:then>
 		<f:else>
 			<media:image image="{image}"

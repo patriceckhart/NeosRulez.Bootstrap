@@ -1,0 +1,147 @@
+'NeosRulez.Bootstrap:Button':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+    'NeosRulez.Bootstrap:LinkEditorTarget': TRUE
+  ui:
+    group: 'bootstrapnodetypes'
+    label: i18n
+    icon: 'icon-link'
+    inspector:
+      groups:
+        settings:
+          label: NeosRulez.Bootstrap:Main:settings
+          icon: 'icon-cog'
+  properties:
+    link:
+      type: string
+      ui:
+        reloadIfChanged: TRUE
+        label: i18n
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          editorOptions:
+            assets: TRUE
+    text:
+      type: string
+      defaultValue: 'Button'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inlineEditable: TRUE
+    style:
+      defaultValue: 'primary'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'primary':
+                label: 'Primary'
+              'secondary':
+                label: 'Secondary'
+              'success':
+                label: 'Success'
+              'danger':
+                label: 'Danger'
+              'warning':
+                label: 'Warning'
+              'info':
+                label: 'Info'
+              'light':
+                label: 'Light'
+              'dark':
+                label: 'Dark'
+              'link':
+                label: 'Link'
+    size:
+      defaultValue: ''
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'lg':
+                label: i18n
+              'sm':
+                label: i18n
+    alignment:
+      defaultValue: 'left'
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'left':
+                label: i18n
+              'center':
+                label: i18n
+              'right':
+                label: i18n
+    outline:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    fullwidth:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    #faicon:
+      #type: string
+      #defaultValue: ''
+      #ui:
+        #label: NeosRulez.Bootstrap:Main:faicon
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
+    faicon:
+      type: string
+      defaultValue: ~
+      ui:
+        label: NeosRulez.Bootstrap:Main:faicon
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+        values: []
+      onlyicon:
+        type: boolean
+        defaultValue: FALSE
+        ui:
+          label: NeosRulez.Bootstrap:Main:onlyicon
+          reloadIfChanged: TRUE
+          inspector:
+            group: 'settings'
+    onlyicon:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: NeosRulez.Bootstrap:Main:onlyicon
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+  postprocessors:
+    FontAwesomeIconsNodeTypePostprocessor:
+      postprocessor: NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor
+      postprocessorOptions:
+        properties:
+          faicon: 'faicon'

@@ -1,0 +1,21 @@
+'NeosRulez.Bootstrap:ContainerWidth':
+  abstract: TRUE
+  properties:
+    containerwidth:
+      defaultValue: 'container'
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:containerwidth
+        reloadIfChanged: TRUE
+        inspector:
+          hidden: 'ClientEval:node.depth >= 6'
+          #hidden: 'ClientEval:console.info(node)'
+          group: 'settings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          position: 'start'
+          editorOptions:
+            values:
+              'container':
+                label: NeosRulez.Bootstrap:Main:properties.containerwidth.selectBoxEditor.values.container
+              'container-fluid':
+                label: NeosRulez.Bootstrap:Main:properties.containerwidth.selectBoxEditor.values.container-fluid

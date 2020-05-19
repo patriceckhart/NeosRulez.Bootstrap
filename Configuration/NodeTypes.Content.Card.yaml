@@ -1,0 +1,94 @@
+'NeosRulez.Bootstrap:Card':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  childNodes:
+    cardBody:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': TRUE
+          'NeosRulez.Bootstrap:CardColumn': FALSE
+          'NeosRulez.Bootstrap:Card': FALSE
+          'NeosRulez.Bootstrap:Container': FALSE
+          'Neos.NodeTypes:Column': FALSE
+          'Neos.NodeTypes.Form:Form': FALSE
+          'Neos.NodeTypes.AssetList:AssetList': FALSE
+  ui: ~
+    #label: i18n
+    #group: 'bootstrapnodetypes'
+    #icon: 'icon-square'
+    #inlineEditable: TRUE
+    #inspector:
+      #groups:
+        #settings:
+          #label: NeosRulez.Bootstrap:Main:settings
+          #icon: 'icon-cog'
+  #properties:
+    #image:
+      #type: 'Neos\Media\Domain\Model\ImageInterface'
+      #ui:
+        #label: i18n
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
+    #header:
+      #type: string
+      #defaultValue: ''
+      #ui:
+        #label: i18n
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
+    #footer:
+      #type: string
+      #defaultValue: ''
+      #ui:
+        #label: i18n
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
+    #style:
+      #defaultValue: ''
+      #ui:
+        #label: i18n
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
+          #editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          #editorOptions:
+            #values:
+              #'':
+                #label: ''
+              #'primary':
+                #label: 'Primary'
+              #'secondary':
+                #label: 'Secondary'
+              #'success':
+                #label: 'Success'
+              #'danger':
+                #label: 'Danger'
+              #'warning':
+                #label: 'Warning'
+              #'info':
+                #label: 'Info'
+              #'light':
+                #label: 'Light'
+              #'dark':
+                #label: 'Dark'
+              #'link':
+                #label: 'Link'
+    #outline:
+      #type: boolean
+      #defaultValue: TRUE
+      #ui:
+        #label: i18n
+        #reloadIfChanged: TRUE
+        #inspector:
+          #group: 'settings'
+    #link:
+      #type: reference
+      #ui:
+        #reloadIfChanged: TRUE
+        #label: i18n
+        #inspector:
+          #group: 'settings'

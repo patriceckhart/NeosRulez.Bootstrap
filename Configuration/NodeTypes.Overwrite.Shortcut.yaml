@@ -1,34 +1,32 @@
-'NeosRulez.Bootstrap:IconBackgroundMixin':
-  abstract: true
+'Neos.Neos:Shortcut':
   ui:
     inspector:
       groups:
-        stacked:
-          label: i18n
+        settings:
+          label: NeosRulez.Bootstrap:Main:settings
+          icon: 'icon-cog'
   properties:
-    backgroundIcon:
+    faicon:
       type: string
       defaultValue: ~
       ui:
-        label: i18n
+        label: NeosRulez.Bootstrap:Main:faicon
         reloadIfChanged: true
         inspector:
+          group: settings
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
-          editorOptions:
-            allowEmpty: true
-          group: stacked
         values: []
-    iconInversed:
+    onlyicon:
       type: boolean
-      defaultValue: false
+      defaultValue: FALSE
       ui:
-        label: i18n
-        reloadIfChanged: true
+        label: NeosRulez.Bootstrap:Main:onlyicon
+        reloadIfChanged: TRUE
         inspector:
-          group: stacked
+          group: 'settings'
   postprocessors:
     FontAwesomeIconsNodeTypePostprocessor:
       postprocessor: NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor
       postprocessorOptions:
         properties:
-          backgroundIcon: 'backgroundIcon'
+          faicon: 'faicon'

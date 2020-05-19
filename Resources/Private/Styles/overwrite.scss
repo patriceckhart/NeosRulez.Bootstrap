@@ -3909,6 +3909,19 @@ div[role="tabpanel"] { outline:0; }
   }
 }
 
+div.datedropper.bootstrap {
+
+  --dd-color1: #{$primary};
+  --dd-color2: #FFF;
+  --dd-color3: #4D4D4D;
+  --dd-color4: #FFF;
+
+  --dd-radius: 0px;
+  --dd-width: 200px;
+  --dd-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.1);
+
+}
+
 @media only screen and (max-width:1200px) {
   .neosrulez-bootstrap-imagewithcontent .contentitems { padding:3rem; }
 }

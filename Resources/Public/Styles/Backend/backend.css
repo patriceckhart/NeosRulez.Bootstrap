@@ -1,0 +1,6 @@
+.cc-window { display:none !important; }
+.os-animation, .os-animation.animated { opacity: 1; }
+form[data-_neos-form-builder-type="Neos.Form.Builder:NodeBasedForm"] { display:block; width:100%; }
+fieldset[data-_neos-form-builder-type="Neos.Form.Builder:ElementCollection"]:before { font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f055"; color:#198cf0; display:block; width:100%; text-align:center; margin-left:20px; margin-right:20px; }
+div[data-_neos-form-builder-type="Neos.Form.Builder:FinisherCollection"]:after { font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f055"; color:#198cf0; display:block; width:100%; text-align:center; margin-left:20px; margin-right:20px; }
+.style__notInlineEditableOverlay___9Lzv1 { background-image:none !important; }

@@ -1,4 +1,3 @@
 include: ProtoTypes/*
 include: NodeTypes/*
-include: Components/*
 include: Plugins/*
