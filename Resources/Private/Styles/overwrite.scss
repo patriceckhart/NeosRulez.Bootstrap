@@ -3865,7 +3865,19 @@ img.mfp-img {
 .card-item-action:hover { background:#f8f9fa; color:#212529; text-decoration: none; }
 
 .card { margin-bottom:2rem; }
-.accordion .card { margin-bottom:0; }
+.accordion .card { margin-bottom:0;
+  .card-header { padding:0;
+    h2 {
+      .btn-link { padding:1.2em; padding-top:1em; padding-bottom:1em; text-decoration: none !important; background:$primary; color:#FFF; font-weight:bold;
+        div { float:left; }
+        &:after { float:right; font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f077"; }
+        &.collapsed { background:none; color:$primary;
+          &:after { float:right; font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f078"; }
+        }
+      }
+    }
+  }
+}
 
 .neosrulez-bootstrap-imagewithcontent .contentimage { min-height:400px; }
 .neosrulez-bootstrap-imagewithcontent .contentitems { padding:5rem; }
@@ -3921,6 +3933,8 @@ div.datedropper.bootstrap {
   --dd-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.1);
 
 }
+
+
 
 @media only screen and (max-width:1200px) {
   .neosrulez-bootstrap-imagewithcontent .contentitems { padding:3rem; }

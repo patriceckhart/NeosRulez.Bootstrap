@@ -1,30 +1,27 @@
 'NeosRulez.Bootstrap:AccordionItem':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
+    'NeosRulez.Bootstrap:ContentProperties': false
   childNodes:
     accordionItems:
       type: 'Neos.Neos:ContentCollection'
       constraints:
         nodeTypes:
-          'NeosRulez.Bootstrap:CarouselItem': FALSE
-          'NeosRulez.Bootstrap:AccordionItem': FALSE
-          'Neos.NodeTypes.AssetList:AssetList': FALSE
-          'Neos.NodeTypes:Menu': FALSE
-          'Neos.Neos:PluginView': FALSE
+          'NeosRulez.Bootstrap:CarouselItem': false
+          'NeosRulez.Bootstrap:Accordion': false
+          'NeosRulez.Bootstrap:AccordionItem': false
+          'Neos.NodeTypes.AssetList:AssetList': false
+          'Neos.NodeTypes:Menu': false
+          'Neos.Neos:PluginView': false
   ui:
     label: i18n
     group: 'bootstrapnodetypes'
     icon: 'icon-list-alt'
-    inlineEditable: TRUE
-    inspector:
-      groups:
-        settings:
-          label: NeosRulez.Bootstrap:Main:settings
-          icon: 'icon-cog'
+    inlineEditable: true
   properties:
     title:
       type: string
       defaultValue: Title
       ui:
         label: i18n
-        inlineEditable: TRUE
+        inlineEditable: true

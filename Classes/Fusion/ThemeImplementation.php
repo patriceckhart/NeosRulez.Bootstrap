@@ -40,13 +40,13 @@ class ThemeImplementation extends AbstractFusionObject {
         } else {
             $scss .= '$enable-responsive-font-sizes: false; ';
         }
-        $styleFile = 'resource://NeosRulez.Bootstrap/Private/Styles/styles.scss';
-        $themeFile = 'resource://NeosRulez.Bootstrap/Private/Styles/theme.scss';
-        $oldThemeFile = file_get_contents($themeFile);
-        if($oldThemeFile!=$scss) {
-            file_put_contents($themeFile, $scss);
-            $styleFileContent = file_get_contents($styleFile);
-            file_put_contents($styleFile, $styleFileContent);
+        $style_file = 'resource://NeosRulez.Bootstrap/Private/Styles/styles.scss';
+        $theme_file = 'resource://NeosRulez.Bootstrap/Private/Styles/theme.scss';
+        $theme_file_1 = file_get_contents($theme_file);
+        if($theme_file_1!=$scss) {
+            file_put_contents($theme_file, $scss);
+            $style_file_content = file_get_contents($style_file);
+            file_put_contents($style_file, $style_file_content);
         }
         return '';
     }

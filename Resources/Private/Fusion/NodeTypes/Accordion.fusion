@@ -3,5 +3,6 @@ prototype(NeosRulez.Bootstrap:Accordion) < prototype(Neos.Neos:Content) {
     accordionItems = Neos.Neos:ContentCollection {
         nodePath = 'accordionItems'
         attributes.class = 'accordion'
+        attributes.id = ${'accordion_'+node.identifier}
     }
 }

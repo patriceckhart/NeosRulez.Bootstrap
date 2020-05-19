@@ -15,6 +15,8 @@
         inspector:
           group: settings
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            allowEmpty: true
         values: []
     onlyicon:
       type: boolean

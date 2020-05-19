@@ -1,6 +1,7 @@
 prototype(NeosRulez.Bootstrap:AccordionItem) < prototype(Neos.Neos:Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/AccordionItem.html'
     title = ${q(node).property('title')}
+    identifier = ${node.parent.identifier}
     accordionItems = Neos.Neos:ContentCollection {
         nodePath = 'accordionItems'
     }
