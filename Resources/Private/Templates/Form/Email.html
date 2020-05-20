@@ -4,8 +4,16 @@
         <f:if condition="{0: formValue.element.type} == {0: 'Neos.Form:FileUpload'}">
             <f:else>
                 <tr>
-                    <th style="text-align:left;">{f:if(condition: formValue.element.label, then: formValue.element.label, else: formValue.element.identifier)}</th>
-                    <td>{formValue.value}</td>
+                    <f:if condition="{0: formValue.element.type} == {0: 'Neos.Form:DatePicker'}">
+                        <f:then>
+                            <th style="text-align:left;">{f:if(condition: formValue.element.label, then: formValue.element.label, else: formValue.element.identifier)}</th>
+                            <td><f:format.date format="Y-m-d">{formValue.value}</f:format.date></td>
+                        </f:then>
+                        <f:else>
+                            <th style="text-align:left;">{f:if(condition: formValue.element.label, then: formValue.element.label, else: formValue.element.identifier)}</th>
+                            <td>{formValue.value}</td>
+                        </f:else>
+                    </f:if>
                 </tr>
             </f:else>
         </f:if>

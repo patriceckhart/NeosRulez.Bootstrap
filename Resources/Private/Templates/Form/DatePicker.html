@@ -1,29 +1,13 @@
 {namespace form=Neos\Form\ViewHelpers}
 <f:layout name="Neos.Form:Field" />
 <f:section name="field">
-	<f:comment>
-		<form:form.datePicker id="{element.uniqueIdentifier}" property="{element.identifier}" placeholder="{element -> form:translateElementProperty(property: 'placeholder')}" dateFormat="{element.properties.dateFormat}" initialDate="{element.properties.initialDate}" enableDatePicker="{element.properties.enableDatePicker}" class="{element.properties.elementClassAttribute}" errorClass="{element.properties.elementErrorClassAttribute}" />
-		<f:if condition="{element.properties.displayTimeSelector}">
-			<form:form.timePicker id="{element.uniqueIdentifier}-time" property="{element.identifier}" initialDate="{element.properties.initialDate}" class="{element.properties.timeSelectorClassAttribute}" errorClass="{element.properties.elementErrorClassAttribute}" />
-		</f:if>
-	</f:comment>
 	<f:form.textfield id="{element.uniqueIdentifier}" property="{element.identifier}" placeholder="{element -> form:translateElementProperty(property: 'label') -> f:format.nl2br()}" class="{element.properties.elementClassAttribute}" errorClass="{element.properties.elementErrorClassAttribute}" />
 	<script>
-		lang = document.documentElement.lang;
-		if(lang=='de') {
-			picker_lang = 'de';
-			picker_format = 'd.m.Y';
-		} else if (lang=='en') {
-			picker_lang = 'en';
-			picker_format = 'm/d/Y';
-		} else {
-			picker_lang = 'en';
-			picker_format = 'm/d/Y';
-		}
+		picker_lang = document.documentElement.lang;
 		$('#{element.uniqueIdentifier}').dateDropper(
 				{
 					lang: picker_lang,
-					format: picker_format,
+					format: 'Y-m-d',
 					large: true,
 					largeDefault: true,
 					theme: 'bootstrap'
