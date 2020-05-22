@@ -1,4 +1,38 @@
 'Neos.Neos:Document':
+  ui:
+    inspector:
+      groups:
+        settings:
+          label: NeosRulez.Bootstrap:Main:settings
+          icon: 'icon-cog'
+  properties:
+    noSubMenu:
+      type: boolean
+      defaultValue: FALSE
+      ui: ~
+    faicon:
+      type: string
+      defaultValue: ~
+      ui:
+        label: NeosRulez.Bootstrap:Main:faicon
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            allowEmpty: true
+        values: []
+    onlyicon:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: NeosRulez.Bootstrap:Main:onlyicon
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'settings'
+    pageImage:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui: ~
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'
@@ -26,3 +60,9 @@
           'Neos.NodeTypes.AssetList:AssetList': FALSE
           'Neos.Neos:PluginView': FALSE
           'Neos.NodeTypes.Form:Form': FALSE
+  postprocessors:
+    FontAwesomeIconsNodeTypePostprocessor:
+      postprocessor: NeosRulez\Bootstrap\NodeTypePostprocessor\FontAwesomeIconsNodeTypePostprocessor
+      postprocessorOptions:
+        properties:
+          faicon: 'faicon'
