@@ -23,6 +23,9 @@
 			<trans-unit id="properties.modalcenter" xml:space="preserve">
 				<source>Modal centered</source>
 			</trans-unit>
+			<trans-unit id="properties.btnlabel" xml:space="preserve">
+				<source>Button Label</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

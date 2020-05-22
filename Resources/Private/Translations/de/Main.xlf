@@ -104,6 +104,9 @@
 			<trans-unit id="tooltiptext" xml:space="preserve">
 				<source>Tooltip-Text</source>
 			</trans-unit>
+			<trans-unit id="tooltipposition" xml:space="preserve">
+				<source>Tooltip Position</source>
+			</trans-unit>
 			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.top" xml:space="preserve">
                 <source>Oben</source>
             </trans-unit>

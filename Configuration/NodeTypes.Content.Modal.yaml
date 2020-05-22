@@ -91,6 +91,14 @@
         inspector:
           group: 'settings'
           position: 'after modalsize'
+    btnlabel:
+      type: string
+      defaultValue: 'Button Label'
+      ui:
+        label: i18n
+        inspector:
+          group: 'settings'
+          position: 'after class'
     containerwidth:
       ui: ~
     link:

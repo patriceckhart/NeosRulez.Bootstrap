@@ -1,11 +1,22 @@
-prototype(NeosRulez.Bootstrap:Icon) < prototype(Neos.Neos:Content) {
-	templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Icon.html'
-	icon = ${q(node).property('icon')}
+prototype(NeosRulez.Bootstrap:Icon) < prototype(Neos.Neos:ContentComponent) {
 	iconSize = ${q(node).property('iconSize')}
-	alignment = ${q(node).property('alignment')}
+	icon = ${(q(node).property('icon')) + (this.iconSize ? ' fa-' + this.iconSize : '')}
+	alignment = ${'d-block text-' + q(node).property('alignment')}
 	link = ${q(node).property('link')}
 	link.@process.convertUris = Neos.Neos:ConvertUris {
 		forceConversion = true
 	}
-	linktarget = ${q(node).property('linktarget')}
+	linktarget = ${q(node).property('linktarget') ? '_blank' : '_self'}
+	renderAsLink = ${site.context.inBackend ? false : true}
+	renderer = afx`
+		<NeosRulez.Bootstrap:Content.AbstractContent>
+			<div class={props.alignment}>
+				<i @if.render={!props.link} class={props.icon}></i>
+				<div @if.render={props.link}>
+					<a @if.render={props.renderAsLink} href={props.link} target={props.linktarget}><i class={props.icon}></i></a>
+					<div @if.render={!props.renderAsLink}><i class={props.icon}></i></div>
+				</div>
+			</div>
+		</NeosRulez.Bootstrap:Content.AbstractContent>
+	`
 }

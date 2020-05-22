@@ -5,6 +5,9 @@
 			<trans-unit id="ui.label" xml:space="preserve">
 				<source>Divider</source>
 			</trans-unit>
+			<trans-unit id="properties.noborder" xml:space="preserve">
+				<source>No line</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -435,7 +435,7 @@
         inspector:
           group: 'tooltipsettings'
     tooltipposition:
-      defaultValue: ''
+      defaultValue: 'top'
       type: string
       ui:
         label: NeosRulez.Bootstrap:Main:tooltipposition
@@ -445,8 +445,6 @@
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
-              '':
-                label: ''
               'top':
                 label: NeosRulez.Bootstrap:Main:properties.tooltipposition.selectBoxEditor.values.top
               'right':

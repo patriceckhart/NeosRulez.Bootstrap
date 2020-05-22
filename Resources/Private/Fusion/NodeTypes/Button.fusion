@@ -1,16 +1,27 @@
-prototype(NeosRulez.Bootstrap:Button) < prototype(Neos.Neos:Content) {
-    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/Button.html'
-    text = ${q(node).property('text')}
+prototype(NeosRulez.Bootstrap:Button) < prototype(Neos.Neos:ContentComponent) {
+    label = Neos.Neos:Editable {
+        property = 'text'
+    }
     link = ${q(node).property('link')}
     link.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
     }
-    style = ${q(node).property('style')}
-    size = ${q(node).property('size')}
-    alignment = ${q(node).property('alignment')}
-    outline = ${q(node).property('outline')}
-    fullwidth = ${q(node).property('fullwidth')}
-    faicon = ${q(node).property('faicon')}
+    linktarget = ${q(node).property('linktarget') ? '_blank' : '_self'}
+    style = ${q(node).property('outline') ? 'btn btn-outline-' + q(node).property('style') : 'btn btn-' + q(node).property('style')}
+    size = ${q(node).property('size') ? ' btn-' + q(node).property('size') : ''}
+    alignment = ${q(node).property('alignment') ? 'd-block text-' + q(node).property('alignment') : ''}
+    block = ${q(node).property('fullwidth') ? ' btn-block' : ''}
     onlyicon = ${q(node).property('onlyicon')}
-    linktarget = ${q(node).property('linktarget')}
+    icon = ${q(node).property('faicon')}
+    faicon = ${q(node).property('onlyicon') ? this.icon : this.icon + ' mr-3'}
+    btnclass = ${this.style + this.size + this.block}
+    renderAsLink = ${site.context.inBackend ? false : true}
+    renderer = afx`
+        <NeosRulez.Bootstrap:Content.AbstractContent>
+            <div class={props.alignment}>
+                <a @if.render={props.renderAsLink} href={props.link} class={props.btnclass} target={props.linktarget}><i @if.render={props.icon} class={props.faicon}></i><span @if.render={!props.onlyicon} class="d-inline-block"> {props.label}</span></a>
+                <div @if.render={!props.renderAsLink} class={props.btnclass}><i @if.render={props.icon} class={props.faicon}></i><span @if.render={!props.onlyicon} class="d-inline-block"> {props.label}</span></div>
+            </div>
+        </NeosRulez.Bootstrap:Content.AbstractContent>
+    `
 }

@@ -1,3 +1,9 @@
-prototype(NeosRulez.Bootstrap:Divider) < prototype(Neos.Neos:Content) {
-    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/FusionObjects/Divider.html'
+prototype(NeosRulez.Bootstrap:Divider) < prototype(Neos.Neos:ContentComponent) {
+    noborder = ${node.properties.noborder}
+    renderer = afx`
+        <NeosRulez.Bootstrap:Content.AbstractContent>
+            <hr @if.render={props.noborder} class="border-transparent" />
+            <hr @if.render={!props.noborder} />
+        </NeosRulez.Bootstrap:Content.AbstractContent>
+    `
 }

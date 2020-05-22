@@ -2,3 +2,4 @@ include: ProtoTypes/*
 include: NodeTypes/*
 include: Plugins/*
 include: Finishers/*
+include: Content/AbstractContent/*

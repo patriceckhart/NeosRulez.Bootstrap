@@ -3921,6 +3921,8 @@ div[role="tabpanel"] { outline:0; }
   }
 }
 
+.border-transparent { border-top: 1px solid rgba(0, 0, 0, 0); }
+
 div.datedropper.bootstrap {
 
   --dd-color1: #{$primary};
@@ -3933,8 +3935,6 @@ div.datedropper.bootstrap {
   --dd-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.1);
 
 }
-
-
 
 @media only screen and (max-width:1200px) {
   .neosrulez-bootstrap-imagewithcontent .contentitems { padding:3rem; }

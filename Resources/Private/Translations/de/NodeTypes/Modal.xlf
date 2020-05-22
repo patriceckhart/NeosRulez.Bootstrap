@@ -23,6 +23,9 @@
 			<trans-unit id="properties.modalcenter" xml:space="preserve">
 				<source>Popup vertikal zentrieren</source>
 			</trans-unit>
+			<trans-unit id="properties.btnlabel" xml:space="preserve">
+				<source>Button Beschriftung</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

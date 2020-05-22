@@ -24,7 +24,7 @@
             assets: TRUE
     text:
       type: string
-      defaultValue: 'Button'
+      defaultValue: 'Button Label'
       ui:
         label: i18n
         reloadIfChanged: TRUE
