@@ -1,14 +1,15 @@
 prototype(NeosRulez.Bootstrap:Modal) < prototype(Neos.Neos:Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Modal.html'
     @context.nodeidentifier = ${node.identifier}
+    btnlabel = ${q(node).property('btnlabel')}
     @context.btnlabel = ${q(node).property('btnlabel')}
     button = NeosRulez.Bootstrap:Button {
         @context.container = ${(q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? '' : ''}
-        text = ${btnlabel}
+        text = ${q(node).property('btnlabel')}
         identifier = ${'#modal-' + nodeidentifier}
         renderer = afx`
             <div class={props.alignment}>
-                <div class={props.btnclass} data-toggle="modal" data-target={props.identifier}><i @if.render={props.icon} class={props.faicon}></i><span @if.render={!props.onlyicon} class="d-inline-block"> {props.label}</span></div>
+                <div class={props.btnclass} data-toggle="modal" data-target={props.identifier}><i @if.render={props.icon} class={props.faicon}></i><span @if.render={!props.onlyicon} class="d-inline-block"> {props.text}</span></div>
             </div>
         `
     }
