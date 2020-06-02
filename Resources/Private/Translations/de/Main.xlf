@@ -89,6 +89,18 @@
 			<trans-unit id="pr" xml:space="preserve">
 				<source>Abstand innen rechts</source>
 			</trans-unit>
+			<trans-unit id="mtn" xml:space="preserve">
+				<source>Negativer Abstand davor</source>
+			</trans-unit>
+			<trans-unit id="mbn" xml:space="preserve">
+				<source>Negativer Abstand danach</source>
+			</trans-unit>
+			<trans-unit id="mln" xml:space="preserve">
+				<source>Negativer Abstand links</source>
+			</trans-unit>
+			<trans-unit id="mrn" xml:space="preserve">
+				<source>Negativer Abstand rechts</source>
+			</trans-unit>
 			<trans-unit id="animation" xml:space="preserve">
 				<source>Animation</source>
 			</trans-unit>
@@ -136,6 +148,9 @@
             </trans-unit>
 			<trans-unit id="paddingsettings" xml:space="preserve">
                 <source>Innerer Abstand</source>
+            </trans-unit>
+			<trans-unit id="marginnegativesettings" xml:space="preserve">
+                <source>Äußerer Abstand (negativ)</source>
             </trans-unit>
 			<trans-unit id="animation" xml:space="preserve">
                 <source>Animation</source>

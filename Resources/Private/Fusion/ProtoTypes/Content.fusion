@@ -2,7 +2,7 @@ prototype(Neos.Neos:Content) {
 
     @context.container = ${(q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? q(node).property('containerwidth') + ' ' : ''}
 
-    attributes.class.@process.class = ${container + value + (q(node).property('mt') ? ' ' + q(node).property('mt') : '' ) + (q(node).property('mb') ? ' ' + q(node).property('mb') : '' ) + (q(node).property('ml') ? ' ' + q(node).property('ml') : '' ) + (q(node).property('mr') ? ' ' + q(node).property('mr') : '' ) + (q(node).property('pt') ? ' ' + q(node).property('pt') : '' ) + (q(node).property('pb') ? ' ' + q(node).property('pb') : '' ) + (q(node).property('pl') ? ' ' + q(node).property('pl') : '' ) + (q(node).property('pr') ? ' ' + q(node).property('pr') : '' ) + (q(node).property('class') ? ' ' + q(node).property('class') : '' ) + (q(node).property('animation') ? ' ' + 'os-animation' : '' ) + (q(node).property('parallax') && !node.context.inBackend ? ' ' + ' parallax' : '' ) + (q(node).property('parallax') && node.context.inBackend ? ' ' + ' bparallax' : '' ) + (q(node).property('textBsColor') ? ' ' + q(node).property('textBsColor') : '' ) + (q(node).property('backgroundBsColor') ? ' ' + q(node).property('backgroundBsColor') : '' ) + (q(node).property('masterclass') ? ' ' + q(node).property('masterclass') : '' ) + ' neosrulez-content'}
+    attributes.class.@process.class = ${container + value + (q(node).property('mt') ? ' ' + q(node).property('mt') : '' ) + (q(node).property('mb') ? ' ' + q(node).property('mb') : '' ) + (q(node).property('ml') ? ' ' + q(node).property('ml') : '' ) + (q(node).property('mr') ? ' ' + q(node).property('mr') : '' ) + (q(node).property('mtn') ? ' ' + q(node).property('mtn') : '' ) + (q(node).property('mbn') ? ' ' + q(node).property('mbn') : '' ) + (q(node).property('mln') ? ' ' + q(node).property('mln') : '' ) + (q(node).property('mrn') ? ' ' + q(node).property('mrn') : '' ) + (q(node).property('pt') ? ' ' + q(node).property('pt') : '' ) + (q(node).property('pb') ? ' ' + q(node).property('pb') : '' ) + (q(node).property('pl') ? ' ' + q(node).property('pl') : '' ) + (q(node).property('pr') ? ' ' + q(node).property('pr') : '' ) + (q(node).property('class') ? ' ' + q(node).property('class') : '' ) + (q(node).property('animation') ? ' ' + 'os-animation' : '' ) + (q(node).property('parallax') && !node.context.inBackend ? ' ' + ' parallax' : '' ) + (q(node).property('parallax') && node.context.inBackend ? ' ' + ' bparallax' : '' ) + (q(node).property('textBsColor') ? ' ' + q(node).property('textBsColor') : '' ) + (q(node).property('backgroundBsColor') ? ' ' + q(node).property('backgroundBsColor') : '' ) + (q(node).property('masterclass') ? ' ' + q(node).property('masterclass') : '' ) + (q(node).property('videourl') ? ' position-relative' : '') + ' neosrulez-content'}
 
     attributes.data-os-animation.@process.value = ${value + (q(node).property('animation') ? '' + q(node).property('animation') : 'none' )}
     attributes.data-os-animation-delay.@process.value = ${value + (q(node).property('delay') ? '' + q(node).property('delay') + 's' : '0s' )}
@@ -16,6 +16,11 @@ prototype(Neos.Neos:Content) {
     pb = ${q(node).property('pb')}
     pl = ${q(node).property('pl')}
     pr = ${q(node).property('pr')}
+
+    mtn = ${q(node).property('mtn')}
+    mbn = ${q(node).property('mbn')}
+    mln = ${q(node).property('mln')}
+    mrn = ${q(node).property('mrn')}
 
     tooltiptext = ${q(node).property('tooltiptext')}
     tooltipposition = ${q(node).property('tooltipposition')}

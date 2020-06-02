@@ -89,6 +89,18 @@
 			<trans-unit id="pr" xml:space="preserve">
 				<source>Padding right</source>
 			</trans-unit>
+			<trans-unit id="mtn" xml:space="preserve">
+				<source>Negative margin top</source>
+			</trans-unit>
+			<trans-unit id="mbn" xml:space="preserve">
+				<source>Negative margin bottom</source>
+			</trans-unit>
+			<trans-unit id="mln" xml:space="preserve">
+				<source>Negative margin left</source>
+			</trans-unit>
+			<trans-unit id="mrn" xml:space="preserve">
+				<source>Negative margin right</source>
+			</trans-unit>
 			<trans-unit id="animation" xml:space="preserve">
 				<source>Animation</source>
 			</trans-unit>
@@ -139,6 +151,9 @@
             </trans-unit>
 			<trans-unit id="paddingsettings" xml:space="preserve">
                 <source>Padding</source>
+            </trans-unit>
+			<trans-unit id="marginnegativesettings" xml:space="preserve">
+                <source>Margin (negative)</source>
             </trans-unit>
 			<trans-unit id="animation" xml:space="preserve">
                 <source>Animation</source>

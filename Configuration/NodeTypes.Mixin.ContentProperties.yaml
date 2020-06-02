@@ -29,6 +29,11 @@
           icon: 'icon-arrows-v'
           tab: 'distance'
           position: 110
+        marginnegativesettings:
+          label: NeosRulez.Bootstrap:Main:marginnegativesettings
+          icon: 'icon-arrows-v'
+          tab: 'distance'
+          position: 120
         animationsettings:
           label: NeosRulez.Bootstrap:Main:animationsettings
           icon: 'icon-star'
@@ -426,6 +431,98 @@
               'pr-4':
                 label: '1.5'
               'pr-5':
+                label: '3'
+    mtn:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:mtn
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'marginnegativesettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'mt-n1':
+                label: '0.25'
+              'mt-n2':
+                label: '0.5'
+              'mt-n3':
+                label: '1'
+              'mt-n4':
+                label: '1.5'
+              'mt-n5':
+                label: '3'
+    mbn:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:mbn
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'marginnegativesettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'mb-n1':
+                label: '0.25'
+              'mb-n2':
+                label: '0.5'
+              'mb-n3':
+                label: '1'
+              'mb-n4':
+                label: '1.5'
+              'mb-n5':
+                label: '3'
+    mln:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:mln
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'marginnegativesettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'ml-n1':
+                label: '0.25'
+              'ml-n2':
+                label: '0.5'
+              'ml-n3':
+                label: '1'
+              'ml-n4':
+                label: '1.5'
+              'ml-n5':
+                label: '3'
+    mrn:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:mrn
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'marginnegativesettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'mr-n1':
+                label: '0.25'
+              'mr-n2':
+                label: '0.5'
+              'mr-n3':
+                label: '1'
+              'mr-n4':
+                label: '1.5'
+              'mr-n5':
                 label: '3'
     tooltiptext:
       type: string
