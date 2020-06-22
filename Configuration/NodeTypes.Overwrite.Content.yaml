@@ -1,4 +1,0 @@
-'Neos.Neos:Content':
-  superTypes:
-    'NeosRulez.Bootstrap:ContentProperties': TRUE
-    'NeosRulez.Bootstrap:ContainerWidth': TRUE
