@@ -227,6 +227,48 @@
 			<trans-unit id="alignmentsettings" xml:space="preserve">
                 <source>Navigation</source>
             </trans-unit>
+			<trans-unit id="breakpoint" xml:space="preserve">
+                <source>Breakpoint</source>
+            </trans-unit>
+			<trans-unit id="visibility" xml:space="preserve">
+                <source>Visibility per screen size</source>
+            </trans-unit>
+			<trans-unit id="hiddenonall" xml:space="preserve">
+                <source>Hidden on all</source>
+            </trans-unit>
+			<trans-unit id="hiddenonlyonxs" xml:space="preserve">
+                <source>Hidden only on xs</source>
+            </trans-unit>
+			<trans-unit id="hiddenonlyonsm" xml:space="preserve">
+                <source>Hidden only on sm</source>
+            </trans-unit>
+			<trans-unit id="hiddenonlyonmd" xml:space="preserve">
+                <source>Hidden only on md</source>
+            </trans-unit>
+			<trans-unit id="hiddenonlyonlg" xml:space="preserve">
+                <source>Hidden only on lg</source>
+            </trans-unit>
+			<trans-unit id="hiddenonlyonxl" xml:space="preserve">
+                <source>Hidden only on xl</source>
+            </trans-unit>
+			<trans-unit id="visibleonlyonxs" xml:space="preserve">
+                <source>Visible only on xs</source>
+            </trans-unit>
+			<trans-unit id="visibleonlyonsm" xml:space="preserve">
+                <source>Visible only on sm</source>
+            </trans-unit>
+			<trans-unit id="visibleonlyonmd" xml:space="preserve">
+                <source>Visible only on md</source>
+            </trans-unit>
+			<trans-unit id="visibleonlyonlg" xml:space="preserve">
+                <source>Visible only on lg</source>
+            </trans-unit>
+			<trans-unit id="visibleonlyonxl" xml:space="preserve">
+                <source>Visible only on xl</source>
+            </trans-unit>
+			<trans-unit id="submitLabel" xml:space="preserve">
+                <source>Submit-Button Label</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

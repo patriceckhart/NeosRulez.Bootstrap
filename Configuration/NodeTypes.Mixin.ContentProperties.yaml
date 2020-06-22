@@ -550,3 +550,37 @@
                 label: NeosRulez.Bootstrap:Main:properties.tooltipposition.selectBoxEditor.values.bottom
               'left':
                 label: NeosRulez.Bootstrap:Main:properties.tooltipposition.selectBoxEditor.values.left
+    visibility:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:visibility
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'visibility'
+          position: 'end'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'd-none':
+                label: NeosRulez.Bootstrap:Main:hiddenonall
+              'd-none d-sm-block':
+                label: NeosRulez.Bootstrap:Main:hiddenonlyonxs
+              'd-sm-none d-md-block':
+                label: NeosRulez.Bootstrap:Main:hiddenonlyonsm
+              'd-md-none d-lg-block':
+                label: NeosRulez.Bootstrap:Main:hiddenonlyonmd
+              'd-lg-none d-xl-block':
+                label: NeosRulez.Bootstrap:Main:hiddenonlyonlg
+              'd-xl-none':
+                label: NeosRulez.Bootstrap:Main:hiddenonlyonxl
+              'd-block d-sm-none':
+                label: NeosRulez.Bootstrap:Main:visibleonlyonxs
+              'd-none d-sm-block d-md-none':
+                label: NeosRulez.Bootstrap:Main:visibleonlyonsm
+              'd-none d-md-block d-lg-none':
+                label: NeosRulez.Bootstrap:Main:visibleonlyonmd
+              'd-none d-lg-block d-xl-none':
+                label: NeosRulez.Bootstrap:Main:visibleonlyonlg

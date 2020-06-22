@@ -137,6 +137,9 @@
             <trans-unit id="properties.masterclass.selectBoxEditor.values.windowheight" xml:space="preserve">
                 <source>Adjust to window height</source>
             </trans-unit>
+            <trans-unit id="properties.videourl" xml:space="preserve">
+                <source>YouTube or Vimeo URL</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -26,7 +26,7 @@ prototype(Neos.Neos:Page) {
                 media = 'all'
                 rel = 'stylesheet'
                 href = Neos.Fusion:ResourceUri {
-                    path = 'resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-5.11.2-web/css/all.min.css'
+                    path = 'resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-5.13.0-web/css/all.min.css'
                 }
             }
         }
@@ -35,7 +35,7 @@ prototype(Neos.Neos:Page) {
         NeosRulezBootstrapCss {
             @position = 'before stylesheets'
             source = 'resource://NeosRulez.Bootstrap/Private/Styles/styles.scss'
-            inline = FALSE
+            inline = false
             format = 'compressed'
             outputFolder = 'resource://NeosRulez.Bootstrap/Public/Styles/'
         }

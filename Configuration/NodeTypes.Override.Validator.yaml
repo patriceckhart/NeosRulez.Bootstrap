@@ -1,0 +1,16 @@
+'Neos.Form.Builder:AbstractValidator':
+  properties:
+    class: [ ]
+    animation: [ ]
+    delay: [ ]
+    mt: [ ]
+    mb: [ ]
+    ml: [ ]
+    mr: [ ]
+    pt: [ ]
+    pb: [ ]
+    pl: [ ]
+    pr: [ ]
+    tooltiptext: [ ]
+    tooltipposition: [ ]
+    containerwidth: [ ]

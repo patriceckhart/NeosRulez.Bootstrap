@@ -8,6 +8,13 @@
   properties:
     'preset':
       defaultValue: 'bootstrap'
+      ui: ~
+    'submitLabel':
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:submitLabel
+        inspector:
+          group: 'form'
 'Neos.Form.Builder:FormElement':
   abstract: TRUE
   superTypes:

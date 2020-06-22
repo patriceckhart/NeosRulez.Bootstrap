@@ -224,6 +224,48 @@
 			<trans-unit id="alignmentsettings" xml:space="preserve">
                 <source>Navigation</source>
             </trans-unit>
+			<trans-unit id="breakpoint" xml:space="preserve">
+                <source>Breakpoint</source>
+            </trans-unit>
+			<trans-unit id="visibility" xml:space="preserve">
+                <source>Sichtbarkeit nach Bildschirmgröße</source>
+            </trans-unit>
+			<trans-unit id="hiddenonall" xml:space="preserve">
+                <source>Versteckt auf allen</source>
+            </trans-unit>
+			<trans-unit id="hiddenonlyonxs" xml:space="preserve">
+                <source>Nur auf xs versteckt</source>
+            </trans-unit>
+			<trans-unit id="hiddenonlyonsm" xml:space="preserve">
+                <source>Nur auf sm versteckt</source>
+            </trans-unit>
+			<trans-unit id="hiddenonlyonmd" xml:space="preserve">
+                <source>Nur auf md versteckt</source>
+            </trans-unit>
+			<trans-unit id="hiddenonlyonlg" xml:space="preserve">
+                <source>Nur auf lg versteckt</source>
+            </trans-unit>
+			<trans-unit id="hiddenonlyonxl" xml:space="preserve">
+                <source>Nur auf xl versteckt</source>
+            </trans-unit>
+			<trans-unit id="visibleonlyonxs" xml:space="preserve">
+                <source>Nur auf xs sichtbar</source>
+            </trans-unit>
+			<trans-unit id="visibleonlyonsm" xml:space="preserve">
+                <source>Nur sichtbar auf sm</source>
+            </trans-unit>
+			<trans-unit id="visibleonlyonmd" xml:space="preserve">
+                <source>Nur sichtbar auf md</source>
+            </trans-unit>
+			<trans-unit id="visibleonlyonlg" xml:space="preserve">
+                <source>Nur sichtbar auf lg</source>
+            </trans-unit>
+			<trans-unit id="visibleonlyonxl" xml:space="preserve">
+                <source>Nur sichtbar auf xl</source>
+            </trans-unit>
+			<trans-unit id="submitLabel" xml:space="preserve">
+                <source>Absenden-Button Label</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

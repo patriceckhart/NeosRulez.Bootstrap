@@ -1,6 +1,71 @@
 'Neos.NodeTypes.ColumnLayouts:Column':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
+  abstract: true
+  ui:
+    group: 'structure'
+    label: i18n
+    icon: 'icon-columns'
+    inlineEditable: true
+    inspector:
+      groups:
+        column:
+          label: i18n
+          position: 10
+          icon: 'icon-columns'
+  properties:
+    layout:
+      type: string
+      ui:
+        label: i18n
+        inspector:
+          group: 'column'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+    nogutters:
+      type: boolean
+      defaultValue: FALSE
+      ui:
+        label: NeosRulez.Bootstrap:Main:nogutters
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'column'
+    valignment:
+      defaultValue: ''
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:alignment
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'column'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: NeosRulez.Bootstrap:Main:alignmentdefault
+              'align-items-start':
+                label: NeosRulez.Bootstrap:Main:alignmentstart
+              'align-items-center':
+                label: NeosRulez.Bootstrap:Main:alignmentcenter
+              'align-items-end':
+                label: NeosRulez.Bootstrap:Main:alignmentend
+    breakpoint:
+      defaultValue: 'md'
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:Main:breakpoint
+        inspector:
+          group: 'column'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'lg':
+                label: 'lg'
+              'md':
+                label: 'md'
+              'sm':
+                label: 'sm'
   childNodes:
     column0:
       constraints:
@@ -58,15 +123,6 @@
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
           'Neos.NodeTypes:Column': FALSE
-  properties:
-    nogutters:
-      type: boolean
-      defaultValue: FALSE
-      ui:
-        label: NeosRulez.Bootstrap:Main:nogutters
-        reloadIfChanged: TRUE
-        inspector:
-          group: 'settings'
 'Neos.NodeTypes.ColumnLayouts:TwoColumn':
   properties:
     'layout':

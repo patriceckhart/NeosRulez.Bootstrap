@@ -1,3 +1,4 @@
 prototype(Neos.NodeTypes.ColumnLayouts:MultiColumnItem) < prototype(Neos.Neos:ContentCollection) {
-    attributes.class = ${'col-md-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+    @context.col = ${q(node).parent().property('breakpoint') ? 'col-' + q(node).parent().property('breakpoint') + '-' : 'col-'}
+    attributes.class = ${col + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
 }
