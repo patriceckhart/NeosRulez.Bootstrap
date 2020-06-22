@@ -1,0 +1,58 @@
+up:
+  comments: 'Update Neos.NodeTypes.ColumnLayouts:MultiColumnItem breakpoint'
+  warnings: 'There is no way of reverting this migration since the nodes will be changed in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'Neos.NodeTypes.ColumnLayouts:TwoColumn'
+      transformations:
+        -
+          type: 'AddNewProperty'
+          settings:
+            newPropertyName: 'breakpoint'
+            value: 'md'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'breakpoint'
+            newValue: 'md'
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'Neos.NodeTypes.ColumnLayouts:ThreeColumn'
+      transformations:
+        -
+          type: 'AddNewProperty'
+          settings:
+            newPropertyName: 'breakpoint'
+            value: 'md'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'breakpoint'
+            newValue: 'md'
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'Neos.NodeTypes.ColumnLayouts:FourColumn'
+      transformations:
+        -
+          type: 'AddNewProperty'
+          settings:
+            newPropertyName: 'breakpoint'
+            value: 'md'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'breakpoint'
+            newValue: 'md'
+
+down:
+  comments: 'No down migration available'
