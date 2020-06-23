@@ -53,14 +53,14 @@ prototype(Neos.Neos:Page) {
             }
         }
 
-        DatedropperJs = NeosRulez.JsMinifier:JsFile
-        DatedropperJs {
+        NeosRulezBootstrapJsDatedropperJs = NeosRulez.JsMinifier:JsFile
+        NeosRulezBootstrapJsDatedropperJs {
             @position = 'after NeosRulezBootstrapCss'
             source = 'resource://NeosRulez.Bootstrap/Private/JavaScript/datedropper.pro.min.js'
             inline = FALSE
             outputFolder = 'resource://NeosRulez.Bootstrap/Public/JavaScript/'
         }
-        DatedropperJs.@if.contentIsPresent = ${q(documentNode).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof Neos.Form.Builder:NodeBasedForm]').is()}
+        NeosRulezBootstrapJsDatedropperJs.@if.contentIsPresent = ${q(documentNode).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof Neos.Form.Builder:NodeBasedForm]').is()}
 
     }
 
