@@ -31,3 +31,4 @@ prototype(Neos.NodeTypes:TextWithImage) {
     sectionName = 'Main'
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/TextWithImage.html'
 }
+
