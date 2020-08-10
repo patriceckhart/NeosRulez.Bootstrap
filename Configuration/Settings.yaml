@@ -8,20 +8,13 @@ NeosRulez:
     thumbImageWidth: '255'
     thumbImageHeight: '255'
     navbarAlignment: 'right'
-    navbarFluid: FALSE
-    navbarSticky: TRUE
+    navbarFluid: false
+    navbarSticky: true
     navbarBackground: 'bg-white'
     navbarBreakpoint: 'lg'
-    navbarHover: TRUE
-    enableRounded: FALSE
-    enableResponsiveFontSizes: TRUE
-    maxSize: 2560   # maximum image size (should generally be identical with the largest value in the sizes array)
-    sizes:          # dynamic array of sizes generated for the srcset attribute
-      full: 2560
-      large: 1280
-      medium: 768
-      small: 420
-      tiny: 240
+    navbarHover: true
+    enableRounded: false
+    enableResponsiveFontSizes: true
     fontawesome:
       licence: free #pro
       version: 5.11.2
@@ -51,7 +44,7 @@ Neos:
             editorOptions:
               accept: 'image/png,image/jpeg,image/gif'
               features:
-                resize: TRUE
+                resize: true
       navigateComponent:
         nodeTree:
           loadingDepth: 999

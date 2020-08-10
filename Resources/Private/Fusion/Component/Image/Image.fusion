@@ -1,0 +1,11 @@
+prototype(NeosRulez.Bootstrap:Component.ResponsiveImage) < prototype(Neos.Neos:ContentComponent) {
+    asset1x = NULL
+    srcset = NULL
+    title = NULL
+    altText = NULL
+    imgClass = NULL
+    renderedImgClass = ${'figure-img img-fluid' + (this.imgClass ? ' ' + this.imgClass : '')}
+    renderer = afx`
+        <Neos.Fusion:Tag tagName="img" attributes.src={props.asset1x} attributes.srcset={props.srcset} attributes.class={props.renderedImgClass} attributes.title={props.title} attributes.alt={props.altText} />
+    `
+}

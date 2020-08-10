@@ -1,34 +1,93 @@
-prototype(Neos.NodeTypes:Image) {
-    sectionName = 'Main'
-    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Image.html'
+prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 
-    @context.config = ${Configuration.setting('NeosRulez.Bootstrap')}
-    @context.maximumWidth = ${this.maximumWidth}
+    asset = ${q(node).property('image')}
+    originalAsset = ${this.asset.originalAsset}
+    @context.originalAsset = ${this.asset.originalAsset}
 
-    srcset = Neos.Fusion:Collection {
-        collection = ${config.sizes}
-        itemName = 'size'
-        itemRenderer = Neos.Neos:ImageUri {
-            asset = ${q(node).property('image')}
-            maximumWidth = ${size}
-            maximumHeight = ${size}
-            @process.wrapSrc = ${(size <= maximumWidth ? (value + ' ' + size + 'w' + (iterator.isLast ? '' : ', ')) : '')}
-        }
+    fileExtension = ${this.asset.fileExtension}
+    renderFileExtension = ${(this.fileExtension == 'gif' ? false : true)}
+
+    width = ${this.asset.width}
+    height = ${this.asset.height}
+    @context.width = ${this.width}
+    @context.height = ${this.height}
+    @context.width2x = ${this.width * 2}
+    @context.height2x = ${this.height * 2}
+
+    altText = ${q(node).property('alternativeText')}
+    titleText = ${q(node).property('title')}
+    link = ${q(node).property('link')}
+    link.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+    linktarget = ${q(node).property('linktarget') ? '_blank' : '_self'}
+    hasCaption = ${q(node).property('hasCaption')}
+    imgfullwidth = ${q(node).property('imgfullwidth')}
+    lightbox = ${q(node).property('lightbox')}
+    rounded = ${q(node).property('rounded')}
+    alignment = ${q(node).property('alignment')}
+
+    @context.magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
+    @context.magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
+
+    figureClass = ${(this.lightbox ? 'figure d-block singlelightbox' : 'figure d-block') + (this.alignment == 'center' ? ' text-center' : '') + (this.alignment == 'left' ? ' text-left' : '') + (this.alignment == 'right' ? ' text-right' : '')}
+    imgClass = ${(this.imgfullwidth ? 'img-fullwidth' : '') + (this.rounded ? ' rounded' : '') + (this.alignment == 'center' ? ' mx-auto d-block' : '') + (this.alignment == 'left' ? ' mr-auto d-block' : '') + (this.alignment == 'right' ? ' ml-auto d-block' : '')}
+    renderedImgClass = ${'figure-img img-fluid' + (this.imgClass ? ' ' + this.imgClass : '')}
+
+    asset1x = Neos.Neos:ImageUri {
+        asset = ${originalAsset}
+        allowUpScaling = true
+        allowCropping = true
+        width = ${width}
+        height = ${height}
     }
 
-    sizes = ${'(max-width: ' + maximumWidth + 'px) 100vw, ' + maximumWidth + 'px'}
+    asset2x = Neos.Neos:ImageUri {
+        asset = ${originalAsset}
+        allowUpScaling = true
+        allowCropping = true
+        width = ${width2x}
+        height = ${height2x}
+    }
 
-    rounded = ${q(node).property('rounded')}
-    lightbox = ${q(node).property('lightbox')}
-    imgfullwidth = ${q(node).property('imgfullwidth')}
-    magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
-    magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
+    assetOriginal = Neos.Fusion:ResourceUri {
+        resource = ${originalAsset.resource}
+    }
 
-    linktarget = ${q(node).property('linktarget')}
+    lightboxImage = Neos.Neos:ImageUri {
+        asset = ${originalAsset}
+        allowUpScaling = true
+        allowCropping = true
+        width = ${magnificPopupWidth}
+        height = ${magnificPopupHeight}
+    }
+
+    dummyImage = Neos.Fusion:ResourceUri {
+        path = 'resource://Neos.Neos/Public/Images/dummy-image.svg'
+    }
+
+    linkUri = ${this.link ? this.link : (this.lightbox ? this.lightboxImage : false)}
+
+    srcset = ${this.asset1x + ' 1x, ' + this.asset2x + ' 2x'}
+
+    renderAsLink = ${(site.context.inBackend ? false : true) && (this.linkUri ? true : false)}
+    renderImage = ${this.asset ? true : false}
+    renderDummyImage = ${this.asset ? false : site.context.inBackend ? true : false}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Content.AbstractContent @if.render={props.renderImage} >
+            <figure @if.render={props.renderFileExtension} class={props.figureClass}>
+                <a @if.render={props.renderAsLink} href={props.linkUri} target={props.linktarget} class="d-inline-block" >
+                    <Neos.Fusion:Tag tagName="img" attributes.src={props.asset1x} attributes.srcset={props.srcset} attributes.class={props.renderedImgClass} attributes.title={props.title} attributes.alt={props.altText} />
+                </a>
+                <Neos.Fusion:Tag @if.render={!props.renderAsLink} tagName="img" attributes.src={props.asset1x} attributes.srcset={props.srcset} attributes.class={props.renderedImgClass} attributes.title={props.title} attributes.alt={props.altText} />
+                <figcaption @if.render={props.hasCaption} class="figure-caption d-block mt-2 mb-3">
+                    <Neos.Neos:Editable property="caption" block={false} />
+                </figcaption>
+            </figure>
+        </NeosRulez.Bootstrap:Content.AbstractContent>
+        <NeosRulez.Bootstrap:Content.AbstractContent @if.render={props.renderDummyImage} >
+            <Neos.Fusion:Tag tagName="img" attributes.src={props.dummyImage} attributes.class="figure-img img-fluid" />
+        </NeosRulez.Bootstrap:Content.AbstractContent>
+    `
 }
-
-prototype(Neos.NodeTypes:TextWithImage) {
-    sectionName = 'Main'
-    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/TextWithImage.html'
-}
-
