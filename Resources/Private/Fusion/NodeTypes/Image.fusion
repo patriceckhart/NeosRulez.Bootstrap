@@ -1,6 +1,7 @@
 prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 
     asset = ${q(node).property('image')}
+    @context.asset = ${q(node).property('image')}
     originalAsset = ${this.asset.originalAsset}
     @context.originalAsset = ${this.asset.originalAsset}
 
@@ -35,7 +36,7 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     renderedImgClass = ${'figure-img img-fluid' + (this.imgClass ? ' ' + this.imgClass : '')}
 
     asset1x = Neos.Neos:ImageUri {
-        asset = ${originalAsset}
+        asset = ${asset}
         allowUpScaling = true
         allowCropping = true
         width = ${width}
@@ -43,7 +44,7 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     }
 
     asset2x = Neos.Neos:ImageUri {
-        asset = ${originalAsset}
+        asset = ${asset}
         allowUpScaling = true
         allowCropping = true
         width = ${width2x}
@@ -55,7 +56,7 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     }
 
     lightboxImage = Neos.Neos:ImageUri {
-        asset = ${originalAsset}
+        asset = ${asset}
         allowUpScaling = true
         allowCropping = true
         width = ${magnificPopupWidth}
@@ -73,6 +74,15 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     renderAsLink = ${(site.context.inBackend ? false : true) && (this.linkUri ? true : false)}
     renderImage = ${this.asset ? true : false}
     renderDummyImage = ${this.asset ? false : site.context.inBackend ? true : false}
+
+//    testasset = Neos.Neos:ImageUri {
+//        asset = ${asset}
+//        allowUpScaling = true
+//        allowCropping = true
+//        width = ${width*2}
+//        height = ${height*2}
+//    }
+//    <Neos.Fusion:Debug>{props.testasset}</Neos.Fusion:Debug><Neos.Fusion:Debug>{props.asset2x}</Neos.Fusion:Debug>
 
     renderer = afx`
         <NeosRulez.Bootstrap:Content.AbstractContent @if.render={props.renderImage} >
