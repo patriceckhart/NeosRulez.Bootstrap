@@ -74,11 +74,11 @@
         <f:then>
             <f:if condition="{item.node.properties.noSubMenu}">
                 <f:then>
-                    <neos:link.node class="nav-link" node="{item.node}"><f:render section="fontAwesomeIcon" arguments="{icon: item.node.properties.faicon}" /><f:if condition="!{item.node.properties.onlyicon}">{item.label}</f:if></neos:link.node>
+                    <neos:link.node class="nav-link{f:if(condition: '{item.state}', then: ' {item.state}')}" node="{item.node}"><f:render section="fontAwesomeIcon" arguments="{icon: item.node.properties.faicon}" /><f:if condition="!{item.node.properties.onlyicon}">{item.label}</f:if></neos:link.node>
                 </f:then>
                 <f:else>
                     <li class="nav-item dropdown">
-                        <neos:link.node class="nav-link dropdown-toggle" node="{item.node}" additionalAttributes="{role: 'button', data-toggle: 'dropdown', aria-haspopup: 'true', aria-expanded: 'false'}">{item.label}</neos:link.node>
+                        <neos:link.node class="nav-link{f:if(condition: '{item.state}', then: ' {item.state}')} dropdown-toggle" node="{item.node}" additionalAttributes="{role: 'button', data-toggle: 'dropdown', aria-haspopup: 'true', aria-expanded: 'false'}">{item.label}</neos:link.node>
                         <f:render section="subList" arguments="{items: item.subItems}" />
                     </li>
                 </f:else>
@@ -86,7 +86,7 @@
         </f:then>
         <f:else>
             <li class="nav-item">
-                <neos:link.node class="nav-link" node="{item.node}"><f:render section="fontAwesomeIcon" arguments="{icon: item.node.properties.faicon}" /><f:if condition="!{item.node.properties.onlyicon}">{item.label}</f:if></neos:link.node>
+                <neos:link.node class="nav-link{f:if(condition: '{item.state}', then: ' {item.state}')}" node="{item.node}"><f:render section="fontAwesomeIcon" arguments="{icon: item.node.properties.faicon}" /><f:if condition="!{item.node.properties.onlyicon}">{item.label}</f:if></neos:link.node>
             </li>
         </f:else>
     </f:if>
@@ -95,7 +95,7 @@
 <f:section name="subList">
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <f:for each="{items}" as="item">
-            <neos:link.node class="dropdown-item" node="{item.node}">{item.label}</neos:link.node>
+            <neos:link.node class="dropdown-item{f:if(condition: '{item.state}', then: ' {item.state}')}" node="{item.node}">{item.label}</neos:link.node>
         </f:for>
     </div>
 </f:section>
