@@ -182,4 +182,12 @@ $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip()
     });
     lazySizes.init();
+    if($('.navbar-cp').length) {
+        $('.dropdown').click(function() {
+            if(winWidth > 992) {
+                href = $(this).find('.dropdown-toggle').attr('href');
+                location.href = href;
+            }
+        });
+    }
 });

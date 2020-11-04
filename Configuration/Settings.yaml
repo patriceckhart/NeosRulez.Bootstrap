@@ -15,6 +15,7 @@ NeosRulez:
     navbarHover: true
     enableRounded: false
     enableResponsiveFontSizes: true
+    clickableParent: false
     fontawesome:
       licence: free #pro
       version: 5.11.2

@@ -9,7 +9,7 @@
 				<source>Unterseiten im Hauptmenü verbergen</source>
 			</trans-unit>
 			<trans-unit id="faicon" xml:space="preserve">
-				<source>Font Awesome (fas fa-star)</source>
+				<source>Font Awesome Icon</source>
 			</trans-unit>
 			<trans-unit id="onlyicon" xml:space="preserve">
 				<source>Nur Font Awesome Icon anzeigen</source>
