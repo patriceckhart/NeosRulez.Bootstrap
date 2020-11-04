@@ -15,6 +15,14 @@
         label: NeosRulez.Bootstrap:Main:submitLabel
         inspector:
           group: 'form'
+    'hideLabels':
+      type: boolean
+      ui:
+        label: NeosRulez.Bootstrap:Main:hideLabels
+        reloadIfChanged: true
+        inspector:
+          group: 'form'
+          position: 'end'
 'Neos.Form.Builder:FormElement':
   abstract: TRUE
   superTypes:

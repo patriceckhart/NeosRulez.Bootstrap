@@ -3851,8 +3851,9 @@ img.mfp-img {
 .form-navigation ul, .form-navigation ul li { display:block; margin:0; padding:0; }
 .carousel .carousel-item>img { width: 100%; height: auto; }
 .card-img-top { height:auto; }
-.neosrulez-bootstrap-gallery .img-thumbnail { width:100%; height:auto; margin-top:15px; margin-bottom:15px; padding:0; background: $primary; border:0; border-radius:0; }
-.neosrulez-bootstrap-gallery a { outline:0; }
+.neosrulez-bootstrap-gallery .img-thumbnail { width:100%; height:auto; padding:0; background: none; border:0; border-radius:0; }
+.neosrulez-bootstrap-gallery .col-6 { margin-top:15px; margin-bottom:15px; }
+.neosrulez-bootstrap-gallery a { outline:0; display:block; }
 .singlelightbox a { outline:0; }
 
 .topLink { display:none; position: fixed; right:0; bottom:0; z-index:99; font-size:2em; background:rgba(0,0,0,0.2); width:1.5em; height:1.5em; line-height:1.5em; box-sizing: border-box; text-align: center; margin-right:1em; margin-bottom:1em; cursor: pointer; border-radius: .25rem; }
@@ -3934,6 +3935,29 @@ div.datedropper.bootstrap {
   --dd-width: 200px;
   --dd-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.1);
 
+}
+
+.mfp-img-mobile .mfp-container,
+.mfp-img-mobile.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.mfp-img-mobile.mfp-ready .mfp-container {
+  opacity: 1;
+}
+.mfp-img-mobile.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-img-mobile.mfp-removing .mfp-container,
+.mfp-img-mobile.mfp-removing.mfp-bg {
+  opacity: 0;
 }
 
 @media only screen and (max-width:1200px) {

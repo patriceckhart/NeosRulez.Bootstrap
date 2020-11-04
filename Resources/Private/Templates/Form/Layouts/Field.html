@@ -2,7 +2,9 @@
 <f:validation.results for="{element.identifier}">
 	<div class="clearfix{f:if(condition: validationResults.flattenedErrors, then: ' error')}"<f:if condition="{element.rootForm.renderingOptions.previewMode}"> data-element="{form:form.formElementRootlinePath(renderable:element)}"</f:if>>
 		<f:if condition="{element.type}!='Neos.Form:Checkbox'">
-			<label for="{element.uniqueIdentifier}">{element -> form:translateElementProperty(property: 'label') -> f:format.nl2br()}<f:if condition="{element.required}"><f:render partial="Neos.Form:Field/Required" /></f:if></label>
+			<f:if condition="!{element -> form:translateElementProperty(property: 'hideLabels')}">
+				<label for="{element.uniqueIdentifier}">{element -> form:translateElementProperty(property: 'label') -> f:format.nl2br()}<f:if condition="{element.required}"><f:render partial="Neos.Form:Field/Required" /></f:if></label>
+			</f:if>
 		</f:if>
 		<div class="{element.properties.containerClassAttribute}">
 			<f:render section="field" />

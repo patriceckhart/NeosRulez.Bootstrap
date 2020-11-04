@@ -269,6 +269,9 @@
 			<trans-unit id="submitLabel" xml:space="preserve">
                 <source>Submit-Button Label</source>
             </trans-unit>
+			<trans-unit id="hideLabels" xml:space="preserve">
+                <source>Labels ausblenden</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

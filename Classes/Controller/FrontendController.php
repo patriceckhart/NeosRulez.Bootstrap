@@ -36,6 +36,10 @@ class FrontendController extends ActionController
             $youtubeId = substr($link, strpos($link, "=") + 1);
             $link = 'https://www.youtube.com/embed/'.$youtubeId;
         }
+        if (strpos($link, 'youtu.be') !== false) {
+            $youtube_id = str_replace('https://youtu.be/', '', $link);
+            $link = 'https://www.youtube.com/embed/'.$youtube_id;
+        }
         $this->view->assign('link',$link);
         $this->view->assign('attributes',$this->request->getInternalArgument('__attributes'));
     }

@@ -31,6 +31,10 @@
         inspector:
           group: 'image'
           position: 200
+    link:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.lightbox ? true : false'
     lightbox:
       type: boolean
       defaultValue: false
@@ -54,3 +58,4 @@
          inspector:
            group: 'image'
            position: 'after link'
+           hidden: 'ClientEval:node.properties.lightbox ? true : false'

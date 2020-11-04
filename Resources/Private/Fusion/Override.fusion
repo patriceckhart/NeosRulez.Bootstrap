@@ -3,3 +3,9 @@ prototype(Neos.Form.Builder:Form) {
         submitButtonLabel = ${q(node).property('submitLabel')}
     }
 }
+
+prototype(Neos.Form.Builder:FormElement.Definition) {
+    properties {
+        hideLabels = ${q(node).property('hideLabels')}
+    }
+}

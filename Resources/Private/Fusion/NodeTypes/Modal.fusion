@@ -7,9 +7,13 @@ prototype(NeosRulez.Bootstrap:Modal) < prototype(Neos.Neos:Content) {
         @context.container = ${(q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? '' : ''}
         text = ${q(node).property('btnlabel')}
         identifier = ${'#modal-' + nodeidentifier}
+        renderer >
         renderer = afx`
             <div class={props.alignment}>
-                <div class={props.btnclass} data-toggle="modal" data-target={props.identifier}><i @if.render={props.icon} class={props.faicon}></i><span @if.render={!props.onlyicon} class="d-inline-block"> {props.text}</span></div>
+                <div class={props.btnclass} data-toggle="modal" data-target={props.identifier}>
+                    <i @if.render={props.icon} class={props.faicon}></i>
+                    <span @if.render={!props.onlyicon} class="d-inline-block"> {props.text}</span>
+                </div>
             </div>
         `
     }

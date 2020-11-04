@@ -2,26 +2,28 @@
 {namespace fusion=Neos\Fusion\ViewHelpers}
 {namespace media=Neos\Media\ViewHelpers}
 <div{attributes -> f:format.raw()}>
-    <div class="row{f:if(condition: '{lightbox}', then: ' lightbox')}">
-        <f:if condition="{assets}">
-            <f:then>
-                <f:if condition="{crop}">
-                    <f:then>
-                        <f:render section="image" arguments="{_all}" />
-                    </f:then>
-                    <f:else>
-                        <f:render section="image" arguments="{_all}" />
-                    </f:else>
-                </f:if>
-            </f:then>
-            <f:else>
-                <f:if condition="{node.context.workspace.name} != 'live'">
-                    <div{attributes -> f:format.raw()}>
-                    {f:translate(id: 'choosefiles', package: 'NeosRulez.Bootstrap', source: 'Main')}
-                    </div>
-                </f:if>
-            </f:else>
-        </f:if>
+    <div class="neosrulez-bootstrap-gallery">
+        <div class="row{f:if(condition: '{lightbox}', then: ' lightbox')}">
+            <f:if condition="{assets}">
+                <f:then>
+                    <f:if condition="{crop}">
+                        <f:then>
+                            <f:render section="image" arguments="{_all}" />
+                        </f:then>
+                        <f:else>
+                            <f:render section="image" arguments="{_all}" />
+                        </f:else>
+                    </f:if>
+                </f:then>
+                <f:else>
+                    <f:if condition="{node.context.workspace.name} != 'live'">
+                        <div{attributes -> f:format.raw()}>
+                            {f:translate(id: 'choosefiles', package: 'NeosRulez.Bootstrap', source: 'Main')}
+                        </div>
+                    </f:if>
+                </f:else>
+            </f:if>
+        </div>
     </div>
 </div>
 
@@ -32,10 +34,10 @@
                 <div class="col-md-3 col-6">
                     <f:if condition="{lightbox}">
                         <f:then>
-                            <a href="{media:uri.image(image: asset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}"><media:image image="{asset}" width="{thumbImageWidth}" maximumHeight="{thumbImageHeight}" allowCropping="FALSE" allowUpScaling="TRUE" class="img-thumbnail" alt="" /></a>
+                            <a href="{media:uri.image(image: asset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}"><media:image image="{asset}" width="{thumbImageWidth}" maximumHeight="{thumbImageHeight}" allowCropping="FALSE" allowUpScaling="TRUE" class="img-thumbnail" title="{f:if(condition:asset.title, then: asset.title, else: asset.copyrightnotice)}" alt="{asset.caption}" /></a>
                         </f:then>
                         <f:else>
-                            <media:image image="{asset}" width="{thumbImageWidth}" maximumHeight="{thumbImageHeight}" allowCropping="FALSE" allowUpScaling="TRUE" class="img-thumbnail" alt="" />
+                            <media:image image="{asset}" width="{thumbImageWidth}" maximumHeight="{thumbImageHeight}" allowCropping="FALSE" allowUpScaling="TRUE" class="img-thumbnail" title="{f:if(condition:asset.title, then: asset.title, else: asset.copyrightnotice)}" alt="{asset.caption}" />
                         </f:else>
                     </f:if>
                 </div>
@@ -44,10 +46,10 @@
                 <div class="col-md-3 col-6">
                     <f:if condition="{lightbox}">
                         <f:then>
-                            <a href="{media:uri.image(image: asset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}"><media:image image="{asset}" width="{thumbImageWidth}" height="{thumbImageHeight}" allowCropping="TRUE" allowUpScaling="TRUE" class="img-thumbnail" alt="" /></a>
+                            <a href="{media:uri.image(image: asset, maximumWidth: magnificPopupWidth, maximumHeight: magnificPopupHeight, allowCropping:FALSE)}"><media:image image="{asset}" width="{thumbImageWidth}" height="{thumbImageHeight}" allowCropping="TRUE" allowUpScaling="TRUE" class="img-thumbnail" title="{f:if(condition:asset.title, then: asset.title, else: asset.copyrightnotice)}" alt="{asset.caption}" /></a>
                         </f:then>
                         <f:else>
-                            <media:image image="{asset}" width="{thumbImageWidth}" height="{thumbImageHeight}" allowCropping="TRUE" allowUpScaling="TRUE" class="img-thumbnail" alt="" />
+                            <media:image image="{asset}" width="{thumbImageWidth}" height="{thumbImageHeight}" allowCropping="TRUE" allowUpScaling="TRUE" class="img-thumbnail" title="{f:if(condition:asset.title, then: asset.title, else: asset.copyrightnotice)}" alt="{asset.caption}" />
                         </f:else>
                     </f:if>
                 </div>

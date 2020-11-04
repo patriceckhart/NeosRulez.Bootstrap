@@ -56,11 +56,11 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     }
 
     lightboxImage = Neos.Neos:ImageUri {
-        asset = ${asset}
-        allowUpScaling = true
-        allowCropping = true
+        asset = ${originalAsset}
+        allowUpScaling = false
+        allowCropping = false
         width = ${magnificPopupWidth}
-        height = ${magnificPopupHeight}
+        maximumHeight = ${magnificPopupHeight}
     }
 
     dummyImage = Neos.Fusion:ResourceUri {
@@ -75,22 +75,13 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     renderImage = ${this.asset ? true : false}
     renderDummyImage = ${this.asset ? false : site.context.inBackend ? true : false}
 
-//    testasset = Neos.Neos:ImageUri {
-//        asset = ${asset}
-//        allowUpScaling = true
-//        allowCropping = true
-//        width = ${width*2}
-//        height = ${height*2}
-//    }
-//    <Neos.Fusion:Debug>{props.testasset}</Neos.Fusion:Debug><Neos.Fusion:Debug>{props.asset2x}</Neos.Fusion:Debug>
-
     renderer = afx`
         <NeosRulez.Bootstrap:Content.AbstractContent @if.render={props.renderImage} >
             <figure @if.render={props.renderFileExtension} class={props.figureClass}>
                 <a @if.render={props.renderAsLink} href={props.linkUri} target={props.linktarget} class="d-inline-block" >
-                    <Neos.Fusion:Tag tagName="img" attributes.src={props.asset1x} attributes.srcset={props.srcset} attributes.class={props.renderedImgClass} attributes.title={props.title} attributes.alt={props.altText} />
+                    <Neos.Fusion:Tag tagName="img" attributes.src={props.asset1x} attributes.srcset={props.srcset} attributes.class={props.renderedImgClass} attributes.title={props.title ? props.title : props.originalAsset.copyrightnotice} attributes.alt={props.altText} />
                 </a>
-                <Neos.Fusion:Tag @if.render={!props.renderAsLink} tagName="img" attributes.src={props.asset1x} attributes.srcset={props.srcset} attributes.class={props.renderedImgClass} attributes.title={props.title} attributes.alt={props.altText} />
+                <Neos.Fusion:Tag @if.render={!props.renderAsLink} tagName="img" attributes.src={props.asset1x} attributes.srcset={props.srcset} attributes.class={props.renderedImgClass} attributes.title={props.title ? props.title : props.originalAsset.copyrightnotice} attributes.alt={props.altText} />
                 <figcaption @if.render={props.hasCaption} class="figure-caption d-block mt-2 mb-3">
                     <Neos.Neos:Editable property="caption" block={false} />
                 </figcaption>
