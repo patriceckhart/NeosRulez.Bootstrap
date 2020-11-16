@@ -78,6 +78,18 @@ prototype(Neos.Neos:Page) {
         outputFolder = 'resource://NeosRulez.Bootstrap/Public/JavaScript/'
     }
 
+    NeosRulezBootstrapBackendJs = Neos.Fusion:Tag {
+        @position = 'after NeosRulezBootstrapJs'
+        @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
+        tagName = 'script'
+        attributes {
+            type = 'text/javascript'
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/Backend/backend.js'
+            }
+        }
+    }
+
     #head.@process.compression >
     #body.@process.compression >
 
