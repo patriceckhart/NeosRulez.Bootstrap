@@ -269,6 +269,18 @@
 			<trans-unit id="hideLabels" xml:space="preserve">
                 <source>Labels ausblenden</source>
             </trans-unit>
+			<trans-unit id="nobreakpoint" xml:space="preserve">
+                <source>Kein Breakpoint</source>
+            </trans-unit>
+			<trans-unit id="breakpointlg" xml:space="preserve">
+                <source>Breakpoint (lg): Große Displays</source>
+            </trans-unit>
+			<trans-unit id="breakpointmd" xml:space="preserve">
+                <source>Breakpoint (md): Normale Displays</source>
+            </trans-unit>
+			<trans-unit id="breakpointsm" xml:space="preserve">
+                <source>Breakpoint (sm): Kleine Displays</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

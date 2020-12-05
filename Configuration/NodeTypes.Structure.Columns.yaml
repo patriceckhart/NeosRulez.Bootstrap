@@ -59,13 +59,13 @@
           editorOptions:
             values:
               '':
-                label: ''
+                label: NeosRulez.Bootstrap:Main:nobreakpoint
               'lg':
-                label: 'lg'
+                label: NeosRulez.Bootstrap:Main:breakpointlg
               'md':
-                label: 'md'
+                label: NeosRulez.Bootstrap:Main:breakpointmd
               'sm':
-                label: 'sm'
+                label: NeosRulez.Bootstrap:Main:breakpointsm
   childNodes:
     column0:
       constraints:

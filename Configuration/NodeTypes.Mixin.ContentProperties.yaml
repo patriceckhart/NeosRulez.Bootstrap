@@ -10,7 +10,7 @@
         animation:
           label: NeosRulez.Bootstrap:Main:animation
           position: 12
-          icon: 'icon-star'
+          icon: 'fas fa-magic'
         tooltip:
           label: NeosRulez.Bootstrap:Main:tooltip
           position: 13
@@ -36,7 +36,7 @@
           position: 120
         animationsettings:
           label: NeosRulez.Bootstrap:Main:animationsettings
-          icon: 'icon-star'
+          icon: 'fas fa-magic'
           tab: 'animation'
         tooltipsettings:
           label: NeosRulez.Bootstrap:Main:tooltipsettings
