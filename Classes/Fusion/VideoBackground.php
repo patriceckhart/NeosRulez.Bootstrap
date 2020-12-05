@@ -40,14 +40,14 @@ class VideoBackground extends AbstractFusionObject {
                 if(preg_match("/\/(\d+)$/",$link,$matches)) {
                     $vimeoId = $matches[1];
                 }
-                $link = 'https://player.vimeo.com/video/'.$vimeoId.'?autoplay=1&loop=1&title=0&portrait=0&byline=0';
+                $link = 'https://player.vimeo.com/video/'.$vimeoId.'?autoplay=1&loop=1&muted=1&autopause=0&title=0&portrait=0&byline=0';
                 $platform = 'vimeo';
             }
 
             if (strpos($link, 'vimeo') !== false) {
                 $linkString = explode('/', $link);
                 $vimeoId = array_pop($linkString);
-                $link = 'https://player.vimeo.com/video/'.$vimeoId.'?autoplay=1&loop=1&title=0&portrait=0&byline=0';
+                $link = 'https://player.vimeo.com/video/'.$vimeoId.'?autoplay=1&loop=1&muted=1&autopause=0&title=0&portrait=0&byline=0';
                 $platform = 'vimeo';
             }
 

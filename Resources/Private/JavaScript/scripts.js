@@ -165,7 +165,7 @@ function adjustBgVideo() {
             $iFrameParentHeight = $iFrameParent.height();
             $iFramePosition = ($iFrameHeight / 2) - ($iFrameParentHeight / 2);
             $iFrame.css('margin-top', '-' + $iFramePosition + 'px');
-            
+
             // if($iFrameParentHeight > $iFrameHeight) {
             //     $aspectRatio = ($iFrameWidth / $iFrameHeight);
             //     $iFrame.css('height', $iFrameParentHeight - 1 + 'px');
