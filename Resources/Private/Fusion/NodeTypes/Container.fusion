@@ -3,7 +3,7 @@ prototype(NeosRulez.Bootstrap:Container) < prototype(Neos.Neos:Content) {
 
     valignment = ${q(node).property('valignment')}
 
-    @context.container = ${(q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? 'container-fluid ' : ''}
+    @context.container = ${((q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? 'container-fluid ' : '') + (q(node).property('videourl') ? ' position-relative overflow-hidden' : '')}
 
     attributesInner = Neos.Fusion:Attributes
     attributesInner.class = ${(q(node).property('containerwidth')) + (q(node).property('valignment') ? '' + ' h-100' : '' )}
@@ -30,4 +30,6 @@ prototype(NeosRulez.Bootstrap:Container) < prototype(Neos.Neos:Content) {
     attributes.data-placement.@process.data-placement = ${(q(node).property('tooltipposition') ? '' + q(node).property('tooltipposition') : '' )}
     attributes.title.@if.cond1 = ${q(node).property('tooltiptext')}
     attributes.data-toggle.@if.cond2 = ${!node.context.inBackend}
+
+    videoBackground = NeosRulez.Bootstrap:Component.VideoBackground
 }

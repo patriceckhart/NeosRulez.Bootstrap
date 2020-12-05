@@ -155,6 +155,27 @@ function isInViewport(node) {
         rect.left <= (window.innerWidth || document.documentElement.clientWidth)
     )
 }
+function adjustBgVideo() {
+    if($('.video-foreground').length) {
+        $('.video-foreground').each(function() {
+            $iFrame = $(this).find('iframe');
+            $iFrameWidth = $iFrame.width();
+            $iFrameHeight = $iFrame.height();
+            $iFrameParent = $(this).parent().parent().parent().parent();
+            $iFrameParentHeight = $iFrameParent.height();
+            $iFramePosition = ($iFrameHeight / 2) - ($iFrameParentHeight / 2);
+            $iFrame.css('margin-top', '-' + $iFramePosition + 'px');
+            // if($iFrameParentHeight > $iFrameHeight) {
+            //     $aspectRatio = ($iFrameWidth / $iFrameHeight);
+            //     $iFrame.css('height', $iFrameParentHeight - 1 + 'px');
+            //     $newIFrameWidth = ($iFrame.width() * $aspectRatio);
+            //     $iFrame.css('width', $newIFrameWidth + 'px');
+            // } else {
+            //     $iFrame.css('margin-top', '-' + $iFramePosition + 'px');
+            // }
+        });
+    }
+}
 $(document).ready(function(){
     $('.parallax').each(function() {
         var imageSrc = $(this).data('image-src');
@@ -216,4 +237,11 @@ $(document).ready(function(){
             }
         });
     }
+    adjustBgVideo();
+});
+$(window).resize(function() {
+    adjustBgVideo();
+});
+$(window).on('resize', function(){
+    adjustBgVideo();
 });

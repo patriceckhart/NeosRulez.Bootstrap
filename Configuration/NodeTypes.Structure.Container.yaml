@@ -106,15 +106,15 @@
                 label: i18n
     videourl:
       type: string
-      ui: ~
-#         label: i18n
-#         reloadPageIfChanged: TRUE
-#         inspector:
-#           hidden: 'ClientEval:node.properties.backgroundImage ? true : false'
-#           group: 'settings'
-#           position: 'before backgroundImage'
-#           editorOptions:
-#             placeholder: 'https://www.youtube.com/embed/YOUTUBEID'
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.backgroundImage ? true : false'
+          group: 'settings'
+          position: 'before backgroundImage'
+          editorOptions:
+            placeholder: 'https://www.youtube.com/embed/YOUTUBEID'
     backgroundImage:
       type: 'Neos\Media\Domain\Model\ImageInterface'
       ui:

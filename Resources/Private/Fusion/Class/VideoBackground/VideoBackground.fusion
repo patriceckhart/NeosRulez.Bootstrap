@@ -1,0 +1,4 @@
+prototype(NeosRulez.Bootstrap:Class.VideoBackground) {
+    @class = 'NeosRulez\\Bootstrap\\Fusion\\VideoBackground'
+    videourl = false
+}

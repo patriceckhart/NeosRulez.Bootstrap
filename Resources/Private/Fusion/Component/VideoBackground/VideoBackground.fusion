@@ -1,0 +1,16 @@
+prototype(NeosRulez.Bootstrap:Component.VideoBackground) < prototype(Neos.Fusion:Component) {
+
+    videourl = NeosRulez.Bootstrap:Class.VideoBackground {
+        videourl = ${node.properties.videourl}
+    }
+
+    renderer = afx`
+        <div @if.render={props.videourl} class="video-background">
+            <div class="video-foreground">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src={props.videourl} frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    `
+}
