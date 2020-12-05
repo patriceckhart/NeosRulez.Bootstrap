@@ -1,0 +1,5 @@
+prototype(NeosRulez.Bootstrap:Section) < prototype(NeosRulez.Bootstrap:Container) {
+    section = true
+//    @context.container = ${'section'}
+    attributesInner.class = ${'section' + (q(node).property('valignment') ? '' + ' h-100' : '' )}
+}

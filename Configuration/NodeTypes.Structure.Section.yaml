@@ -1,0 +1,13 @@
+'NeosRulez.Bootstrap:Section':
+  label: "${'Section' + (q(node).property('containerwidth') == 'container' ? ' (' + I18n.translate('NeosRulez.Bootstrap:Main:properties.containerwidth.selectBoxEditor.values.container') + ')' : q(node).property('containerwidth') == 'container-fluid' ? ' (' + I18n.translate('NeosRulez.Bootstrap:Main:properties.containerwidth.selectBoxEditor.values.container-fluid') + ')' : '')}"
+  superTypes:
+    'NeosRulez.Bootstrap:Container': true
+  ui:
+    label: 'Section'
+    group: 'bootstrapnodetypes'
+    icon: 'icon-square-o'
+  properties:
+    pt:
+      defaultValue: ''
+    pb:
+      defaultValue: ''

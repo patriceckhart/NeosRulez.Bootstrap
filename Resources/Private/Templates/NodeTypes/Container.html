@@ -12,7 +12,9 @@
                 </div>
             </f:then>
             <f:else>
-                {contentItems -> f:format.raw()}
+                <div class="d-block">
+                    {contentItems -> f:format.raw()}
+                </div>
             </f:else>
         </f:if>
     </div>

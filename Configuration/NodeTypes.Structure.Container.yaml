@@ -1,4 +1,5 @@
 'NeosRulez.Bootstrap:Container':
+  label: "${'Container' + (q(node).property('containerwidth') == 'container' ? ' (' + I18n.translate('NeosRulez.Bootstrap:Main:properties.containerwidth.selectBoxEditor.values.container') + ')' : q(node).property('containerwidth') == 'container-fluid' ? ' (' + I18n.translate('NeosRulez.Bootstrap:Main:properties.containerwidth.selectBoxEditor.values.container-fluid') + ')' : '')}"
   superTypes:
     'Neos.Neos:Content': TRUE
   childNodes:
