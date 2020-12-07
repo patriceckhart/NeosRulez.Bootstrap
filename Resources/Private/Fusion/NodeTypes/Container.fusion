@@ -1,15 +1,19 @@
 prototype(NeosRulez.Bootstrap:Container) < prototype(Neos.Neos:Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Container.html'
 
+    transparency = ${node.properties.transparency}
+    transparencyValue = ${this.transparency ? (String.toInteger(this.transparency) / 100) : false}
+    transparencyImage = ${q(node).property('backgroundImage')}
+
     valignment = ${q(node).property('valignment')}
 
-    @context.container = ${((q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? 'container-fluid ' : '') + (q(node).property('videourl') ? ' position-relative overflow-hidden' : '')}
+    @context.container = ${((q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? 'container-fluid ' : '') + (q(node).property('videourl') ? ' position-relative overflow-hidden' : '') + (this.transparency ? ' position-relative' : '')}
 
     attributesInner = Neos.Fusion:Attributes
-    attributesInner.class = ${(q(node).property('containerwidth')) + (q(node).property('valignment') ? '' + ' h-100' : '' )}
+    attributesInner.class = ${(q(node).property('containerwidth')) + (q(node).property('valignment') ? '' + ' h-100' : '' ) + (node.properties.transparency ? ' z-index-2' : '')}
 
     backgroundColor = ${q(node).property('backgroundColor')}
-    backgroundImage = ${q(node).property('backgroundImage')}
+    backgroundImage = ${this.transparency ? false : q(node).property('backgroundImage')}
     backgroundSize = ${q(node).property('backgroundSize')}
     backgroundPosition = ${q(node).property('backgroundPosition')}
     padding = ${q(node).property('padding')}
@@ -17,6 +21,8 @@ prototype(NeosRulez.Bootstrap:Container) < prototype(Neos.Neos:Content) {
     textWhite = ${q(node).property('textWhite')}
     parallax = ${q(node).property('parallax')}
     parallax.@if.condition = ${!node.context.inBackend}
+
+    transparencyBackgroundColor = ${q(node).property('backgroundColor')}
 
     contentItems = Neos.Neos:ContentCollection {
         nodePath = 'contentItems'
@@ -32,4 +38,5 @@ prototype(NeosRulez.Bootstrap:Container) < prototype(Neos.Neos:Content) {
     attributes.data-toggle.@if.cond2 = ${!node.context.inBackend}
 
     videoBackground = NeosRulez.Bootstrap:Component.VideoBackground
+
 }

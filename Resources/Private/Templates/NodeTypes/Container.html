@@ -18,5 +18,14 @@
             </f:else>
         </f:if>
     </div>
-    {videoBackground -> f:format.raw()}
+    <f:if condition="{videoBackground}">
+        <f:then>
+            {videoBackground -> f:format.raw()}
+        </f:then>
+        <f:else>
+            <f:if condition="{transparency}">
+                <div class="transparency"<f:if condition="{parallax}"><f:then><f:if condition="{transparencyImage}"> data-image-src="{media:uri.image(image: transparencyImage, maximumWidth: 2000)}"</f:if></f:then><f:else><f:if condition="{transparencyImage}"><f:then> style="opacity:{transparencyValue}; background:url({media:uri.image(image: transparencyImage, maximumWidth: 2000)}) no-repeat {transparencyBackgroundColor} {backgroundPosition}; -webkit-background-size: {backgroundSize}; -moz-background-size: {backgroundSize}; -o-background-size: {backgroundSize}; background-size: {backgroundSize};"</f:then><f:else>{f:if(condition: '{transparencyBackgroundColor}', then: ' style="opacity:{transparencyValue}; background-color:{transparencyBackgroundColor};"')}</f:else></f:if></f:else></f:if>></div>
+            </f:if>
+        </f:else>
+    </f:if>
 </div>

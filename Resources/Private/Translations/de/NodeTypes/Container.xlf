@@ -140,6 +140,9 @@
             <trans-unit id="properties.videourl" xml:space="preserve">
                 <source>YouTube oder Vimeo URL</source>
             </trans-unit>
+            <trans-unit id="properties.transparency" xml:space="preserve">
+                <source>Deckkraft</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

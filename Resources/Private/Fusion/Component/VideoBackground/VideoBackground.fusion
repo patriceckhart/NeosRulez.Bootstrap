@@ -16,4 +16,5 @@ prototype(NeosRulez.Bootstrap:Component.VideoBackground) < prototype(Neos.Fusion
             </div>
         </div>
     `
+    renderer.@if.condition = ${node.properties.videourl}
 }

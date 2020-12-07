@@ -3975,6 +3975,9 @@ div.datedropper.bootstrap {
   pointer-events: none;
 }
 
+.transparency { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index:1; }
+.z-index-2 { position:relative; z-index: +2; }
+
 @media only screen and (max-width:1200px) {
   .neosrulez-bootstrap-imagewithcontent .contentitems { padding:3rem; }
 }
