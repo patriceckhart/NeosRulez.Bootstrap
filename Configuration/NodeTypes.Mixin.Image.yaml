@@ -44,6 +44,12 @@
         inspector:
           group: 'image'
           position: 250
+    linktarget:
+       ui:
+         inspector:
+           group: 'image'
+           position: 'after link'
+           hidden: 'ClientEval:node.properties.lightbox ? true : false'
     imgfullwidth:
       type: boolean
       defaultValue: true
@@ -53,9 +59,3 @@
         inspector:
           group: 'image'
           position: 300
-    linktarget:
-       ui:
-         inspector:
-           group: 'image'
-           position: 'after link'
-           hidden: 'ClientEval:node.properties.lightbox ? true : false'

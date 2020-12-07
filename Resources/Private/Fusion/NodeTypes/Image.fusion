@@ -31,7 +31,7 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     @context.magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
     @context.magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
 
-    figureClass = ${(this.lightbox ? 'figure d-block singlelightbox' : 'figure d-block') + (this.alignment == 'center' ? ' text-center' : '') + (this.alignment == 'left' ? ' text-left' : '') + (this.alignment == 'right' ? ' text-right' : '')}
+    figureClass = ${(this.lightbox ? (Configuration.setting('NeosRulez.Bootstrap.lightcase') ? 'figure d-block' : 'figure d-block singlelightbox') : 'figure d-block') + (this.alignment == 'center' ? ' text-center' : '') + (this.alignment == 'left' ? ' text-left' : '') + (this.alignment == 'right' ? ' text-right' : '')}
     imgClass = ${(this.imgfullwidth ? 'img-fullwidth' : '') + (this.rounded ? ' rounded' : '') + (this.alignment == 'center' ? ' mx-auto d-block' : '') + (this.alignment == 'left' ? ' mr-auto d-block' : '') + (this.alignment == 'right' ? ' ml-auto d-block' : '')}
     renderedImgClass = ${'figure-img img-fluid' + (this.imgClass ? ' ' + this.imgClass : '')}
 
@@ -78,7 +78,7 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     renderer = afx`
         <NeosRulez.Bootstrap:Content.AbstractContent @if.render={props.renderImage} >
             <figure @if.render={props.renderFileExtension} class={props.figureClass}>
-                <a @if.render={props.renderAsLink} href={props.linkUri} target={props.linktarget} class="d-inline-block" >
+                <a @if.render={props.renderAsLink} href={props.linkUri} target={props.linktarget} class="d-inline-block" data-rel={Configuration.setting('NeosRulez.Bootstrap.lightcase') ? 'lightcase:' : false} >
                     <Neos.Fusion:Tag tagName="img" attributes.src={props.asset1x} attributes.srcset={props.srcset} attributes.class={props.renderedImgClass} attributes.title={props.title ? props.title : props.originalAsset.copyrightnotice} attributes.alt={props.altText} />
                 </a>
                 <Neos.Fusion:Tag @if.render={!props.renderAsLink} tagName="img" attributes.src={props.asset1x} attributes.srcset={props.srcset} attributes.class={props.renderedImgClass} attributes.title={props.title ? props.title : props.originalAsset.copyrightnotice} attributes.alt={props.altText} />

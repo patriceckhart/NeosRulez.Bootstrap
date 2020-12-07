@@ -30,7 +30,7 @@
 				<source>Abgerundete Ecken</source>
 			</trans-unit>
 			<trans-unit id="lightbox" xml:space="preserve">
-				<source>Vergrößerung</source>
+				<source>Vergrößerung (Lightbox)</source>
 			</trans-unit>
 			<trans-unit id="imgfullwidth" xml:space="preserve">
 				<source>Bildbreite an Container anpassen</source>

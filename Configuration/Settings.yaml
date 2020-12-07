@@ -16,7 +16,7 @@ NeosRulez:
     enableRounded: false
     enableResponsiveFontSizes: true
     clickableParent: false
-    lightcase: true
+    lightcase: false
     fontawesome:
       licence: free #pro
       version: 5.11.2
