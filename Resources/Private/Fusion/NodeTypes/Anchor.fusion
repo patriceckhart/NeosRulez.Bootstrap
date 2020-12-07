@@ -1,4 +1,4 @@
 prototype(NeosRulez.Bootstrap:Anchor) < prototype(Neos.Neos:Content) {
     templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Anchor.html'
-    title = ${q(node).property('title')}
+    title = ${String.toLowerCase(q(node).property('title'))}
 }
