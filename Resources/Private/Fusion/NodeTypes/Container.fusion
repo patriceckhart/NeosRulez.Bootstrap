@@ -7,7 +7,7 @@ prototype(NeosRulez.Bootstrap:Container) < prototype(Neos.Neos:Content) {
 
     valignment = ${q(node).property('valignment')}
 
-    @context.container = ${((q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? 'container-fluid ' : '') + (q(node).property('videourl') ? ' position-relative overflow-hidden' : '') + (this.transparency ? ' position-relative' : '')}
+    @context.container = ${((q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1) ? 'container-fluid ' : '') + (q(node).property('videourl') ? ' position-relative overflow-hidden' : '') + (this.transparency ? ' position-relative ' : '')}
 
     attributesInner = Neos.Fusion:Attributes
     attributesInner.class = ${(q(node).property('containerwidth')) + (q(node).property('valignment') ? '' + ' h-100' : '' ) + (node.properties.transparency ? ' z-index-2' : '')}
