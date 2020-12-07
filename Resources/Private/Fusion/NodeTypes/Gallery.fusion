@@ -1,11 +1,61 @@
-prototype(NeosRulez.Bootstrap:Gallery) < prototype(Neos.Neos:Content) {
-    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Gallery.html'
-    magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
-    magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
-    thumbImageWidth = ${Configuration.setting('NeosRulez.Bootstrap.thumbImageWidth')}
-    thumbImageHeight = ${Configuration.setting('NeosRulez.Bootstrap.thumbImageHeight')}
+prototype(NeosRulez.Bootstrap:Gallery) < prototype(Neos.Neos:ContentComponent) {
+    @context.magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
+    @context.magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
+    @context.thumbImageWidth = ${Configuration.setting('NeosRulez.Bootstrap.thumbImageWidth')}
+    @context.thumbImageHeight = ${Configuration.setting('NeosRulez.Bootstrap.thumbImageHeight')}
 
     assets = ${q(node).property('assets')}
-    lightbox = ${q(node).property('lightbox')}
-    crop = ${q(node).property('crop')}
+    @context.lightbox = ${q(node).property('lightbox') ? (Configuration.setting('NeosRulez.Bootstrap.lightcase') ? '' : 'lightbox') : ''}
+    @context.crop = ${q(node).property('crop')}
+
+    galleryIdentifier = ${'gallery__' + node.identifier}
+
+    @context.columns = ${node.properties.cols == '4' ? 'col-md-3 col-6' : node.properties.cols == '3' ? 'col-md-4 col-6' : node.properties.cols == '2' ? 'col-md-6 col-6' : node.properties.cols ? 'col-md-3 col-6' : 'col-md-3 col-6'}
+
+    rowClass = ${node.properties.nogutters ? 'row no-gutters' : lightbox ? 'row ' + lightbox : 'row'}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Content.AbstractContent>
+            <div id={props.galleryIdentifier} class="neosrulez-bootstrap-gallery">
+                <div class={props.rowClass} >
+                    <Neos.Fusion:Loop items={props.assets} itemName="asset" itemKey="assetKey" >
+                        <NeosRulez.Bootstrap:Component.GalleryImage />
+                    </Neos.Fusion:Loop>
+                </div>
+            </div>
+        </NeosRulez.Bootstrap:Content.AbstractContent>
+    `
 }
+
+prototype(NeosRulez.Bootstrap:Component.GalleryImage) < prototype(Neos.Fusion:Component) {
+
+    lightboxImageUri = Neos.Neos:ImageUri {
+        asset = ${asset}
+        allowUpScaling = true
+        allowCropping = false
+        maximumWidth = ${magnificPopupWidth}
+        maximumHeight = ${magnificPopupHeight}
+    }
+
+    renderer = afx`
+        <div class={columns} >
+            <Neos.Fusion:Tag @if.render={lightbox} tagName="a" attributes.href={props.lightboxImageUri} attributes.data-rel={Configuration.setting('NeosRulez.Bootstrap.lightcase') ? 'lightcase:' + props.galleryIdentifier : false} >
+                <Neos.Neos:ImageTag asset={asset} allowUpScaling="true" allowCropping={!crop} width={thumbImageWidth} height={thumbImageHeight} attributes.class="img-thumbnail" />
+            </Neos.Fusion:Tag>
+            <Neos.Neos:ImageTag @if.render={!lightbox} asset={asset} allowUpScaling="true" allowCropping={!crop} width={thumbImageWidth} height={thumbImageHeight} attributes.class="img-thumbnail" />
+        </div>
+    `
+}
+
+
+//prototype(NeosRulez.Bootstrap:Gallery) < prototype(Neos.Neos:Content) {
+//    templatePath = 'resource://NeosRulez.Bootstrap/Private/Templates/NodeTypes/Gallery.html'
+//    magnificPopupWidth = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupWidth')}
+//    magnificPopupHeight = ${Configuration.setting('NeosRulez.Bootstrap.magnificPopupHeight')}
+//    thumbImageWidth = ${Configuration.setting('NeosRulez.Bootstrap.thumbImageWidth')}
+//    thumbImageHeight = ${Configuration.setting('NeosRulez.Bootstrap.thumbImageHeight')}
+//
+//    assets = ${q(node).property('assets')}
+//    lightbox = ${q(node).property('lightbox')}
+//    crop = ${q(node).property('crop')}
+//}

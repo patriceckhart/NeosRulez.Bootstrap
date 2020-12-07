@@ -1,0 +1,16 @@
+prototype(NeosRulez.Bootstrap:Component.Lightcase) < prototype(Neos.Fusion:Component) {
+
+    scriptline01 = ${'<script type="text/javascript">'}
+    scriptline02 = ${'$(document).ready(function($) {'}
+    scriptline03 = ${'$("a[data-rel^=lightcase]").lightcase();'}
+    scriptline04 = ${'});'}
+    scriptline05 = ${'</script>'}
+
+    renderer = afx`
+        {props.scriptline01}
+        {props.scriptline02}
+        {props.scriptline03}
+        {props.scriptline04}
+        {props.scriptline05}
+    `
+}

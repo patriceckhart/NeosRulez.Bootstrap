@@ -14,6 +14,21 @@
 			<trans-unit id="properties.crop" xml:space="preserve">
 				<source>Keine quadratischen Thumbnails</source>
 			</trans-unit>
+			<trans-unit id="properties.cols" xml:space="preserve">
+				<source>Spalten</source>
+			</trans-unit>
+			<trans-unit id="properties.nogutters" xml:space="preserve">
+				<source>Keine Spaltenabstände</source>
+			</trans-unit>
+			<trans-unit id="properties.cols.selectBoxEditor.values.4" xml:space="preserve">
+				<source>4 Spalten</source>
+			</trans-unit>
+			<trans-unit id="properties.cols.selectBoxEditor.values.3" xml:space="preserve">
+				<source>3 Spalten</source>
+			</trans-unit>
+			<trans-unit id="properties.cols.selectBoxEditor.values.2" xml:space="preserve">
+				<source>2 Spalten</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -90,6 +90,35 @@ prototype(Neos.Neos:Page) {
         }
     }
 
+    LightcaseLightboxCss = Neos.Fusion:Tag {
+        @position = 'end'
+        tagName = 'link'
+        attributes {
+            media = 'all'
+            rel = 'stylesheet'
+            href = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Bootstrap/Public/Assets/lightcase-2.5.0/src/css/lightcase.css'
+            }
+        }
+        @if.condition = ${Configuration.setting('NeosRulez.Bootstrap.lightcase')}
+    }
+
+    LightcaseLightboxJs = Neos.Fusion:Tag {
+        @position = 'after LightcaseLightboxCss'
+        tagName = 'script'
+        attributes {
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Bootstrap/Public/Assets/lightcase-2.5.0/src/js/lightcase.js'
+            }
+        }
+        @if.condition = ${Configuration.setting('NeosRulez.Bootstrap.lightcase')}
+    }
+
+    lightcase = NeosRulez.Bootstrap:Component.Lightcase {
+        @position = 'after LightcaseLightboxJs'
+        @if.condition = ${Configuration.setting('NeosRulez.Bootstrap.lightcase')}
+    }
+
     #head.@process.compression >
     #body.@process.compression >
 
