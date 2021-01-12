@@ -17,6 +17,7 @@
         "neosrulez/scssparser": "*",
         "neosrulez/jsminifier": "*",
         "neos/form-builder": "^2.0",
+        "neosrulez/form-multicolumnsection": "^1.0",
         "shel/neos-colorpicker": "^1.3"
     },
     "autoload": {
