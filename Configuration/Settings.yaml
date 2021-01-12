@@ -236,6 +236,24 @@ Neos:
           'Neos.Form:HiddenField':
             superTypes:
               'Neos.Form:FormElement': true
+          'NeosRulez.Form.MultiColumnSection:TwoColumns':
+            superTypes:
+              'Neos.Form:FormElement': true
+            implementationClassName: 'NeosRulez\Form\MultiColumnSection\Form\TwoColumnFormElement'
+            renderingOptions:
+              renderableNameInTemplate: container
+              templatePathPattern: 'resource://{@package}/Private/Form/{@type}.html'
+              partialPathPattern: 'resource://{@package}/Private/Form/Partials/{@type}.html'
+              layoutPathPattern: 'resource://{@package}/Private/Form/Layouts/{@type}.html'
+          'NeosRulez.Form.MultiColumnSection:ThreeColumns':
+            superTypes:
+              'Neos.Form:FormElement': true
+            implementationClassName: 'NeosRulez\Form\MultiColumnSection\Form\ThreeColumnFormElement'
+            renderingOptions:
+              renderableNameInTemplate: container
+              templatePathPattern: 'resource://{@package}/Private/Form/{@type}.html'
+              partialPathPattern: 'resource://{@package}/Private/Form/Partials/{@type}.html'
+              layoutPathPattern: 'resource://{@package}/Private/Form/Layouts/{@type}.html'
         finisherPresets:
           'Neos.Form:Closure':
             implementationClassName: Neos\Form\Finishers\ClosureFinisher
