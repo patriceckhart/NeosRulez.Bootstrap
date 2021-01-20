@@ -1,0 +1,126 @@
+prototype(NeosRulez.Bootstrap:Component.Navbar) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <header class="neosrulez-navigation" >
+            <nav class="container navbar navbar-light navbar-expand-lg" >
+                <NeosRulez.Bootstrap:Component.Navbar.Alignment alignment="right" />
+            </nav>
+        </header>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.Navbar.Alignment) < prototype(Neos.Fusion:Component) {
+
+    right = Neos.Fusion:Component {
+        renderer = afx`
+            <NeosRulez.Bootstrap:Component.Navbar.Brand />
+            <NeosRulez.Bootstrap:Component.Navbar.Toggle />
+            <NeosRulez.Bootstrap:Component.Navbar.Navbar />
+        `
+    }
+    left = Neos.Fusion:Component {
+        renderer = afx`
+            <NeosRulez.Bootstrap:Component.Navbar.Navbar />
+            <NeosRulez.Bootstrap:Component.Navbar.Toggle />
+            <NeosRulez.Bootstrap:Component.Navbar.Brand />
+        `
+    }
+    center = Neos.Fusion:Component {
+        renderer = afx`
+            <p class="text-center">Centered</p>
+        `
+    }
+
+    navbarRenderer = ${this.alignment == 'right' ? this.right : this.alignment == 'left' ? this.left : this.alignment == 'center' ? this.center : this.right}
+
+    renderer = afx`
+        {props.navbarRenderer}
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.Navbar.Brand) < prototype(Neos.Fusion:Component) {
+    siteNode = ${site}
+    navbarBrandClass = 'navbar-brand'
+
+    renderer = afx`
+        <Neos.Neos:NodeLink node={props.siteNode} attributes.class={props.navbarBrandClass} >
+            Brand
+        </Neos.Neos:NodeLink>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.Navbar.Toggle) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar) < prototype(Neos.Fusion:Component) {
+    menuItems = Neos.Neos:MenuItems
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.Navbar.Navbar.List menuItems={props.menuItems} />
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List) < prototype(Neos.Fusion:Component) {
+    listTag = 'ul'
+    listClass = 'navbar-nav ml-auto'
+    itemTag = 'li'
+    itemClass = 'nav-item'
+    linkClass = 'nav-link'
+    items = ${this.menuItems ? this.menuItems : false}
+
+    renderer = afx`
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <Neos.Fusion:Tag @if.render={props.items} tagName={props.listTag} attributes.class={props.listClass} >
+                <Neos.Fusion:Loop items={props.items} itemName="item" itemKey="itemKey" >
+                    <Neos.Fusion:Tag tagName={props.itemTag} attributes.class={item.subItems ? props.itemClass + ' dropdown' : props.itemClass} >
+                        <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem linkClass={item.subItems ? props.linkClass + ' dropdown-toggle' : props.linkClass} subList={item.subItems ? true : false} />
+                        <NeosRulez.Bootstrap:Component.Navbar.Navbar.SubList @if.render={item.subItems} menuItems={item.subItems} />
+                    </Neos.Fusion:Tag>
+                </Neos.Fusion:Loop>
+            </Neos.Fusion:Tag>
+        </div>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.SubList) < prototype(Neos.Fusion:Component) {
+    listTag = 'div'
+    listClass = 'dropdown-menu'
+    linkClass = 'dropdown-item'
+    items = ${this.menuItems ? this.menuItems : false}
+
+    renderer = afx`
+        <Neos.Fusion:Tag @if.render={props.items} tagName={props.listTag} attributes.class={props.listClass} attributes.aria-labelledby="navbarDropdown" >
+            <Neos.Fusion:Loop items={props.items} itemName="item" itemKey="itemKey" >
+                <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem linkClass={props.linkClass} />
+            </Neos.Fusion:Loop>
+        </Neos.Fusion:Tag>
+    `
+}
+
+
+prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem) < prototype(Neos.Fusion:Component) {
+    linkItemClass = ${this.linkClass + ' ' + item.state}
+    attrRole = ${this.subList ? 'button' : false}
+    attrDatatoggle = ${this.subList ? 'dropdown' : false}
+    attrAriahaspopup = ${this.subList ? 'true' : false}
+    attrExpanded = ${this.subList ? 'false' : false}
+
+    renderer = afx`
+        <Neos.Neos:NodeLink node={item.node} attributes.role={props.attrRole} attributes.data-toggle={props.attrDatatoggle} attributes.aria-haspopup={props.attrAriahaspopup} attributes.aria-expanded={props.attrExpanded} attributes.class={props.linkItemClass} >
+            <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem.FontAwesomeIcon @if.render={item.node.properties.faicon} icon={item.node.properties.faicon} />
+            {item.node.properties.onlyicon ? false : item.node.properties.title}
+        </Neos.Neos:NodeLink>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem.FontAwesomeIcon) < prototype(Neos.Fusion:Component) {
+    icon = ${this.icon ? this.icon : false}
+
+    renderer = afx`
+        <i @if.render={props.icon} class="{icon}"></i>
+    `
+}
