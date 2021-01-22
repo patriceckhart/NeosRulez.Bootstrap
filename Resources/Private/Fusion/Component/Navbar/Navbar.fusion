@@ -1,15 +1,25 @@
 prototype(NeosRulez.Bootstrap:Component.Navbar) < prototype(Neos.Fusion:Component) {
+    headerClass = ${'neosrulez-navigation' + (Configuration.setting('NeosRulez.Bootstrap.clickableParent') ? ' navbar-cp' : '') + (Configuration.setting('NeosRulez.Bootstrap.navbarSticky') ? ' ' + 'sticky-top' : '' ) + (Configuration.setting('NeosRulez.Bootstrap.navbarHover') ? ' ' + 'navbar-hover' : '' ) + (Configuration.setting('NeosRulez.Bootstrap.navbarBackground') ? ' ' + Configuration.setting('NeosRulez.Bootstrap.navbarBackground') : '' )}
+    navbarFluid = ${Configuration.setting('NeosRulez.Bootstrap.navbarFluid')}
+    navbarSticky = ${Configuration.setting('NeosRulez.Bootstrap.navbarSticky')}
+    navbarBreakpoint = ${Configuration.setting('NeosRulez.Bootstrap.navbarBreakpoint')}
+    navbarBackground = ${Configuration.setting('NeosRulez.Bootstrap.navbarBackground')}
+    navbarHover = ${Configuration.setting('NeosRulez.Bootstrap.navbarHover')}
+    clickableParent = ${Configuration.setting('NeosRulez.Bootstrap.clickableParent')}
+    navbarAlignment = ${Configuration.setting('NeosRulez.Bootstrap.navbarAlignment')}
+    navClass = ${(this.navbarFluid ? 'container-fluid' : 'container') + ' navbar' + (this.navbarBackground == 'bg-dark' || this.navbarBackground == 'bg-primary' || this.navbarBackground == 'bg-danger' ? ' navbar-dark' : ' navbar-light') + ' navbar-expand-lg'}
 
     renderer = afx`
-        <header class="neosrulez-navigation" >
-            <nav class="container navbar navbar-light navbar-expand-lg" >
-                <NeosRulez.Bootstrap:Component.Navbar.Alignment alignment="right" />
+        <header class={props.headerClass} >
+            <nav class={props.navClass} >
+                <NeosRulez.Bootstrap:Component.Navbar.Alignment />
             </nav>
         </header>
     `
 }
 
 prototype(NeosRulez.Bootstrap:Component.Navbar.Alignment) < prototype(Neos.Fusion:Component) {
+    navbarAlignment = ${Configuration.setting('NeosRulez.Bootstrap.navbarAlignment')}
 
     right = Neos.Fusion:Component {
         renderer = afx`
@@ -27,24 +37,38 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Alignment) < prototype(Neos.Fusio
     }
     center = Neos.Fusion:Component {
         renderer = afx`
-            <p class="text-center">Centered</p>
+            <NeosRulez.Bootstrap:Component.Navbar.Navbar.Centered />
         `
     }
 
-    navbarRenderer = ${this.alignment == 'right' ? this.right : this.alignment == 'left' ? this.left : this.alignment == 'center' ? this.center : this.right}
+    navbarRenderer = ${this.navbarAlignment == 'right' ? this.right : this.navbarAlignment == 'left' ? this.left : this.navbarAlignment == 'center' ? this.center : this.right}
 
     renderer = afx`
         {props.navbarRenderer}
     `
 }
 
+prototype(NeosRulez.Bootstrap:Component.Navbar.Brand.BrandImage) < prototype(Neos.Fusion:Component) {
+    @context.headerLogoPath = ${Configuration.setting('NeosRulez.Bootstrap.headerLogoPath')}
+    @context.headerLogoPackage = ${Configuration.setting('NeosRulez.Bootstrap.headerLogoPackage')}
+    headerLogoAltText = ${Configuration.setting('NeosRulez.Bootstrap.headerLogoAltText')}
+    navbarBrand = Neos.Fusion:ResourceUri {
+        path = ${'resource://' + headerLogoPackage + '/Public/' + headerLogoPath}
+    }
+
+    renderer = afx`
+        <Neos.Fusion:Tag tagName="img" attributes.src={props.navbarBrand} attributes.alt={props.headerLogoAltText} />
+    `
+}
+
 prototype(NeosRulez.Bootstrap:Component.Navbar.Brand) < prototype(Neos.Fusion:Component) {
     siteNode = ${site}
-    navbarBrandClass = 'navbar-brand'
+    navbarAlignment = ${Configuration.setting('NeosRulez.Bootstrap.navbarAlignment')}
+    navbarBrandClass = ${'navbar-brand' + (this.navbarAlignment == 'center' ? ' mr-0' : false) + (this.navbarAlignment == 'left' ? ' mr-0 ml-3' : false)}
 
     renderer = afx`
         <Neos.Neos:NodeLink node={props.siteNode} attributes.class={props.navbarBrandClass} >
-            Brand
+            <NeosRulez.Bootstrap:Component.Navbar.Brand.BrandImage />
         </Neos.Neos:NodeLink>
     `
 }
@@ -66,11 +90,13 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar) < prototype(Neos.Fusion:C
 
 prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List) < prototype(Neos.Fusion:Component) {
     listTag = 'ul'
-    listClass = 'navbar-nav ml-auto'
+    navbarAlignment = ${Configuration.setting('NeosRulez.Bootstrap.navbarAlignment')}
+    listClass = ${'navbar-nav ' + (this.navbarAlignment == 'right' ? 'ml-auto' : false) + (this.navbarAlignment == 'left' ? 'mr-auto' : false)}
     itemTag = 'li'
     itemClass = 'nav-item'
     linkClass = 'nav-link'
     items = ${this.menuItems ? this.menuItems : false}
+    itemcount = ${Array.length(this.items)/2}
 
     renderer = afx`
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -101,6 +127,40 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.SubList) < prototype(Neos.
     `
 }
 
+prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.Centered) < prototype(Neos.Fusion:Component) {
+    itemTag = 'li'
+    itemClass = 'nav-item'
+    linkClass = 'nav-link'
+    items = ${this.menuItems ? this.menuItems : false}
+    itemcount = ${Array.length(this.items)/2}
+    menuItems = Neos.Neos:MenuItems
+
+    renderer = afx`
+        <ul class="navbar-nav navbar-nav-left d-none d-lg-flex flex-fill w-100 flex-nowrap">
+            <Neos.Fusion:Loop items={props.items} itemName="item" itemKey="itemKey" >
+                <Neos.Fusion:Tag tagName={props.itemTag} attributes.class={item.subItems ? props.itemClass + ' dropdown' : props.itemClass} >
+                    <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem @if.render={itemKey < props.itemcount ? true : false} linkClass={item.subItems ? props.linkClass + ' dropdown-toggle' : props.linkClass} subList={item.subItems ? true : false} />
+                    <NeosRulez.Bootstrap:Component.Navbar.Navbar.SubList items={item.subItems} />
+                </Neos.Fusion:Tag>
+            </Neos.Fusion:Loop>
+        </ul>
+        <ul class="navbar-nav mx-auto flex-fill">
+            <NeosRulez.Bootstrap:Component.Navbar.Brand />
+        </ul>
+        <ul class="navbar-nav navbar-nav-right d-none d-lg-flex flex-fill w-100 flex-nowrap justify-content-end">
+            <Neos.Fusion:Loop items={props.items} itemName="item" itemKey="itemKey" >
+                <Neos.Fusion:Tag tagName={props.itemTag} attributes.class={item.subItems ? props.itemClass + ' dropdown' : props.itemClass} >
+                    <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem @if.render={itemKey >= props.itemcount ? true : false} linkClass={item.subItems ? props.linkClass + ' dropdown-toggle' : props.linkClass} subList={item.subItems ? true : false} />
+                    <NeosRulez.Bootstrap:Component.Navbar.Navbar.SubList items={item.subItems} />
+                </Neos.Fusion:Tag>
+            </Neos.Fusion:Loop>
+        </ul>
+        <NeosRulez.Bootstrap:Component.Navbar.Toggle />
+        <div class="d-md-block d-lg-none w-100">
+            <NeosRulez.Bootstrap:Component.Navbar.Navbar.List menuItems={props.menuItems} listClass="navbar-nav" />
+        </div>
+    `
+}
 
 prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem) < prototype(Neos.Fusion:Component) {
     linkItemClass = ${this.linkClass + ' ' + item.state}
@@ -111,7 +171,7 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem) < prototype
 
     renderer = afx`
         <Neos.Neos:NodeLink node={item.node} attributes.role={props.attrRole} attributes.data-toggle={props.attrDatatoggle} attributes.aria-haspopup={props.attrAriahaspopup} attributes.aria-expanded={props.attrExpanded} attributes.class={props.linkItemClass} >
-            <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem.FontAwesomeIcon @if.render={item.node.properties.faicon} icon={item.node.properties.faicon} />
+            <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem.FontAwesomeIcon @if.render={item.node.properties.faicon} icon={item.node.properties.faicon} onlyicon={item.node.properties.onlyicon} />
             {item.node.properties.onlyicon ? false : item.node.properties.title}
         </Neos.Neos:NodeLink>
     `
@@ -121,6 +181,6 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem.FontAwesomeI
     icon = ${this.icon ? this.icon : false}
 
     renderer = afx`
-        <i @if.render={props.icon} class="{icon}"></i>
+        <i @if.render={props.icon} class={props.icon + (props.onlyicon ? '' : ' mr-1')} ></i>
     `
 }
