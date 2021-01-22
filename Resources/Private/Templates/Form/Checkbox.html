@@ -3,6 +3,13 @@
 <f:section name="field">
 	<div class="custom-control custom-checkbox">
 		<f:form.checkbox property="{element.identifier}" id="{element.uniqueIdentifier}" class="custom-control-input" value="{element.properties.value}" errorClass="{element.properties.elementErrorClassAttribute}" />
-		<label class="custom-control-label" for="{element.uniqueIdentifier}">{element -> form:translateElementProperty(property: 'label') -> f:format.nl2br()}</label>
+		<f:if condition="{element -> form:translateElementProperty(property: 'htmlLabel')}">
+			<f:then>
+				<label class="custom-control-label" for="{element.uniqueIdentifier}">{element -> form:translateElementProperty(property: 'htmlLabel') -> f:format.raw()}</label>
+			</f:then>
+			<f:else>
+				<label class="custom-control-label" for="{element.uniqueIdentifier}">{element -> form:translateElementProperty(property: 'label') -> f:format.nl2br()}</label>
+			</f:else>
+		</f:if>
 	</div>
 </f:section>

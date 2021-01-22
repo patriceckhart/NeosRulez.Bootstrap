@@ -1,0 +1,45 @@
+'Neos.Form.Builder:Checkbox':
+  properties:
+    htmlLabel:
+      type: string
+      ui:
+        label: 'HTML'
+        reloadIfChanged: true
+        inspector:
+          group: formElement
+          position: 'end'
+          editor: Neos.Neos/Inspector/Editors/RichTextEditor
+          editorOptions:
+            placeholder: 'Text'
+            autoparagraph: false
+            linking:
+              anchor: true
+              title: true
+              relNofollow: true
+              targetBlank: true
+            formatting:
+              strong: true
+              em: true
+              u: true
+              sub: true
+              sup: true
+              del: true
+              p: false
+              h1: false
+              h2: false
+              h3: false
+              h4: false
+              h5: false
+              h6: false
+              pre: false
+              underline: true
+              strikethrough: true
+              removeFormat: true
+              left: false
+              right: false
+              center: false
+              justify: false
+              table: false
+              ol: false
+              ul: false
+              a: true
