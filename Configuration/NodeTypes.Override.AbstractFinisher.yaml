@@ -1,0 +1,4 @@
+'Neos.Form.Builder:AbstractFinisher':
+  superTypes:
+    'NeosRulez.Bootstrap:ContentProperties': false
+    'NeosRulez.Bootstrap:ContainerWidth': false

@@ -1,0 +1,4 @@
+'Neos.Form.Builder:FormPage':
+  superTypes:
+    'NeosRulez.Bootstrap:ContentProperties': false
+    'NeosRulez.Bootstrap:ContainerWidth': false

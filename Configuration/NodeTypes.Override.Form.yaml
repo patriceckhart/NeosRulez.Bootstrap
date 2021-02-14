@@ -1,7 +1,8 @@
 'Neos.Form.Builder:NodeBasedForm':
   superTypes:
-    'NeosRulez.Bootstrap:ContentProperties': false
-    'NeosRulez.Bootstrap:ContainerWidth': false
+#    'NeosRulez.Bootstrap:ContentProperties': true
+#    'NeosRulez.Bootstrap:ContainerWidth': true
+    'Neos.Neos:Content': true
   ui:
     label: i18n
     icon: 'icon-envelope'
@@ -46,3 +47,17 @@
       defaultValue: TRUE
       type: boolean
       ui: ~
+'Neos.Form.Builder:ElementCollection':
+  ui:
+    label: 'Elements'
+    icon: 'icon-list'
+    inlineEditable: true
+  options:
+    fusion:
+      prototypeGenerator: null
+  superTypes:
+    'Neos.Neos:ContentCollection': true
+  constraints:
+    nodeTypes:
+      '*': false
+      'NeosRulez.Bootstrap:Section': false

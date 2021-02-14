@@ -15,6 +15,7 @@
           'Neos.NodeTypes:Column': FALSE
           'Neos.NodeTypes:TextWithImage': FALSE
           'Neos.NodeTypes.Form:Form': FALSE
+          'NeosRulez.Bootstrap:Section': true
   ui:
     label: i18n
     group: 'bootstrapnodetypes'

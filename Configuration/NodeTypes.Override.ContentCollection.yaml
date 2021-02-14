@@ -2,8 +2,7 @@
   constraints:
     nodeTypes:
       '*': TRUE
-      'Neos.Neos:Document': FALSE
-      'Neos.NodeTypes.Form:Form': FALSE
-      'Neos.NodeTypes:TextWithImage': FALSE
-      'Neos.NodeTypes.AssetList:AssetList': FALSE
-      #'NeosRulez.Bootstrap:Containerwidth': FALSE
+      'Neos.Neos:Document': false
+      'Neos.NodeTypes.Form:Form': false
+      'Neos.NodeTypes:TextWithImage': false
+      'Neos.NodeTypes.AssetList:AssetList': false

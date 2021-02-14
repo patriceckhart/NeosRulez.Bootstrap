@@ -81,6 +81,7 @@
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
           'Neos.NodeTypes:Column': FALSE
+          'NeosRulez.Bootstrap:Section': true
     column1:
       constraints:
         nodeTypes:
@@ -95,6 +96,7 @@
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
           'Neos.NodeTypes:Column': FALSE
+          'NeosRulez.Bootstrap:Section': true
     column2:
       constraints:
         nodeTypes:
@@ -109,6 +111,7 @@
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
           'Neos.NodeTypes:Column': FALSE
+          'NeosRulez.Bootstrap:Section': true
     column3:
       constraints:
         nodeTypes:
@@ -123,6 +126,7 @@
           'Neos.NodeTypes:ThreeColumn': FALSE
           'Neos.NodeTypes:FourColumn': FALSE
           'Neos.NodeTypes:Column': FALSE
+          'NeosRulez.Bootstrap:Section': true
 'Neos.NodeTypes.ColumnLayouts:TwoColumn':
   properties:
     'layout':
