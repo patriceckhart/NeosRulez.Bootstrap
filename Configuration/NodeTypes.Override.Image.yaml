@@ -1,0 +1,27 @@
+'Neos.NodeTypes:Image':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+    'NeosRulez.Bootstrap:Mixin.Lightbox': true
+    'NeosRulez.Bootstrap:Mixin.Rounded': true
+  ui:
+    group: general
+    position: 300
+  properties:
+    lightbox:
+      ui:
+        inspector:
+          group: image
+          position: after linktarget
+    link:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.lightbox ? true : false'
+    linktarget:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.lightbox ? true : false'
+    rounded:
+      ui:
+        inspector:
+          group: image
+          position: 200

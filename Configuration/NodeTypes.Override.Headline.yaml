@@ -1,0 +1,49 @@
+'Neos.NodeTypes:Headline':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+    'NeosRulez.Bootstrap:Mixin.TextColor': true
+  ui:
+    group: general
+    position: 100
+  properties:
+    title:
+      type: string
+      defaultValue: '<h1>Enter headline here</h1>'
+      ui:
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: 'Enter headline here'
+            autoparagraph: true
+            linking:
+              anchor: true
+              title: true
+              relNofollow: true
+              targetBlank: true
+            formatting:
+              strong: true
+              em: false
+              u: false
+              sub: false
+              sup: false
+              del: false
+              p: false
+              h1: true
+              h2: true
+              h3: true
+              h4: true
+              h5: true
+              h6: true
+              pre: true
+              underline: false
+              strikethrough: false
+              removeFormat: true
+              left: true
+              right: true
+              center: true
+              justify: false
+              table: false
+              ol: false
+              ul: false
+    textColor:
+      defaultValue: ''

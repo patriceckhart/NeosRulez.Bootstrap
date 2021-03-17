@@ -1,0 +1,16 @@
+'NeosRulez.Bootstrap:Content.FontAwesomeIcon':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+    'NeosRulez.Bootstrap:Mixin.FontAwesomeIcon': true
+    'NeosRulez.Bootstrap:Mixin.HorizontalAlignment': true
+    'NeosRulez.Bootstrap:Mixin.TextColor': true
+  ui:
+    group: neosrulezBootstrap
+    label: i18n
+    icon: fas fa-icons
+    position: 4
+    inspector:
+      groups:
+        neosrulezBootstrap:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.FontAwesomeIcon:ui.label
+          icon: fas fa-icons

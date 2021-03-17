@@ -1,0 +1,38 @@
+'NeosRulez.Bootstrap:Component.AbstractContent':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+    'NeosRulez.Bootstrap:Mixin.Container': true
+    'NeosRulez.Bootstrap:Mixin.ExtraClass': true
+    'NeosRulez.Bootstrap:Mixin.Distance': true
+    'NeosRulez.Bootstrap:Mixin.Animation': true
+    'NeosRulez.Bootstrap:Mixin.Tooltip': true
+    'NeosRulez.Bootstrap:Mixin.Link': true
+    'NeosRulez.Bootstrap:Mixin.LinkTarget': true
+  ui:
+    group: neosrulezBootstrap
+    inspector:
+      tabs:
+        link:
+          label: NeosRulez.Bootstrap:NodeTypes.Mixin.Link:properties.link
+          icon: fas fa-link
+          position: 11
+      groups:
+        neosrulezBootstrap:
+          label: neosrulezBootstrap
+          icon: fab fa-bootstrap
+        link:
+          label: NeosRulez.Bootstrap:NodeTypes.Mixin.Link:properties.link
+          icon: fas fa-link
+          tab: link
+  properties:
+    link:
+      ui:
+        inspector:
+          group: link
+          position: 1
+    linktarget:
+      ui:
+        inspector:
+          group: link
+          position: after link

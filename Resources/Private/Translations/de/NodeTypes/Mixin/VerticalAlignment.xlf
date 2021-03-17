@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.valignment" xml:space="preserve">
+				<source>Vertikale Ausrichtung</source>
+			</trans-unit>
+            <trans-unit id="properties.valignment.selectBoxEditor.values.align-items-start" xml:space="preserve">
+                <source>Oben</source>
+            </trans-unit>
+            <trans-unit id="properties.valignment.selectBoxEditor.values.align-items-center" xml:space="preserve">
+                <source>Mittig</source>
+            </trans-unit>
+            <trans-unit id="properties.valignment.selectBoxEditor.values.align-items-end" xml:space="preserve">
+                <source>Unten</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

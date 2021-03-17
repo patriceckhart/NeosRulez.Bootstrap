@@ -1,0 +1,25 @@
+prototype(NeosRulez.Bootstrap:Content.Accordion.AccordionItem) < prototype(Neos.Neos:ContentComponent) {
+    nodes = Neos.Neos:ContentCollection {
+        nodePath = 'nodes'
+    }
+
+    accordionItemId = ${'neosrulez_bootstrap__accordion_item__' + node.identifier}
+    accordionItemHeaderId = ${'neosrulez_bootstrap__accordion_itemheader__' + node.identifier}
+
+    accordionId = ${'#neosrulez_bootstrap__accordion__' + node.parent.parent.identifier}
+
+    renderer = afx`
+        <div class="accordion-item">
+            <h2 class="accordion-header" id={props.accordionItemHeaderId} >
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={'#' + props.accordionItemId} aria-expanded="false" aria-controls={props.accordionItemId} >
+                    <Neos.Neos:Editable property="title" />
+                </button>
+            </h2>
+            <div id={props.accordionItemId} class="accordion-collapse collapse" aria-labelledby={props.accordionItemHeaderId} data-bs-parent={props.accordionId} >
+                <div class="accordion-body">
+                    {props.nodes}
+                </div>
+            </div>
+        </div>
+    `
+}

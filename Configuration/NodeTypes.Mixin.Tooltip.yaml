@@ -1,0 +1,41 @@
+'NeosRulez.Bootstrap:Mixin.Tooltip':
+  abstract: true
+  ui:
+    inspector:
+      tabs:
+        tooltip:
+          label: i18n
+          position: 13
+          icon: 'icon-window-minimize'
+      groups:
+        tooltipsettings:
+          label: i18n
+          icon: 'icon-window-minimize'
+          tab: 'tooltip'
+  properties:
+    tooltiptext:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'tooltipsettings'
+    tooltipposition:
+      defaultValue: 'top'
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'tooltipsettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'top':
+                label: i18n
+              'right':
+                label: i18n
+              'bottom':
+                label: i18n
+              'left':
+                label: i18n

@@ -1,0 +1,11 @@
+prototype(Neos.NodeTypes.Html:Html) < prototype(Neos.Neos:ContentComponent) {
+    source = ${node.properties.source}
+    inBackend = ${site.context.inBackend}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            {props.source}
+            <kbd @if.render={props.inBackend} style="display:block;opacity:0.3;font-size:0.7rem;">{String.htmlSpecialChars(props.source)}</kbd>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

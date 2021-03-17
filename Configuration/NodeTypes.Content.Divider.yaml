@@ -1,0 +1,28 @@
+#noborder = noBorder
+'NeosRulez.Bootstrap:Content.Divider':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+  ui:
+    label: i18n
+    group: general
+    position: 600
+    icon: icon-minus
+    inspector:
+      groups:
+        neosrulezBootstrap:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.Divider:ui.label
+          icon: icon-minus
+  properties:
+    noBorder:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+
+'NeosRulez.Bootstrap:Divider':
+  superTypes:
+    'NeosRulez.Bootstrap:Content.Button': true
+  ui: ~

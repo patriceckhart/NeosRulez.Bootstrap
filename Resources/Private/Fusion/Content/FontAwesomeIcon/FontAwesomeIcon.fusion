@@ -1,0 +1,17 @@
+prototype(NeosRulez.Bootstrap:Content.FontAwesomeIcon) < prototype(Neos.Neos:ContentComponent) {
+    faiconSize = ${node.properties.faiconSize}
+    faicon = ${node.properties.faicon + (this.faiconSize ? ' ' + this.faiconSize : false)}
+
+    horizontalAlignment = ${node.properties.alignment == 'left' ? 'text-start' : node.properties.alignment == 'center' ? 'text-center' : node.properties.alignment == 'right' ? 'text-end' : 'text-start'}
+    textColor = ${node.properties.textColor ? node.properties.textColor : false}
+
+    divClassName = ${(this.horizontalAlignment ? this.horizontalAlignment : false) + (this.textColor ? ' text-' + this.textColor : false)}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <div class={props.divClassName} >
+                <i class={props.faicon} ></i>
+            </div>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

@@ -1,0 +1,6 @@
+'Neos.NodeTypes.Html:Html':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+  ui:
+    group: general
+    position: 400

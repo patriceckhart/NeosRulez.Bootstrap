@@ -1,0 +1,392 @@
+'AF':
+  label: 'Afghanistan'
+'AL':
+  label: 'Albania'
+'DZ':
+  label: 'Algeria'
+'AD':
+  label: 'Andorra'
+'AO':
+  label: 'Angola'
+'AG':
+  label: 'Antigua and Barbuda'
+'AR':
+  label: 'Argentina'
+'AM':
+  label: 'Armenia'
+'AU':
+  label: 'Australia'
+'AT':
+  label: 'Austria'
+'AZ':
+  label: 'Azerbaijan'
+'BS':
+  label: 'Bahamas'
+'BH':
+  label: 'Bahrain'
+'BD':
+  label: 'Bangladesh'
+'BB':
+  label: 'Barbados'
+'BY':
+  label: 'Belarus'
+'BE':
+  label: 'Belgium'
+'BZ':
+  label: 'Belize'
+'BJ':
+  label: 'Benin'
+'BT':
+  label: 'Bhutan'
+'BO':
+  label: 'Bolivia (Plurinational State of)'
+'BA':
+  label: 'Bosnia and Herzegovina'
+'BW':
+  label: 'Botswana'
+'BR':
+  label: 'Brazil'
+'BN':
+  label: 'Brunei Darussalam'
+'BG':
+  label: 'Bulgaria'
+'BF':
+  label: 'Burkina Faso'
+'BI':
+  label: 'Burundi'
+'CV':
+  label: 'Cabo Verde'
+'KH':
+  label: 'Cambodia'
+'CM':
+  label: 'Cameroon'
+'CA':
+  label: 'Canada'
+'CF':
+  label: 'Central African Republic'
+'TD':
+  label: 'Chad'
+'CL':
+  label: 'Chile'
+'CN':
+  label: 'China'
+'CO':
+  label: 'Colombia'
+'KM':
+  label: 'Comoros'
+'CG':
+  label: 'Congo'
+'CK':
+  label: 'Cook Islands'
+'CR':
+  label: 'Costa Rica'
+'HR':
+  label: 'Croatia'
+'CU':
+  label: 'Cuba'
+'CY':
+  label: 'Cyprus'
+'CZ':
+  label: 'Czechia'
+'CI':
+  label: 'Cote dIvoire'
+'KP':
+  label: 'Democratic Peoples Republic of Korea'
+'CD':
+  label: 'Democratic Republic of the Congo'
+'DK':
+  label: 'Denmark'
+'DJ':
+  label: 'Djibouti'
+'DM':
+  label: 'Dominica'
+'DO':
+  label: 'Dominican Republic'
+'EC':
+  label: 'Ecuador'
+'EG':
+  label: 'Egypt'
+'SV':
+  label: 'El Salvador'
+'GQ':
+  label: 'Equatorial Guinea'
+'ER':
+  label: 'Eritrea'
+'EE':
+  label: 'Estonia'
+'SZ':
+  label: 'Eswatini'
+'ET':
+  label: 'Ethiopia'
+'FO':
+  label: 'Faroe Islands'
+'FJ':
+  label: 'Fiji'
+'FI':
+  label: 'Finland'
+'FR':
+  label: 'France'
+'GA':
+  label: 'Gabon'
+'GM':
+  label: 'Gambia'
+'GE':
+  label: 'Georgia'
+'DE':
+  label: 'Germany'
+'GH':
+  label: 'Ghana'
+'GR':
+  label: 'Greece'
+'GD':
+  label: 'Grenada'
+'GT':
+  label: 'Guatemala'
+'GN':
+  label: 'Guinea'
+'GW':
+  label: 'Guinea-Bissau'
+'GY':
+  label: 'Guyana'
+'HT':
+  label: 'Haiti'
+'HN':
+  label: 'Honduras'
+'HU':
+  label: 'Hungary'
+'IS':
+  label: 'Iceland'
+'IN':
+  label: 'India'
+'ID':
+  label: 'Indonesia'
+'IR':
+  label: 'Iran (Islamic Republic of)'
+'IQ':
+  label: 'Iraq'
+'IE':
+  label: 'Ireland'
+'IL':
+  label: 'Israel'
+'IT':
+  label: 'Italy'
+'JM':
+  label: 'Jamaica'
+'JP':
+  label: 'Japan'
+'JO':
+  label: 'Jordan'
+'KZ':
+  label: 'Kazakhstan'
+'KE':
+  label: 'Kenya'
+'KI':
+  label: 'Kiribati'
+'KW':
+  label: 'Kuwait'
+'KG':
+  label: 'Kyrgyzstan'
+'LA':
+  label: 'Lao Peoples Democratic Republic'
+'LV':
+  label: 'Latvia'
+'LB':
+  label: 'Lebanon'
+'LS':
+  label: 'Lesotho'
+'LR':
+  label: 'Liberia'
+'LY':
+  label: 'Libya'
+'LT':
+  label: 'Lithuania'
+'LU':
+  label: 'Luxembourg'
+'MG':
+  label: 'Madagascar'
+'MW':
+  label: 'Malawi'
+'MY':
+  label: 'Malaysia'
+'MV':
+  label: 'Maldives'
+'ML':
+  label: 'Mali'
+'MT':
+  label: 'Malta'
+'MH':
+  label: 'Marshall Islands'
+'MR':
+  label: 'Mauritania'
+'MU':
+  label: 'Mauritius'
+'MX':
+  label: 'Mexico'
+'FM':
+  label: 'Micronesia (Federated States of)'
+'MC':
+  label: 'Monaco'
+'MN':
+  label: 'Mongolia'
+'ME':
+  label: 'Montenegro'
+'MA':
+  label: 'Morocco'
+'MZ':
+  label: 'Mozambique'
+'MM':
+  label: 'Myanmar'
+'NA':
+  label: 'Namibia'
+'NR':
+  label: 'Nauru'
+'NP':
+  label: 'Nepal'
+'NL':
+  label: 'Netherlands'
+'NZ':
+  label: 'New Zealand'
+'NI':
+  label: 'Nicaragua'
+'NE':
+  label: 'Niger'
+'NG':
+  label: 'Nigeria'
+'NU':
+  label: 'Niue'
+'MK':
+  label: 'North Macedonia'
+'NO':
+  label: 'Norway'
+'OM':
+  label: 'Oman'
+'PK':
+  label: 'Pakistan'
+'PW':
+  label: 'Palau'
+'PA':
+  label: 'Panama'
+'PG':
+  label: 'Papua New Guinea'
+'PY':
+  label: 'Paraguay'
+'PE':
+  label: 'Peru'
+'PH':
+  label: 'Philippines'
+'PL':
+  label: 'Poland'
+'PT':
+  label: 'Portugal'
+'QA':
+  label: 'Qatar'
+'KR':
+  label: 'Republic of Korea'
+'MD':
+  label: 'Republic of Moldova'
+'RO':
+  label: 'Romania'
+'RU':
+  label: 'Russian Federation'
+'RW':
+  label: 'Rwanda'
+'KN':
+  label: 'Saint Kitts and Nevis'
+'LC':
+  label: 'Saint Lucia'
+'VC':
+  label: 'Saint Vincent and the Grenadines'
+'WS':
+  label: 'Samoa'
+'SM':
+  label: 'San Marino'
+'ST':
+  label: 'Sao Tome and Principe'
+'SA':
+  label: 'Saudi Arabia'
+'SN':
+  label: 'Senegal'
+'RS':
+  label: 'Serbia'
+'SC':
+  label: 'Seychelles'
+'SL':
+  label: 'Sierra Leone'
+'SG':
+  label: 'Singapore'
+'SK':
+  label: 'Slovakia'
+'SI':
+  label: 'Slovenia'
+'SB':
+  label: 'Solomon Islands'
+'SO':
+  label: 'Somalia'
+'ZA':
+  label: 'South Africa'
+'SS':
+  label: 'South Sudan'
+'ES':
+  label: 'Spain'
+'LK':
+  label: 'Sri Lanka'
+'SD':
+  label: 'Sudan'
+'SR':
+  label: 'Suriname'
+'SE':
+  label: 'Sweden'
+'CH':
+  label: 'Switzerland'
+'SY':
+  label: 'Syrian Arab Republic'
+'TJ':
+  label: 'Tajikistan'
+'TH':
+  label: 'Thailand'
+'TL':
+  label: 'Timor-Leste'
+'TG':
+  label: 'Togo'
+'TK':
+  label: 'Tokelau'
+'TO':
+  label: 'Tonga'
+'TT':
+  label: 'Trinidad and Tobago'
+'TN':
+  label: 'Tunisia'
+'TR':
+  label: 'Turkey'
+'TM':
+  label: 'Turkmenistan'
+'TV':
+  label: 'Tuvalu'
+'UG':
+  label: 'Uganda'
+'UA':
+  label: 'Ukraine'
+'AE':
+  label: 'United Arab Emirates'
+'GB':
+  label: 'United Kingdom of Great Britain and Northern Ireland'
+'TZ':
+  label: 'United Republic of Tanzania'
+'US':
+  label: 'United States of America'
+'UY':
+  label: 'Uruguay'
+'UZ':
+  label: 'Uzbekistan'
+'VU':
+  label: 'Vanuatu'
+'VE':
+  label: 'Venezuela (Bolivarian Republic of)'
+'VN':
+  label: 'Vietnam'
+'YE':
+  label: 'Yemen'
+'ZM':
+  label: 'Zambia'
+'ZW':
+  label: 'Zimbabwe'

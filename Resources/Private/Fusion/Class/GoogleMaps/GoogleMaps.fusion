@@ -1,0 +1,8 @@
+prototype(NeosRulez.Bootstrap:Class.GoogleMaps) {
+    @class = 'NeosRulez\\Bootstrap\\Fusion\\GoogleMapsFusion'
+    address = false
+    zip = false
+    city = false
+    country = false
+    source = false
+}

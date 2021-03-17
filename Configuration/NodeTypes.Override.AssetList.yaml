@@ -1,0 +1,6 @@
+'Neos.NodeTypes.AssetList:AssetList':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+  ui:
+    group: general
+    position: 500

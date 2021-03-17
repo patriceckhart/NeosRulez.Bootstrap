@@ -1,0 +1,18 @@
+'NeosRulez.Bootstrap:Mixin.Column':
+  abstract: true
+  superTypes:
+    'NeosRulez.Bootstrap:Mixin.VerticalAlignment': true
+  properties:
+    nogutters:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: column
+    valignment:
+      ui:
+        inspector:
+          group: column
+          position: after nogutters

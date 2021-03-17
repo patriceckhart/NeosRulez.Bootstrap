@@ -1,0 +1,15 @@
+'NeosRulez.Bootstrap:Mixin.Link':
+  abstract: true
+  superTypes:
+    'NeosRulez.Bootstrap:Mixin.LinkTarget': true
+  properties:
+    link:
+      type: string
+      ui:
+        reloadIfChanged: true
+        label: i18n
+        inspector:
+          group: neosrulezBootstrap
+          editor: 'Neos.Neos/Inspector/Editors/LinkEditor'
+          editorOptions:
+            assets: true

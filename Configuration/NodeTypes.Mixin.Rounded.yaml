@@ -1,0 +1,9 @@
+'NeosRulez.Bootstrap:Mixin.Rounded':
+  abstract: true
+  properties:
+    rounded:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true

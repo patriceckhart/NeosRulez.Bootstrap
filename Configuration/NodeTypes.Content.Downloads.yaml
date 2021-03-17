@@ -1,0 +1,24 @@
+'NeosRulez.Bootstrap:Content.Downloads':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+    'Neos.NodeTypes.AssetList:AssetList': true
+  ui:
+    group: neosrulezBootstrap
+    label: i18n
+    icon: fas fa-download
+    position: 3
+    inspector:
+      groups:
+        neosrulezBootstrap:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.Downloads:ui.label
+          icon: fas fa-download
+  properties:
+    assets:
+      ui:
+        inspector:
+          group: neosrulezBootstrap
+
+'NeosRulez.Bootstrap:Downloads':
+  superTypes:
+    'NeosRulez.Bootstrap:Content.Downloads': true
+  ui: ~

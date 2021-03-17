@@ -1,0 +1,6 @@
+'Neos.NodeTypes.ContentReferences:ContentReferences':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+  ui:
+    group: general
+    position: 800

@@ -1,0 +1,19 @@
+'NeosRulez.Bootstrap:Mixin.HorizontalAlignment':
+  abstract: true
+  properties:
+    alignment:
+      defaultValue: 'left'
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'left':
+                label: i18n
+              'center':
+                label: i18n
+              'right':
+                label: i18n

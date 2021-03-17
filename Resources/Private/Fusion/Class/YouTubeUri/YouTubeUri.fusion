@@ -1,0 +1,4 @@
+prototype(NeosRulez.Bootstrap:Class.YouTubeUri) {
+    @class = 'NeosRulez\\Bootstrap\\Fusion\\YouTubeUriFusion'
+    link = false
+}

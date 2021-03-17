@@ -1,0 +1,67 @@
+prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentComponent) {
+    nodes = Neos.Neos:ContentCollection {
+        nodePath = 'nodes'
+    }
+
+    backgroundImageUri = Neos.Neos:ImageUri {
+        asset = ${node.properties.backgroundImage}
+        width = 2000
+        height = 800
+        allowCropping = true
+        allowUpScaling = true
+    }
+
+    transparency = ${node.properties.transparency}
+    backgroundPosition = ${node.properties.backgroundPosition}
+    backgroundSize = ${node.properties.backgroundSize}
+
+    bgColorPicker = ${node.properties.bgColorPicker ? node.properties.bgColorPicker : false}
+
+    styleAttribute = ${this.backgroundImageUri ? (!this.transparency ? 'background: url(' + this.backgroundImageUri + ') no-repeat ' + this.backgroundPosition + '; ' : false) + (!this.transparency ? (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : false ) + '-webkit-background-size: ' + this.backgroundSize +'; -moz-background-size: ' + this.backgroundSize +'; -o-background-size: ' + this.backgroundSize +'; background-size: ' + this.backgroundSize + ';' : false) : (!this.transparency ? (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : false ) : false)}
+
+    bgColor = ${node.properties.bgColor ? 'bg-' + node.properties.bgColor : false}
+    textColor = ${node.properties.textColor ? 'text-' + node.properties.textColor : false}
+
+    additionalClass = ${this.textColor + ' ' + this.bgColor}
+
+    containerType = ${node.properties.containerType + (this.transparency ? ' bg-transparent__content-overlay' : false)}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent isContainerNodeType={true} styleAttribute={props.styleAttribute} backgroundImageUri={props.backgroundImageUri} additionalClass={props.additionalClass} >
+            <div class={props.containerType} >
+                {props.nodes}
+            </div>
+            <NeosRulez.Bootstrap:Component.Container.Transparency @if.render={props.transparency} transparency={props.transparency} backgroundImageUri={props.backgroundImageUri} backgroundPosition={props.backgroundPosition} backgroundSize={props.backgroundSize} bgColorPicker={props.bgColorPicker} />
+            <NeosRulez.Bootstrap:Component.Container.VideoBackground />
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.Container.Transparency) < prototype(Neos.Fusion:Component) {
+    opacity = ${(String.toInteger(this.transparency) / 100)}
+    styleAttribute = ${this.backgroundImageUri ? 'background: url(' + this.backgroundImageUri + ') no-repeat ' + this.backgroundPosition + '; ' + (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : false ) + '-webkit-background-size: ' + this.backgroundSize + '; -moz-background-size: ' + this.backgroundSize +'; -o-background-size: ' + this.backgroundSize +'; background-size: ' + this.backgroundSize + ';' + (this.opacity ? ' opacity: ' + this.opacity + ';' : '') : (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : false ) + (this.opacity ? ' opacity: ' + this.opacity + ';' : false)}
+    inlineCss = ${'<style> #node__' + node.identifier + ':after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;z-index:1;' + this.styleAttribute + '}</style>'}
+
+    renderer = afx`
+        {props.inlineCss}
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.Container.VideoBackground) < prototype(Neos.Fusion:Component) {
+
+    video = NeosRulez.Bootstrap:Class.VideoBackground {
+        videourl = ${node.properties.videourl}
+    }
+
+    platformClass = ${this.video.platform == 'vimeo' ? 'ratio ratio-4x3' : 'ratio ratio-16x9'}
+    videourl = ${this.video.videourl}
+
+    renderer = afx`
+        <div @if.render={props.video} class="video-background">
+            <div class="video-foreground">
+                <iframe class={props.platformClass} src={props.videourl} frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    `
+    renderer.@if.condition = ${node.properties.videourl}
+}

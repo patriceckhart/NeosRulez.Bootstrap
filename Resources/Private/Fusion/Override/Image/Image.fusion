@@ -1,0 +1,88 @@
+prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
+    maximumWidth = 2560
+    width = null
+    maximumHeight = 2560
+    height = null
+
+    figureClassName = ${'d-flex' + (node.properties.alignment == 'left' ? ' justify-content-start' : (node.properties.alignment == 'right' ? ' justify-content-end' : (node.properties.alignment == 'center' ? ' justify-content-center' : false)))}
+    figcaptionClassName = ${'figure-caption' + (node.properties.alignment == 'left' ? ' text-start' : (node.properties.alignment == 'right' ? ' text-end' : (node.properties.alignment == 'center' ? ' text-center' : false)))}
+    lightbox = ${node.properties.lightbox ? true : false}
+    figureWrapperClassName = ${'figure-wrapper' + (this.lightbox ? ' lightbox' : false)}
+
+    allowCropping = false
+    allowUpScaling = false
+    image = ${q(node).property("image") ? q(node).property("image") : false}
+    originalAsset = ${this.image.originalAsset}
+
+    dummyImage = Neos.Fusion:ResourceUri {
+        path = 'resource://Neos.Neos/Public/Images/dummy-image.svg'
+    }
+    inBackend = ${site.context.inBackend}
+
+    alternativeText = ${q(node).property("alternativeText")}
+    link = ${q(node).property("link")}
+    loading = 'lazy'
+    link.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+
+    title = ${q(node).property('title') ? q(node).property('title') : q(node).property('image').title}
+    hasCaption = ${q(node).property("hasCaption")}
+    caption = ${String.trim(String.stripTags(q(node).property('caption'))) ? q(node).property('caption') : q(node).property('image').caption}
+    caption.@process.convertUris = Neos.Neos:ConvertUris
+    alignment = ${q(node).property("alignment")}
+
+    linktarget = ${node.properties.linktarget ? '_blank' : false}
+
+    galleryId = ${'lightbox__' + node.identifier}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <figure class={props.figureClassName} >
+                <div @if.render={props.image} class={props.figureWrapperClassName} >
+                    <a @if.render={props.link} href={props.link} target={props.linktarget}>
+                        <NeosRulez.Bootstrap:Component.ImageTag image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} />
+                    </a>
+                    <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} />
+                    <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} image={props.image} asset={props.originalAsset} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} galleryId={props.galleryId} />
+                    <figcaption @if.render={props.hasCaption} class={props.figcaptionClassName} itemprop={props.caption} >
+                        <Neos.Neos:Editable property="caption" />
+                    </figcaption>
+                </div>
+                <div @if.render={!props.image && props.inBackend} class={props.figureWrapperClassName} >
+                    <img src={props.dummyImage} title="Dummy image" alt="Dummy image" class="neos-handle" />
+                </div>
+            </figure>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Content.Image) < prototype(Neos.NodeTypes:Image)
+
+prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Component) {
+    imageClassName = ${node.properties.rounded ? 'figure-img img-fluid rounded' : 'figure-img img-fluid'}
+
+    renderer = afx`
+        <Neos.Neos:ImageTag attributes.class={props.imageClassName} asset={props.image} alt={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} />
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusion:Component) {
+    @context.image = ${this.image}
+    @context.asset = ${this.asset}
+    lightboxImage = Neos.Neos:ImageUri {
+        asset = ${asset}
+        width = 1200
+        maximumHeight = 1200
+        allowCropping = false
+        allowUpScaling = true
+    }
+    inBackend = ${site.context.inBackend}
+    tagName = ${this.inBackend ? 'div' : 'a'}
+
+    renderer = afx`
+        <Neos.Fusion:Tag tagName={props.tagName} attributes.href={props.inBackend ? false : props.lightboxImage} attributes.class="d-block" attributes.data-fslightbox={props.galleryId} >
+            <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} />
+        </Neos.Fusion:Tag>
+    `
+}

@@ -1,0 +1,90 @@
+#style = bgColor, fullwidth = block, text = title
+'NeosRulez.Bootstrap:Content.Button':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+    'NeosRulez.Bootstrap:Mixin.Link': true
+    'NeosRulez.Bootstrap:Mixin.LinkTarget': true
+    'NeosRulez.Bootstrap:Mixin.HorizontalAlignment': true
+    'NeosRulez.Bootstrap:Mixin.BackgroundColor': true
+    'NeosRulez.Bootstrap:Mixin.FontAwesomeIcon': true
+    'NeosRulez.Bootstrap:Mixin.FontAwesomeIcon.OnlyIcon': true
+  ui:
+    group: neosrulezBootstrap
+    label: i18n
+    icon: fas fa-link
+    position: 1
+    inspector:
+      groups:
+        neosrulezBootstrap:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.Button:ui.label
+          icon: fas fa-link
+  properties:
+    title:
+      type: string
+      defaultValue: 'Button Label'
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inlineEditable: true
+    size:
+      defaultValue: ''
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'lg':
+                label: i18n
+              'sm':
+                label: i18n
+    outline:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+    block:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+    faicon:
+      ui:
+        inspector:
+          position: end
+    iconAlignment:
+      defaultValue: 'left'
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.onlyicon ? true : false'
+          group: neosrulezBootstrap
+          position: after faicon
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              'left':
+                label: i18n
+              'right':
+                label: i18n
+    onlyicon:
+      ui:
+        inspector:
+          hidden: 'ClientEval:node.properties.iconAligment ? true : false'
+          position: after iconAligment
+
+'NeosRulez.Bootstrap:Button':
+  superTypes:
+    'NeosRulez.Bootstrap:Content.Button': true
+  ui: ~

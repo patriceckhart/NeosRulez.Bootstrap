@@ -1,0 +1,4 @@
+prototype(NeosRulez.Bootstrap:Class.VimeoUri) {
+    @class = 'NeosRulez\\Bootstrap\\Fusion\\VimeoUriFusion'
+    link = false
+}

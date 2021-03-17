@@ -1,0 +1,44 @@
+prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion:Component) {
+    nodetype = ${String.replace(String.replace(String.toLowerCase(node.nodetype), '.', '-'), ':', '-')}
+    inBackend = ${site.context.inBackend}
+
+    containerType = ${q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1 ? (this.isContainerNodeType ? 'container-fluid px-0' : (node.properties.containerType ? node.properties.containerType : false)) : false}
+    cssClass = ${node.properties.class ? node.properties.class : false}
+
+    marginClass = ${(node.properties.mt ? ' ' + node.properties.mt : '') + (node.properties.mb ? ' ' + node.properties.mb : '') + (node.properties.ml ? ' ' + node.properties.ml : '') + (node.properties.mr ? ' ' + node.properties.mr : '')}
+    paddingClass = ${(node.properties.pt ? ' ' + node.properties.pt : '') + (node.properties.pb ? ' ' + node.properties.pb : '') + (node.properties.pl ? ' ' + node.properties.pl : '') + (node.properties.pr ? ' ' + node.properties.pr : '')}
+    marginNegativeClass = ${(node.properties.mtn ? ' ' + node.properties.mtn : '') + (node.properties.mbn ? ' ' + node.properties.mbn : '') + (node.properties.mln ? ' ' + node.properties.mln : '') + (node.properties.mrn ? ' ' + node.properties.mrn : '')}
+    valignmentClass = ${node.properties.valignment ? ' ' + node.properties.valignment : ''}
+
+    animation = ${node.properties.animation ? node.properties.animation : false}
+    animationDelay = ${node.properties.animation && node.properties.delay ? node.properties.delay + 's' : (node.properties.animation ? '0s' : false)}
+
+    link = ${node.properties.link}
+    link.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+    linkTarget = ${node.properties.linktarget ? '_blank' : false}
+    linkedClass = ${this.link ? ' linked' : false}
+
+    parallax = ${node.properties.parallax ? true : false}
+    parallaxClass = ${this.parallax ? 'parallax-window' : false}
+    parallaxDataAttribute = ${this.parallax ? 'scroll' : false}
+    parallaxImage = ${this.parallax && this.backgroundImageUri && !this.inBackend ? this.backgroundImageUri : false}
+
+    class = ${'neosrulez-bootstrap-content' + (this.nodetype ? ' ' + this.nodetype : false) + (this.containerType ? ' ' + this.containerType : false) + (this.marginClass ? this.marginClass : false) + (this.marginNegativeClass ? this.marginNegativeClass : false) + (this.paddingClass ? this.paddingClass : false) + (this.additionalClass ? ' ' + this.additionalClass : false) + (this.linkedClass ? this.linkedClass : false) + (this.valignmentClass ? this.valignmentClass : false) + (this.animation ? ' os-animation' : false) + (this.parallaxClass ? ' ' + this.parallaxClass : false) + (this.cssClass ? ' ' + this.cssClass : false)}
+    id = ${'node__' + node.identifier}
+
+    isButton = ${this.nodetype == 'neosrulez-bootstrap-content-button' ? true : false}
+
+    renderer = afx`
+        <div @if.render={!props.link && !props.isButton || props.link && props.inBackend && !props.isButton} id={props.id} class={props.class} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} style={!props.parallaxImage ? props.styleAttribute : false} >
+            {props.content}
+        </div>
+        <a @if.render={!props.inBackend && !props.isButton && props.link} id={props.id} class={props.class} style={props.styleAttribute} href={props.link} target={props.linkTarget} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} style={!props.parallaxImage ? props.styleAttribute : false} >
+            {props.content}
+        </a>
+        <div @if.render={props.isButton} id={props.id} class={props.class} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} style={!props.parallaxImage ? props.styleAttribute : false} >
+            {props.content}
+        </div>
+    `
+}

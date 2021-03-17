@@ -1,0 +1,24 @@
+prototype(NeosRulez.Bootstrap:Content.Vimeo) < prototype(Neos.Neos:ContentComponent) {
+    link = NeosRulez.Bootstrap:Class.VimeoUri {
+        link = ${node.properties.link}
+    }
+
+    autoplay = ${node.properties.autoplay ? 'autoplay=1' : 'autoplay=0'}
+    loop = ${node.properties.loop ? '&loop=1' : '&loop=0'}
+    introImage = ${node.properties.introImage ? '&portrait=1' : '&portrait=0'}
+    introTitle = ${node.properties.introTitle ? '&title=1' : '&title=0'}
+    introAuthor = ${node.properties.introAuthor ? '&byline=1' : '&byline=0'}
+
+    src = ${this.link + '?' + this.autoplay + this.loop + this.introTitle + this.introImage + this.introAuthor}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <div @if.render={node.properties.link} class="ratio ratio-4x3">
+                <iframe src={props.src} allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+            <code @if.render={!node.properties.link} >
+                {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Vimeo:content.noUri')}
+            </code>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

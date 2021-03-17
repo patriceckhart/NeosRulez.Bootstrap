@@ -1,0 +1,9 @@
+prototype(Neos.NodeTypes:Headline) < prototype(Neos.Neos:ContentComponent) {
+    additionalClass = ${node.properties.textColor ? 'text-' + node.properties.textColor : false}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent additionalClass={props.additionalClass} >
+            <Neos.Neos:Editable property="title" />
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

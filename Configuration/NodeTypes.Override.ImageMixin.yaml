@@ -1,0 +1,66 @@
+'Neos.NodeTypes.BaseMixins:ImageMixin':
+  abstract: true
+  superTypes:
+    'NeosRulez.Bootstrap:Mixin.LinkTarget': true
+  ui:
+    inspector:
+      groups:
+        image:
+          label: i18n
+          position: 5
+          icon: 'icon-image'
+  properties:
+    image:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        inspector:
+          editorOptions:
+            features:
+              crop: true
+            crop:
+              aspectRatio:
+                forceCrop: true
+                enableOriginal: true
+                allowCustom: true
+    linktarget:
+      ui:
+        inspector:
+          group: image
+          position: 'after link'
+#    rounded:
+#      type: boolean
+#      defaultValue: false
+#      ui:
+#        label: NeosRulez.Bootstrap:Main:rounded
+#        reloadIfChanged: true
+#        inspector:
+#          group: 'image'
+#          position: 200
+#    link:
+#      ui:
+#        inspector:
+#          hidden: 'ClientEval:node.properties.lightbox ? true : false'
+#    lightbox:
+#      type: boolean
+#      defaultValue: false
+#      ui:
+#        label: NeosRulez.Bootstrap:Main:lightbox
+#        reloadIfChanged: true
+#        inspector:
+#          group: 'image'
+#          position: 250
+#    linktarget:
+#      ui:
+#        inspector:
+#          group: 'image'
+#          position: 'after link'
+#          hidden: 'ClientEval:node.properties.lightbox ? true : false'
+#    imgfullwidth:
+#      type: boolean
+#      defaultValue: true
+#      ui:
+#        label: NeosRulez.Bootstrap:Main:imgfullwidth
+#        reloadIfChanged: true
+#        inspector:
+#          group: 'image'
+#          position: 300

@@ -1,0 +1,15 @@
+prototype(NeosRulez.Bootstrap:Content.AnchorTarget) < prototype(Neos.Neos:ContentComponent) {
+    title = ${String.replace(String.toLowerCase(node.properties.title), ' ', '')}
+    inBackend = ${site.context.inBackend}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <a id={props.title}></a>
+            <code @if.render={props.inBackend} >
+                {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.AnchorTarget:ui.label')} #{props.title}
+            </code>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Anchor) < prototype(NeosRulez.Bootstrap:Content.AnchorTarget)

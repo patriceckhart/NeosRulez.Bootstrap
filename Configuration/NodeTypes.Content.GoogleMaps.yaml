@@ -1,0 +1,62 @@
+'NeosRulez.Bootstrap:Content.GoogleMaps':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+    'NeosRulez.Bootstrap:Mixin.Country': true
+  ui:
+    group: neosrulezBootstrap
+    label: i18n
+    icon: fas fa-map-marked-alt
+    inspector:
+      groups:
+        neosrulezBootstrap:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.GoogleMaps:ui.label
+          icon: fas fa-map-marked-alt
+  properties:
+    address:
+      type: string
+      ui:
+        label: i18n
+        showInCreationDialog: true
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.source ? true : false'
+          group: neosrulezBootstrap
+    zip:
+      type: string
+      ui:
+        label: i18n
+        showInCreationDialog: true
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.source ? true : false'
+          group: neosrulezBootstrap
+    city:
+      type: string
+      ui:
+        label: i18n
+        showInCreationDialog: true
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.source ? true : false'
+          group: neosrulezBootstrap
+    country:
+      ui:
+        showInCreationDialog: true
+        inspector:
+          hidden: 'ClientEval:node.properties.source ? true : false'
+          position: after city
+    source:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+          position: end
+          hidden: 'ClientEval:node.properties.address || node.properties.zip || node.properties.city || node.properties.country ? true : false'
+          editor: 'Neos.Neos/Inspector/Editors/CodeEditor'
+
+'NeosRulez.Bootstrap:GoogleMaps':
+  superTypes:
+    'NeosRulez.Bootstrap:Content.GoogleMaps': true
+  ui: ~

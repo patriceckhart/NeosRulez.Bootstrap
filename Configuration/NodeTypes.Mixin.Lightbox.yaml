@@ -1,0 +1,11 @@
+'NeosRulez.Bootstrap:Mixin.Lightbox':
+  abstract: true
+  properties:
+    lightbox:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.link ? true : false'

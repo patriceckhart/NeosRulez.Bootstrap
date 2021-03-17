@@ -1,0 +1,26 @@
+#accordionItems=nodes
+'NeosRulez.Bootstrap:Content.Accordion':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+  ui:
+    group: neosrulezBootstrap
+    label: i18n
+    icon: fas fa-list-ul
+    position: 5
+    inspector:
+      groups:
+        neosrulezBootstrap:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.Accordion:ui.label
+          icon: fas fa-list-ul
+  childNodes:
+    nodes:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'NeosRulez.Bootstrap:Content.Accordion.AccordionItem': true
+
+'NeosRulez.Bootstrap:Accordion':
+  superTypes:
+    'NeosRulez.Bootstrap:Content.Accordion': true
+  ui: ~

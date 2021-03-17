@@ -1,0 +1,6 @@
+'Neos.NodeTypes.Navigation:Navigation':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+  ui:
+    group: general
+    position: end

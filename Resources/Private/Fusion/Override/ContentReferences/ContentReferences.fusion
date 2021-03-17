@@ -1,0 +1,28 @@
+prototype(Neos.NodeTypes.ContentReferences:ContentReferences) < prototype(Neos.Neos:ContentComponent) {
+    @context.referenceNodesArray = ${q(node).property('references')}
+    referenceNodes = Neos.Fusion:Loop {
+        items = ${referenceNodesArray}
+        itemRenderer = Neos.Neos:ContentCase
+        itemName = 'node'
+    }
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.nodeTag(referenceNodesArray)}
+            3 = ${Neos.Caching.descendantOfTag(referenceNodesArray)}
+        }
+    }
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <code @if.render={!props.referenceNodes} >
+                {I18n.translate('Neos.NodeTypes.ContentReferences:NodeTypes.ContentReferences:content.noReferencesSelected')}
+            </code>
+            {props.referenceNodes ? props.referenceNodes : false}
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

@@ -1,0 +1,37 @@
+'NeosRulez.Bootstrap:Content.Card':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+    'NeosRulez.Bootstrap:Mixin.BackgroundColor': true
+    'NeosRulez.Bootstrap:Mixin.TextColor': true
+    'NeosRulez.Bootstrap:Mixin.BorderColor': true
+  ui:
+    group: neosrulezBootstrap
+    label: i18n
+    icon: far fa-sticky-note
+    position: 6
+    inspector:
+      groups:
+        neosrulezBootstrap:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.Accordion:ui.label
+          icon: far fa-sticky-note
+  properties:
+    bgColor:
+      defaultValue: ''
+    textColor:
+      defaultValue: ''
+    borderColor:
+      defaultValue: ''
+  childNodes:
+    nodes:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'NeosRulez.Bootstrap:Content.Card': false
+          'NeosRulez.Bootstrap:Content.Accordion': false
+          'NeosRulez.Bootstrap:Content.Container': false
+          'NeosRulez.Bootstrap:Content.CardColumn': false
+
+'NeosRulez.Bootstrap:Card':
+  superTypes:
+    'NeosRulez.Bootstrap:Content.Card': true
+  ui: ~

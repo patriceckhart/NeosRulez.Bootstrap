@@ -1,0 +1,30 @@
+prototype(NeosRulez.Bootstrap:Content.Card) < prototype(Neos.Neos:ContentComponent) {
+    inBackend = ${site.context.inBackend}
+    tagName = ${this.inBackend ? 'div' : 'a'}
+
+    cardTextColor = ${node.properties.textColor ? 'text-' + node.properties.textColor : false}
+    cardBgColor = ${node.properties.bgColor ? 'bg-' + node.properties.bgColor : false}
+    cardBorderColor = ${node.properties.borderColor ? 'border-' + node.properties.borderColor : false}
+
+    class = ${'card' + (this.cardTextColor ? ' ' + this.cardTextColor : false) + (this.cardBgColor ? ' ' + this.cardBgColor : false) + (this.cardBorderColor ? ' ' + this.cardBorderColor : false)}
+
+    link = ${node.properties.link}
+    link.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+    linkTarget = ${node.properties.linktarget ? '_blank' : false}
+
+    nodes = Neos.Neos:ContentCollection {
+        nodePath = 'nodes'
+    }
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <div class={props.class} >
+                <div class="card-body">
+                    {props.nodes}
+                </div>
+            </div>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

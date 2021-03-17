@@ -1,0 +1,18 @@
+prototype(Neos.NodeTypes.ColumnLayouts:MultiColumn) < prototype(Neos.Neos:ContentComponent) {
+
+    attributes = ${'row' + divattributes + (q(node).property('nogutters') ? ' ' + ' no-gutters' : '' ) + (q(node).property('valignment') ? ' ' + q(node).property('valignment') : '' )}
+    columns.iterationName = 'multiColumnIteration'
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <div class={props.attributes} >
+                {props.columns}
+            </div>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}
+
+prototype(Neos.NodeTypes.ColumnLayouts:MultiColumnItem) < prototype(Neos.Neos:ContentCollection) {
+    @context.col = ${q(node).parent().property('breakpoint') ? 'col-' + q(node).parent().property('breakpoint') + '-' : 'col-'}
+    attributes.class = ${col + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+}

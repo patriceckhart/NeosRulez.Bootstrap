@@ -1,0 +1,16 @@
+prototype(NeosRulez.Bootstrap:Content.YouTube) < prototype(Neos.Neos:ContentComponent) {
+    link = NeosRulez.Bootstrap:Class.YouTubeUri {
+        link = ${node.properties.link}
+    }
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <div @if.render={node.properties.link} class="ratio ratio-16x9">
+                <iframe src={props.link} allowfullscreen></iframe>
+            </div>
+            <code @if.render={!node.properties.link} >
+                {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.YouTube:content.noUri')}
+            </code>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

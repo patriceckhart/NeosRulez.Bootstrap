@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="tabs.distance" xml:space="preserve">
+				<source>Abstände</source>
+			</trans-unit>
+            <trans-unit id="groups.marginsettings" xml:space="preserve">
+				<source>Äußerer Abstand</source>
+			</trans-unit>
+            <trans-unit id="groups.paddingsettings" xml:space="preserve">
+				<source>Innerer Abstand</source>
+			</trans-unit>
+            <trans-unit id="groups.marginnegativesettings" xml:space="preserve">
+				<source>Äußerer Abstand (negativ)</source>
+			</trans-unit>
+            <trans-unit id="properties.mt" xml:space="preserve">
+				<source>Abstand davor</source>
+			</trans-unit>
+            <trans-unit id="properties.mb" xml:space="preserve">
+				<source>Abstand danach</source>
+			</trans-unit>
+            <trans-unit id="properties.ml" xml:space="preserve">
+				<source>Abstand links</source>
+			</trans-unit>
+            <trans-unit id="properties.mr" xml:space="preserve">
+				<source>Abstand rechts</source>
+			</trans-unit>
+            <trans-unit id="properties.pt" xml:space="preserve">
+				<source>Abstand innen oben</source>
+			</trans-unit>
+            <trans-unit id="properties.pb" xml:space="preserve">
+				<source>Abstand innen unten</source>
+			</trans-unit>
+            <trans-unit id="properties.pl" xml:space="preserve">
+				<source>Abstand innen links</source>
+			</trans-unit>
+            <trans-unit id="properties.pr" xml:space="preserve">
+				<source>Abstand innen rechts</source>
+			</trans-unit>
+            <trans-unit id="properties.mtn" xml:space="preserve">
+				<source>Negativer Abstand davor</source>
+			</trans-unit>
+            <trans-unit id="properties.mbn" xml:space="preserve">
+				<source>Negativer Abstand danach</source>
+			</trans-unit>
+            <trans-unit id="properties.mln" xml:space="preserve">
+				<source>Negativer Abstand links</source>
+			</trans-unit>
+            <trans-unit id="properties.mrn" xml:space="preserve">
+				<source>Negativer Abstand rechts</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

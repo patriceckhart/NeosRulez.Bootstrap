@@ -1,0 +1,302 @@
+'NeosRulez.Bootstrap:Mixin.Distance':
+  abstract: true
+  ui:
+    inspector:
+      tabs:
+        distance:
+          label: i18n
+          position: 11
+          icon: 'icon-arrows-v'
+      groups:
+        marginsettings:
+          label: i18n
+          icon: 'icon-arrows-v'
+          tab: 'distance'
+          position: 100
+        paddingsettings:
+          label: i18n
+          icon: 'icon-arrows-v'
+          tab: 'distance'
+          position: 110
+        marginnegativesettings:
+          label: i18n
+          icon: 'icon-arrows-v'
+          tab: 'distance'
+          position: 120
+  properties:
+    mt:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'marginsettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'mt-1':
+                label: '0.25'
+              'mt-2':
+                label: '0.5'
+              'mt-3':
+                label: '1'
+              'mt-4':
+                label: '1.5'
+              'mt-5':
+                label: '3'
+    mb:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'marginsettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'mb-1':
+                label: '0.25'
+              'mb-2':
+                label: '0.5'
+              'mb-3':
+                label: '1'
+              'mb-4':
+                label: '1.5'
+              'mb-5':
+                label: '3'
+    ml:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'marginsettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'ms-1':
+                label: '0.25'
+              'ms-2':
+                label: '0.5'
+              'ms-3':
+                label: '1'
+              'ms-4':
+                label: '1.5'
+              'ms-5':
+                label: '3'
+    mr:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'marginsettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'me-1':
+                label: '0.25'
+              'me-2':
+                label: '0.5'
+              'me-3':
+                label: '1'
+              'me-4':
+                label: '1.5'
+              'me-5':
+                label: '3'
+    pt:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'paddingsettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'pt-1':
+                label: '0.25'
+              'pt-2':
+                label: '0.5'
+              'pt-3':
+                label: '1'
+              'pt-4':
+                label: '1.5'
+              'pt-5':
+                label: '3'
+    pb:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'paddingsettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'pb-1':
+                label: '0.25'
+              'pb-2':
+                label: '0.5'
+              'pb-3':
+                label: '1'
+              'pb-4':
+                label: '1.5'
+              'pb-5':
+                label: '3'
+    pl:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'paddingsettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'ps-1':
+                label: '0.25'
+              'ps-2':
+                label: '0.5'
+              'ps-3':
+                label: '1'
+              'ps-4':
+                label: '1.5'
+              'ps-5':
+                label: '3'
+    pr:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'paddingsettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'pe-1':
+                label: '0.25'
+              'pe-2':
+                label: '0.5'
+              'pe-3':
+                label: '1'
+              'pe-4':
+                label: '1.5'
+              'pe-5':
+                label: '3'
+    mtn:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'marginnegativesettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'mt-n1':
+                label: '0.25'
+              'mt-n2':
+                label: '0.5'
+              'mt-n3':
+                label: '1'
+              'mt-n4':
+                label: '1.5'
+              'mt-n5':
+                label: '3'
+    mbn:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'marginnegativesettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'mb-n1':
+                label: '0.25'
+              'mb-n2':
+                label: '0.5'
+              'mb-n3':
+                label: '1'
+              'mb-n4':
+                label: '1.5'
+              'mb-n5':
+                label: '3'
+    mln:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'marginnegativesettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'ms-n1':
+                label: '0.25'
+              'ms-n2':
+                label: '0.5'
+              'ms-n3':
+                label: '1'
+              'ms-n4':
+                label: '1.5'
+              'ms-n5':
+                label: '3'
+    mrn:
+      defaultValue: ''
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: 'marginnegativesettings'
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'me-n1':
+                label: '0.25'
+              'me-n2':
+                label: '0.5'
+              'me-n3':
+                label: '1'
+              'me-n4':
+                label: '1.5'
+              'me-n5':
+                label: '3'

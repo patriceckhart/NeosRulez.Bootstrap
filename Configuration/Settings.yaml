@@ -1,0 +1,56 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        NeosRulez.Bootstrap: true
+    nodeTypes:
+      groups:
+        neosrulezBootstrap:
+          position: 'end'
+          label: NeosRulez.Bootstrap:Main:neosrulezBootstrap
+        neosrulezBootstrapMultimedia:
+          position: 'after neosrulezBootstrap'
+          label: NeosRulez.Bootstrap:Main:neosrulezBootstrapMultimedia
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.Bootstrap:
+            - Main
+            - 'NodeTypes/*'
+            - 'NodeTypes/Content/*'
+            - 'NodeTypes/Component/*'
+            - 'NodeTypes/Mixin/*'
+      inspector:
+        dataTypes:
+          'Neos\Media\Domain\Model\ImageInterface':
+            editorOptions:
+              accept: 'image/png,image/jpeg,image/gif'
+              features:
+                resize: true
+NeosRulez:
+  Bootstrap:
+    headerLogoPath: 'Images/Logo.svg'
+    headerLogoPackage: 'NeosRulez.Bootstrap'
+    headerLogoAltText: 'NeosRulez.Bootstrap'
+    navbarAlignment: 'right'
+    navbarFluid: false
+    navbarSticky: true
+    navbarBackground: 'bg-white'
+    navbarBreakpoint: 'lg'
+    navbarHover: true
+    clickableParent: false
+  DynamicResources:
+    site:
+      resources:
+        head:
+          styles:
+            animateCss: 'resource://NeosRulez.Bootstrap/Private/Styles/animate.css'
+            neosrulezBootstrapCss: 'resource://NeosRulez.Bootstrap/Private/Styles/styles.scss'
+        footer:
+          scripts:
+            fsLightboxJs: 'resource://NeosRulez.Bootstrap/Private/JavaScript/fslightbox.js'
+            neosrulezBootstrapJs: 'resource://NeosRulez.Bootstrap/Private/JavaScript/bootstrap.js'
+            jQuery: 'resource://NeosRulez.Bootstrap/Private/JavaScript/jquery-3.5.1.js'
+            waypointsJs: 'resource://NeosRulez.Bootstrap/Private/JavaScript/waypoints.js'
+            parallaxJs: 'resource://NeosRulez.Bootstrap/Private/JavaScript/parallax.js'
+            neosrulezBootstrapAdditionalJs: 'resource://NeosRulez.Bootstrap/Private/JavaScript/scripts.js'

@@ -1,0 +1,76 @@
+prototype(Neos.NodeTypes.Navigation:Navigation) < prototype(Neos.Neos:ContentComponent) {
+
+    navigation = Neos.Fusion:Component {
+        entryLevel = ${this.startingPoint ? 0 : 1}
+        maximumLevels = 2
+        startingPoint = null
+        lastLevel = null
+        filter = 'Neos.Neos:Document'
+        renderHiddenInIndex = false
+        itemCollection = null
+
+        node = ${node}
+
+        attributes = Neos.Fusion:Attributes
+
+        active.attributes = Neos.Fusion:Attributes {
+            class = 'active'
+        }
+        current.attributes = Neos.Fusion:Attributes {
+            class = 'current'
+        }
+        normal.attributes = Neos.Fusion:Attributes {
+            class = 'normal'
+        }
+
+        @context {
+            entryLevel = ${this.entryLevel}
+            maximumLevels = ${this.maximumLevels}
+            startingPoint = ${this.startingPoint}
+            lastLevel = ${this.lastLevel}
+            filter = ${this.filter}
+            renderHiddenInIndex = ${this.renderHiddenInIndex}
+            itemCollection = ${this.itemCollection}
+        }
+
+        items = Neos.Neos:MenuItems {
+            entryLevel = ${entryLevel}
+            maximumLevels = ${maximumLevels}
+            startingPoint = ${startingPoint}
+            lastLevel = ${lastLevel}
+            filter = ${filter}
+            renderHiddenInIndex = ${renderHiddenInIndex}
+            itemCollection = ${itemCollection}
+        }
+
+        @exceptionHandler = 'Neos\\Fusion\\Core\\ExceptionHandlers\\ContextDependentHandler'
+
+        @cache {
+            mode = 'cached'
+            entryIdentifier {
+                documentNode = ${documentNode}
+            }
+            entryTags {
+                1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+            }
+        }
+
+        renderer = afx`
+            <ul class="nav flex-column">
+                <Neos.Fusion:Loop items={props.items} itemName="item">
+                    <li class="nav-item">
+                        <Neos.Neos:NodeLink node={item.node} attributes.class="nav-link" attributes.aria-current="page" >
+                            {item.node.properties.title}
+                        </Neos.Neos:NodeLink>
+                    </li>
+                </Neos.Fusion:Loop>
+            </ul>
+        `
+    }
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            {props.navigation}
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

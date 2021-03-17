@@ -1,0 +1,12 @@
+'NeosRulez.Bootstrap:Mixin.LinkTarget':
+  abstract: true
+  properties:
+    linktarget:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+          position: 'after link'

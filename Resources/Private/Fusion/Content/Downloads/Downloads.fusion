@@ -1,0 +1,52 @@
+prototype(NeosRulez.Bootstrap:Content.Downloads) < prototype(Neos.Neos:ContentComponent) {
+    assets = ${node.properties.assets}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <code @if.render={!props.assets} >
+                {I18n.translate('Neos.NodeTypes.AssetList:NodeTypes.AssetList:content.emptyAssetList')}
+            </code>
+            <div @if.render={props.assets} class="list-group">
+                <Neos.Fusion:Loop items={props.assets} itemName="asset">
+                    <NeosRulez.Bootstrap:Content.Downloads.LinkItem asset={asset} />
+                </Neos.Fusion:Loop>
+            </div>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Content.Downloads.LinkItem) < prototype(Neos.Fusion:Component) {
+    @context.asset = ${this.asset}
+    assetLink = Neos.Fusion:ResourceUri {
+        resource = ${asset.resource}
+    }
+
+    @context.fileExtension = ${String.toLowerCase(File.fileInfo(this.assetLink).extension)}
+    @context.theme = 'vivid'
+    fileIcon = Neos.Fusion:ResourceUri {
+        path = ${'resource://Neos.Media/Public/IconSets/' + theme + '/' + fileExtension + '.svg'}
+    }
+
+    fileSize = NeosRulez.Bootstrap:Helper.FileSize {
+        bytes = ${asset.resource.filesize}
+        decimalSeparator = ','
+    }
+
+    renderer = afx`
+        <a href={props.assetLink} class="list-group-item list-group-item-action">
+            <div class="row align-items-center">
+                <div class="col-md-1 col-2">
+                    <img src={props.fileIcon} />
+                </div>
+                <div class="col">
+                    {props.asset.title ? props.asset.title : props.asset.resource.filename}
+                    <span class="d-block">
+                        {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Downloads:content.filesize')}: {props.fileSize}
+                    </span>
+                </div>
+            </div>
+        </a>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Downloads) < prototype(NeosRulez.Bootstrap:Content.Downloads)

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+				<source>Google Maps</source>
+			</trans-unit>
+            <trans-unit id="properties.address" xml:space="preserve">
+				<source>Adresse</source>
+			</trans-unit>
+            <trans-unit id="properties.zip" xml:space="preserve">
+				<source>Postleitzahl</source>
+			</trans-unit>
+            <trans-unit id="properties.city" xml:space="preserve">
+				<source>Ort</source>
+			</trans-unit>
+            <trans-unit id="properties.country" xml:space="preserve">
+				<source>Land</source>
+			</trans-unit>
+            <trans-unit id="properties.source" xml:space="preserve">
+				<source>Einbettungscode</source>
+			</trans-unit>
+			<trans-unit id="content.noProperties" xml:space="preserve">
+				<source>Adressdaten oder Einbettungscode im Inspector definieren</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

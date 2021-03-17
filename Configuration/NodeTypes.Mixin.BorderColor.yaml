@@ -1,0 +1,39 @@
+'NeosRulez.Bootstrap:Mixin.BorderColor':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        color:
+          label: i18n
+          icon: fas fa-paint-roller
+  properties:
+    borderColor:
+      defaultValue: 'primary'
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: color
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'primary':
+                label: 'Primary'
+              'secondary':
+                label: 'Secondary'
+              'success':
+                label: 'Success'
+              'danger':
+                label: 'Danger'
+              'warning':
+                label: 'Warning'
+              'info':
+                label: 'Info'
+              'light':
+                label: 'Light'
+              'dark':
+                label: 'Dark'
+              'link':
+                label: 'Link'
