@@ -50,7 +50,8 @@ NeosRulez:
           scripts:
             fsLightboxJs: 'resource://NeosRulez.Bootstrap/Private/JavaScript/fslightbox.js'
             neosrulezBootstrapJs: 'resource://NeosRulez.Bootstrap/Private/JavaScript/bootstrap.js'
-            jQuery: 'resource://NeosRulez.Bootstrap/Private/JavaScript/jquery-3.5.1.js'
+#            jQuery: 'resource://NeosRulez.Bootstrap/Private/JavaScript/jquery-3.5.1.js'
+            jQuery: 'resource://NeosRulez.Bootstrap/Private/JavaScript/jquery-3.6.0.js'
             waypointsJs: 'resource://NeosRulez.Bootstrap/Private/JavaScript/waypoints.js'
             parallaxJs: 'resource://NeosRulez.Bootstrap/Private/JavaScript/parallax.js'
             neosrulezBootstrapAdditionalJs: 'resource://NeosRulez.Bootstrap/Private/JavaScript/scripts.js'

@@ -1,6 +1,7 @@
 prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion:Component) {
     nodetype = ${String.replace(String.replace(String.toLowerCase(node.nodetype), '.', '-'), ':', '-')}
     inBackend = ${site.context.inBackend}
+    isButton = ${this.nodetype == 'neosrulez-bootstrap-content-button' || this.nodetype == 'neosrulez-bootstrap-content-youtube' || this.nodetype == 'neosrulez-bootstrap-content-vimeo' ? true : false}
 
     containerType = ${q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1 ? (this.isContainerNodeType ? 'container-fluid px-0' : (node.properties.containerType ? node.properties.containerType : false)) : false}
     cssClass = ${node.properties.class ? node.properties.class : false}
@@ -18,7 +19,7 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
         forceConversion = true
     }
     linkTarget = ${node.properties.linktarget ? '_blank' : false}
-    linkedClass = ${this.link ? ' linked' : false}
+    linkedClass = ${this.link ? (!this.isButton ? ' linked' : false) : false}
 
     parallax = ${node.properties.parallax ? true : false}
     parallaxClass = ${this.parallax ? 'parallax-window' : false}
@@ -27,8 +28,6 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
 
     class = ${'neosrulez-bootstrap-content' + (this.nodetype ? ' ' + this.nodetype : false) + (this.containerType ? ' ' + this.containerType : false) + (this.marginClass ? this.marginClass : false) + (this.marginNegativeClass ? this.marginNegativeClass : false) + (this.paddingClass ? this.paddingClass : false) + (this.additionalClass ? ' ' + this.additionalClass : false) + (this.linkedClass ? this.linkedClass : false) + (this.valignmentClass ? this.valignmentClass : false) + (this.animation ? ' os-animation' : false) + (this.parallaxClass ? ' ' + this.parallaxClass : false) + (this.cssClass ? ' ' + this.cssClass : false)}
     id = ${'node__' + node.identifier}
-
-    isButton = ${this.nodetype == 'neosrulez-bootstrap-content-button' ? true : false}
 
     renderer = afx`
         <div @if.render={!props.link && !props.isButton || props.link && props.inBackend && !props.isButton} id={props.id} class={props.class} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} style={!props.parallaxImage ? props.styleAttribute : false} >

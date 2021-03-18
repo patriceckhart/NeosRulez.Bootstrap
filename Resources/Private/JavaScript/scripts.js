@@ -39,4 +39,25 @@ function adjustBgVideo() {
         });
     }
 }
-adjustBgVideo();
+
+var iOS = false, p = navigator.platform;
+if( p === 'iPad' || p === 'iPhone' || p === 'iPod' ){
+    iOS = true;
+}
+
+function resize() {
+    adjustBgVideo();
+}
+
+
+$(document).ready(function(){
+    resize();
+});
+
+
+if (iOS == true) {
+} else {
+    $(window).resize(function() {
+        resize();
+    });
+}

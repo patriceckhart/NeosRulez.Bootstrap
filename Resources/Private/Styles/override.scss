@@ -4,6 +4,10 @@
   &.show { visibility:visible; opacity:1; }
 }
 
+.navbar-nav {
+  .nav-link { white-space: nowrap; }
+}
+
 .figure-img { margin-bottom:0; }
 
 .neosrulez-bootstrap-content-gallery {
@@ -43,8 +47,18 @@
 }
 
 .neosrulez-bootstrap-content-container { display: flex; flex-wrap: wrap; position: relative; }
-.linked { flex-wrap: wrap; }
+.linked { display:flex; flex-wrap: wrap; }
 .bg-transparent__content-overlay { position: relative; z-index:2; }
+
+div.datedropper.bootstrap {
+  --dd-color1: #{$primary};
+  --dd-color2: #FFF;
+  --dd-color3: #4D4D4D;
+  --dd-color4: #FFF;
+  --dd-radius: 0px;
+  --dd-width: 200px;
+  --dd-shadow: 0 0 32px 0px rgba(0, 0, 0, 0.1);
+}
 
 .video-background {
   position: absolute;

@@ -21,8 +21,9 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
 
     bgColor = ${node.properties.bgColor ? 'bg-' + node.properties.bgColor : false}
     textColor = ${node.properties.textColor ? 'text-' + node.properties.textColor : false}
+    videourl = ${node.properties.videourl}
 
-    additionalClass = ${this.textColor + ' ' + this.bgColor}
+    additionalClass = ${this.textColor + ' ' + this.bgColor + (this.videourl ? ' overflow-hidden' : false)}
 
     containerType = ${node.properties.containerType + (this.transparency ? ' bg-transparent__content-overlay' : false)}
 
@@ -59,7 +60,9 @@ prototype(NeosRulez.Bootstrap:Component.Container.VideoBackground) < prototype(N
     renderer = afx`
         <div @if.render={props.video} class="video-background">
             <div class="video-foreground">
-                <iframe class={props.platformClass} src={props.videourl} frameborder="0" allowfullscreen></iframe>
+                <div class={props.platformClass} >
+                    <iframe src={props.videourl} frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     `
