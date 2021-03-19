@@ -1,0 +1,18 @@
+up:
+  comments: 'Migrate NeosRulez.Bootstrap:Vimeo to NeosRulez.Bootstrap:Content.Vimeo'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'NeosRulez.Bootstrap:Vimeo'
+      transformations:
+        -
+          type: 'ChangeNodeType'
+          settings:
+            newType: 'NeosRulez.Bootstrap:Content.Vimeo'
+
+down:
+  comments: 'No down migration available'

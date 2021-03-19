@@ -17,8 +17,3 @@
       ui:
         inspector:
           group: neosrulezBootstrap
-
-'NeosRulez.Bootstrap:Downloads':
-  superTypes:
-    'NeosRulez.Bootstrap:Content.Downloads': true
-  ui: ~

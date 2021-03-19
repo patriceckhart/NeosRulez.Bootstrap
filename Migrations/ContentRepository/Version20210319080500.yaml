@@ -1,0 +1,23 @@
+up:
+  comments: 'Migrate NeosRulez.Bootstrap:Divider to NeosRulez.Bootstrap:Content.Divider'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'NeosRulez.Bootstrap:Divider'
+      transformations:
+        -
+          type: 'ChangeNodeType'
+          settings:
+            newType: 'NeosRulez.Bootstrap:Content.Divider'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'noborder'
+            to: 'noBorder'
+
+down:
+  comments: 'No down migration available'

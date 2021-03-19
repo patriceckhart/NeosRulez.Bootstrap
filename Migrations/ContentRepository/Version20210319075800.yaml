@@ -1,0 +1,29 @@
+up:
+  comments: 'Migrate NeosRulez.Bootstrap:AccordionItem to NeosRulez.Bootstrap:Content.Accordion'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'NeosRulez.Bootstrap:Accordion'
+      transformations:
+        -
+          type: 'ChangeNodeType'
+          settings:
+            newType: 'NeosRulez.Bootstrap:Content.Accordion'
+    -
+      filters:
+        -
+          type: 'NodeName'
+          settings:
+            nodeName: 'accordionItems'
+      transformations:
+        -
+          type: 'RenameNode'
+          settings:
+            newName: 'nodes'
+
+down:
+  comments: 'No down migration available'

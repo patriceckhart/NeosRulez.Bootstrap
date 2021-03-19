@@ -1,4 +1,3 @@
-#contentcollection contentItems to nodes, backgroundBsColor=bgColor, textBsColor=textColor, backgroundColor=bgColorPicker
 'NeosRulez.Bootstrap:Content.Container':
   superTypes:
     'NeosRulez.Bootstrap:Component.AbstractContent': true
@@ -148,9 +147,3 @@
   childNodes:
     nodes:
       type: 'Neos.Neos:ContentCollection'
-
-
-'NeosRulez.Bootstrap:Container':
-  superTypes:
-    'NeosRulez.Bootstrap:Content.Container': true
-  ui: ~

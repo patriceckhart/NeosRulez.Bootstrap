@@ -20,8 +20,3 @@
         reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
-
-'NeosRulez.Bootstrap:Anchor':
-  superTypes:
-    'NeosRulez.Bootstrap:Content.AnchorTarget': true
-  ui: ~

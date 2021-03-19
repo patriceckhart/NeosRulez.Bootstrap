@@ -1,0 +1,18 @@
+up:
+  comments: 'Migrate NeosRulez.Bootstrap:YouTube to NeosRulez.Bootstrap:Content.YouTube'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'NeosRulez.Bootstrap:YouTube'
+      transformations:
+        -
+          type: 'ChangeNodeType'
+          settings:
+            newType: 'NeosRulez.Bootstrap:Content.YouTube'
+
+down:
+  comments: 'No down migration available'

@@ -25,3 +25,12 @@
         inspector:
           group: image
           position: 200
+    block:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: NeosRulez.Bootstrap:NodeTypes.Content.Image:properties.block
+        reloadIfChanged: true
+        inspector:
+          group: image
+          position: 300

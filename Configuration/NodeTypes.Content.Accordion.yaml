@@ -19,8 +19,3 @@
         nodeTypes:
           '*': false
           'NeosRulez.Bootstrap:Content.Accordion.AccordionItem': true
-
-'NeosRulez.Bootstrap:Accordion':
-  superTypes:
-    'NeosRulez.Bootstrap:Content.Accordion': true
-  ui: ~

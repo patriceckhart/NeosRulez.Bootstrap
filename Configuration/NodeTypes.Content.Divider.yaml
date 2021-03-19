@@ -1,4 +1,3 @@
-#noborder = noBorder
 'NeosRulez.Bootstrap:Content.Divider':
   superTypes:
     'NeosRulez.Bootstrap:Component.AbstractContent': true
@@ -21,8 +20,3 @@
         reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
-
-'NeosRulez.Bootstrap:Divider':
-  superTypes:
-    'NeosRulez.Bootstrap:Content.Button': true
-  ui: ~

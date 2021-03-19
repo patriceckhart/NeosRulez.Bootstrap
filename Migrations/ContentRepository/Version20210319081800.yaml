@@ -1,0 +1,18 @@
+up:
+  comments: 'Migrate NeosRulez.Bootstrap:GoogleMaps to NeosRulez.Bootstrap:Content.GoogleMaps'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'NeosRulez.Bootstrap:GoogleMaps'
+      transformations:
+        -
+          type: 'ChangeNodeType'
+          settings:
+            newType: 'NeosRulez.Bootstrap:Content.GoogleMaps'
+
+down:
+  comments: 'No down migration available'

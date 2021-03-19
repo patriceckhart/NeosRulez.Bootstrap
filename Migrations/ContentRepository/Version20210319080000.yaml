@@ -1,0 +1,44 @@
+up:
+  comments: 'Migrate NeosRulez.Bootstrap:Container to NeosRulez.Bootstrap:Content.Container'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'NeosRulez.Bootstrap:Container'
+      transformations:
+        -
+          type: 'ChangeNodeType'
+          settings:
+            newType: 'NeosRulez.Bootstrap:Content.Container'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'backgroundBsColor'
+            to: 'bgColor'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'textBsColor'
+            to: 'textColor'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'backgroundColor'
+            to: 'bgColorPicker'
+    -
+      filters:
+        -
+          type: 'NodeName'
+          settings:
+            nodeName: 'contentItems'
+      transformations:
+        -
+          type: 'RenameNode'
+          settings:
+            newName: 'nodes'
+
+down:
+  comments: 'No down migration available'

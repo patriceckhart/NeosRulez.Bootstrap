@@ -1,0 +1,23 @@
+up:
+  comments: 'Migrate NeosRulez.Bootstrap:Icon to NeosRulez.Bootstrap:Content.FontAwesomeIcon'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'NeosRulez.Bootstrap:Icon'
+      transformations:
+        -
+          type: 'ChangeNodeType'
+          settings:
+            newType: 'NeosRulez.Bootstrap:Content.FontAwesomeIcon'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'textBsColor'
+            to: 'textColor'
+
+down:
+  comments: 'No down migration available'

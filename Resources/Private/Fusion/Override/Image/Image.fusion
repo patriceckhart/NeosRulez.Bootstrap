@@ -7,7 +7,8 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     figureClassName = ${'d-flex' + (node.properties.alignment == 'left' ? ' justify-content-start' : (node.properties.alignment == 'right' ? ' justify-content-end' : (node.properties.alignment == 'center' ? ' justify-content-center' : false)))}
     figcaptionClassName = ${'figure-caption' + (node.properties.alignment == 'left' ? ' text-start' : (node.properties.alignment == 'right' ? ' text-end' : (node.properties.alignment == 'center' ? ' text-center' : false)))}
     lightbox = ${node.properties.lightbox ? true : false}
-    figureWrapperClassName = ${'figure-wrapper' + (this.lightbox ? ' lightbox' : false)}
+    block = ${node.properties.block ? ' w-100' : false}
+    figureWrapperClassName = ${'figure-wrapper' + (this.lightbox ? ' lightbox' : false) + (this.block ? ' w-100' : false)}
 
     allowCropping = false
     allowUpScaling = false
@@ -60,7 +61,8 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 prototype(NeosRulez.Bootstrap:Content.Image) < prototype(Neos.NodeTypes:Image)
 
 prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Component) {
-    imageClassName = ${node.properties.rounded ? 'figure-img img-fluid rounded' : 'figure-img img-fluid'}
+    block = ${node.properties.block ? ' w-100' : false}
+    imageClassName = ${node.properties.rounded ? 'figure-img img-fluid' + this.block + ' rounded' : 'figure-img img-fluid' + this.block}
 
     renderer = afx`
         <Neos.Neos:ImageTag attributes.class={props.imageClassName} asset={props.image} alt={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} />

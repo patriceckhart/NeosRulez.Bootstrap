@@ -1,0 +1,33 @@
+up:
+  comments: 'Migrate NeosRulez.Bootstrap:Button to NeosRulez.Bootstrap:Content.Button'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'NeosRulez.Bootstrap:Button'
+      transformations:
+        -
+          type: 'ChangeNodeType'
+          settings:
+            newType: 'NeosRulez.Bootstrap:Content.Button'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'style'
+            to: 'bgColor'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'fullwidth'
+            to: 'block'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'text'
+            to: 'title'
+
+down:
+  comments: 'No down migration available'

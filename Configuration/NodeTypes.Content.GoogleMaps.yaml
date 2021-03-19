@@ -55,8 +55,3 @@
           position: end
           hidden: 'ClientEval:node.properties.address || node.properties.zip || node.properties.city || node.properties.country ? true : false'
           editor: 'Neos.Neos/Inspector/Editors/CodeEditor'
-
-'NeosRulez.Bootstrap:GoogleMaps':
-  superTypes:
-    'NeosRulez.Bootstrap:Content.GoogleMaps': true
-  ui: ~

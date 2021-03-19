@@ -37,8 +37,8 @@ NeosRulez:
     navbarSticky: true
     navbarBackground: 'bg-white'
     navbarBreakpoint: 'lg'
-    navbarHover: true
-    clickableParent: false
+#    navbarHover: true
+#    clickableParent: false
   DynamicResources:
     site:
       resources:

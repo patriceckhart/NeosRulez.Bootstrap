@@ -1,4 +1,3 @@
-#crop = noCropping, cols = columns, nogutters= noGutters
 'NeosRulez.Bootstrap:Content.Gallery':
   superTypes:
     'NeosRulez.Bootstrap:Component.AbstractContent': true
@@ -62,8 +61,3 @@
         inspector:
           group: neosrulezBootstrap
           position: after columns
-
-'NeosRulez.Bootstrap:Gallery':
-  superTypes:
-    'NeosRulez.Bootstrap:Content.Gallery': true
-  ui: ~

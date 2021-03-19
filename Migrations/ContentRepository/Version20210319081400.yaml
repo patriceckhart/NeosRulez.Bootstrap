@@ -1,0 +1,33 @@
+up:
+  comments: 'Migrate NeosRulez.Bootstrap:Gallery to NeosRulez.Bootstrap:Content.Gallery'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      filters:
+        -
+          type: 'NodeType'
+          settings:
+            nodeType: 'NeosRulez.Bootstrap:Gallery'
+      transformations:
+        -
+          type: 'ChangeNodeType'
+          settings:
+            newType: 'NeosRulez.Bootstrap:Content.Gallery'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'crop'
+            to: 'noCropping'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'cols'
+            to: 'columns'
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'nogutters'
+            to: 'noGutters'
+
+down:
+  comments: 'No down migration available'
