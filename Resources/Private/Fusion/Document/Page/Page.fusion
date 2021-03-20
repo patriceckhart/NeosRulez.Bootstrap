@@ -11,7 +11,7 @@ prototype(Neos.Neos:Page) {
         NeosRulezBootstrapMetadata = Neos.Fusion:Component {
             renderer = afx`
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-                <Neos.Fusion:Tag tagName="link" attributes.rel="preload" @children="attributes.href" >
+                <Neos.Fusion:Tag tagName="link" attributes.rel="stylesheet" @children="attributes.href" >
                     <Neos.Fusion:ResourceUri path="resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-5.15.2-web/css/all.css" />
                 </Neos.Fusion:Tag>
             `

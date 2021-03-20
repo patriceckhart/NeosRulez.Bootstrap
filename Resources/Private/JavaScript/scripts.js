@@ -52,6 +52,12 @@ function resize() {
 
 $(document).ready(function(){
     resize();
+    if($('.navbar-cp').length) {
+        $('a.nav-link.dropdown-toggle').on('show.bs.dropdown', function() {
+            location.href = $(this).attr('href');
+            console.log($(this).attr('href'));
+        });
+    }
 });
 
 

@@ -1,0 +1,59 @@
+up:
+  comments: 'Migrate distance values (padding)'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      transformations:
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'pl-1'
+            to: 'ps-1'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'pl-2'
+            to: 'ps-2'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'pl-3'
+            to: 'ps-3'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'pl-4'
+            to: 'ps-4'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'pl-5'
+            to: 'ps-5'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'pr-1'
+            to: 'pe-1'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'pr-2'
+            to: 'pe-2'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'pr-3'
+            to: 'pe-3'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'pr-4'
+            to: 'pe-4'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'pr-5'
+            to: 'pe-5'
+
+down:
+  comments: 'No down migration available'

@@ -8,6 +8,17 @@
   .nav-link { white-space: nowrap; }
 }
 
+@media all and (min-width: 992px) {
+  .navbar-hover {
+    .nav-item {
+      .dropdown-menu { opacity:0; display:block; visibility: hidden; @include transition(0.3s); }
+      &:hover {
+        .dropdown-menu { @include transition(0.3s); opacity:1; visibility:visible; }
+      }
+    }
+  }
+}
+
 .figure-img { margin-bottom:0; }
 
 .neosrulez-bootstrap-content-gallery {

@@ -7,7 +7,7 @@ prototype(NeosRulez.Bootstrap:Component.Navbar) < prototype(Neos.Fusion:Componen
     navbarHover = ${Configuration.setting('NeosRulez.Bootstrap.navbarHover')}
     clickableParent = ${Configuration.setting('NeosRulez.Bootstrap.clickableParent')}
     navbarAlignment = ${Configuration.setting('NeosRulez.Bootstrap.navbarAlignment')}
-    navClass = ${(this.navbarFluid ? 'container-fluid' : 'container') + ' navbar' + (this.navbarBackground == 'bg-dark' || this.navbarBackground == 'bg-primary' || this.navbarBackground == 'bg-danger' ? ' navbar-dark' : ' navbar-light') + ' navbar-expand-lg'}
+    navClass = ${(this.navbarFluid ? 'container-fluid' : 'container') + ' navbar' + (this.navbarHover ? ' navbar-hover' : false) + (this.clickableParent ? ' navbar-cp' : false) + (this.navbarBackground == 'bg-dark' || this.navbarBackground == 'bg-primary' || this.navbarBackground == 'bg-danger' ? ' navbar-dark' : ' navbar-light') + ' navbar-expand-lg'}
 
     renderer = afx`
         <header id="navigation" class={props.headerClass} >

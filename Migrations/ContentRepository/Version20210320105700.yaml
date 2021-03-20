@@ -1,0 +1,59 @@
+up:
+  comments: 'Migrate distance values (margin)'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      transformations:
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'ml-1'
+            to: 'ms-1'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'ml-2'
+            to: 'ms-2'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'ml-3'
+            to: 'ms-3'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'ml-4'
+            to: 'ms-4'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'ml-5'
+            to: 'ms-5'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'mr-1'
+            to: 'me-1'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'mr-2'
+            to: 'me-2'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'mr-3'
+            to: 'me-3'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'mr-4'
+            to: 'me-4'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            from: 'mr-5'
+            to: 'me-5'
+
+down:
+  comments: 'No down migration available'

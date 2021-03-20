@@ -1,0 +1,26 @@
+prototype(NeosRulez.Bootstrap:Button) < prototype(NeosRulez.Bootstrap:Content.Button)
+prototype(NeosRulez.Bootstrap:AccordionItem) < prototype(NeosRulez.Bootstrap:Content.Accordion.AccordionItem) {
+    accordionItems = Neos.Neos:ContentCollection {
+        nodePath = 'nodes'
+    }
+}
+prototype(NeosRulez.Bootstrap:Accordion) < prototype(NeosRulez.Bootstrap:Content.Accordion) {
+    accordionItems = Neos.Neos:ContentCollection {
+        nodePath = 'nodes'
+        attributes.class = 'accordion'
+        attributes.id = ${'accordion_' + node.identifier}
+    }
+}
+prototype(NeosRulez.Bootstrap:Anchor) < prototype(NeosRulez.Bootstrap:Content.AnchorTarget)
+prototype(NeosRulez.Bootstrap:Container) < prototype(NeosRulez.Bootstrap:Content.Container) {
+    contentItems = Neos.Neos:ContentCollection {
+        nodePath = 'nodes'
+    }
+}
+prototype(NeosRulez.Bootstrap:Divider) < prototype(NeosRulez.Bootstrap:Content.Divider)
+prototype(NeosRulez.Bootstrap:Downloads) < prototype(NeosRulez.Bootstrap:Content.Downloads)
+prototype(NeosRulez.Bootstrap:Icon) < prototype(NeosRulez.Bootstrap:Content.FontAwesomeIcon)
+prototype(NeosRulez.Bootstrap:Gallery) < prototype(NeosRulez.Bootstrap:Content.Gallery)
+prototype(NeosRulez.Bootstrap:GoogleMaps) < prototype(NeosRulez.Bootstrap:Content.GoogleMaps)
+prototype(NeosRulez.Bootstrap:Vimeo) < prototype(NeosRulez.Bootstrap:Content.Vimeo)
+prototype(NeosRulez.Bootstrap:YouTube) < prototype(NeosRulez.Bootstrap:Content.YouTube)

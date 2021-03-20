@@ -1,0 +1,134 @@
+.border-left {
+  @extend .border-start;
+}
+.border-right {
+  @extend .border-end;
+}
+
+.rounded-left {
+  @extend .rounded-start;
+}
+.rounded-right {
+  @extend .rounded-end;
+}
+
+.text-left {
+  @extend .text-start;
+}
+.text-right {
+  @extend .text-end;
+}
+
+.float-left {
+  @extend .float-start;
+}
+.float-right {
+  @extend .float-end;
+}
+
+.ml-auto {
+  @extend .ms-auto;
+}
+.mr-auto {
+  @extend .me-auto;
+}
+.ml-1 {
+  @extend .ms-1;
+}
+.mr-1 {
+  @extend .me-1;
+}
+.ml-2 {
+  @extend .ms-2;
+}
+.mr-2 {
+  @extend .me-2;
+}
+.ml-3 {
+  @extend .ms-3;
+}
+.mr-3 {
+  @extend .me-3;
+}
+.ml-4 {
+  @extend .ms-4;
+}
+.mr-4 {
+  @extend .me-4;
+}
+.ml-5 {
+  @extend .ms-5;
+}
+.mr-5 {
+  @extend .me-5;
+}
+
+.pl-1 {
+  @extend .ps-1;
+}
+.pr-1 {
+  @extend .pe-1;
+}
+.pl-2 {
+  @extend .ps-2;
+}
+.pr-2 {
+  @extend .pe-2;
+}
+.pl-3 {
+  @extend .ps-3;
+}
+.pr-3 {
+  @extend .pe-3;
+}
+.pl-4 {
+  @extend .ps-4;
+}
+.pr-4 {
+  @extend .pe-4;
+}
+.pl-5 {
+  @extend .ps-5;
+}
+.pr-5 {
+  @extend .pe-5;
+}
+
+.ml-n1 {
+  @extend .ms-n1;
+}
+.mr-n1 {
+  @extend .me-n1;
+}
+.ml-n2 {
+  @extend .ms-n2;
+}
+.mr-n2 {
+  @extend .me-n2;
+}
+.ml-n3 {
+  @extend .ms-n3;
+}
+.mr-n3 {
+  @extend .me-n3;
+}
+.ml-n4 {
+  @extend .ms-n4;
+}
+.mr-n4 {
+  @extend .me-n4;
+}
+.ml-n5 {
+  @extend .ms-n5;
+}
+.mr-n5 {
+  @extend .me-n5;
+}
+
+.form-group {
+  @extend .mb-3;
+}
+
+.no-gutters {
+  @extend .g-0;
+}
