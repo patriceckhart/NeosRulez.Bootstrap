@@ -3,7 +3,10 @@
     <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
         <body>
             <trans-unit id="ui.label" xml:space="preserve">
-				<source>Trenner</source>
+				<source>Bild</source>
+			</trans-unit>
+            <trans-unit id="content.alternativeImageSizes" xml:space="preserve">
+				<source>Bild mit alternativen Bildgrößen</source>
 			</trans-unit>
             <trans-unit id="properties.block" xml:space="preserve">
 				<source>Volle Breite</source>

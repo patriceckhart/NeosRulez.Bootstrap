@@ -1,4 +1,5 @@
 'Neos.NodeTypes:Image':
+  label: "${q(node).property('alternativeImageSizes') ? I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Image:content.alternativeImageSizes') : I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Image:ui.label')}"
   superTypes:
     'NeosRulez.Bootstrap:Component.AbstractContent': true
     'NeosRulez.Bootstrap:Mixin.Lightbox': true
