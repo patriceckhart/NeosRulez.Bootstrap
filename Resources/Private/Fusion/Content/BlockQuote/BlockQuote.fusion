@@ -1,0 +1,17 @@
+prototype(NeosRulez.Bootstrap:Content.BlockQuote) < prototype(Neos.Neos:ContentComponent) {
+    inBackend = ${site.context.inBackend}
+    alignmentClass = ${node.properties.alignment == 'left' ? 'text-start' : node.properties.alignment == 'center' ? 'text-center' : node.properties.alignment == 'right' ? 'text-end' : false}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <figure class={props.alignmentClass} >
+                <blockquote class="blockquote">
+                    <Neos.Neos:Editable property="title" />
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    <Neos.Neos:Editable property="footer" block={false} />
+                </figcaption>
+            </figure>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

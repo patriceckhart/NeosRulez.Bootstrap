@@ -64,6 +64,10 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
     block = ${node.properties.block ? ' w-100' : false}
     imageClassName = ${node.properties.rounded ? 'figure-img img-fluid' + this.block + ' rounded' : 'figure-img img-fluid' + this.block}
 
+    originalAssetTitle = ${this.image.originalAsset.title}
+    originalAssetCopyrightnotice = ${this.image.originalAsset.copyrightnotice}
+    imageTitle = ${this.title ? this.title : (this.originalAssetTitle ? this.originalAssetTitle : (this.originalAssetCopyrightnotice ? this.originalAssetCopyrightnotice : false))}
+
     alternativeImageSizes = ${node.properties.alternativeImageSizes}
 
     srcsetMobile = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
@@ -83,7 +87,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
             <source @if.render={props.srcsetMobile} srcset={props.srcsetMobile} media="(max-width: 575px)" sizes="(min-width: 300px) 300px, 100vw" />
             <Neos.Neos:ImageTag attributes.class={props.imageClassName} asset={props.image} alt={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.srcset={props.srcsetDesktop} attributes.loading={props.loading} />
         </picture>
-        <Neos.Neos:ImageTag @if.render={!props.alternativeImageSizes} attributes.class={props.imageClassName} asset={props.image} alt={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.srcset={props.srcsetDesktop} attributes.loading={props.loading} />
+        <Neos.Neos:ImageTag @if.render={!props.alternativeImageSizes} attributes.class={props.imageClassName} asset={props.image} attributes.alt={props.alternativeText} attributes.title={props.imageTitle} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.srcset={props.srcsetDesktop} attributes.loading={props.loading} />
     `
 }
 
