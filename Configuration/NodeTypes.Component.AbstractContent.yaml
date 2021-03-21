@@ -6,9 +6,9 @@
     'NeosRulez.Bootstrap:Mixin.ExtraClass': true
     'NeosRulez.Bootstrap:Mixin.Distance': true
     'NeosRulez.Bootstrap:Mixin.Animation': true
-    'NeosRulez.Bootstrap:Mixin.Tooltip': true
     'NeosRulez.Bootstrap:Mixin.Link': true
     'NeosRulez.Bootstrap:Mixin.LinkTarget': true
+    'NeosRulez.Bootstrap:Mixin.HidingElements': true
   ui:
     group: neosrulezBootstrap
     inspector:

@@ -34,7 +34,10 @@
       "./flow node:migrate 20210319082100 --confirmation TRUE",
       "./flow node:migrate 20210319082300 --confirmation TRUE",
       "./flow node:migrate 20210319083000 --confirmation TRUE",
-      "./flow node:migrate 20210319083400 --confirmation TRUE"
+      "./flow node:migrate 20210319083400 --confirmation TRUE",
+      "./flow node:migrate 20210320105700 --confirmation TRUE",
+      "./flow node:migrate 20210320110100 --confirmation TRUE",
+      "./flow node:migrate 20210320110200 --confirmation TRUE"
     ],
     "post-install-cmd": [
       "./flow node:migrate 20210319073500 --confirmation TRUE",
@@ -51,7 +54,10 @@
       "./flow node:migrate 20210319082100 --confirmation TRUE",
       "./flow node:migrate 20210319082300 --confirmation TRUE",
       "./flow node:migrate 20210319083000 --confirmation TRUE",
-      "./flow node:migrate 20210319083400 --confirmation TRUE"
+      "./flow node:migrate 20210319083400 --confirmation TRUE",
+      "./flow node:migrate 20210320105700 --confirmation TRUE",
+      "./flow node:migrate 20210320110100 --confirmation TRUE",
+      "./flow node:migrate 20210320110200 --confirmation TRUE"
     ]
   }
 }

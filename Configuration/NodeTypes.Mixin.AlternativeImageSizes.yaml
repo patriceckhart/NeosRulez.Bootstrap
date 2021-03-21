@@ -1,0 +1,53 @@
+'NeosRulez.Bootstrap:Mixin.AlternativeImageSizes':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        alternativeImageSizes:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.Image:properties.alternativeImageSizes
+          icon: fas fa-mobile-alt
+          position: end
+  properties:
+    alternativeImageSizes:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: alternativeImageSizes
+          position: start
+    imageMobile:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.alternativeImageSizes ? false : true'
+          group: alternativeImageSizes
+          position: after alternativeImageSizes
+          editorOptions:
+            features:
+              crop: true
+            crop:
+              aspectRatio:
+                forceCrop: true
+                enableOriginal: true
+                allowCustom: true
+    imageTablet:
+      type: 'Neos\Media\Domain\Model\ImageInterface'
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.alternativeImageSizes ? false : true'
+          group: alternativeImageSizes
+          position: after imageMobile
+          editorOptions:
+            features:
+              crop: true
+            crop:
+              aspectRatio:
+                forceCrop: true
+                enableOriginal: true
+                allowCustom: true

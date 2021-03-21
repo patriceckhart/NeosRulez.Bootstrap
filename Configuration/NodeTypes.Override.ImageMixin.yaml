@@ -2,6 +2,7 @@
   abstract: true
   superTypes:
     'NeosRulez.Bootstrap:Mixin.LinkTarget': true
+    'NeosRulez.Bootstrap:Mixin.AlternativeImageSizes': true
   ui:
     inspector:
       groups:
@@ -27,40 +28,3 @@
         inspector:
           group: image
           position: 'after link'
-#    rounded:
-#      type: boolean
-#      defaultValue: false
-#      ui:
-#        label: NeosRulez.Bootstrap:Main:rounded
-#        reloadIfChanged: true
-#        inspector:
-#          group: 'image'
-#          position: 200
-#    link:
-#      ui:
-#        inspector:
-#          hidden: 'ClientEval:node.properties.lightbox ? true : false'
-#    lightbox:
-#      type: boolean
-#      defaultValue: false
-#      ui:
-#        label: NeosRulez.Bootstrap:Main:lightbox
-#        reloadIfChanged: true
-#        inspector:
-#          group: 'image'
-#          position: 250
-#    linktarget:
-#      ui:
-#        inspector:
-#          group: 'image'
-#          position: 'after link'
-#          hidden: 'ClientEval:node.properties.lightbox ? true : false'
-#    imgfullwidth:
-#      type: boolean
-#      defaultValue: true
-#      ui:
-#        label: NeosRulez.Bootstrap:Main:imgfullwidth
-#        reloadIfChanged: true
-#        inspector:
-#          group: 'image'
-#          position: 300

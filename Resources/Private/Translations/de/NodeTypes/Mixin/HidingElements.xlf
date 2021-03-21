@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="tabs.animation" xml:space="preserve">
+				<source>Sichtbarkeit nach Displaygrößen</source>
+			</trans-unit>
+            <trans-unit id="tabs.visibility" xml:space="preserve">
+				<source>Sichtbarkeit nach Displaygrößen</source>
+			</trans-unit>
+			<trans-unit id="groups.hidingElements" xml:space="preserve">
+				<source>Sichtbarkeit nach Displaygrößen</source>
+			</trans-unit>
+            <trans-unit id="properties.visibility" xml:space="preserve">
+				<source>Sichtbarkeit</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

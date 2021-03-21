@@ -2,14 +2,14 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
         <body>
-            <trans-unit id="ui.label" xml:space="preserve">
-				<source>Trenner</source>
-			</trans-unit>
-            <trans-unit id="properties.block" xml:space="preserve">
-				<source>Volle Breite</source>
-			</trans-unit>
             <trans-unit id="properties.alternativeImageSizes" xml:space="preserve">
 				<source>Alternative Bildgrößen</source>
+			</trans-unit>
+            <trans-unit id="properties.imageMobile" xml:space="preserve">
+				<source>Bild für Smartphones</source>
+			</trans-unit>
+            <trans-unit id="properties.imageTablet" xml:space="preserve">
+				<source>Bild für Tablets</source>
 			</trans-unit>
         </body>
     </file>

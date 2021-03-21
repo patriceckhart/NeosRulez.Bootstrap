@@ -1,0 +1,57 @@
+'NeosRulez.Bootstrap:Mixin.HidingElements':
+  abstract: true
+  ui:
+    inspector:
+      tabs:
+        visibility:
+          label: i18n
+          position: 11
+          icon: fas fa-eye-slash
+      groups:
+        hidingElements:
+          label: i18n
+          icon: fas fa-eye-slash
+          tab: visibility
+          position: 100
+  properties:
+    visibility:
+      defaultValue: ''
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: hidingElements
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'd-none':
+                label: 'Hidden on all'
+              'd-none d-sm-block':
+                label: 'Hidden only on xs'
+              'd-sm-none d-md-block':
+                label: 'Hidden only on sm'
+              'd-md-none d-lg-block':
+                label: 'Hidden only on md'
+              'd-lg-none d-xl-block':
+                label: 'Hidden only on lg'
+              'd-xl-none d-xxl-block':
+                label: 'Hidden only on xl'
+              'd-xxl-none':
+                label: 'Hidden only on xxl'
+#              'd-block':
+#                label: 'Visible on all'
+              'd-block d-sm-none':
+                label: 'Visible only on xs'
+              'd-none d-sm-block d-md-none':
+                label: 'Visible only on sm'
+              'd-none d-md-block d-lg-none':
+                label: 'Visible only on md'
+              'd-none d-lg-block d-xl-none':
+                label: 'Visible only on lg'
+              'd-none d-xl-block d-xxl-none':
+                label: 'Visible only on xl'
+              'd-none d-xxl-block':
+                label: 'Visible only on xxl'
+

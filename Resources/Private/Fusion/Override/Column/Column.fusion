@@ -1,7 +1,22 @@
 prototype(Neos.NodeTypes.ColumnLayouts:MultiColumn) < prototype(Neos.Neos:ContentComponent) {
-
+    inBackend = ${site.context.inBackend}
     attributes = ${'row' + divattributes + (q(node).property('nogutters') ? ' ' + ' no-gutters' : '' ) + (q(node).property('valignment') ? ' ' + q(node).property('valignment') : '' )}
     columns.iterationName = 'multiColumnIteration'
+
+    renderer = afx`
+        <div @if.render={props.inBackend} class="d-block">
+            <NeosRulez.Bootstrap:Component.MultiColumn.Renderer columns={props.columns} attributes={props.attributes} />
+        </div>
+        <NeosRulez.Bootstrap:Component.MultiColumn.Renderer @if.render={!props.inBackend} columns={props.columns} attributes={props.attributes} />
+    `
+}
+
+prototype(Neos.NodeTypes.ColumnLayouts:MultiColumnItem) < prototype(Neos.Neos:ContentCollection) {
+    @context.col = ${q(node).parent().property('breakpoint') ? 'col-' + q(node).parent().property('breakpoint') + '-' : 'col-'}
+    attributes.class = ${col + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+}
+
+prototype(NeosRulez.Bootstrap:Component.MultiColumn.Renderer) < prototype(Neos.Neos:ContentComponent) {
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
@@ -10,9 +25,4 @@ prototype(Neos.NodeTypes.ColumnLayouts:MultiColumn) < prototype(Neos.Neos:Conten
             </div>
         </NeosRulez.Bootstrap:Component.AbstractContent>
     `
-}
-
-prototype(Neos.NodeTypes.ColumnLayouts:MultiColumnItem) < prototype(Neos.Neos:ContentCollection) {
-    @context.col = ${q(node).parent().property('breakpoint') ? 'col-' + q(node).parent().property('breakpoint') + '-' : 'col-'}
-    attributes.class = ${col + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
 }

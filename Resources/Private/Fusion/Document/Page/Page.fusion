@@ -10,11 +10,23 @@ prototype(Neos.Neos:Page) {
     head {
         NeosRulezBootstrapMetadata = Neos.Fusion:Component {
             renderer = afx`
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <Neos.Fusion:Tag tagName="link" attributes.rel="stylesheet" @children="attributes.href" >
                     <Neos.Fusion:ResourceUri path="resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-5.15.2-web/css/all.css" />
                 </Neos.Fusion:Tag>
             `
+        }
+        NeosRulezBootstrapBackendCss = Neos.Fusion:Tag {
+            @position = 'end'
+            @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
+            tagName = 'link'
+            attributes {
+                media = 'all'
+                rel = 'stylesheet'
+                href = Neos.Fusion:ResourceUri {
+                    path = 'resource://NeosRulez.Bootstrap/Public/Styles/Backend/backend.css'
+                }
+            }
         }
 
         neosrulezBootstrapFormBuilderDateDropperJs.@if.contentIsPresent = ${q(documentNode).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof NeosRulez.Bootstrap.FormBuilder:Content.NodeBasedForm]').is()}
