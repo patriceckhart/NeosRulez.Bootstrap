@@ -26,9 +26,18 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
     parallaxDataAttribute = ${this.parallax ? 'scroll' : false}
     parallaxImage = ${this.parallax && this.backgroundImageUri && !this.inBackend ? this.backgroundImageUri : false}
 
-    visibilityClass = ${node.properties.visibility}
+    @context.visibilities = ${node.properties.visibility}
+    visibilityClasses = Neos.Fusion:Loop {
+        items = ${visibilities}
+        itemName = 'visibility'
+        iterationName = 'visibilityIterator'
+        itemRenderer = afx`
+            {visibilityIterator.isLast ? visibility : visibility + ' '}
+        `
+    }
+    visibilityClasses.@if.render = ${visibilities}
 
-    class = ${'neosrulez-bootstrap-content' + (this.nodetype ? ' ' + this.nodetype : false) + (this.containerType ? ' ' + this.containerType : false) + (this.marginClass ? this.marginClass : false) + (this.marginNegativeClass ? this.marginNegativeClass : false) + (this.paddingClass ? this.paddingClass : false) + (this.additionalClass ? ' ' + this.additionalClass : false) + (this.linkedClass ? this.linkedClass : false) + (this.valignmentClass ? this.valignmentClass : false) + (this.animation ? ' os-animation' : false) + (this.parallaxClass ? ' ' + this.parallaxClass : false) + (this.visibilityClass ? ' ' + (this.inBackend ? ' hiding' : this.visibilityClass) : false) + (this.cssClass ? ' ' + this.cssClass : false)}
+    class = ${'neosrulez-bootstrap-content' + (this.nodetype ? ' ' + this.nodetype : false) + (this.containerType ? ' ' + this.containerType : false) + (this.marginClass ? this.marginClass : false) + (this.marginNegativeClass ? this.marginNegativeClass : false) + (this.paddingClass ? this.paddingClass : false) + (this.additionalClass ? ' ' + this.additionalClass : false) + (this.linkedClass ? this.linkedClass : false) + (this.valignmentClass ? this.valignmentClass : false) + (this.animation ? ' os-animation' : false) + (this.parallaxClass ? ' ' + this.parallaxClass : false) + (this.visibilityClasses ? ' ' + (this.inBackend ? ' hiding' : this.visibilityClasses) : false) + (this.cssClass ? ' ' + this.cssClass : false)}
     id = ${'node__' + node.identifier}
 
     renderer = afx`

@@ -92,39 +92,39 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
 }
 
 prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < prototype(Neos.Fusion:Value) {
-    @context.Image = ${this.image}
-    mediatype = ${this.Image.originalAsset.mediatype}
+    @context.image = ${this.image}
+    mediatype = ${this.image.originalAsset.mediatype}
     webpImageUri = Neos.Neos:ImageUri {
-        asset = ${Image}
-        width = ${Image.width}
-        height = ${Image.height}
+        asset = ${image}
+        width = ${image.width}
+        height = ${image.height}
         allowUpScaling = true
         allowCropping = true
         format = 'webp'
     }
-    ImageUri = Neos.Neos:ImageUri {
-        asset = ${Image}
-        width = ${Image.width}
-        height = ${Image.height}
+    imageUri = Neos.Neos:ImageUri {
+        asset = ${image}
+        width = ${image.width}
+        height = ${image.height}
         allowUpScaling = true
         allowCropping = true
     }
     webpImageUri2x = Neos.Neos:ImageUri {
-        asset = ${Image}
-        width = ${Image.width * 2}
-        height = ${Image.height * 2}
+        asset = ${image}
+        width = ${image.width * 2}
+        height = ${image.height * 2}
         allowUpScaling = true
         allowCropping = true
         format = 'webp'
     }
-    ImageUri2x = Neos.Neos:ImageUri {
-        asset = ${Image.originalAsset}
-        width = ${Image.width * 2}
-        height = ${Image.height * 2}
+    imageUri2x = Neos.Neos:ImageUri {
+        asset = ${image.originalAsset}
+        width = ${image.width * 2}
+        height = ${image.height * 2}
         allowUpScaling = true
         allowCropping = true
     }
-    value = ${this.webpImageUri + ' 1x, ' + this.ImageUri + ' 1x, ' + this.webpImageUri2x + ' 2x, ' + this.ImageUri2x + ' 2x'}
+    value = ${this.webpImageUri + ' 1x, ' + this.imageUri + ' 1x, ' + this.webpImageUri2x + ' 2x, ' + this.imageUri2x + ' 2x'}
 }
 
 prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusion:Component) {

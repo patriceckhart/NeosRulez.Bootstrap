@@ -15,6 +15,7 @@
           position: 100
   properties:
     visibility:
+      type: array
       defaultValue: ''
       ui:
         label: i18n
