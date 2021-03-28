@@ -17,47 +17,5 @@
     "neos": {
       "package-key": "NeosRulez.Bootstrap"
     }
-  },
-  "scripts": {
-    "post-update-cmd": [
-      "./flow node:migrate 20210319073500 --confirmation TRUE",
-      "./flow node:migrate 20210319074700 --confirmation TRUE",
-      "./flow node:migrate 20210319075800 --confirmation TRUE",
-      "./flow node:migrate 20210319075900 --confirmation TRUE",
-      "./flow node:migrate 20210319080000 --confirmation TRUE",
-      "./flow node:migrate 20210319080500 --confirmation TRUE",
-      "./flow node:migrate 20210319080800 --confirmation TRUE",
-      "./flow node:migrate 20210319081000 --confirmation TRUE",
-      "./flow node:migrate 20210319081400 --confirmation TRUE",
-      "./flow node:migrate 20210319081800 --confirmation TRUE",
-      "./flow node:migrate 20210319082000 --confirmation TRUE",
-      "./flow node:migrate 20210319082100 --confirmation TRUE",
-      "./flow node:migrate 20210319082300 --confirmation TRUE",
-      "./flow node:migrate 20210319083000 --confirmation TRUE",
-      "./flow node:migrate 20210319083400 --confirmation TRUE",
-      "./flow node:migrate 20210320105700 --confirmation TRUE",
-      "./flow node:migrate 20210320110100 --confirmation TRUE",
-      "./flow node:migrate 20210320110200 --confirmation TRUE"
-    ],
-    "post-install-cmd": [
-      "./flow node:migrate 20210319073500 --confirmation TRUE",
-      "./flow node:migrate 20210319074700 --confirmation TRUE",
-      "./flow node:migrate 20210319075800 --confirmation TRUE",
-      "./flow node:migrate 20210319075900 --confirmation TRUE",
-      "./flow node:migrate 20210319080000 --confirmation TRUE",
-      "./flow node:migrate 20210319080500 --confirmation TRUE",
-      "./flow node:migrate 20210319080800 --confirmation TRUE",
-      "./flow node:migrate 20210319081000 --confirmation TRUE",
-      "./flow node:migrate 20210319081400 --confirmation TRUE",
-      "./flow node:migrate 20210319081800 --confirmation TRUE",
-      "./flow node:migrate 20210319082000 --confirmation TRUE",
-      "./flow node:migrate 20210319082100 --confirmation TRUE",
-      "./flow node:migrate 20210319082300 --confirmation TRUE",
-      "./flow node:migrate 20210319083000 --confirmation TRUE",
-      "./flow node:migrate 20210319083400 --confirmation TRUE",
-      "./flow node:migrate 20210320105700 --confirmation TRUE",
-      "./flow node:migrate 20210320110100 --confirmation TRUE",
-      "./flow node:migrate 20210320110200 --confirmation TRUE"
-    ]
   }
 }
