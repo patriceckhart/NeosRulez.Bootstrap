@@ -55,7 +55,6 @@ $(document).ready(function(){
     if($('.navbar-cp').length) {
         $('a.nav-link.dropdown-toggle').on('show.bs.dropdown', function() {
             location.href = $(this).attr('href');
-            console.log($(this).attr('href'));
         });
     }
 });

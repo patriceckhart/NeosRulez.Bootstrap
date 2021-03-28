@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Neos\Fusion\FusionObjects\AbstractFusionObject;
 
 class GoogleMapsFusion extends AbstractFusionObject {
-
+    
     /**
      * @return string
      */

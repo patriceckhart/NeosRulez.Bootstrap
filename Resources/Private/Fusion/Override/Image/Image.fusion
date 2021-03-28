@@ -61,6 +61,16 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 prototype(NeosRulez.Bootstrap:Content.Image) < prototype(Neos.NodeTypes:Image)
 
 prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Component) {
+    @context.image = ${this.image}
+    @context.imageMobile = ${this.imageMobile}
+    @context.imageTablet = ${this.imageTablet}
+
+    @context.allowCropping = ${this.allowCropping}
+    @context.allowUpScaling = ${this.allowUpScaling}
+
+    @context.width = ${this.width}
+    @context.height = ${this.height}
+
     block = ${node.properties.block ? ' w-100' : false}
     imageClassName = ${node.properties.rounded ? 'figure-img img-fluid' + this.block + ' rounded' : 'figure-img img-fluid' + this.block}
 
@@ -71,13 +81,25 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
     alternativeImageSizes = ${node.properties.alternativeImageSizes}
 
     srcsetMobile = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
-        image = ${node.properties.imageMobile}
+        image = ${image ? imageMobile : node.properties.imageMobile}
+        width = ${width}
+        height = ${height}
+        allowCropping = ${allowCropping ? allowCropping : true}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
     }
     srcsetTablet = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
-        image = ${node.properties.imageTablet}
+        image = ${image ? imageTablet : node.properties.imageTablet}
+        width = ${width}
+        height = ${height}
+        allowCropping = ${allowCropping ? allowCropping : true}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
     }
     srcsetDesktop = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
-        image = ${node.properties.image}
+        image = ${image ? image : node.properties.image}
+        width = ${width}
+        height = ${height}
+        allowCropping = ${allowCropping ? allowCropping : true}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
     }
 
     renderer = afx`
@@ -94,35 +116,42 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
 prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < prototype(Neos.Fusion:Value) {
     @context.image = ${this.image}
     mediatype = ${this.image.originalAsset.mediatype}
+
+    @context.allowCropping = ${this.allowCropping}
+    @context.allowUpScaling = ${this.allowUpScaling}
+
+    @context.width = ${this.width}
+    @context.height = ${this.height}
+
     webpImageUri = Neos.Neos:ImageUri {
         asset = ${image}
-        width = ${image.width}
-        height = ${image.height}
-        allowUpScaling = true
-        allowCropping = true
+        width = ${width ? width : image.width}
+        height = ${height ? height : image.height}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
+        allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
     }
     imageUri = Neos.Neos:ImageUri {
         asset = ${image}
-        width = ${image.width}
-        height = ${image.height}
-        allowUpScaling = true
-        allowCropping = true
+        width = ${width ? width : image.width}
+        height = ${height ? height : image.height}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
+        allowCropping = ${allowCropping ? allowCropping : true}
     }
     webpImageUri2x = Neos.Neos:ImageUri {
         asset = ${image}
-        width = ${image.width * 2}
-        height = ${image.height * 2}
-        allowUpScaling = true
-        allowCropping = true
+        width = ${width ? width * 2 : image.width * 2}
+        height = ${height ? height * 2 : image.height * 2}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
+        allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
     }
     imageUri2x = Neos.Neos:ImageUri {
         asset = ${image.originalAsset}
-        width = ${image.width * 2}
-        height = ${image.height * 2}
-        allowUpScaling = true
-        allowCropping = true
+        width = ${width ? width * 2 : image.width * 2}
+        height = ${height ? height * 2 : image.height * 2}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
+        allowCropping = ${allowCropping ? allowCropping : true}
     }
     value = ${this.webpImageUri + ' 1x, ' + this.imageUri + ' 1x, ' + this.webpImageUri2x + ' 2x, ' + this.imageUri2x + ' 2x'}
 }

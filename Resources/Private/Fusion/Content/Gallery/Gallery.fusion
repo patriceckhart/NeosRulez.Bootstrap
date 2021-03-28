@@ -24,9 +24,7 @@ prototype(NeosRulez.Bootstrap:Content.Gallery) < prototype(Neos.Neos:ContentComp
 }
 
 prototype(NeosRulez.Bootstrap:Content.Gallery.Item) < prototype(Neos.Fusion:Component) {
-
     allowCropping = ${this.noCropping ? false : true}
-
     originalAsset = ${this.image.originalAsset}
 
     renderer = afx`

@@ -41,8 +41,6 @@
                 label: 'Hidden only on xl'
               'd-xxl-none':
                 label: 'Hidden only on xxl'
-#              'd-block':
-#                label: 'Visible on all'
               'd-block d-sm-none':
                 label: 'Visible only on xs'
               'd-none d-sm-block d-md-none':

@@ -1,0 +1,49 @@
+'NeosRulez.Bootstrap:Content.Video':
+  superTypes:
+    'NeosRulez.Bootstrap:Component.AbstractContent': true
+  ui:
+    group: neosrulezBootstrapMultimedia
+    label: i18n
+    icon: fas fa-video
+    position: end
+    inspector:
+      groups:
+        neosrulezBootstrap:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.Video:ui.label
+          icon: fas fa-video
+  properties:
+    video:
+      type: Neos\Media\Domain\Model\Asset
+      ui:
+        label: i18n
+        inspector:
+          group: neosrulezBootstrap
+          position: 1
+    autoplay:
+      type: boolean
+      ui:
+        label: i18n
+        inspector:
+          group: neosrulezBootstrap
+          position: 2
+    controls:
+      type: boolean
+      ui:
+        label: i18n
+        inspector:
+          group: neosrulezBootstrap
+          position: 3
+    loop:
+      type: boolean
+      ui:
+        label: i18n
+        inspector:
+          group: neosrulezBootstrap
+          position: 4
+    muted:
+      type: boolean
+      ui:
+        label: i18n
+        inspector:
+          group: neosrulezBootstrap
+          position: 5

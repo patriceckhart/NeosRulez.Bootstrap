@@ -1,0 +1,21 @@
+prototype(NeosRulez.Bootstrap:Content.Video) < prototype(Neos.Neos:ContentComponent) {
+    video = ${node.properties.video}
+    autoplay = ${node.properties.autoplay ? true : false}
+    controls = ${node.properties.controls ? true : false}
+    loop = ${node.properties.loop ? true : false}
+    muted = ${node.properties.muted ? true : false}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <Neos.Fusion:Tag @if.render={props.video} tagName="video" attributes.width="100%" attributes.autoplay={props.autoplay} attributes.loop={props.loop} attributes.muted={props.muted} attributes.controls={props.controls} >
+                <Neos.Fusion:Tag tagName="source" @children="attributes.src" attributes.type="video/mp4">
+                    <Neos.Fusion:ResourceUri resource={props.video.resource} />
+                </Neos.Fusion:Tag>
+                Your browser does not support the video tag.
+            </Neos.Fusion:Tag>
+            <code @if.render={!props.video} >
+                {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Video:content.noVideo')}
+            </code>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}
