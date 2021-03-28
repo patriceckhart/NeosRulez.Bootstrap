@@ -81,23 +81,23 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
     alternativeImageSizes = ${node.properties.alternativeImageSizes}
 
     srcsetMobile = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
-        image = ${image ? imageMobile : node.properties.imageMobile}
-        width = ${width}
-        height = ${height}
+        image = ${imageMobile ? imageMobile : node.properties.imageMobile}
+        width = ${width ? width : node.properties.imageMobile.width}
+        height = ${height ? height : node.properties.imageMobile.height}
         allowCropping = ${allowCropping ? allowCropping : true}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
     }
     srcsetTablet = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
-        image = ${image ? imageTablet : node.properties.imageTablet}
-        width = ${width}
-        height = ${height}
+        image = ${imageTablet ? imageTablet : node.properties.imageTablet}
+        width = ${width ? width : node.properties.imageTablet.width}
+        height = ${height ? height : node.properties.imageTablet.height}
         allowCropping = ${allowCropping ? allowCropping : true}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
     }
     srcsetDesktop = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
         image = ${image ? image : node.properties.image}
-        width = ${width}
-        height = ${height}
+        width = ${width ? width : node.properties.image.width}
+        height = ${height ? height : node.properties.image.height}
         allowCropping = ${allowCropping ? allowCropping : true}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
     }
