@@ -6,7 +6,8 @@
     "neos/neos": "*",
     "neos/nodetypes": "*",
     "shel/neos-colorpicker": "^1.3",
-    "neosrulez/bootstrap-formbuilder": "*"
+    "neosrulez/bootstrap-formbuilder": "*",
+    "neosrulez/countrydatasource": "^1.0"
   },
   "autoload": {
     "psr-4": {

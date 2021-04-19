@@ -1,7 +1,7 @@
 'NeosRulez.Bootstrap:Content.GoogleMaps':
   superTypes:
     'NeosRulez.Bootstrap:Component.AbstractContent': true
-    'NeosRulez.Bootstrap:Mixin.Country': true
+    'NeosRulez.CountryDataSource:Mixin.Country': true
   ui:
     group: neosrulezBootstrap
     label: i18n

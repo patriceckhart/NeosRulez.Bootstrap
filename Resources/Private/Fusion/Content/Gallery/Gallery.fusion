@@ -2,7 +2,7 @@ prototype(NeosRulez.Bootstrap:Content.Gallery) < prototype(Neos.Neos:ContentComp
     assets = ${node.properties.assets}
     lightbox = ${node.properties.lightbox ? true : false}
     noGutters = ${node.properties.noGutters ? ' g-0' : false}
-    lightboxClassName = ${this.lightbox ? 'row' + this.noGutters + ' lightbox' : 'row' + this.noGutters}
+    lightboxClassName = ${this.lightbox ? 'gallery-row row' + this.noGutters + ' lightbox' : 'gallery-row row' + this.noGutters}
     noCropping = ${node.properties.noCropping}
     columns = ${'col-6 ' + (node.properties.columns == '4' ? 'col-md-3' : node.properties.columns == '3' ? 'col-md-4' : node.properties.columns == '2' ? 'col-md-6' : 'col')}
     galleryId = ${'lightbox__' + node.identifier}
