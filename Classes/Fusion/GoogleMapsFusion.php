@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Neos\Fusion\FusionObjects\AbstractFusionObject;
 
 class GoogleMapsFusion extends AbstractFusionObject {
-    
+
     /**
      * @return string
      */
@@ -16,7 +16,6 @@ class GoogleMapsFusion extends AbstractFusionObject {
         $city = $this->fusionValue('city');
         $country = $this->fusionValue('country');
         $source = $this->fusionValue('source');
-        $result = false;
         if(!empty($source)) {
             $result = $this->getStringBetween($source, 'src="', '"');
         } else {
