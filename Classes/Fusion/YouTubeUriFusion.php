@@ -8,19 +8,34 @@ use Neos\Fusion\FusionObjects\AbstractFusionObject;
 class YouTubeUriFusion extends AbstractFusionObject {
 
     /**
+     * @var array
+     */
+    protected $settings;
+
+    /**
+     * @param array $settings
+     * @return void
+     */
+    public function injectSettings(array $settings) {
+        $this->settings = $settings;
+    }
+
+
+    /**
      * @return string
      */
     public function evaluate() {
         $link = $this->fusionValue('link');
         $result = false;
         if($link) {
+            $youTubeUri = $this->settings['useYouTubeNoCookie'] ? 'https://www.youtube-nocookie.com' : 'https://www.youtube.com';
             if (strpos($link, 'watch') !== false) {
                 $youtubeId = substr($link, strpos($link, "=") + 1);
-                $result = 'https://www.youtube.com/embed/'.$youtubeId;
+                $result = $youTubeUri . '/embed/'.$youtubeId;
             }
             if (strpos($link, 'youtu.be') !== false) {
                 $youtube_id = str_replace('https://youtu.be/', '', $link);
-                $result = 'https://www.youtube.com/embed/'.$youtube_id;
+                $result = $youTubeUri . '/embed/'.$youtube_id;
             }
         }
         return $result;

@@ -39,6 +39,7 @@ NeosRulez:
     navbarBreakpoint: 'lg'
     navbarHover: true
     clickableParent: true
+    useYouTubeNoCookie: true
 #  DynamicResources:
 #    site:
 #      resources:
