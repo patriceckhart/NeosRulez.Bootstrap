@@ -7,11 +7,16 @@ prototype(NeosRulez.Bootstrap:Content.GoogleMaps) < prototype(Neos.Neos:ContentC
         source = ${node.properties.source}
     }
 
-    src = ${this.location && !node.properties.source ? 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAEpcE4tniLTPaCDTm9e9-7h9dPBQVLzbw&q=' + this.location : false}
+    gMapsApiKey = ${Configuration.setting('NeosRulez.Bootstrap.googleMapsApiKey')}
+
+    src = ${this.location && !node.properties.source ? 'https://www.google.com/maps/embed/v1/place?key=' + this.gMapsApiKey + '&q=' +this.location : false}
     embedSrc = ${this.location && node.properties.source ? this.location : false}
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
+            <code @if.render={!props.gMapsApiKey} >
+                {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.GoogleMaps:content.noApiKey')}
+            </code>
             <div @if.render={props.src} class="ratio ratio-16x9">
                 <iframe src={props.src} allowfullscreen></iframe>
             </div>

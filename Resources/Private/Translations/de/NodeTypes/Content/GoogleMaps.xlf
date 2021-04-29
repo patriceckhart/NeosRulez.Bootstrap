@@ -23,6 +23,9 @@
 			<trans-unit id="content.noProperties" xml:space="preserve">
 				<source>Adressdaten oder Einbettungscode im Inspector definieren</source>
 			</trans-unit>
+            <trans-unit id="content.noApiKey" xml:space="preserve">
+				<source>Ein GoogleMaps Api Key wird benötigt. (Settings.yaml)</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>
