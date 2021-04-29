@@ -4,3 +4,13 @@
   ui:
     group: general
     position: 400
+  properties:
+    showSource:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: NeosRulez.Bootstrap:NodeTypes.Content.Html:properties.showSource
+        reloadIfChanged: true
+        inspector:
+          group: html
+          position: end
