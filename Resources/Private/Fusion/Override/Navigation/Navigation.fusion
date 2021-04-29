@@ -6,8 +6,20 @@ prototype(Neos.NodeTypes.Navigation:Navigation) < prototype(Neos.Neos:ContentCom
         startingPoint = null
         lastLevel = null
         filter = 'Neos.Neos:Document'
-        renderHiddenInIndex = false
+        renderHiddenInIndex = ${node.properties.showHidden}
         itemCollection = null
+
+        startingPoint = ${q(node).property('startingPoint') ? q(node).property('startingPoint') : documentNode}
+
+        itemCollection = ${Array.isEmpty(q(node).property('selection') ? q(node).property('selection') : {}) ? null : q(node).property('selection')}
+
+        entryLevel = ${q(node).property('startLevel')}
+        entryLevel.@process.1 = ${String.toInteger(value)}
+
+        maximumLevels = ${q(node).property('maximumLevels')}
+        maximumLevels.@process.1 = ${String.toInteger(value)}
+
+        attributes.class.@process < prototype(Neos.Neos:Content).attributes.class.@process
 
         node = ${node}
 
@@ -48,10 +60,12 @@ prototype(Neos.NodeTypes.Navigation:Navigation) < prototype(Neos.Neos:ContentCom
         @cache {
             mode = 'cached'
             entryIdentifier {
+                node = ${node}
                 documentNode = ${documentNode}
             }
             entryTags {
-                1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+                1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Content', node)}
+                2 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
             }
         }
 

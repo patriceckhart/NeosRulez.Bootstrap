@@ -4,3 +4,13 @@
   ui:
     group: general
     position: end
+  properties:
+    showHidden:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: NeosRulez.Bootstrap:NodeTypes.Content.Navigation:properties.showHidden
+        reloadIfChanged: true
+        inspector:
+          group: options
+          position: end
