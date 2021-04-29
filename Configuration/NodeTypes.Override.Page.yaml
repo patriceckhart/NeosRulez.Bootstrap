@@ -1,14 +1,3 @@
 'Neos.Neos:Document':
-  ui:
-    inspector:
-      groups:
-        neosrulezBootstrap:
-          label: NeosRulez.Bootstrap:NodeTypes.Content.FontAwesomeIcon:ui.label
-          icon: fas fa-icons
-          position: end
   superTypes:
-    'NeosRulez.Bootstrap:Mixin.FontAwesomeIcon': true
-    'NeosRulez.Bootstrap:Mixin.FontAwesomeIcon.OnlyIcon': true
-  properties:
-    faiconSize:
-      ui: ~
+    'NeosRulez.Bootstrap:Mixin.Page': true
