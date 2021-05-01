@@ -16,3 +16,23 @@
         inspector:
           group: column
           position: after nogutters
+    breakpoint:
+      defaultValue: 'md'
+      ui:
+        label: Breakpoint
+        inspector:
+          group: column
+          position: end
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'sm':
+                label: sm
+              'md':
+                label: md
+              'lg':
+                label: lg
+              'xl':
+                label: xl
