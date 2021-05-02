@@ -12,6 +12,8 @@
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:
             values:
+              '':
+                label: ''
               'align-items-start':
                 label: i18n
               'align-items-center':

@@ -12,6 +12,7 @@
         inspector:
           group: column
     valignment:
+      defaultValue: ''
       ui:
         inspector:
           group: column
