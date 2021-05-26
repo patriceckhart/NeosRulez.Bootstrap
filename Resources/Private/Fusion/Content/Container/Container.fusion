@@ -7,7 +7,7 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
         asset = ${node.properties.backgroundImage}
         width = 2000
         height = 800
-        allowCropping = true
+        allowCropping = false
         allowUpScaling = true
     }
 
