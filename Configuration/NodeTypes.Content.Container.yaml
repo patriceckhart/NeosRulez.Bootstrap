@@ -7,6 +7,7 @@
     'NeosRulez.Bootstrap:Mixin.VerticalAlignment': true
     'NeosRulez.Bootstrap:Mixin.Link': true
     'NeosRulez.Bootstrap:Mixin.LinkTarget': true
+    'Neos.Neos:ContentCollection': true
   ui:
     group: structure
     label: i18n
@@ -144,6 +145,3 @@
       ui:
         inspector:
           hidden: 'ClientEval:node.properties.parallax || node.properties.videourl ? true : false'
-  childNodes:
-    nodes:
-      type: 'Neos.Neos:ContentCollection'

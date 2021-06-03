@@ -24,9 +24,9 @@ Neos:
         dataTypes:
           'Neos\Media\Domain\Model\ImageInterface':
             editorOptions:
-              accept: 'image/png,image/jpeg,image/gif'
+              accept: 'image/png,image/jpeg,image/gif,image/svg+xml'
               features:
-                resize: true
+                resize: false
 NeosRulez:
   Bootstrap:
     headerLogoPath: 'Images/Logo.svg'

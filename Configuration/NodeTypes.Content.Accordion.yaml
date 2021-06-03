@@ -2,6 +2,7 @@
 'NeosRulez.Bootstrap:Content.Accordion':
   superTypes:
     'NeosRulez.Bootstrap:Component.AbstractContent': true
+    'Neos.Neos:ContentCollection': true
   ui:
     group: neosrulezBootstrap
     label: i18n
@@ -12,10 +13,7 @@
         neosrulezBootstrap:
           label: NeosRulez.Bootstrap:NodeTypes.Content.Accordion:ui.label
           icon: fas fa-list-ul
-  childNodes:
-    nodes:
-      type: 'Neos.Neos:ContentCollection'
-      constraints:
-        nodeTypes:
-          '*': false
-          'NeosRulez.Bootstrap:Content.Accordion.AccordionItem': true
+  constraints:
+    nodeTypes:
+      '*': false
+      'NeosRulez.Bootstrap:Content.Accordion.AccordionItem': true

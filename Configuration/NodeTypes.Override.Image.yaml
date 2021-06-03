@@ -4,6 +4,7 @@
     'NeosRulez.Bootstrap:Component.AbstractContent': true
     'NeosRulez.Bootstrap:Mixin.Lightbox': true
     'NeosRulez.Bootstrap:Mixin.Rounded': true
+    'NeosRulez.Bootstrap:Mixin.LinkTarget': true
   ui:
     group: general
     position: 300
@@ -21,6 +22,7 @@
       ui:
         inspector:
           hidden: 'ClientEval:node.properties.lightbox ? true : false'
+          position: after link
     rounded:
       ui:
         inspector:

@@ -1,7 +1,6 @@
 'Neos.NodeTypes.BaseMixins:ImageMixin':
   abstract: true
   superTypes:
-    'NeosRulez.Bootstrap:Mixin.LinkTarget': true
     'NeosRulez.Bootstrap:Mixin.AlternativeImageSizes': true
   ui:
     inspector:
@@ -9,7 +8,7 @@
         image:
           label: i18n
           position: 5
-          icon: 'icon-image'
+          icon: icon-image
   properties:
     image:
       type: 'Neos\Media\Domain\Model\ImageInterface'
@@ -23,8 +22,31 @@
                 forceCrop: true
                 enableOriginal: true
                 allowCustom: true
-    linktarget:
+    imageWidth:
+      type: string
       ui:
+        label: NeosRulez.Bootstrap:NodeTypes.Mixin.ImageMixin:properties.imageWidth
+        reloadIfChanged: true
         inspector:
+          hidden: 'ClientEval:node.properties.imageHeight ? true : false'
           group: image
-          position: 'after link'
+          position: after image
+          editorOptions:
+            placeholder: NeosRulez.Bootstrap:NodeTypes.Mixin.ImageMixin:properties.imageWidth.placeholder
+            maxlength: 4
+      validation:
+        'Neos.Neos/Validation/IntegerValidator': []
+    imageHeight:
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:NodeTypes.Mixin.ImageMixin:properties.imageHeight
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.imageWidth ? true : false'
+          group: image
+          position: after image
+          editorOptions:
+            placeholder: NeosRulez.Bootstrap:NodeTypes.Mixin.ImageMixin:properties.imageHeight.placeholder
+            maxlength: 4
+      validation:
+        'Neos.Neos/Validation/IntegerValidator': []

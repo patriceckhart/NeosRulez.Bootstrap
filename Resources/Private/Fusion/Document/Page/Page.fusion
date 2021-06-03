@@ -28,8 +28,6 @@ prototype(Neos.Neos:Page) {
                 }
             }
         }
-
-        neosrulezBootstrapFormBuilderDateDropperJs.@if.contentIsPresent = ${q(documentNode).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof NeosRulez.Bootstrap.FormBuilder:Content.NodeBasedForm]').is()}
     }
     NeosRulezBootstrapTopAnchorLink = NeosRulez.Bootstrap:Component.TopAnchorLink
 }

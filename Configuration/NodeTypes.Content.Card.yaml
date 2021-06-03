@@ -4,6 +4,7 @@
     'NeosRulez.Bootstrap:Mixin.BackgroundColor': true
     'NeosRulez.Bootstrap:Mixin.TextColor': true
     'NeosRulez.Bootstrap:Mixin.BorderColor': true
+    'Neos.Neos:ContentCollection': true
   ui:
     group: neosrulezBootstrap
     label: i18n
@@ -21,15 +22,12 @@
       defaultValue: ''
     borderColor:
       defaultValue: ''
-  childNodes:
-    nodes:
-      type: 'Neos.Neos:ContentCollection'
-      constraints:
-        nodeTypes:
-          'NeosRulez.Bootstrap:Content.Card': false
-          'NeosRulez.Bootstrap:Content.Accordion': false
-          'NeosRulez.Bootstrap:Content.Container': false
-          'NeosRulez.Bootstrap:Content.CardColumn': false
+  constraints:
+    nodeTypes:
+      'NeosRulez.Bootstrap:Content.Card': false
+      'NeosRulez.Bootstrap:Content.Accordion': false
+      'NeosRulez.Bootstrap:Content.Container': false
+      'NeosRulez.Bootstrap:Content.CardColumn': false
 
 'NeosRulez.Bootstrap:Card':
   superTypes:
