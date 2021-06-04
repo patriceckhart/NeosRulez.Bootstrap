@@ -17,7 +17,8 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
 
     bgColorPicker = ${node.properties.bgColorPicker ? node.properties.bgColorPicker : false}
 
-    styleAttribute = ${this.backgroundImageUri ? (!this.transparency ? 'background: url(' + this.backgroundImageUri + ') no-repeat ' + this.backgroundPosition + '; ' : false) + (!this.transparency ? (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : false ) + '-webkit-background-size: ' + this.backgroundSize +'; -moz-background-size: ' + this.backgroundSize +'; -o-background-size: ' + this.backgroundSize +'; background-size: ' + this.backgroundSize + ';' : false) : (!this.transparency ? (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : false ) : false)}
+    hasHtml5Video = ${node.properties.video}
+    styleAttribute = ${this.backgroundImageUri ? (!this.transparency ? 'background: url(' + this.backgroundImageUri + ') no-repeat ' + this.backgroundPosition + '; ' : false) + (!this.transparency ? (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : false ) + '-webkit-background-size: ' + this.backgroundSize +'; -moz-background-size: ' + this.backgroundSize +'; -o-background-size: ' + this.backgroundSize +'; background-size: ' + this.backgroundSize + ';' : false) : (!this.transparency ? (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : false ) : false) + (this.hasHtml5Video ? 'overflow:hidden;' : '')}
 
     bgColor = ${node.properties.bgColor ? 'bg-' + node.properties.bgColor : false}
     textColor = ${node.properties.textColor ? 'text-' + node.properties.textColor : false}
@@ -34,6 +35,7 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
             </div>
             <NeosRulez.Bootstrap:Component.Container.Transparency @if.render={props.transparency} transparency={props.transparency} backgroundImageUri={props.backgroundImageUri} backgroundPosition={props.backgroundPosition} backgroundSize={props.backgroundSize} bgColorPicker={props.bgColorPicker} />
             <NeosRulez.Bootstrap:Component.Container.VideoBackground />
+            <NeosRulez.Bootstrap:Component.Container.Html5VideoBackground />
         </NeosRulez.Bootstrap:Component.AbstractContent>
     `
 }
@@ -67,4 +69,26 @@ prototype(NeosRulez.Bootstrap:Component.Container.VideoBackground) < prototype(N
         </div>
     `
     renderer.@if.condition = ${node.properties.videourl}
+}
+
+prototype(NeosRulez.Bootstrap:Component.Container.Html5VideoBackground) < prototype(Neos.Fusion:Component) {
+
+    platformClass = ${this.video.platform == 'vimeo' ? 'ratio ratio-4x3' : 'ratio ratio-16x9'}
+
+    video = ${node.properties.video}
+
+    renderer = afx`
+        <div @if.render={props.video} class="video-background">
+            <div class="video-foreground">
+                <div class="ratio ratio-16x9" >
+                    <Neos.Fusion:Tag @if.render={props.video} tagName="video" attributes.width="100%" attributes.autoplay="true" attributes.loop="true" attributes.muted="true" attributes.controls="false" >
+                        <Neos.Fusion:Tag tagName="source" @children="attributes.src" attributes.type="video/mp4">
+                            <Neos.Fusion:ResourceUri resource={props.video.resource} />
+                        </Neos.Fusion:Tag>
+                        Your browser does not support the video tag.
+                    </Neos.Fusion:Tag>
+                </div>
+            </div>
+        </div>
+    `
 }

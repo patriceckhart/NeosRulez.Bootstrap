@@ -14,6 +14,9 @@
             <trans-unit id="properties.videourl" xml:space="preserve">
                 <source>YouTube oder Vimeo URL</source>
             </trans-unit>
+            <trans-unit id="properties.video" xml:space="preserve">
+                <source>Video</source>
+            </trans-unit>
             <trans-unit id="properties.backgroundImage" xml:space="preserve">
 				<source>Hintergrundbild</source>
 			</trans-unit>

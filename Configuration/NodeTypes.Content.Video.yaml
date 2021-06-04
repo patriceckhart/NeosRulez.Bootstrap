@@ -19,6 +19,9 @@
         inspector:
           group: neosrulezBootstrap
           position: 1
+          editorOptions:
+            constraints:
+              mediaTypes: [ '.mp4', '.ogg', '.webm' ]
     autoplay:
       type: boolean
       ui:

@@ -30,6 +30,9 @@ function adjustBgVideo() {
     if($('.video-foreground').length) {
         $('.video-foreground').each(function() {
             $iFrame = $(this).find('iframe');
+            if($iFrame.length == 0) {
+                $iFrame = $(this).find('video');
+            }
             $iFrameWidth = $iFrame.width();
             $iFrameHeight = $iFrame.height();
             $iFrameParent = $(this).parent().parent().parent().parent();
