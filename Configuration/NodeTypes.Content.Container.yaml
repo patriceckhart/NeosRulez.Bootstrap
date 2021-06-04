@@ -26,12 +26,12 @@
       defaultValue: 'container'
       ui:
         inspector:
-          group: neosrulezBootstrap
+          group: neosrulezBootstrapContainer
           position: start
     class:
       ui:
         inspector:
-          group: neosrulezBootstrap
+          group: neosrulezBootstrapContainer
           position: after containerType
     parallax:
       type: boolean
