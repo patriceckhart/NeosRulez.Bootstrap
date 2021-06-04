@@ -16,6 +16,7 @@
       type: Neos\Media\Domain\Model\Asset
       ui:
         label: i18n
+        reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
           position: 1
@@ -26,6 +27,7 @@
       type: boolean
       ui:
         label: i18n
+        reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
           position: 2
@@ -33,6 +35,7 @@
       type: boolean
       ui:
         label: i18n
+        reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
           position: 3
@@ -40,6 +43,7 @@
       type: boolean
       ui:
         label: i18n
+        reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
           position: 4
@@ -47,6 +51,7 @@
       type: boolean
       ui:
         label: i18n
+        reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
           position: 5

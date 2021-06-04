@@ -58,6 +58,7 @@
       type: Neos\Media\Domain\Model\Asset
       ui:
         label: i18n
+        reloadPageIfChanged: true
         inspector:
           hidden: 'ClientEval:node.properties.backgroundImage || node.properties.videourl ? true : false'
           group: neosrulezBootstrap
