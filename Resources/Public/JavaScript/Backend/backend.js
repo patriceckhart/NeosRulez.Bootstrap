@@ -4,7 +4,7 @@ var neosIsReady = (callback) => {
 }
 neosIsReady(() => {
     setInterval(function(){
-        document.querySelectorAll('.neos-nodetypes-columnlayouts-twocolumn, .row').forEach(columnNodeType => {
+        document.querySelectorAll('.neos-nodetypes-columnlayouts-twocolumn, .neos-nodetypes-columnlayouts-threecolumn, .neos-nodetypes-columnlayouts-fourcolumn, .row').forEach(columnNodeType => {
             columnNodeType.querySelectorAll('.neos-contentcollection').forEach(contentCollection => {
                 var children = contentCollection.innerHTML.trim();
                 if(!children) {
