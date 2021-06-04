@@ -30,4 +30,15 @@ prototype(Neos.Neos:Page) {
         }
     }
     NeosRulezBootstrapTopAnchorLink = NeosRulez.Bootstrap:Component.TopAnchorLink
+    NeosRulezBootstrapBackendJs = Neos.Fusion:Tag {
+        @position = 'end'
+        @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
+        tagName = 'script'
+        attributes {
+            rel = 'text/javascript'
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/Backend/backend.js'
+            }
+        }
+    }
 }
