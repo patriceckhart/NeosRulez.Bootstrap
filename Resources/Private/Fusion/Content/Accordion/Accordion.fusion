@@ -7,7 +7,7 @@ prototype(NeosRulez.Bootstrap:Content.Accordion) < prototype(Neos.Neos:ContentCo
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
-            <div class="accordion" id={props.accordionId} >
+            <div class="accordion accordion-flush" id={props.accordionId} >
                 {props.nodes}
             </div>
         </NeosRulez.Bootstrap:Component.AbstractContent>
