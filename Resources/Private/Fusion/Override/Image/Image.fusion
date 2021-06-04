@@ -14,9 +14,11 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     allowUpScaling = false
     image = ${q(node).property("image") ? q(node).property("image") : false}
 
+    autoWidth = NeosRulez.Bootstrap:Helper.ImageAutoWidth
+
     imageHeight = ${node.properties.imageHeight ? node.properties.imageHeight : false}
-    width = ${node.properties.imageWidth ? node.properties.imageWidth : (this.imageHeight ? String.toInteger((String.toInteger(this.image.width * this.imageHeight)) / String.toInteger(this.image.height)) : this.defaultWidth)}
-    height = ${node.properties.imageWidth ? String.toInteger((String.toInteger(this.image.height * this.width)) / String.toInteger(this.image.width)) : (this.imageHeight ? this.imageHeight : this.defaultHeight)}
+    width = ${node.properties.imageWidth ? node.properties.imageWidth : this.autoWidth ? this.autoWidth : (this.imageHeight ? String.toInteger((String.toInteger(this.image.width * this.imageHeight)) / String.toInteger(this.image.height)) : this.defaultWidth)}
+    height = ${node.properties.imageWidth ? String.toInteger((String.toInteger(this.image.height * this.width)) / String.toInteger(this.image.width)) : (this.imageHeight ? this.imageHeight : (this.autoWidth ? String.toInteger((String.toInteger(this.image.height * this.autoWidth)) / String.toInteger(this.image.width)) : this.defaultHeight))}
 
     dummyImage = Neos.Fusion:ResourceUri {
         path = 'resource://Neos.Neos/Public/Images/dummy-image.svg'
@@ -189,4 +191,12 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusi
             <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} />
         </Neos.Fusion:Tag>
     `
+}
+
+prototype(NeosRulez.Bootstrap:Helper.ImageAutoWidth) < prototype(Neos.Fusion:Value) {
+    isTwoColumn = ${q(node).parentsUntil('[instanceof Neos.NodeTypes.ColumnLayouts:TwoColumn]').count() == 1 ? true : false}
+    isThreeColumn = ${q(node).parentsUntil('[instanceof Neos.NodeTypes.ColumnLayouts:ThreeColumn]').count() == 1 ? true : false}
+    isFourColumn = ${q(node).parentsUntil('[instanceof Neos.NodeTypes.ColumnLayouts:FourColumn]').count() == 1 ? true : false}
+    width = ${this.isTwoColumn ? 660 : (this.isThreeColumn ? 440 : (this.isFourColumn ? 330 : false))}
+    value = ${this.width}
 }
