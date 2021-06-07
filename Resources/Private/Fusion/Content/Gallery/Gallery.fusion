@@ -25,10 +25,9 @@ prototype(NeosRulez.Bootstrap:Content.Gallery) < prototype(Neos.Neos:ContentComp
 
 prototype(NeosRulez.Bootstrap:Content.Gallery.Item) < prototype(Neos.Fusion:Component) {
     allowCropping = ${this.noCropping ? false : true}
-    originalAsset = ${this.image.originalAsset}
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.lightbox} image={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} />
-        <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} image={props.image} asset={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} galleryId={props.galleryId} />
+        <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} image={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} galleryId={props.galleryId} />
     `
 }

@@ -17,7 +17,7 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     autoWidth = NeosRulez.Bootstrap:Helper.ImageAutoWidth
 
     imageHeight = ${node.properties.imageHeight ? node.properties.imageHeight : false}
-    width = ${node.properties.imageWidth ? node.properties.imageWidth : this.autoWidth ? this.autoWidth : (this.imageHeight ? String.toInteger((String.toInteger(this.image.width * this.imageHeight)) / String.toInteger(this.image.height)) : this.defaultWidth)}
+    width = ${node.properties.imageWidth ? node.properties.imageWidth : (this.imageHeight ? String.toInteger((String.toInteger(this.image.width * this.imageHeight)) / String.toInteger(this.image.height)) : this.autoWidth ? this.autoWidth : this.defaultWidth)}
     height = ${node.properties.imageWidth ? String.toInteger((String.toInteger(this.image.height * this.width)) / String.toInteger(this.image.width)) : (this.imageHeight ? this.imageHeight : (this.autoWidth ? String.toInteger((String.toInteger(this.image.height * this.autoWidth)) / String.toInteger(this.image.width)) : this.defaultHeight))}
 
     dummyImage = Neos.Fusion:ResourceUri {
@@ -177,7 +177,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
 prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusion:Component) {
     @context.image = ${this.image}
     lightboxImage = Neos.Neos:ImageUri {
-        asset = ${image.originalAsset}
+        asset = ${image.originalAsset ? image.originalAsset : image}
         width = 1200
         maximumHeight = 1200
         allowCropping = false

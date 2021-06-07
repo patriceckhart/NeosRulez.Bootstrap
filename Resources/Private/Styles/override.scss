@@ -4,9 +4,7 @@
   &.show { visibility:visible; opacity:1; }
 }
 
-.navbar-nav {
-  .nav-link { white-space: nowrap; }
-}
+.nav-link { white-space: nowrap; }
 
 @media all and (min-width: 992px) {
   .navbar-hover {
