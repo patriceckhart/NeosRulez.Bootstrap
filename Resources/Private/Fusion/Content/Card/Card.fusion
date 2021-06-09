@@ -15,7 +15,7 @@ prototype(NeosRulez.Bootstrap:Content.Card) < prototype(Neos.Neos:ContentCompone
     linkTarget = ${node.properties.linktarget ? '_blank' : false}
 
     nodes = Neos.Neos:ContentCollection {
-        nodePath = 'nodes'
+        @context.node = ${node}
     }
 
     renderer = afx`

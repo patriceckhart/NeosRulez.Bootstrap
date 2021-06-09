@@ -1,6 +1,6 @@
 prototype(NeosRulez.Bootstrap:Content.Accordion) < prototype(Neos.Neos:ContentComponent) {
     nodes = Neos.Neos:ContentCollection {
-        nodePath = 'nodes'
+        @context.node = ${node}
     }
 
     accordionId = ${'neosrulez_bootstrap__accordion__' + node.identifier}

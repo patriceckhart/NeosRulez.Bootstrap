@@ -1,0 +1,53 @@
+prototype(NeosRulez.Bootstrap:Content.Modal) < prototype(Neos.Neos:ContentComponent) {
+    nodes = Neos.Neos:ContentCollection {
+        @context.node = ${node}
+    }
+
+    modalId = ${'modal__' + node.identifier}
+
+    modalSize = ${node.properties.modalsize ? ' modal-' + node.properties.modalsize : ''}
+    modalDialogClass = ${'modal-dialog' + (node.properties.modalcenter ? ' modal-dialog-centered' : '') + this.modalSize}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <NeosRulez.Bootstrap:Content.Modal.Button modalId={props.modalId} />
+            <div class="modal fade" id={props.modalId} tabindex="-1" aria-labelledby={props.modalId + 'Label'} aria-hidden="true">
+                <div class={props.modalDialogClass} >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id={props.modalId + 'Label'} >
+                                <Neos.Neos:Editable property="title" />
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            {props.nodes}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Content.Modal.Button) < prototype(NeosRulez.Bootstrap:Content.Button) {
+    tagName >
+    tagName = 'button'
+    link = false
+    link.@process.convertUris >
+
+    btnlabel = ${node.properties.btnlabel}
+
+    renderer >
+    renderer = afx`
+        <div class={props.btnAlignment} >
+            <Neos.Fusion:Tag tagName={props.tagName} attributes.class={props.class} attributes.data-bs-toggle="modal" attributes.data-bs-target={'#' + props.modalId}>
+                <div class="d-inline-flex align-items-center">
+                    <NeosRulez.Bootstrap:Component.Button.FontAwesomeIcon @if.render={props.faicon && props.iconAlignmentLeft} faIcon={props.faicon} size={props.faiconSize} onlyIcon={props.onlyIcon} iconAlignment={props.iconAlignment} />
+                    {props.btnlabel}
+                    <NeosRulez.Bootstrap:Component.Button.FontAwesomeIcon @if.render={props.faicon && props.iconAlignmentRight} faIcon={props.faicon} size={props.faiconSize} onlyIcon={props.onlyIcon} iconAlignment={props.iconAlignment} />
+                </div>
+            </Neos.Fusion:Tag>
+        </div>
+    `
+}

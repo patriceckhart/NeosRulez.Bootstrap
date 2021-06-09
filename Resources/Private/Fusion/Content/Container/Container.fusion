@@ -1,6 +1,6 @@
 prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentComponent) {
     nodes = Neos.Neos:ContentCollection {
-        nodePath = 'nodes'
+        @context.node = ${node}
     }
 
     backgroundImageUri = Neos.Neos:ImageUri {

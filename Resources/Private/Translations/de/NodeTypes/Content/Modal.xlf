@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+				<source>Popup</source>
+			</trans-unit>
+            <trans-unit id="properties.title" xml:space="preserve">
+				<source>Titel</source>
+			</trans-unit>
+            <trans-unit id="properties.modalsize" xml:space="preserve">
+				<source>Größe</source>
+			</trans-unit>
+            <trans-unit id="properties.modalsize.selectBoxEditor.values.sm" xml:space="preserve">
+                <source>Klein</source>
+            </trans-unit>
+            <trans-unit id="properties.modalsize.selectBoxEditor.values.lg" xml:space="preserve">
+                <source>Groß</source>
+            </trans-unit>
+            <trans-unit id="properties.modalsize.selectBoxEditor.values.xl" xml:space="preserve">
+                <source>Sehr groß</source>
+            </trans-unit>
+            <trans-unit id="properties.modalcenter" xml:space="preserve">
+				<source>Popup vertikal zentrieren</source>
+			</trans-unit>
+            <trans-unit id="properties.btnlabel" xml:space="preserve">
+				<source>Button Beschriftung</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
