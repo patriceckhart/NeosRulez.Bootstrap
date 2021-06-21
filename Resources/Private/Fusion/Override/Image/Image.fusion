@@ -75,7 +75,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
     @context.height = ${this.height}
 
     block = ${node.properties.block ? ' w-100' : false}
-    imageClassName = ${node.properties.rounded ? 'figure-img img-fluid' + this.block + ' rounded' : 'figure-img img-fluid' + this.block}
+    imageClassName = ${node.properties.rounded ? 'figure-img img-fluid' + this.block + ' rounded' : 'figure-img img-fluid' + this.block + (this.class ? ' ' + this.class : '')}
 
     originalAssetTitle = ${this.image.originalAsset.title}
     originalAssetCopyrightnotice = ${this.image.originalAsset.copyrightnotice}

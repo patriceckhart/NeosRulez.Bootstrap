@@ -37,7 +37,7 @@ NeosRulez:
     navbarSticky: true
     navbarBackground: 'bg-white'
     navbarBreakpoint: 'lg'
-    navbarHover: true
-    clickableParent: true
+    navbarHover: false
+    clickableParent: false
     useYouTubeNoCookie: true
 #    googleMapsApiKey: 'XyzaazaSyAEpcE4tniLTPaCDTm9e9-7h9dPBgHjfs'

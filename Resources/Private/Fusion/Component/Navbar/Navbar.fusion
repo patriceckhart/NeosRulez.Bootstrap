@@ -90,6 +90,16 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar) < prototype(Neos.Fusion:C
     `
 }
 
+prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.ListItem) < prototype(Neos.Fusion:Component) {
+    content = ''
+
+    renderer = afx`
+        <Neos.Fusion:Tag tagName={props.tagName} attributes.class={props.class}>
+            {props.content}
+        </Neos.Fusion:Tag>
+    `
+}
+
 prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List) < prototype(Neos.Fusion:Component) {
     listTag = 'ul'
     navbarAlignment = ${Configuration.setting('NeosRulez.Bootstrap.navbarAlignment')}
@@ -104,10 +114,10 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List) < prototype(Neos.Fus
         <div class="collapse navbar-collapse" id="navbarNav">
             <Neos.Fusion:Tag @if.render={props.items} tagName={props.listTag} attributes.class={props.listClass} >
                 <Neos.Fusion:Loop items={props.items} itemName="item" itemKey="itemKey" >
-                    <Neos.Fusion:Tag tagName={props.itemTag} attributes.class={item.subItems ? props.itemClass + ' dropdown' : props.itemClass} >
+                    <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.ListItem tagName={props.itemTag} class={item.subItems ? props.itemClass + ' dropdown' : props.itemClass} >
                         <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem linkClass={item.subItems ? props.linkClass + ' dropdown-toggle' : props.linkClass} subList={item.subItems ? true : false} />
                         <NeosRulez.Bootstrap:Component.Navbar.Navbar.SubList @if.render={item.subItems} menuItems={item.subItems} />
-                    </Neos.Fusion:Tag>
+                    </NeosRulez.Bootstrap:Component.Navbar.Navbar.List.ListItem>
                 </Neos.Fusion:Loop>
             </Neos.Fusion:Tag>
         </div>
