@@ -3,6 +3,11 @@ up:
   warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
   migration:
     -
+      filters:
+        -
+          type: 'Workspace'
+          settings:
+            workspaceName: 'live'
       transformations:
         -
           type: 'RenameProperty'
