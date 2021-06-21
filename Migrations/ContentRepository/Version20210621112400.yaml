@@ -1,0 +1,11 @@
+up:
+  comments: 'Migrate property masterclass to class'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      transformations:
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'masterclass'
+            to: 'class'

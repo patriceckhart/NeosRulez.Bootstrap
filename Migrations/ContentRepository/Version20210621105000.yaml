@@ -1,0 +1,195 @@
+up:
+  comments: 'Migrate container mixins default properties'
+  warnings: 'There is no way of reverting this migration since the nodes will be deleted in the database.'
+  migration:
+    -
+      transformations:
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'containerwidth'
+            to: 'containerType'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'ml'
+            search: 'ml-1'
+            replace: 'ms-1'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'ml'
+            search: 'ml-2'
+            replace: 'ms-2'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'ml'
+            search: 'ml-3'
+            replace: 'ms-3'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'ml'
+            search: 'ml-4'
+            replace: 'ms-4'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'ml'
+            search: 'ml-5'
+            replace: 'ms-5'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mr'
+            search: 'mr-1'
+            replace: 'me-1'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mr'
+            search: 'mr-2'
+            replace: 'me-2'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mr'
+            search: 'mr-3'
+            replace: 'me-3'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mr'
+            search: 'mr-4'
+            replace: 'me-4'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mr'
+            search: 'mr-5'
+            replace: 'me-5'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'pl'
+            search: 'pl-1'
+            replace: 'ps-1'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'pl'
+            search: 'pl-2'
+            replace: 'ps-2'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'pl'
+            search: 'pl-3'
+            replace: 'ps-3'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'pl'
+            search: 'pl-4'
+            replace: 'ps-4'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'pl'
+            search: 'pl-5'
+            replace: 'ps-5'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'pr'
+            search: 'pr-1'
+            replace: 'pe-1'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'pr'
+            search: 'pr-2'
+            replace: 'pe-2'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'pr'
+            search: 'pr-3'
+            replace: 'pe-3'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'pr'
+            search: 'pr-4'
+            replace: 'pe-4'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'pr'
+            search: 'pr-5'
+            replace: 'pe-5'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mln'
+            search: 'ml-n1'
+            replace: 'ms-n1'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mln'
+            search: 'ml-n2'
+            replace: 'ms-n2'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mln'
+            search: 'ml-n3'
+            replace: 'ms-n3'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mln'
+            search: 'ml-n4'
+            replace: 'ms-n4'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mln'
+            search: 'ml-n5'
+            replace: 'ms-n5'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mrn'
+            search: 'mr-n1'
+            replace: 'me-n1'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mrn'
+            search: 'mr-n2'
+            replace: 'me-n2'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mrn'
+            search: 'mr-n3'
+            replace: 'me-n3'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mrn'
+            search: 'mr-n4'
+            replace: 'me-n4'
+        -
+          type: 'ChangePropertyValue'
+          settings:
+            property: 'mrn'
+            search: 'mr-n5'
+            replace: 'me-n5'
+
+
+down:
+  comments: 'No down migration available'
