@@ -14,3 +14,5 @@ up:
           settings:
             from: 'masterclass'
             to: 'class'
+down:
+  comments: 'No down migration available'
