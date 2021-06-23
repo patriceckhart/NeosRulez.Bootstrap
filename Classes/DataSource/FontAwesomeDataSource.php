@@ -16,6 +16,20 @@ class FontAwesomeDataSource extends AbstractDataSource {
     protected static $identifier = 'neosrulez-bootstrap-fa';
 
     /**
+     * @var array
+     */
+    protected $settings;
+
+    /**
+     * @param array $settings
+     * @return void
+     */
+    public function injectSettings(array $settings) {
+        $this->settings = $settings;
+    }
+
+
+    /**
      * @inheritDoc
      */
     public function getData(NodeInterface $node = null, array $arguments = array()) {
@@ -38,7 +52,15 @@ class FontAwesomeDataSource extends AbstractDataSource {
     }
 
     function loadMetaData() {
-        $fileName = sprintf('resource://NeosRulez.Bootstrap/Private/Metadata/font-awesome-icons-free.yml');
+        $pr = 'free';
+        if(array_key_exists('fontawesome', $this->settings)) {
+            if(array_key_exists('licence', $this->settings['fontawesome'])) {
+                if($this->settings['fontawesome']['licence'] == 'pro') {
+                    $pr = 'pro';
+                }
+            }
+        }
+        $fileName = sprintf('resource://NeosRulez.Bootstrap/Private/Metadata/font-awesome-icons-' . $pr . '.yml');
         return (array) Yaml::parseFile($fileName);
     }
 
