@@ -22,8 +22,8 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
     linkedClass = ${this.link ? (!this.isButton ? ' linked' : false) : false}
 
     parallax = ${node.properties.parallax ? true : false}
-    parallaxClass = ${this.parallax ? 'parallax-window' : false}
-    parallaxDataAttribute = ${this.parallax ? 'scroll' : false}
+    parallaxClass = ${this.parallax && !this.inBackend ? 'parallax-window' : false}
+    parallaxDataAttribute = ${this.parallax && !this.inBackend ? 'scroll' : false}
     parallaxImage = ${this.parallax && this.backgroundImageUri && !this.inBackend ? this.backgroundImageUri : false}
 
     @context.visibilities = ${node.properties.visibility}
