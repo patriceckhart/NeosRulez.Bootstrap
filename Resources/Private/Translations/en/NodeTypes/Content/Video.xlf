@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+				<source>HTML5 Video</source>
+			</trans-unit>
+            <trans-unit id="properties.video" xml:space="preserve">
+				<source>Video</source>
+			</trans-unit>
+            <trans-unit id="properties.autoplay" xml:space="preserve">
+				<source>Autoplay</source>
+			</trans-unit>
+            <trans-unit id="properties.controls" xml:space="preserve">
+				<source>Controls</source>
+			</trans-unit>
+            <trans-unit id="properties.muted" xml:space="preserve">
+				<source>Muted</source>
+			</trans-unit>
+            <trans-unit id="properties.loop" xml:space="preserve">
+				<source>Loop</source>
+			</trans-unit>
+            <trans-unit id="content.noVideo" xml:space="preserve">
+				<source>Define the video in the Inspector</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

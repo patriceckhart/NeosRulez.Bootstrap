@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+				<source>Container</source>
+			</trans-unit>
+            <trans-unit id="properties.parallax" xml:space="preserve">
+				<source>Parallax effect</source>
+			</trans-unit>
+            <trans-unit id="properties.bgColorPicker" xml:space="preserve">
+				<source>Background color</source>
+			</trans-unit>
+            <trans-unit id="properties.videourl" xml:space="preserve">
+                <source>YouTube or Vimeo URL</source>
+            </trans-unit>
+            <trans-unit id="properties.video" xml:space="preserve">
+                <source>Video</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundImage" xml:space="preserve">
+				<source>Background image</source>
+			</trans-unit>
+            <trans-unit id="properties.backgroundSize" xml:space="preserve">
+				<source>Background image size</source>
+			</trans-unit>
+            <trans-unit id="properties.backgroundPosition" xml:space="preserve">
+				<source>Position of the background image</source>
+			</trans-unit>
+            <trans-unit id="properties.backgroundSize.selectBoxEditor.values.cover" xml:space="preserve">
+                <source>All over</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundSize.selectBoxEditor.values.contain" xml:space="preserve">
+                <source>Adapted to container</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundSize.selectBoxEditor.values.auto" xml:space="preserve">
+                <source>No adjustment</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPosition" xml:space="preserve">
+				<source>Position of the background image</source>
+			</trans-unit>
+            <trans-unit id="properties.backgroundPosition.selectBoxEditor.values.left top" xml:space="preserve">
+                <source>top left</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPosition.selectBoxEditor.values.left bottom" xml:space="preserve">
+                <source>bottom left</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPosition.selectBoxEditor.values.left center" xml:space="preserve">
+                <source>left center</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPosition.selectBoxEditor.values.center top" xml:space="preserve">
+                <source>centered above</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPosition.selectBoxEditor.values.center bottom" xml:space="preserve">
+                <source>centered below</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPosition.selectBoxEditor.values.center center" xml:space="preserve">
+                <source>centered in the middle</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPosition.selectBoxEditor.values.right top" xml:space="preserve">
+                <source>top right</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPosition.selectBoxEditor.values.right bottom" xml:space="preserve">
+                <source>bottom right</source>
+            </trans-unit>
+            <trans-unit id="properties.backgroundPosition.selectBoxEditor.values.right center" xml:space="preserve">
+                <source>center right</source>
+            </trans-unit>
+            <trans-unit id="tabs.link" xml:space="preserve">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tabs.linktarget" xml:space="preserve">
+                <source>Open in new window</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

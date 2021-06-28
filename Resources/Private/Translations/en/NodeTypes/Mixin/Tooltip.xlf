@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="tabs.tooltip" xml:space="preserve">
+				<source>Tooltips</source>
+			</trans-unit>
+            <trans-unit id="groups.tooltipsettings" xml:space="preserve">
+				<source>Configure tooltips</source>
+			</trans-unit>
+            <trans-unit id="properties.tooltiptext" xml:space="preserve">
+				<source>Tooltip text</source>
+			</trans-unit>
+			<trans-unit id="properties.tooltipposition" xml:space="preserve">
+				<source>Tooltip position</source>
+			</trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.top" xml:space="preserve">
+                <source>Top</source>
+            </trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.right" xml:space="preserve">
+                <source>Right</source>
+            </trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.bottom" xml:space="preserve">
+                <source>Bottom</source>
+            </trans-unit>
+			<trans-unit id="properties.tooltipposition.selectBoxEditor.values.left" xml:space="preserve">
+                <source>Left</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

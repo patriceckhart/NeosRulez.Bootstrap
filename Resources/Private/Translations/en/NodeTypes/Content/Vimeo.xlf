@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+				<source>Vimeo Video</source>
+			</trans-unit>
+            <trans-unit id="properties.link" xml:space="preserve">
+				<source>Vimeo Link</source>
+			</trans-unit>
+            <trans-unit id="properties.autoplay" xml:space="preserve">
+				<source>Autoplay</source>
+			</trans-unit>
+            <trans-unit id="properties.loop" xml:space="preserve">
+				<source>Loop</source>
+			</trans-unit>
+            <trans-unit id="properties.introImage" xml:space="preserve">
+				<source>Intro: Image</source>
+			</trans-unit>
+            <trans-unit id="properties.introTitle" xml:space="preserve">
+				<source>Intro: Title</source>
+			</trans-unit>
+            <trans-unit id="properties.introAuthor" xml:space="preserve">
+				<source>Intro: Author description</source>
+			</trans-unit>
+			<trans-unit id="content.noUri" xml:space="preserve">
+				<source>Define the Vimeo Video URL in the Inspector</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+				<source>Image</source>
+			</trans-unit>
+            <trans-unit id="content.alternativeImageSizes" xml:space="preserve">
+				<source>Image with alternative image sizes</source>
+			</trans-unit>
+            <trans-unit id="properties.block" xml:space="preserve">
+				<source>Whole width</source>
+			</trans-unit>
+            <trans-unit id="properties.alternativeImageSizes" xml:space="preserve">
+				<source>Alternative image sizes</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

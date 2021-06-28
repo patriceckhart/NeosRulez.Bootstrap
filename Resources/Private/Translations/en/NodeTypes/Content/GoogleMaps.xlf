@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
         <body>
             <trans-unit id="ui.label" xml:space="preserve">
 				<source>Google Maps</source>
 			</trans-unit>
             <trans-unit id="properties.address" xml:space="preserve">
-				<source>Adresse</source>
+				<source>Street</source>
 			</trans-unit>
             <trans-unit id="properties.zip" xml:space="preserve">
-				<source>Postleitzahl</source>
+				<source>Postal Code</source>
 			</trans-unit>
             <trans-unit id="properties.city" xml:space="preserve">
-				<source>Ort</source>
+				<source>City</source>
 			</trans-unit>
             <trans-unit id="properties.country" xml:space="preserve">
-				<source>Land</source>
+				<source>Country</source>
 			</trans-unit>
             <trans-unit id="properties.source" xml:space="preserve">
-				<source>Einbettungscode</source>
+				<source>Embed code</source>
 			</trans-unit>
 			<trans-unit id="content.noProperties" xml:space="preserve">
-				<source>Adressdaten oder Einbettungscode im Inspector definieren</source>
+				<source>Define address data or embed code in the Inspector</source>
 			</trans-unit>
             <trans-unit id="content.noApiKey" xml:space="preserve">
-				<source>Ein Google Maps Api Key wird benötigt. (Settings.yaml)</source>
+				<source>A Google Maps Api Key is required. (Settings.yaml)</source>
 			</trans-unit>
         </body>
     </file>

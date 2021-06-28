@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
         <body>
             <trans-unit id="ui.label" xml:space="preserve">
-				<source>Fotogalerie</source>
+				<source>Photo gallery</source>
 			</trans-unit>
             <trans-unit id="properties.assets" xml:space="preserve">
-				<source>Fotos hochladen/auswählen</source>
+				<source>Upload / select photos</source>
 			</trans-unit>
             <trans-unit id="properties.noCropping" xml:space="preserve">
-				<source>Bilder nicht beschneiden</source>
+				<source>Do not crop images</source>
 			</trans-unit>
             <trans-unit id="properties.columns" xml:space="preserve">
-				<source>Spalten</source>
+				<source>Columns</source>
 			</trans-unit>
             <trans-unit id="properties.noGutters" xml:space="preserve">
-				<source>Keine Spaltenabstände</source>
+				<source>No gap between columns</source>
 			</trans-unit>
             <trans-unit id="properties.columns.selectBoxEditor.values.4" xml:space="preserve">
-				<source>4-Spalten</source>
+				<source>4 columns</source>
 			</trans-unit>
             <trans-unit id="properties.columns.selectBoxEditor.values.3" xml:space="preserve">
-				<source>3-Spalten</source>
+				<source>3 columns</source>
 			</trans-unit>
             <trans-unit id="properties.columns.selectBoxEditor.values.2" xml:space="preserve">
-				<source>2-Spalten</source>
+				<source>2 columns</source>
 			</trans-unit>
             <trans-unit id="content.emptyAssetList" xml:space="preserve">
-				<source>Leere Fotogalerie</source>
+				<source>Empty photo gallery</source>
 			</trans-unit>
         </body>
     </file>

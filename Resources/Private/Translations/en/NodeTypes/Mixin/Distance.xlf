@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="tabs.distance" xml:space="preserve">
+				<source>Distances</source>
+			</trans-unit>
+            <trans-unit id="groups.marginsettings" xml:space="preserve">
+				<source>Margin</source>
+			</trans-unit>
+            <trans-unit id="groups.paddingsettings" xml:space="preserve">
+				<source>Padding</source>
+			</trans-unit>
+            <trans-unit id="groups.marginnegativesettings" xml:space="preserve">
+				<source>Margin (negative)</source>
+			</trans-unit>
+            <trans-unit id="properties.mt" xml:space="preserve">
+				<source>Margin top</source>
+			</trans-unit>
+            <trans-unit id="properties.mb" xml:space="preserve">
+				<source>Margin bottom</source>
+			</trans-unit>
+            <trans-unit id="properties.ml" xml:space="preserve">
+				<source>Margin left</source>
+			</trans-unit>
+            <trans-unit id="properties.mr" xml:space="preserve">
+				<source>Margin right</source>
+			</trans-unit>
+            <trans-unit id="properties.pt" xml:space="preserve">
+				<source>Padding top</source>
+			</trans-unit>
+            <trans-unit id="properties.pb" xml:space="preserve">
+				<source>Padding bottom</source>
+			</trans-unit>
+            <trans-unit id="properties.pl" xml:space="preserve">
+				<source>Padding left</source>
+			</trans-unit>
+            <trans-unit id="properties.pr" xml:space="preserve">
+				<source>Padding right</source>
+			</trans-unit>
+            <trans-unit id="properties.mtn" xml:space="preserve">
+				<source>Negative margin top</source>
+			</trans-unit>
+            <trans-unit id="properties.mbn" xml:space="preserve">
+				<source>Negative margin bottom</source>
+			</trans-unit>
+            <trans-unit id="properties.mln" xml:space="preserve">
+				<source>Negative margin left</source>
+			</trans-unit>
+            <trans-unit id="properties.mrn" xml:space="preserve">
+				<source>Negative margin right</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
