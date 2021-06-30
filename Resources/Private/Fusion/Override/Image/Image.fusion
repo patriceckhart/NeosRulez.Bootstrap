@@ -133,6 +133,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
+        async = true
     }
     imageUri = Neos.Neos:ImageUri {
         asset = ${image}
@@ -140,6 +141,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         height = ${height ? height : image.height}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
+        async = true
     }
     webpImageUri2x = Neos.Neos:ImageUri {
         asset = ${image}
@@ -148,6 +150,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
+        async = true
     }
     imageUri2x = Neos.Neos:ImageUri {
         asset = ${image}
@@ -155,6 +158,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         height = ${height ? height * 2 : image.height * 2}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
+        async = true
     }
     webpImageUri4x = Neos.Neos:ImageUri {
         asset = ${image}
@@ -163,6 +167,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
+        async = true
     }
     imageUri4x = Neos.Neos:ImageUri {
         asset = ${image}
@@ -170,6 +175,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         height = ${height ? height * 4 : image.height * 4}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
+        async = true
     }
     value = ${this.webpImageUri + ' 1x, ' + this.imageUri + ' 1x, ' + this.webpImageUri2x + ' 2x, ' + this.imageUri2x + ' 2x,' + this.webpImageUri4x + ' 4x, ' + this.imageUri4x + ' 4x'}
 }
@@ -182,6 +188,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusi
         maximumHeight = 1200
         allowCropping = false
         allowUpScaling = true
+        async = true
     }
     inBackend = ${site.context.inBackend}
     tagName = ${this.inBackend ? 'div' : 'a'}
