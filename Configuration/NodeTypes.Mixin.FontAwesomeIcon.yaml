@@ -11,6 +11,7 @@
           group: neosrulezBootstrap
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
+            allowEmpty: true
             dataSourceIdentifier: neosrulez-bootstrap-fa
     faiconSize:
       defaultValue: ''
