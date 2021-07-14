@@ -16,12 +16,9 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 
     autoWidth = NeosRulez.Bootstrap:Helper.ImageAutoWidth
 
-    nodePropertiesImageWidth = ${node.properties.imageWidth ? (String.toInteger(node.properties.imageWidth) > this.maximumWidth ? this.maximumWidth : node.properties.imageWidth) : false}
-    nodePropertiesImageHeight = ${node.properties.imageHeight ? (String.toInteger(node.properties.imageHeight) > this.maximumHeight ? this.maximumHeight : node.properties.imageHeight) : false}
-
-    imageHeight = ${nodePropertiesImageHeight ? nodePropertiesImageHeight : false}
-    width = ${nodePropertiesImageWidth ? nodePropertiesImageWidth : (this.imageHeight ? String.toInteger((String.toInteger(this.image.width * this.imageHeight)) / String.toInteger(this.image.height)) : this.autoWidth ? this.autoWidth : this.defaultWidth)}
-    height = ${nodePropertiesImageWidth ? String.toInteger((String.toInteger(this.image.height * this.width)) / String.toInteger(this.image.width)) : (this.imageHeight ? this.imageHeight : (this.autoWidth ? String.toInteger((String.toInteger(this.image.height * this.autoWidth)) / String.toInteger(this.image.width)) : this.defaultHeight))}
+    imageHeight = ${node.properties.imageHeight ? node.properties.imageHeight : false}
+    width = ${node.properties.imageWidth ? node.properties.imageWidth : (this.imageHeight ? String.toInteger((String.toInteger(this.image.width * this.imageHeight)) / String.toInteger(this.image.height)) : this.autoWidth ? this.autoWidth : this.defaultWidth)}
+    height = ${node.properties.imageWidth ? String.toInteger((String.toInteger(this.image.height * this.width)) / String.toInteger(this.image.width)) : (this.imageHeight ? this.imageHeight : (this.autoWidth ? String.toInteger((String.toInteger(this.image.height * this.autoWidth)) / String.toInteger(this.image.width)) : this.defaultHeight))}
 
     dummyImage = Neos.Fusion:ResourceUri {
         path = 'resource://Neos.Neos/Public/Images/dummy-image.svg'
