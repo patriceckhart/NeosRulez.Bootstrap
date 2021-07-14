@@ -16,9 +16,12 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 
     autoWidth = NeosRulez.Bootstrap:Helper.ImageAutoWidth
 
-    imageHeight = ${node.properties.imageHeight ? node.properties.imageHeight : false}
-    width = ${node.properties.imageWidth ? node.properties.imageWidth : (this.imageHeight ? String.toInteger((String.toInteger(this.image.width * this.imageHeight)) / String.toInteger(this.image.height)) : this.autoWidth ? this.autoWidth : this.defaultWidth)}
-    height = ${node.properties.imageWidth ? String.toInteger((String.toInteger(this.image.height * this.width)) / String.toInteger(this.image.width)) : (this.imageHeight ? this.imageHeight : (this.autoWidth ? String.toInteger((String.toInteger(this.image.height * this.autoWidth)) / String.toInteger(this.image.width)) : this.defaultHeight))}
+    nodePropertiesImageWidth = ${node.properties.imageWidth ? (String.toInteger(node.properties.imageWidth) > this.maximumWidth ? this.maximumWidth : node.properties.imageWidth) : false}
+    nodePropertiesImageHeight = ${node.properties.imageHeight ? (String.toInteger(node.properties.imageHeight) > this.maximumHeight ? this.maximumHeight : node.properties.imageHeight) : false}
+
+    imageHeight = ${nodePropertiesImageHeight ? nodePropertiesImageHeight : false}
+    width = ${nodePropertiesImageWidth ? nodePropertiesImageWidth : (this.imageHeight ? String.toInteger((String.toInteger(this.image.width * this.imageHeight)) / String.toInteger(this.image.height)) : this.autoWidth ? this.autoWidth : this.defaultWidth)}
+    height = ${nodePropertiesImageWidth ? String.toInteger((String.toInteger(this.image.height * this.width)) / String.toInteger(this.image.width)) : (this.imageHeight ? this.imageHeight : (this.autoWidth ? String.toInteger((String.toInteger(this.image.height * this.autoWidth)) / String.toInteger(this.image.width)) : this.defaultHeight))}
 
     dummyImage = Neos.Fusion:ResourceUri {
         path = 'resource://Neos.Neos/Public/Images/dummy-image.svg'
@@ -74,9 +77,6 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
     @context.width = ${this.width}
     @context.height = ${this.height}
 
-    @context.maximumWidth = ${this.maximumWidth}
-    @context.maximumHeight = ${this.maximumHeight}
-
     block = ${node.properties.block ? ' w-100' : false}
     imageClassName = ${node.properties.rounded ? 'figure-img img-fluid' + this.block + ' rounded' : 'figure-img img-fluid' + this.block + (this.class ? ' ' + this.class : '')}
 
@@ -90,8 +90,6 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         image = ${imageMobile ? imageMobile : node.properties.imageMobile}
         width = ${width ? width : node.properties.imageMobile.width}
         height = ${height ? height : node.properties.imageMobile.height}
-        maximumWidth = ${maximumWidth}
-        maximumHeight = ${maximumHeight}
         allowCropping = ${allowCropping ? allowCropping : false}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
     }
@@ -99,8 +97,6 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         image = ${imageTablet ? imageTablet : node.properties.imageTablet}
         width = ${width ? width : node.properties.imageTablet.width}
         height = ${height ? height : node.properties.imageTablet.height}
-        maximumWidth = ${maximumWidth}
-        maximumHeight = ${maximumHeight}
         allowCropping = ${allowCropping ? allowCropping : false}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
     }
@@ -108,8 +104,6 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         image = ${image ? image : node.properties.image}
         width = ${width ? width : node.properties.image.width}
         height = ${height ? height : node.properties.image.height}
-        maximumWidth = ${maximumWidth}
-        maximumHeight = ${maximumHeight}
         allowCropping = ${allowCropping ? allowCropping : false}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
     }
@@ -135,25 +129,10 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
     @context.width = ${this.width}
     @context.height = ${this.height}
 
-
-    @context.width1x = ${width ? width : image.width}
-    @context.height1x = ${height ? height : image.height}
-
-    @context.width2x = ${width ? width * 2 : image.width * 2}
-    @context.height2x = ${height ? height * 2 : image.height * 2}
-
-    @context.width4x = ${width ? width * 4 : image.width * 4}
-    @context.height4x = ${height ? height * 4 : image.height * 4}
-
-    @context.maximumImageHeight1x = ${width1x ? (height1x * this.maximumWidth) / width1x : false}
-    @context.maximumImageHeight2x = ${width2x ? (height2x * this.maximumWidth) / width2x : false}
-    @context.maximumImageHeight4x = ${width4x ? (height4x * this.maximumWidth) / width4x : false}
-    
-
     webpImageUri = Neos.Neos:ImageUri {
         asset = ${image}
-        width = ${width1x > this.maximumWidth ? this.maximumWidth : width1x}
-        height = ${height1x > this.maximumHeight ? this.maximumImageHeight1x : height1x}
+        width = ${width ? width : image.width}
+        height = ${height ? height : image.height}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
@@ -161,16 +140,16 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
     }
     imageUri = Neos.Neos:ImageUri {
         asset = ${image}
-        width = ${width1x > this.maximumWidth ? this.maximumWidth : width1x}
-        height = ${height1x > this.maximumHeight ? this.maximumImageHeight1x : height1x}
+        width = ${width ? width : image.width}
+        height = ${height ? height : image.height}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         async = true
     }
     webpImageUri2x = Neos.Neos:ImageUri {
         asset = ${image}
-        width = ${width2x > this.maximumWidth ? this.maximumWidth : width2x}
-        height = ${height2x > this.maximumHeight ? this.maximumImageHeight2x : height2x}
+        width = ${width ? width * 2 : image.width * 2}
+        height = ${height ? height * 2 : image.height * 2}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
@@ -178,16 +157,16 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
     }
     imageUri2x = Neos.Neos:ImageUri {
         asset = ${image}
-        width = ${width2x > this.maximumWidth ? this.maximumWidth : width2x}
-        height = ${height2x > this.maximumHeight ? this.maximumImageHeight2x : height2x}
+        width = ${width ? width * 2 : image.width * 2}
+        height = ${height ? height * 2 : image.height * 2}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         async = true
     }
     webpImageUri4x = Neos.Neos:ImageUri {
         asset = ${image}
-        width = ${width4x > this.maximumWidth ? this.maximumWidth : width4x}
-        height = ${height4x > this.maximumHeight ? this.maximumImageHeight4x : height4x}
+        width = ${width ? width * 4 : image.width * 4}
+        height = ${height ? height * 4 : image.height * 4}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
@@ -195,8 +174,8 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
     }
     imageUri4x = Neos.Neos:ImageUri {
         asset = ${image}
-        width = ${width4x > this.maximumWidth ? this.maximumWidth : width4x}
-        height = ${height4x > this.maximumHeight ? this.maximumImageHeight4x : height4x}
+        width = ${width ? width * 4 : image.width * 4}
+        height = ${height ? height * 4 : image.height * 4}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         async = true
