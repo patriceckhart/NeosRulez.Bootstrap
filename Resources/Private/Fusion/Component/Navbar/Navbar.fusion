@@ -185,11 +185,16 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem) < prototype
     nodeType = ${item.node.nodetype.name}
     linkTarget = ${this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false}
 
+    link = ${item.node.properties.target ? item.node.properties.target : 'node://' + item.node.identifier}
+    link.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+
     renderer = afx`
-        <Neos.Neos:NodeLink node={item.node} attributes.role={props.attrRole} attributes.data-toggle={props.attrDatatoggle} attributes.data-bs-toggle={props.attrBsToggle} attributes.aria-expanded={props.attrExpanded} attributes.class={props.linkItemClass} attributes.target={props.linkTarget} >
+        <Neos.Fusion:Tag tagName="a" attributes.href={props.link} attributes.role={props.attrRole} attributes.data-toggle={props.attrDatatoggle} attributes.data-bs-toggle={props.attrBsToggle} attributes.aria-expanded={props.attrExpanded} attributes.class={props.linkItemClass} attributes.target={props.linkTarget} >
             <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem.FontAwesomeIcon @if.render={item.node.properties.faicon} icon={item.node.properties.faicon} onlyicon={item.node.properties.onlyicon} />
             {item.node.properties.onlyicon ? false : item.node.properties.title}
-        </Neos.Neos:NodeLink>
+        </Neos.Fusion:Tag>
     `
 }
 
