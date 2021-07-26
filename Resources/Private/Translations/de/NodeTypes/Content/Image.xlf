@@ -14,6 +14,18 @@
             <trans-unit id="properties.alternativeImageSizes" xml:space="preserve">
 				<source>Alternative Bildgrößen</source>
 			</trans-unit>
+            <trans-unit id="properties.loading" xml:space="preserve">
+				<source>Loading</source>
+			</trans-unit>
+            <trans-unit id="properties.loading.selectBoxEditor.values.lazy" xml:space="preserve">
+                <source>Lazy</source>
+            </trans-unit>
+            <trans-unit id="properties.loading.selectBoxEditor.values.eager" xml:space="preserve">
+                <source>Eager</source>
+            </trans-unit>
+            <trans-unit id="properties.async" xml:space="preserve">
+                <source>Asynchron laden</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

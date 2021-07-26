@@ -103,7 +103,7 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.ListItem) < prototype
 prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List) < prototype(Neos.Fusion:Component) {
     listTag = 'ul'
     navbarAlignment = ${Configuration.setting('NeosRulez.Bootstrap.navbarAlignment')}
-    listClass = ${'navbar-nav ' + (this.navbarAlignment == 'right' ? 'ms-auto' : false) + (this.navbarAlignment == 'left' ? 'me-auto' : false)}
+    listClass = ${'navbar-nav ' + (this.navbarAlignment == 'right' ? 'ms-auto' : '') + (this.navbarAlignment == 'left' ? 'me-auto' : '')}
     itemTag = 'li'
     itemClass = 'nav-item'
     linkClass = 'nav-link'

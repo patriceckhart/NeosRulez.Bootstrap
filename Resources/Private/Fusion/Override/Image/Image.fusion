@@ -27,7 +27,8 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 
     alternativeText = ${q(node).property("alternativeText")}
     link = ${q(node).property("link")}
-    loading = 'lazy'
+    loading = ${node.properties.loading ? node.properties.loading : false}
+    async = ${node.properties.async ? node.properties.async : false}
     link.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
     }
@@ -46,9 +47,9 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
         <NeosRulez.Bootstrap:Component.AbstractContent>
             <figure class={props.figureClassName} >
                 <div @if.render={props.image} class={props.figureWrapperClassName} >
-                    <NeosRulez.Bootstrap:Component.ImageTag @if.render={props.link} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} />
-                    <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} />
-                    <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} galleryId={props.galleryId} />
+                    <NeosRulez.Bootstrap:Component.ImageTag @if.render={props.link} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} />
+                    <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} />
+                    <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} galleryId={props.galleryId} async={props.async} />
                     <figcaption @if.render={props.hasCaption} class={props.figcaptionClassName} itemprop={props.caption} >
                         <Neos.Neos:Editable property="caption" />
                     </figcaption>
@@ -74,6 +75,10 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
     @context.width = ${this.width}
     @context.height = ${this.height}
 
+    @context.loading = ${this.loading}
+
+    @context.async = ${this.async ? this.async : false}
+
     block = ${node.properties.block ? ' w-100' : false}
     imageClassName = ${node.properties.rounded ? 'figure-img img-fluid' + this.block + ' rounded' : 'figure-img img-fluid' + this.block + (this.class ? ' ' + this.class : '')}
 
@@ -89,6 +94,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         height = ${height ? height : node.properties.imageMobile.height}
         allowCropping = ${allowCropping ? allowCropping : false}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        async = ${async}
     }
     srcsetTablet = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
         image = ${imageTablet ? imageTablet : node.properties.imageTablet}
@@ -96,6 +102,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         height = ${height ? height : node.properties.imageTablet.height}
         allowCropping = ${allowCropping ? allowCropping : false}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        async = ${async}
     }
     srcsetDesktop = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
         image = ${image ? image : node.properties.image}
@@ -103,16 +110,16 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         height = ${height ? height : node.properties.image.height}
         allowCropping = ${allowCropping ? allowCropping : false}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        async = ${async}
     }
 
     renderer = afx`
-        <picture @if.render={props.alternativeImageSizes} >
-            <source @if.render={props.srcsetDesktop} srcset={props.srcsetDesktop} media="(min-width: 1200px)" sizes="(min-width: 300px) 300px, 100vw" />
-            <source @if.render={props.srcsetTablet} srcset={props.srcsetTablet} media="(min-width: 576px)" sizes="(min-width: 300px) 300px, 100vw" />
-            <source @if.render={props.srcsetMobile} srcset={props.srcsetMobile} media="(max-width: 575px)" sizes="(min-width: 300px) 300px, 100vw" />
-            <Neos.Neos:ImageTag attributes.class={props.imageClassName} asset={props.image} alt={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.srcset={props.srcsetDesktop} attributes.loading={props.loading} attributes.width={props.width ? props.width : node.properties.image.width} attributes.height={props.height ? props.height : node.properties.image.height} />
+        <picture>
+            <source srcset={props.srcsetDesktop} media="(min-width: 1200px)" sizes="(min-width: 300px) 300px, 100vw" />
+            <source srcset={props.alternativeImageSizes ? (props.srcsetTablet ? props.srcsetTablet : props.srcsetDesktop) : props.srcsetDesktop} media="(min-width: 576px)" sizes="(min-width: 300px) 300px, 100vw" />
+            <source srcset={props.alternativeImageSizes ? (props.srcsetMobile ? props.srcsetMobile : props.srcsetDesktop) : props.srcsetDesktop} media="(max-width: 575px)" sizes="(min-width: 300px) 300px, 100vw" />
+            <Neos.Neos:ImageTag attributes.class={props.imageClassName} asset={props.image} attributes.alt={props.alternativeText} attributes.title={props.imageTitle} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.srcset={props.srcsetDesktop} attributes.loading={loading} attributes.async={async} attributes.width={props.width ? props.width : node.properties.image.width} attributes.height={props.height ? props.height : node.properties.image.height} />
         </picture>
-        <Neos.Neos:ImageTag @if.render={!props.alternativeImageSizes} attributes.class={props.imageClassName} asset={props.image} attributes.alt={props.alternativeText} attributes.title={props.imageTitle} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.srcset={props.srcsetDesktop} attributes.loading={props.loading} attributes.width={props.width ? props.width : node.properties.image.width} attributes.height={props.height ? props.height : node.properties.image.height} />
     `
 }
 
@@ -126,6 +133,8 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
     @context.width = ${this.width}
     @context.height = ${this.height}
 
+    @context.async = ${this.async}
+
     webpImageUri = Neos.Neos:ImageUri {
         asset = ${image}
         width = ${width ? width : image.width}
@@ -133,7 +142,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
-        async = true
+        async = ${async}
     }
     imageUri = Neos.Neos:ImageUri {
         asset = ${image}
@@ -141,7 +150,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         height = ${height ? height : image.height}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
-        async = true
+        async = ${async}
     }
     webpImageUri2x = Neos.Neos:ImageUri {
         asset = ${image}
@@ -150,7 +159,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
-        async = true
+        async = ${async}
     }
     imageUri2x = Neos.Neos:ImageUri {
         asset = ${image}
@@ -158,7 +167,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         height = ${height ? height * 2 : image.height * 2}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
-        async = true
+        async = ${async}
     }
     webpImageUri4x = Neos.Neos:ImageUri {
         asset = ${image}
@@ -167,7 +176,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
-        async = true
+        async = ${async}
     }
     imageUri4x = Neos.Neos:ImageUri {
         asset = ${image}
@@ -175,9 +184,9 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         height = ${height ? height * 4 : image.height * 4}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
         allowCropping = ${allowCropping ? allowCropping : true}
-        async = true
+        async = ${async}
     }
-    value = ${this.webpImageUri + ' 1x, ' + this.imageUri + ' 1x, ' + this.webpImageUri2x + ' 2x, ' + this.imageUri2x + ' 2x,' + this.webpImageUri4x + ' 4x, ' + this.imageUri4x + ' 4x'}
+    value = ${image ? this.webpImageUri + ' 1x, ' + this.imageUri + ' 1x, ' + this.webpImageUri2x + ' 2x, ' + this.imageUri2x + ' 2x,' + this.webpImageUri4x + ' 4x, ' + this.imageUri4x + ' 4x' : false}
 }
 
 prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusion:Component) {
@@ -195,7 +204,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusi
 
     renderer = afx`
         <Neos.Fusion:Tag tagName={props.tagName} attributes.href={props.inBackend ? false : props.lightboxImage} attributes.class="d-block" attributes.data-fslightbox={props.galleryId} >
-            <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={props.loading} />
+            <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} />
         </Neos.Fusion:Tag>
     `
 }
