@@ -37,29 +37,3 @@
         inspector:
           group: image
           position: 300
-    loading:
-      defaultValue: 'lazy'
-      type: string
-      ui:
-        label: NeosRulez.Bootstrap:NodeTypes.Content.Image:properties.loading
-        reloadIfChanged: true
-        inspector:
-          group: image
-          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
-          position: after block
-          editorOptions:
-            allowEmpty: true
-            values:
-              'lazy':
-                label: NeosRulez.Bootstrap:NodeTypes.Content.Image:properties.loading.selectBoxEditor.values.lazy
-              'eager':
-                label: NeosRulez.Bootstrap:NodeTypes.Content.Image:properties.loading.selectBoxEditor.values.eager
-    async:
-      type: boolean
-      defaultValue: true
-      ui:
-        label: NeosRulez.Bootstrap:NodeTypes.Content.Image:properties.async
-        reloadIfChanged: true
-        inspector:
-          group: image
-          position: after loading

@@ -27,8 +27,8 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 
     alternativeText = ${q(node).property("alternativeText")}
     link = ${q(node).property("link")}
-    loading = ${node.properties.loading ? node.properties.loading : false}
-    async = ${node.properties.async ? node.properties.async : false}
+    loading = 'lazy'
+    async = true
     link.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
     }
