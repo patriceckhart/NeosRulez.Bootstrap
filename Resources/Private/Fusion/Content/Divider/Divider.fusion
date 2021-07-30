@@ -1,6 +1,6 @@
 prototype(NeosRulez.Bootstrap:Content.Divider) < prototype(Neos.Neos:ContentComponent) {
     inBackend = ${site.context.inBackend}
-    class = ${node.properties.noBorder ? 'border-0' : false}
+    class = ${node.properties.noBorder ? 'bg-transparent' : false}
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
