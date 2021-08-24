@@ -52,7 +52,6 @@ function resize() {
     adjustBgVideo();
 }
 
-
 $(document).ready(function(){
     resize();
     if($('.navbar-cp').length) {
