@@ -4,7 +4,7 @@ prototype(Neos.NodeTypes.ColumnLayouts:MultiColumn) < prototype(Neos.Neos:Conten
     columns.iterationName = 'multiColumnIteration'
 
     renderer = afx`
-        <div @if.render={props.inBackend} class="d-block">
+        <div @if.render={props.inBackend} class="d-block multi-column">
             <NeosRulez.Bootstrap:Component.MultiColumn.Renderer columns={props.columns} attributes={props.attributes} />
         </div>
         <NeosRulez.Bootstrap:Component.MultiColumn.Renderer @if.render={!props.inBackend} columns={props.columns} attributes={props.attributes} />
