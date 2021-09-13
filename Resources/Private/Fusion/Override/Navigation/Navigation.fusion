@@ -72,11 +72,7 @@ prototype(Neos.NodeTypes.Navigation:Navigation) < prototype(Neos.Neos:ContentCom
         renderer = afx`
             <ul class="nav flex-column">
                 <Neos.Fusion:Loop items={props.items} itemName="item">
-                    <li class="nav-item">
-                        <Neos.Neos:NodeLink node={item.node} attributes.class="nav-link" attributes.aria-current="page" >
-                            {item.node.properties.title}
-                        </Neos.Neos:NodeLink>
-                    </li>
+                    <Neos.NodeTypes.Navigation:Navigation.NavItem />
                 </Neos.Fusion:Loop>
             </ul>
         `
@@ -86,5 +82,28 @@ prototype(Neos.NodeTypes.Navigation:Navigation) < prototype(Neos.Neos:ContentCom
         <NeosRulez.Bootstrap:Component.AbstractContent>
             {props.navigation}
         </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}
+
+prototype(Neos.NodeTypes.Navigation:Navigation.NavItem) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <li class="nav-item">
+            <Neos.Neos:NodeLink node={item.node} attributes.class="nav-link" attributes.aria-current="page" >
+                {item.node.properties.title}
+            </Neos.Neos:NodeLink>
+            <Neos.NodeTypes.Navigation:Navigation.SubItems @if.render={item.subItems} items={item.subItems} />
+        </li>
+    `
+}
+
+prototype(Neos.NodeTypes.Navigation:Navigation.SubItems) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <ul class="nav subitems flex-column">
+            <Neos.Fusion:Loop items={props.items} itemName="item">
+                <Neos.NodeTypes.Navigation:Navigation.NavItem />
+            </Neos.Fusion:Loop>
+        </ul>
     `
 }
