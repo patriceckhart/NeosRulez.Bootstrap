@@ -2,6 +2,7 @@
   superTypes:
     'NeosRulez.Bootstrap:Component.AbstractContent': true
     'NeosRulez.Bootstrap:Mixin.TextColor': true
+    'NeosRulez.Bootstrap:Mixin.LinkColor': true
   ui:
     group: general
     position: 200
@@ -47,4 +48,6 @@
               ul: true
               a: true
     textColor:
+      defaultValue: ''
+    linkColor:
       defaultValue: ''

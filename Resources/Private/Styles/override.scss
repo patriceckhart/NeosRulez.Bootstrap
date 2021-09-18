@@ -82,3 +82,28 @@ div.datedropper.bootstrap {
   height: 100%;
   pointer-events: none;
 }
+
+.link-primary {
+    a { color: $primary; }
+}
+.link-secondary {
+    a { color: $secondary; }
+}
+.link-success {
+    a { color: $success; }
+}
+.link-danger {
+    a { color: $danger; }
+}
+.link-warning {
+    a { color: $warning; }
+}
+.link-info {
+    a { color: $info; }
+}
+.link-light {
+    a { color: $light; }
+}
+.link-dark {
+    a { color: $dark; }
+}

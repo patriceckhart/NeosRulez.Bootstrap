@@ -1,5 +1,6 @@
 prototype(Neos.NodeTypes:Text) < prototype(Neos.Neos:ContentComponent) {
-    additionalClass = ${(node.properties.textColor ? 'text-' + node.properties.textColor : false)}
+    linkColor = ${(node.properties.linkColor ? ('link-' + node.properties.linkColor) : false)}
+    additionalClass = ${(node.properties.textColor ? ('text-' + node.properties.textColor) + (this.linkColor ? ' ' + this.linkColor : false) : (this.linkColor ? this.linkColor : false))}
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent additionalClass={props.additionalClass} >
