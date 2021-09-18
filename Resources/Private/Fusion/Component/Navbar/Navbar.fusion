@@ -92,9 +92,10 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar) < prototype(Neos.Fusion:C
 
 prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.ListItem) < prototype(Neos.Fusion:Component) {
     content = ''
+    navbarIdentifier = ${Configuration.setting('NeosRulez.Bootstrap.navbarIdentifier')}
 
     renderer = afx`
-        <Neos.Fusion:Tag tagName={props.tagName} attributes.class={props.class}>
+        <Neos.Fusion:Tag attributes.id={props.navbarIdentifier ? ('nav_item__' + item.node.identifier) : false} tagName={props.tagName} attributes.class={props.class}>
             {props.content}
         </Neos.Fusion:Tag>
     `
@@ -190,8 +191,10 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem) < prototype
         forceConversion = true
     }
 
+    navbarIdentifier = ${Configuration.setting('NeosRulez.Bootstrap.navbarIdentifier')}
+
     renderer = afx`
-        <Neos.Fusion:Tag tagName="a" attributes.href={props.link} attributes.role={props.attrRole} attributes.data-toggle={props.attrDatatoggle} attributes.data-bs-toggle={props.attrBsToggle} attributes.aria-expanded={props.attrExpanded} attributes.class={props.linkItemClass} attributes.target={props.linkTarget} >
+        <Neos.Fusion:Tag tagName="a" attributes.href={props.link} attributes.id={props.navbarIdentifier ? ('nav_link__' + item.node.identifier) : false} attributes.role={props.attrRole} attributes.data-toggle={props.attrDatatoggle} attributes.data-bs-toggle={props.attrBsToggle} attributes.aria-expanded={props.attrExpanded} attributes.class={props.linkItemClass} attributes.target={props.linkTarget} >
             <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem.FontAwesomeIcon @if.render={item.node.properties.faicon} icon={item.node.properties.faicon} onlyicon={item.node.properties.onlyicon} />
             {item.node.properties.onlyicon ? false : item.node.properties.title}
         </Neos.Fusion:Tag>

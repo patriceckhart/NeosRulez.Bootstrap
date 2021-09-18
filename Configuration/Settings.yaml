@@ -40,6 +40,7 @@ NeosRulez:
     navbarHover: false
     clickableParent: false
     useYouTubeNoCookie: true
+    navbarIdentifier: true
 #    googleMapsApiKey: 'XyzaazaSyAEpcE4tniLTPaCDTm9e9-7h9dPBgHjfs'
 #    fontawesome:
 #      licence: pro
