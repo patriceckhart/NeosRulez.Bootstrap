@@ -87,11 +87,19 @@ prototype(Neos.NodeTypes.Navigation:Navigation) < prototype(Neos.Neos:ContentCom
 
 prototype(Neos.NodeTypes.Navigation:Navigation.NavItem) < prototype(Neos.Fusion:Component) {
 
+    nodeType = ${item.node.nodetype.name}
+    linkTarget = ${this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false}
+
+    link = ${item.node.properties.target ? item.node.properties.target : 'node://' + item.node.identifier}
+    link.@process.convertUris = Neos.Neos:ConvertUris {
+        forceConversion = true
+    }
+
     renderer = afx`
         <li class="nav-item">
-            <Neos.Neos:NodeLink node={item.node} attributes.class="nav-link" attributes.aria-current="page" >
+            <Neos.Fusion:Tag tagName="a" attributes.href={props.link} attributes.class="nav-link" attributes.target={props.linkTarget} attributes.aria-current="page" >
                 {item.node.properties.title}
-            </Neos.Neos:NodeLink>
+            </Neos.Fusion:Tag>
             <Neos.NodeTypes.Navigation:Navigation.SubItems @if.render={item.subItems} items={item.subItems} />
         </li>
     `
