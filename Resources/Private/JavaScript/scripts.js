@@ -56,7 +56,14 @@ $(document).ready(function(){
     resize();
     if($('.navbar-cp').length) {
         $('a.nav-link.dropdown-toggle').on('show.bs.dropdown', function() {
-            location.href = $(this).attr('href');
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+                $('a.nav-link.dropdown-toggle').on('hide.bs.dropdown', function(e) {
+                    e.preventDefault();
+                    location.href = $(this).attr('href');
+                });
+            } else{
+                location.href = $(this).attr('href');
+            }
         });
     }
 });
