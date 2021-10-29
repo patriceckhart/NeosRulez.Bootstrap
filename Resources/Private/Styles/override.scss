@@ -4,7 +4,9 @@
   &.show { visibility:visible; opacity:1; }
 }
 
-.nav-link { white-space: nowrap; }
+.nav-link { white-space: nowrap;
+    &.dropdown-toggle { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+}
 
 @media all and (min-width: 992px) {
   .navbar-hover {
