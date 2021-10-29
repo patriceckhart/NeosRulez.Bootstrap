@@ -55,8 +55,16 @@ function resize() {
 $(document).ready(function(){
     resize();
     if($('.navbar-cp').length) {
-        $('a.nav-link.dropdown-toggle').on('show.bs.dropdown', function() {
-            location.href = $(this).attr('href');
+        $('a.nav-link.dropdown-toggle').on('click', function(e) {
+            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                let thisDropdownToggleNext = $(this).next();
+                if(thisDropdownToggleNext.hasClass('show')) {
+                    e.preventDefault();
+                    location.href = $(this).attr('href');
+                }
+            } else {
+                location.href = $(this).attr('href');
+            }
         });
     }
 });
