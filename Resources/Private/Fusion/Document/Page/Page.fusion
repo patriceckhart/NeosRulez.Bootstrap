@@ -41,4 +41,20 @@ prototype(Neos.Neos:Page) {
             }
         }
     }
+    NeosRulezBootstrapAutoModal = Neos.Fusion:Component {
+        @position = 'end'
+        modals = ${q(documentNode).find('[instanceof NeosRulez.Bootstrap:Content.Modal]').get()}
+        keyboard = 'true'
+
+        renderer = afx`
+            <Neos.Fusion:Loop items={props.modals} itemKey="modalKey">
+                <script @if.render={item.properties.autoOpen} >{"
+                    var modal" + modalKey + " = new bootstrap.Modal(document.getElementById('modal__" + item.identifier + "'), {
+                        keyboard: " + props.keyboard + "
+                    });
+                    var modalTimeOut" + modalKey + " = setTimeout(function(){ modal" + modalKey + ".toggle(); }, " + (item.properties.autoOpenTime ? String.toInteger(item.properties.autoOpenTime) : 0) + ");
+                "}</script>
+            </Neos.Fusion:Loop>
+        `
+    }
 }

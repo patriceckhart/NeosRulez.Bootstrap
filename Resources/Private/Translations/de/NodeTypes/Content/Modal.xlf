@@ -26,6 +26,18 @@
             <trans-unit id="properties.btnlabel" xml:space="preserve">
 				<source>Button Beschriftung</source>
 			</trans-unit>
+            <trans-unit id="properties.autoOpen" xml:space="preserve">
+				<source>Popup automatisch öffnen</source>
+			</trans-unit>
+            <trans-unit id="properties.autoOpenTime" xml:space="preserve">
+				<source>Automatisch öffnen nach (ms)</source>
+			</trans-unit>
+            <trans-unit id="content.autoOpen" xml:space="preserve">
+				<source>Popup: Autom. öffnen nach</source>
+			</trans-unit>
+            <trans-unit id="content.autoOpenSeconds" xml:space="preserve">
+				<source>Sekunden</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

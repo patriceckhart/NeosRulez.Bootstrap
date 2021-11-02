@@ -8,9 +8,14 @@ prototype(NeosRulez.Bootstrap:Content.Modal) < prototype(Neos.Neos:ContentCompon
     modalSize = ${node.properties.modalsize ? ' modal-' + node.properties.modalsize : ''}
     modalDialogClass = ${'modal-dialog' + (node.properties.modalcenter ? ' modal-dialog-centered' : '') + this.modalSize}
 
+    autoOpen = ${node.properties.autoOpen ? true : false}
+
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
-            <NeosRulez.Bootstrap:Content.Modal.Button modalId={props.modalId} />
+            <NeosRulez.Bootstrap:Content.Modal.Button modalId={props.modalId} @if.render={!props.autoOpen} />
+            <code @if.render={props.autoOpen && site.context.inBackend} >
+                {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Modal:content.autoOpen')} {(String.toInteger(node.properties.autoOpenTime) / 1000)} {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Modal:content.autoOpenSeconds')}
+            </code>
             <div class="modal fade" id={props.modalId} tabindex="-1" aria-labelledby={props.modalId + 'Label'} aria-hidden="true">
                 <div class={props.modalDialogClass} >
                     <div class="modal-content">
