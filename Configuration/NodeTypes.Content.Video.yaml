@@ -22,7 +22,7 @@
           position: 1
           editorOptions:
             constraints:
-              mediaTypes: [ '.mp4', '.ogg', '.webm' ]
+              mediaTypes: [ 'video/mp4', 'video/ogg', 'video/webm' ]
     autoplay:
       type: boolean
       ui:
