@@ -18,6 +18,10 @@ up:
           settings:
             from: 'textBsColor'
             to: 'textColor'
-
+        -
+          type: 'RenameProperty'
+          settings:
+            from: 'icon'
+            to: 'faicon'
 down:
   comments: 'No down migration available'
