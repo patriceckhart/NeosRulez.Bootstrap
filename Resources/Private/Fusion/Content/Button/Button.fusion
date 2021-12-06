@@ -27,7 +27,7 @@ prototype(NeosRulez.Bootstrap:Content.Button) < prototype(Neos.Neos:ContentCompo
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
             <div class={props.btnAlignment} >
-                <Neos.Fusion:Tag tagName={props.tagName} attributes.href={props.link} attributes.target={props.linkTarget} attributes.class={props.class} >
+                <Neos.Fusion:Tag tagName={props.tagName} attributes.href={props.tagName == 'a' ? props.link : false} attributes.target={props.linkTarget} attributes.class={props.class} >
                     <div class="d-inline-flex align-items-center">
                         <NeosRulez.Bootstrap:Component.Button.FontAwesomeIcon @if.render={props.faicon && props.iconAlignmentLeft} faIcon={props.faicon} size={props.faiconSize} onlyIcon={props.onlyIcon} iconAlignment={props.iconAlignment} />
                         <Neos.Neos:Editable @if.render={!props.onlyIcon} property="title" block={false} />
