@@ -26,6 +26,9 @@
             <trans-unit id="properties.async" xml:space="preserve">
                 <source>Asynchron laden</source>
             </trans-unit>
+            <trans-unit id="content.noAlternateImageSizesSupportForSvg" xml:space="preserve">
+                <source>Bilder im SVG-Format unterstützen keine alternativen Bildgrößen</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
