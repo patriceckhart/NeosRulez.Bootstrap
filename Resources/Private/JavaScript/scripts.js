@@ -52,18 +52,22 @@ function resize() {
     adjustBgVideo();
 }
 
+let defaultNavbarCp = true;
+
 $(document).ready(function(){
     resize();
     if($('.navbar-cp').length) {
         $('a.nav-link.dropdown-toggle').on('click', function(e) {
-            e.preventDefault();
-            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                let thisDropdownToggleNext = $(this).next();
-                if(!thisDropdownToggleNext.hasClass('show')) {
+            if(defaultNavbarCp) {
+                e.preventDefault();
+                if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                    let thisDropdownToggleNext = $(this).next();
+                    if (!thisDropdownToggleNext.hasClass('show')) {
+                        location.href = $(this).attr('href');
+                    }
+                } else {
                     location.href = $(this).attr('href');
                 }
-            } else {
-                location.href = $(this).attr('href');
             }
         });
     }
