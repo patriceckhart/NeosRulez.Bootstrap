@@ -117,12 +117,48 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         async = ${async}
     }
 
+    srcsetMobileWebp = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
+        image = ${imageMobile ? imageMobile : node.properties.imageMobile}
+        width = ${width ? width : node.properties.imageMobile.width}
+        height = ${height ? height : node.properties.imageMobile.height}
+        allowCropping = ${allowCropping ? allowCropping : false}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        async = ${async}
+        webp = true
+    }
+
+    srcsetTabletWebp = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
+        image = ${imageTablet ? imageTablet : node.properties.imageTablet}
+        width = ${width ? width : node.properties.imageTablet.width}
+        height = ${height ? height : node.properties.imageTablet.height}
+        allowCropping = ${allowCropping ? allowCropping : false}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        async = ${async}
+        webp = true
+    }
+
+    srcsetDesktopWebp = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
+        image = ${image ? image : node.properties.image}
+        width = ${width ? width : node.properties.image.width}
+        height = ${height ? height : node.properties.image.height}
+        allowCropping = ${allowCropping ? allowCropping : false}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        async = ${async}
+        webp = true
+    }
+
     renderer = afx`
         <picture>
-            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} srcset={props.srcsetDesktop} media="(min-width: 1200px)" sizes="(min-width: 300px) 300px, 100vw" />
-            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} srcset={props.alternativeImageSizes ? (props.srcsetTablet ? props.srcsetTablet : props.srcsetDesktop) : props.srcsetDesktop} media="(min-width: 576px)" sizes="(min-width: 300px) 300px, 100vw" />
-            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} srcset={props.alternativeImageSizes ? (props.srcsetMobile ? props.srcsetMobile : props.srcsetDesktop) : props.srcsetDesktop} media="(max-width: 575px)" sizes="(min-width: 300px) 300px, 100vw" />
-            <Neos.Neos:ImageTag attributes.class={props.imageClassName} asset={props.image} attributes.alt={props.alternativeText} attributes.title={props.imageTitle} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.srcset={props.srcsetDesktop} attributes.loading={loading} attributes.async={async} attributes.width={props.width ? props.width : node.properties.image.width} attributes.height={props.height ? props.height : node.properties.image.height} attributes.style={imageSizeStyleAttribute} />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type="image/webp" srcset={props.srcsetDesktopWebp} media="(min-width: 1200px)" sizes="(min-width: 300px) 300px, 100vw" />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type="image/webp" srcset={props.alternativeImageSizes ? (props.srcsetTabletWebp ? props.srcsetTabletWebp : props.srcsetDesktopWebp) : props.srcsetDesktopWebp} media="(min-width: 576px)" sizes="(min-width: 300px) 300px, 100vw" />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type="image/webp" srcset={props.alternativeImageSizes ? (props.srcsetMobileWebp ? props.srcsetMobileWebp : props.srcsetDesktopWebp) : props.srcsetDesktopWebp} media="(max-width: 575px)" sizes="(min-width: 300px) 300px, 100vw" />
+
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type={props.image.originalAsset.mediaType} srcset={props.srcsetDesktop} media="(min-width: 1200px)" sizes="(min-width: 300px) 300px, 100vw" />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type={props.image.originalAsset.mediaType} srcset={props.alternativeImageSizes ? (props.srcsetTablet ? props.srcsetTablet : props.srcsetDesktop) : props.srcsetDesktop} media="(min-width: 576px)" sizes="(min-width: 300px) 300px, 100vw" />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type={props.image.originalAsset.mediaType} srcset={props.alternativeImageSizes ? (props.srcsetMobile ? props.srcsetMobile : props.srcsetDesktop) : props.srcsetDesktop} media="(max-width: 575px)" sizes="(min-width: 300px) 300px, 100vw" />
+
+            <Neos.Neos:ImageTag attributes.class={props.imageClassName} asset={props.image} attributes.alt={props.alternativeText} attributes.title={props.imageTitle} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={loading} attributes.async={async} attributes.width={props.width ? props.width : node.properties.image.width} attributes.height={props.height ? props.height : node.properties.image.height} attributes.style={imageSizeStyleAttribute} />
+
             <code @if.render={props.image.originalAsset.fileExtension == 'svg' && props.alternativeImageSizes && site.context.inBackend ? true : false} class="d-block my-3" >
                 {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Image:content.noAlternateImageSizesSupportForSvg')}
             </code>
@@ -142,6 +178,8 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
 
     @context.async = ${this.async}
 
+    @context.webp = ${this.webp}
+
     webpImageUri = Neos.Neos:ImageUri {
         asset = ${image}
         width = ${width ? width : image.width}
@@ -150,6 +188,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
         async = ${async}
+        @if.condition = ${webp}
     }
     imageUri = Neos.Neos:ImageUri {
         asset = ${image}
@@ -167,6 +206,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
         async = ${async}
+        @if.condition = ${webp}
     }
     imageUri2x = Neos.Neos:ImageUri {
         asset = ${image}
@@ -184,6 +224,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         allowCropping = ${allowCropping ? allowCropping : true}
         format = 'webp'
         async = ${async}
+        @if.condition = ${webp}
     }
     imageUri4x = Neos.Neos:ImageUri {
         asset = ${image}
@@ -193,7 +234,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         allowCropping = ${allowCropping ? allowCropping : true}
         async = ${async}
     }
-    value = ${image ? this.webpImageUri + ' 1x, ' + this.imageUri + ' 1x, ' + this.webpImageUri2x + ' 2x, ' + this.imageUri2x + ' 2x,' + this.webpImageUri4x + ' 4x, ' + this.imageUri4x + ' 4x' : false}
+    value = ${image && !webp ? this.imageUri + ' 1x, ' + this.imageUri2x + ' 2x,' + this.imageUri4x + ' 4x' : (image && webp ? this.webpImageUri + ' 1x, ' + this.webpImageUri2x + ' 2x,' + this.webpImageUri4x + ' 4x' : false)}
 }
 
 prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusion:Component) {
