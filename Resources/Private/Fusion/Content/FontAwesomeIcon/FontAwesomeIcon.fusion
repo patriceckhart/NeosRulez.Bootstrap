@@ -1,4 +1,5 @@
 prototype(NeosRulez.Bootstrap:Content.FontAwesomeIcon) < prototype(Neos.Neos:ContentComponent) {
+    inBackend = ${site.context.inBackend}
     faiconSize = ${node.properties.faiconSize}
     faicon = ${node.properties.faicon + (this.faiconSize ? ' ' + this.faiconSize : false)}
 
@@ -9,7 +10,10 @@ prototype(NeosRulez.Bootstrap:Content.FontAwesomeIcon) < prototype(Neos.Neos:Con
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
-            <div class={props.divClassName} >
+            <code @if.render={!props.faicon && props.inBackend} >
+                {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.FontAwesomeIcon:content.emptyFaicon')}
+            </code>
+            <div @if.render={props.faicon} class={props.divClassName} >
                 <i class={props.faicon} ></i>
             </div>
         </NeosRulez.Bootstrap:Component.AbstractContent>

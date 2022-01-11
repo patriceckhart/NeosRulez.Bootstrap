@@ -1,4 +1,5 @@
 prototype(NeosRulez.Bootstrap:Content.Gallery) < prototype(Neos.Neos:ContentComponent) {
+    inBackend = ${site.context.inBackend}
     assets = ${node.properties.assets}
     lightbox = ${node.properties.lightbox ? true : false}
     noGutters = ${node.properties.noGutters ? ' g-0' : false}
@@ -9,7 +10,7 @@ prototype(NeosRulez.Bootstrap:Content.Gallery) < prototype(Neos.Neos:ContentComp
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
-            <code @if.render={!props.assets} >
+            <code @if.render={!props.assets && props.inBackend} >
                 {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Gallery:content.emptyAssetList')}
             </code>
             <div @if.render={props.assets} class={props.lightboxClassName} >

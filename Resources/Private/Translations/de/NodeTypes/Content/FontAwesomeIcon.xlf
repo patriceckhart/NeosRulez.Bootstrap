@@ -5,6 +5,9 @@
             <trans-unit id="ui.label" xml:space="preserve">
 				<source>Font Awesome Icon</source>
 			</trans-unit>
+            <trans-unit id="content.emptyFaicon" xml:space="preserve">
+				<source>Kein Icon ausgewählt</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>
