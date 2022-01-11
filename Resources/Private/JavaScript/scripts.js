@@ -1,30 +1,32 @@
-function scrollToTop(){
-    window.scrollTo({top: 0, behavior: 'smooth'});
-}
-scrollToTopAnchor = document.getElementById('top__anchor');
-scrollToTopAnchor.addEventListener('click', scrollToTop);
-
-let lastKnownScrollPosition = 0;
-let ticking = false;
-
-function showScrollToTopAnchor(scrollPos) {
-    if(lastKnownScrollPosition >= 400) {
-        scrollToTopAnchor.classList.add('show');
-    } else {
-        scrollToTopAnchor.classList.remove('show');
+if(document.getElementById('top__anchor')) {
+    function scrollToTop(){
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
-}
+    scrollToTopAnchor = document.getElementById('top__anchor');
+    scrollToTopAnchor.addEventListener('click', scrollToTop);
 
-document.addEventListener('scroll', function(e) {
-    lastKnownScrollPosition = window.scrollY;
-    if (!ticking) {
-        window.requestAnimationFrame(function() {
-            showScrollToTopAnchor(lastKnownScrollPosition);
-            ticking = false;
-        });
-        ticking = true;
+    let lastKnownScrollPosition = 0;
+    let ticking = false;
+
+    function showScrollToTopAnchor(scrollPos) {
+        if(lastKnownScrollPosition >= 400) {
+            scrollToTopAnchor.classList.add('show');
+        } else {
+            scrollToTopAnchor.classList.remove('show');
+        }
     }
-});
+
+    document.addEventListener('scroll', function(e) {
+        lastKnownScrollPosition = window.scrollY;
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                showScrollToTopAnchor(lastKnownScrollPosition);
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+}
 
 function adjustBgVideo() {
     if($('.video-foreground').length) {
