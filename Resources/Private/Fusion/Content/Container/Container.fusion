@@ -3,12 +3,16 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
         @context.node = ${node}
     }
 
+    async = true
+    @context.async = ${this.async}
+
     backgroundImageUri = Neos.Neos:ImageUri {
         asset = ${node.properties.backgroundImage}
         width = 2000
         height = 800
         allowCropping = false
         allowUpScaling = true
+        async = ${async}
     }
 
     backgroundImageUriWebp = Neos.Neos:ImageUri {
@@ -18,6 +22,7 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
         allowCropping = false
         allowUpScaling = true
         format = 'webp'
+        async = ${async}
     }
 
     transparency = ${node.properties.transparency}
