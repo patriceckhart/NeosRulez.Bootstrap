@@ -184,8 +184,8 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         asset = ${image}
         width = ${width ? width : image.width}
         height = ${height ? height : image.height}
-        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
-        allowCropping = ${allowCropping ? allowCropping : true}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        allowCropping = ${allowCropping ? allowCropping : false}
         format = 'webp'
         async = ${async}
         @if.condition = ${webp}
@@ -194,16 +194,16 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         asset = ${image}
         width = ${width ? width : image.width}
         height = ${height ? height : image.height}
-        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
-        allowCropping = ${allowCropping ? allowCropping : true}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        allowCropping = ${allowCropping ? allowCropping : false}
         async = ${async}
     }
     webpImageUri2x = Neos.Neos:ImageUri {
         asset = ${image}
         width = ${width ? width * 2 : image.width * 2}
         height = ${height ? height * 2 : image.height * 2}
-        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
-        allowCropping = ${allowCropping ? allowCropping : true}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        allowCropping = ${allowCropping ? allowCropping : false}
         format = 'webp'
         async = ${async}
         @if.condition = ${webp}
@@ -212,16 +212,16 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         asset = ${image}
         width = ${width ? width * 2 : image.width * 2}
         height = ${height ? height * 2 : image.height * 2}
-        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
-        allowCropping = ${allowCropping ? allowCropping : true}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        allowCropping = ${allowCropping ? allowCropping : false}
         async = ${async}
     }
     webpImageUri4x = Neos.Neos:ImageUri {
         asset = ${image}
         width = ${width ? width * 4 : image.width * 4}
         height = ${height ? height * 4 : image.height * 4}
-        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
-        allowCropping = ${allowCropping ? allowCropping : true}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        allowCropping = ${allowCropping ? allowCropping : false}
         format = 'webp'
         async = ${async}
         @if.condition = ${webp}
@@ -230,8 +230,8 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
         asset = ${image}
         width = ${width ? width * 4 : image.width * 4}
         height = ${height ? height * 4 : image.height * 4}
-        allowUpScaling = ${allowUpScaling ? allowUpScaling : true}
-        allowCropping = ${allowCropping ? allowCropping : true}
+        allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
+        allowCropping = ${allowCropping ? allowCropping : false}
         async = ${async}
     }
     value = ${image && !webp ? this.imageUri + ' 1x, ' + this.imageUri2x + ' 2x,' + this.imageUri4x + ' 4x' : (image && webp ? this.webpImageUri + ' 1x, ' + this.webpImageUri2x + ' 2x,' + this.webpImageUri4x + ' 4x' : false)}
