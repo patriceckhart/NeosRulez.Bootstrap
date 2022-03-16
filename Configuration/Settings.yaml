@@ -42,5 +42,6 @@ NeosRulez:
     useYouTubeNoCookie: true
     navbarIdentifier: true
 #    googleMapsApiKey: 'XyzaazaSyAEpcE4tniLTPaCDTm9e9-7h9dPBgHjfs'
-#    fontawesome:
+    fontawesome:
+      version: '5.15.2'
 #      licence: pro

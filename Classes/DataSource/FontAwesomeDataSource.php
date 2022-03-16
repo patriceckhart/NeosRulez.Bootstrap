@@ -60,7 +60,7 @@ class FontAwesomeDataSource extends AbstractDataSource {
                 }
             }
         }
-        $fileName = sprintf('resource://NeosRulez.Bootstrap/Private/Metadata/font-awesome-icons-' . $pr . '.yml');
+        $fileName = sprintf('resource://NeosRulez.Bootstrap/Private/Metadata/font-awesome/' . $this->settings['fontawesome']['version'] . '/font-awesome-icons-' . $pr . '.yml');
         return (array) Yaml::parseFile($fileName);
     }
 
