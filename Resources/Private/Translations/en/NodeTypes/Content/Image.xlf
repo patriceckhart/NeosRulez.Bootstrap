@@ -9,7 +9,7 @@
 				<source>Image with alternate image sizes</source>
 			</trans-unit>
             <trans-unit id="properties.block" xml:space="preserve">
-				<source>Whole width</source>
+				<source>Scale image to whole width</source>
 			</trans-unit>
             <trans-unit id="properties.alternativeImageSizes" xml:space="preserve">
 				<source>Alternate image sizes</source>

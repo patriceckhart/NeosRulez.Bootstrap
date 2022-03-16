@@ -36,4 +36,4 @@
         reloadIfChanged: true
         inspector:
           group: image
-          position: 300
+          position: before alternativeText
