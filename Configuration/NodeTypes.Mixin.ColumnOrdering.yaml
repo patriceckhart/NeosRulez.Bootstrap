@@ -15,6 +15,7 @@
         label: i18n
         reloadIfChanged: true
         inspector:
+          hidden: 'ClientEval:node.properties.breakpoint ? false : true'
           group: columnOrdering
           position: 1
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -35,6 +36,7 @@
         label: i18n
         reloadIfChanged: true
         inspector:
+          hidden: 'ClientEval:node.properties.breakpoint ? false : true'
           group: columnOrdering
           position: 2
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -55,6 +57,7 @@
         label: i18n
         reloadIfChanged: true
         inspector:
+          hidden: 'ClientEval:node.properties.breakpoint ? false : true'
           group: columnOrdering
           position: 3
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
@@ -75,6 +78,7 @@
         label: i18n
         reloadIfChanged: true
         inspector:
+          hidden: 'ClientEval:node.properties.breakpoint ? false : true'
           group: columnOrdering
           position: 4
           editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
