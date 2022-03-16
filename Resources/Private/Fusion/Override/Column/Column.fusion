@@ -13,7 +13,17 @@ prototype(Neos.NodeTypes.ColumnLayouts:MultiColumn) < prototype(Neos.Neos:Conten
 
 prototype(Neos.NodeTypes.ColumnLayouts:MultiColumnItem) < prototype(Neos.Neos:ContentCollection) {
     @context.col = ${q(node).parent().property('breakpoint') ? 'col-' + q(node).parent().property('breakpoint') + '-' : 'col-'}
-    attributes.class = ${col + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+    @context.ordering = Neos.NodeTypes.ColumnLayouts:MultiColumnItem.ColumnOrdering {
+        columnIndex = ${String.toString(String.toInteger(multiColumnIteration.index) + 1)}
+    }
+    attributes.class = ${col + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index] + ordering}
+}
+
+prototype(Neos.NodeTypes.ColumnLayouts:MultiColumnItem.ColumnOrdering) < prototype(Neos.Fusion:Value) {
+
+    renderOrdering = ${q(node).parent().property('orderingColumn1') ? true : q(node).parent().property('orderingColumn2') ? true : q(node).parent().property('orderingColumn3') ? true : q(node).parent().property('orderingColumn4') ? true : false}
+
+    value = ${this.renderOrdering ? ((' order-lg-' + this.columnIndex) + ' order-' + (this.columnIndex == '1' ? q(node).parent().property('orderingColumn1') : '') + (this.columnIndex == '2' ? q(node).parent().property('orderingColumn2') : '') + (this.columnIndex == '3' ? q(node).parent().property('orderingColumn3') : '') + (this.columnIndex == '4' ? q(node).parent().property('orderingColumn4') : '')) : ''}
 }
 
 prototype(NeosRulez.Bootstrap:Component.MultiColumn.Renderer) < prototype(Neos.Neos:ContentComponent) {

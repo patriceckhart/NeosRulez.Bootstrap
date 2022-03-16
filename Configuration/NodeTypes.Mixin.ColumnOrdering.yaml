@@ -1,0 +1,90 @@
+'NeosRulez.Bootstrap:Mixin.ColumnOrdering':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        columnOrdering:
+          label: i18n
+          icon: fas fa-sort
+          position: after column
+  properties:
+    orderingColumn1:
+      defaultValue: '1'
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: columnOrdering
+          position: 1
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              '1':
+                label: 'Position 1'
+              '2':
+                label: 'Position 2'
+              '3':
+                label: 'Position 3'
+              '4':
+                label: 'Position 4'
+    orderingColumn2:
+      defaultValue: '2'
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: columnOrdering
+          position: 2
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              '1':
+                label: 'Position 1'
+              '2':
+                label: 'Position 2'
+              '3':
+                label: 'Position 3'
+              '4':
+                label: 'Position 4'
+    orderingColumn3:
+      defaultValue: '3'
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: columnOrdering
+          position: 3
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              '1':
+                label: 'Position 1'
+              '2':
+                label: 'Position 2'
+              '3':
+                label: 'Position 3'
+              '4':
+                label: 'Position 4'
+    orderingColumn4:
+      defaultValue: '4'
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: columnOrdering
+          position: 4
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              '1':
+                label: 'Position 1'
+              '2':
+                label: 'Position 2'
+              '3':
+                label: 'Position 3'
+              '4':
+                label: 'Position 4'

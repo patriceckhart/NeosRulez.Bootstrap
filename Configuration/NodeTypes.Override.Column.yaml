@@ -2,6 +2,7 @@
   superTypes:
     'NeosRulez.Bootstrap:Component.AbstractContent': true
     'NeosRulez.Bootstrap:Mixin.Column': true
+    'NeosRulez.Bootstrap:Mixin.ColumnOrdering': true
   ui:
     group: structure
     icon: icon-columns
@@ -25,6 +26,24 @@
                 label: '66% / 33%'
               '4-8':
                 label: '33% / 66%'
+    orderingColumn1:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '3': ~
+              '4': ~
+    orderingColumn2:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '3': ~
+              '4': ~
+    orderingColumn3:
+      ui: ~
+    orderingColumn4:
+      ui: ~
 
 'Neos.NodeTypes.ColumnLayouts:ThreeColumn':
   properties:
@@ -46,6 +65,26 @@
                 label: '25% / 50% / 25%'
               '3-3-6':
                 label: '25% / 25% / 50%'
+    orderingColumn1:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '4': ~
+    orderingColumn2:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '4': ~
+    orderingColumn3:
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '4': ~
+    orderingColumn4:
+      ui: ~
 
 'Neos.NodeTypes.ColumnLayouts:FourColumn':
   properties:
