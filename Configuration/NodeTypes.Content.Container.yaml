@@ -65,7 +65,7 @@
           position: before backgroundImage
           editorOptions:
             constraints:
-              mediaTypes: [ '.mp4', '.ogg', '.webm' ]
+              mediaTypes: [ 'video/mp4', 'video/ogg', 'video/webm' ]
     backgroundImage:
       type: 'Neos\Media\Domain\Model\ImageInterface'
       ui:
