@@ -4,7 +4,7 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     maximumHeight = 2560
     defaultHeight = null
 
-    figureClassName = ${'d-flex' + (node.properties.alignment == 'left' ? ' justify-content-start' : (node.properties.alignment == 'right' ? ' justify-content-end' : (node.properties.alignment == 'center' ? ' justify-content-center' : false)))}
+    figureClassName = ${'d-flex w-100' + (node.properties.alignment == 'left' ? ' justify-content-start' : (node.properties.alignment == 'right' ? ' justify-content-end' : (node.properties.alignment == 'center' ? ' justify-content-center' : false)))}
     figcaptionClassName = ${'figure-caption' + (node.properties.alignment == 'left' ? ' text-start' : (node.properties.alignment == 'right' ? ' text-end' : (node.properties.alignment == 'center' ? ' text-center' : false)))}
     lightbox = ${node.properties.lightbox ? true : false}
     block = ${node.properties.block ? ' w-100' : false}
