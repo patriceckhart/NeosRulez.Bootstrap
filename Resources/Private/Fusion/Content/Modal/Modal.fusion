@@ -16,22 +16,29 @@ prototype(NeosRulez.Bootstrap:Content.Modal) < prototype(Neos.Neos:ContentCompon
             <code @if.render={props.autoOpen && site.context.inBackend} >
                 {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Modal:content.autoOpen')} {(String.toInteger(node.properties.autoOpenTime) / 1000)} {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Modal:content.autoOpenSeconds')}
             </code>
-            <div class="modal fade" id={props.modalId} tabindex="-1" aria-labelledby={props.modalId + 'Label'} aria-hidden="true">
-                <div class={props.modalDialogClass} >
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id={props.modalId + 'Label'} >
-                                <Neos.Neos:Editable property="title" />
-                            </h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            {props.nodes}
-                        </div>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+        <NeosRulez.Bootstrap:Content.Modal.Modal modalId={props.modalId} modalDialogClass={props.modalDialogClass} nodes={props.nodes} />
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Content.Modal.Modal) < prototype(Neos.Fusion:Component) {
+
+    renderer = afx`
+        <div class="modal fade" id={props.modalId} tabindex="-1" aria-labelledby={props.modalId + 'Label'} aria-hidden="true">
+            <div class={props.modalDialogClass} >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id={props.modalId + 'Label'} >
+                            <Neos.Neos:Editable property="title" />
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {props.nodes}
                     </div>
                 </div>
             </div>
-        </NeosRulez.Bootstrap:Component.AbstractContent>
+        </div>
     `
 }
 
