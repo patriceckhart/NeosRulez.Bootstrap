@@ -13,6 +13,15 @@
         neosrulezBootstrap:
           label: NeosRulez.Bootstrap:NodeTypes.Content.Accordion:ui.label
           icon: fas fa-list-ul
+  properties:
+    flushAccordion:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+          position: 1
   constraints:
     nodeTypes:
       '*': false

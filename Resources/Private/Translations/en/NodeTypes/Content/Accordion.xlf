@@ -5,6 +5,9 @@
             <trans-unit id="ui.label" xml:space="preserve">
 				<source>Accordion</source>
 			</trans-unit>
+            <trans-unit id="properties.flushAccordion" xml:space="preserve">
+				<source>Hide frames</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

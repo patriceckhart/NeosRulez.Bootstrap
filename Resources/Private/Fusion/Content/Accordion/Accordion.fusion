@@ -5,9 +5,11 @@ prototype(NeosRulez.Bootstrap:Content.Accordion) < prototype(Neos.Neos:ContentCo
 
     accordionId = ${'neosrulez_bootstrap__accordion__' + node.identifier}
 
+    flushAccordion = ${q(node).property('flushAccordion')}
+
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
-            <div class="accordion accordion-flush" id={props.accordionId} >
+            <div class={'accordion' + (props.flushAccordion ? ' accordion-flush' : '')} id={props.accordionId} >
                 {props.nodes}
             </div>
         </NeosRulez.Bootstrap:Component.AbstractContent>
