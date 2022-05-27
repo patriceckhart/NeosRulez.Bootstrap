@@ -146,6 +146,9 @@
       Parallax.requestRender();
     });
 
+    this.$mirror.attr('mirror-parallax-id', this.parallaxId);
+    this.$slider.attr('slider-parallax-id', this.parallaxId);
+
     if (!sliderExisted)
       this.$slider[0].src = this.imageSrc;
 
@@ -405,8 +408,8 @@
 
   // Parallax Data-API
 
-  $( function () { 
-    $('[data-parallax="scroll"]').parallax(); 
+  $( function () {
+    $('[data-parallax="scroll"]').parallax();
   });
 
 }(jQuery, window, document));

@@ -73,8 +73,22 @@ $(document).ready(function(){
             }
         });
     }
+    function onElementHeightChange(element, callback) {
+        let lastHeight = element.clientHeight, newHeight;
+        (function run() {
+            newHeight = element.clientHeight;
+            if (lastHeight !== newHeight)
+                callback(newHeight)
+            lastHeight = newHeight
+            if (element.onElementHeightChangeTimer)
+                clearTimeout(element.onElementHeightChangeTimer)
+            element.onElementHeightChangeTimer = setTimeout(run, 1)
+        })();
+    }
+    onElementHeightChange(document.body, function(h) {
+        window.dispatchEvent(new Event('resize'));
+    });
 });
-
 
 if (iOS == true) {
 } else {

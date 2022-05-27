@@ -40,7 +40,7 @@
         label: i18n
         reloadPageIfChanged: true
         inspector:
-          hidden: 'ClientEval:node.properties.transparency || node.properties.videourl || node.properties.video ? true : false'
+          hidden: 'ClientEval:node.properties.videourl || node.properties.video ? true : false'
           group: neosrulezBootstrap
           position: after backgroundImage
     videourl:
@@ -137,7 +137,7 @@
         label: i18n
         reloadIfChanged: true
         inspector:
-          hidden: 'ClientEval:node.properties.parallax || node.properties.videourl || node.properties.video ? true : false'
+          hidden: 'ClientEval:node.properties.videourl || node.properties.video ? true : false'
           group: color
           position: start
           editor: 'Shel.Neos.ColorPicker/ColorPickerEditor'
@@ -156,4 +156,4 @@
     transparency:
       ui:
         inspector:
-          hidden: 'ClientEval:node.properties.parallax || node.properties.videourl || node.properties.video ? true : false'
+          hidden: 'ClientEval:node.properties.videourl || node.properties.video ? true : false'
