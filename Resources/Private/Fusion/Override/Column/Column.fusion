@@ -1,6 +1,6 @@
 prototype(Neos.NodeTypes.ColumnLayouts:MultiColumn) < prototype(Neos.Neos:ContentComponent) {
     inBackend = ${site.context.inBackend}
-    attributes = ${'row' + divattributes + (q(node).property('nogutters') ? ' ' + ' no-gutters' : '' ) + (q(node).property('valignment') ? ' ' + q(node).property('valignment') : '' )}
+    attributes = ${'row' + divattributes + (q(node).property('nogutters') ? ' g-0' : '' ) + (q(node).property('valignment') ? ' ' + q(node).property('valignment') : '' )}
     columns.iterationName = 'multiColumnIteration'
 
     renderer = afx`
