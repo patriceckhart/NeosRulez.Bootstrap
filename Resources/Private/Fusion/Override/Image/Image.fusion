@@ -83,8 +83,9 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
 
     @context.imageSizeStyleAttribute = ${this.imageWidth ? 'width:' + this.imageWidth + 'px !important; height:auto !important;' : (this.imageHeight ? 'width:auto !important; height:' + this.imageHeight + 'px !important;' : false)}
 
-    block = ${node.properties.block ? ' img-fluid w-100' : false}
-    imageClassName = ${node.properties.rounded ? 'figure-img' + this.block + ' rounded' : 'figure-img' + this.block + (this.class ? ' ' + this.class : '')}
+    block = ${node.properties.block ? true : false}
+    blockClass = ${this.block ? ' img-fluid w-100' : ''}
+    imageClassName = ${node.properties.rounded ? 'figure-img' + this.blockClass + ' rounded' : 'figure-img' + this.blockClass + (this.class ? ' ' + this.class : '')}
 
     originalAssetTitle = ${this.image.originalAsset.title}
     originalAssetCopyrightnotice = ${this.image.originalAsset.copyrightnotice}
