@@ -14,7 +14,9 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     allowUpScaling = false
     image = ${q(node).property("image") ? q(node).property("image") : false}
 
-    autoWidth = NeosRulez.Bootstrap:Helper.ImageAutoWidth
+    autoWidth = NeosRulez.Bootstrap:Helper.ImageAutoWidth {
+        block = ${q(node).property('block')}
+    }
 
     imageHeight = ${this.image.originalAsset.fileExtension != 'svg' ? (node.properties.imageHeight ? node.properties.imageHeight : false) : false}
     width = ${this.image.originalAsset.fileExtension != 'svg' ?  (node.properties.imageWidth ? node.properties.imageWidth : (this.imageHeight ? String.toInteger((String.toInteger(this.image.width * this.imageHeight)) / String.toInteger(this.image.height)) : this.autoWidth ? this.autoWidth : this.defaultWidth)) : false}
@@ -81,8 +83,8 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
 
     @context.imageSizeStyleAttribute = ${this.imageWidth ? 'width:' + this.imageWidth + 'px !important; height:auto !important;' : (this.imageHeight ? 'width:auto !important; height:' + this.imageHeight + 'px !important;' : false)}
 
-    block = ${node.properties.block ? ' w-100' : false}
-    imageClassName = ${node.properties.rounded ? 'figure-img img-fluid' + this.block + ' rounded' : 'figure-img img-fluid' + this.block + (this.class ? ' ' + this.class : '')}
+    block = ${node.properties.block ? ' img-fluid w-100' : false}
+    imageClassName = ${node.properties.rounded ? 'figure-img' + this.block + ' rounded' : 'figure-img' + this.block + (this.class ? ' ' + this.class : '')}
 
     originalAssetTitle = ${this.image.originalAsset.title}
     originalAssetCopyrightnotice = ${this.image.originalAsset.copyrightnotice}
@@ -261,6 +263,6 @@ prototype(NeosRulez.Bootstrap:Helper.ImageAutoWidth) < prototype(Neos.Fusion:Val
     isTwoColumn = ${q(node).parentsUntil('[instanceof Neos.NodeTypes.ColumnLayouts:TwoColumn]').count() == 1 ? true : false}
     isThreeColumn = ${q(node).parentsUntil('[instanceof Neos.NodeTypes.ColumnLayouts:ThreeColumn]').count() == 1 ? true : false}
     isFourColumn = ${q(node).parentsUntil('[instanceof Neos.NodeTypes.ColumnLayouts:FourColumn]').count() == 1 ? true : false}
-    width = ${this.isTwoColumn ? 660 : (this.isThreeColumn ? 440 : (this.isFourColumn ? 330 : false))}
+    width = ${this.block ? this.isTwoColumn ? 660 : (this.isThreeColumn ? 440 : (this.isFourColumn ? 330 : false)) : false}
     value = ${this.width}
 }
