@@ -45,13 +45,15 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 
     galleryId = ${'lightbox__' + node.identifier}
 
+    block = ${q(node).property('block')}
+
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
             <figure class={props.figureClassName} >
                 <div @if.render={props.image} class={props.figureWrapperClassName} >
-                    <NeosRulez.Bootstrap:Component.ImageTag @if.render={props.link} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} imageWidth={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageWidth} imageHeight={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageHeight} />
-                    <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} imageWidth={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageWidth} imageHeight={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageHeight} />
-                    <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} galleryId={props.galleryId} async={props.async} imageWidth={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageWidth} imageHeight={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageHeight} />
+                    <NeosRulez.Bootstrap:Component.ImageTag @if.render={props.link} image={props.image} block={props.block} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} imageWidth={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageWidth} imageHeight={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageHeight} />
+                    <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} block={props.block} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} imageWidth={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageWidth} imageHeight={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageHeight} />
+                    <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} image={props.image} block={props.block} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} galleryId={props.galleryId} async={props.async} imageWidth={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageWidth} imageHeight={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageHeight} />
                     <figcaption @if.render={props.hasCaption} class={props.figcaptionClassName} itemprop={props.caption} >
                         <Neos.Neos:Editable property="caption" />
                     </figcaption>
@@ -83,7 +85,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
 
     @context.imageSizeStyleAttribute = ${this.imageWidth ? 'width:' + this.imageWidth + 'px !important; height:auto !important;' : (this.imageHeight ? 'width:auto !important; height:' + this.imageHeight + 'px !important;' : false)}
 
-    block = ${node.properties.block ? true : false}
+    block = true
     blockClass = ${this.block ? ' img-fluid w-100' : ''}
     imageClassName = ${node.properties.rounded ? 'figure-img' + this.blockClass + ' rounded' : 'figure-img' + this.blockClass + (this.class ? ' ' + this.class : '')}
 
@@ -255,7 +257,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusi
 
     renderer = afx`
         <Neos.Fusion:Tag tagName={props.tagName} attributes.href={props.inBackend ? false : props.lightboxImage} attributes.class="d-block" attributes.data-fslightbox={props.galleryId} >
-            <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} imageWidth={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageWidth} imageHeight={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageHeight} />
+            <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} block={props.block} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} imageWidth={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageWidth} imageHeight={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageHeight} />
         </Neos.Fusion:Tag>
     `
 }
