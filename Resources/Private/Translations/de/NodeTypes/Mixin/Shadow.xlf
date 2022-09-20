@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.shadow" xml:space="preserve">
+				<source>Schatten</source>
+			</trans-unit>
+            <trans-unit id="properties.shadow" xml:space="preserve">
+				<source>Schatten aktivieren</source>
+			</trans-unit>
+            <trans-unit id="properties.shadowSize" xml:space="preserve">
+				<source>Schattengröße</source>
+			</trans-unit>
+            <trans-unit id="properties.shadowSize.selectBoxEditor.values.small" xml:space="preserve">
+                <source>Klein</source>
+            </trans-unit>
+            <trans-unit id="properties.shadowSize.selectBoxEditor.values.regular" xml:space="preserve">
+                <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="properties.shadowSize.selectBoxEditor.values.large" xml:space="preserve">
+                <source>Groß</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

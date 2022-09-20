@@ -37,18 +37,38 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
     }
     visibilityClasses.@if.render = ${visibilities}
 
+    shadow = ${q(node).property('shadow')}
+
     class = ${'neosrulez-bootstrap-content' + (this.nodetype ? ' ' + this.nodetype : false) + (this.containerType ? ' ' + this.containerType : false) + (this.marginClass ? this.marginClass : false) + (this.marginNegativeClass ? this.marginNegativeClass : false) + (this.paddingClass ? this.paddingClass : false) + (this.additionalClass ? ' ' + this.additionalClass : false) + (this.linkedClass ? this.linkedClass : false) + (this.valignmentClass ? this.valignmentClass : false) + (this.animation ? ' os-animation' : false) + (this.parallaxClass ? ' ' + this.parallaxClass : false) + (this.visibilityClasses ? ' ' + (this.inBackend ? ' hiding' : this.visibilityClasses) : false) + (this.cssClass ? ' ' + this.cssClass : false)}
+
     id = ${'node__' + node.identifier}
 
     renderer = afx`
         <div @if.render={!props.link && !props.isButton || props.link && props.inBackend && !props.isButton} id={props.id} class={props.class} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} data-parallax-id={props.parallax ? node.identifier : false} style={!props.parallaxImage ? props.styleAttribute : false} >
-            {props.content}
+            <NeosRulez.Bootstrap:Component.Content content={props.content} shadow={props.shadow} />
         </div>
         <a @if.render={!props.inBackend && !props.isButton && props.link} id={props.id} class={props.class} href={props.link} target={props.linkTarget} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} data-parallax-id={props.parallax ? node.identifier : false} style={!props.parallaxImage ? props.styleAttribute : false} >
-            {props.content}
+            <NeosRulez.Bootstrap:Component.Content content={props.content} shadow={props.shadow} />
         </a>
         <div @if.render={props.isButton} id={props.id} class={props.class} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} data-parallax-id={props.parallax ? node.identifier : false} style={!props.parallaxImage ? props.styleAttribute : false} >
+            <NeosRulez.Bootstrap:Component.Content content={props.content} shadow={props.shadow} />
+        </div>
+    `
+}
+
+prototype(NeosRulez.Bootstrap:Component.Content) < prototype(Neos.Fusion:Component) {
+
+    shadowSize = ${this.shadow ? q(node).property('shadowSize') : false}
+    shadowClass = ${this.shadow && this.shadowSize ? 'shadow' + (this.shadowSize ? (this.shadowSize == 'small' ? '-sm' : this.shadowSize == 'regular' ? '' : this.shadowSize == 'large' ? '-lg' : '') : '') : ''}
+
+    contentClass = ${this.shadowClass}
+
+    renderer = afx`
+        <div @if.render={props.shadow} class={props.contentClass} >
             {props.content}
         </div>
+        <Neos.Fusion:Fragment @if.render={!props.shadow} >
+            {props.content}
+        </Neos.Fusion:Fragment>
     `
 }

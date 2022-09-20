@@ -9,6 +9,7 @@
     'NeosRulez.Bootstrap:Mixin.Link': true
     'NeosRulez.Bootstrap:Mixin.LinkTarget': true
     'NeosRulez.Bootstrap:Mixin.HidingElements': true
+    'NeosRulez.Bootstrap:Mixin.Shadow': true
   ui:
     group: neosrulezBootstrap
     inspector:
