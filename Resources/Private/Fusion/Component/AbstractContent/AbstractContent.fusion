@@ -38,7 +38,7 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
     visibilityClasses.@if.render = ${visibilities}
 
     shadow = ${q(node).property('shadow')}
-    shadowSize = ${q(node).property('shadowSize')}
+    shadowSize = ${q(node).property('shadow') && q(node).property('shadowSize')}
     shadowClass = ${this.shadowSize ? 'shadow' + (this.shadowSize ? (this.shadowSize == 'small' ? '-sm' : this.shadowSize == 'regular' ? '' : this.shadowSize == 'large' ? '-lg' : '') : '') : ''}
 
     class = ${'neosrulez-bootstrap-content' + (this.nodetype ? ' ' + this.nodetype : false) + (this.containerType ? ' ' + this.containerType : false) + (this.marginClass ? this.marginClass : false) + (this.marginNegativeClass ? this.marginNegativeClass : false) + (this.paddingClass ? this.paddingClass : false) + (this.additionalClass ? ' ' + this.additionalClass : false) + (this.linkedClass ? this.linkedClass : false) + (this.valignmentClass ? this.valignmentClass : false) + (this.animation ? ' os-animation' : false) + (this.parallaxClass ? ' ' + this.parallaxClass : false) + (this.visibilityClasses ? ' ' + (this.inBackend ? ' hiding' : this.visibilityClasses) : false) + (this.isContainerNodeType ? (' ' + this.shadowClass) : '') + (this.cssClass ? ' ' + this.cssClass : false)}
