@@ -1,0 +1,7 @@
+prototype(NeosRulez.Bootstrap:Class.OpenStreetMap) {
+    @class = 'NeosRulez\\Bootstrap\\Fusion\\OpenStreetMapFusion'
+    address = false
+    zip = false
+    city = false
+    country = false
+}

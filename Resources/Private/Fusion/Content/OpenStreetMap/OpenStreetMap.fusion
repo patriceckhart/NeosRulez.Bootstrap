@@ -1,0 +1,25 @@
+prototype(NeosRulez.Bootstrap:Content.OpenStreetMap) < prototype(NeosRulez.Bootstrap:Content.GoogleMaps) {
+
+    openStreetMapSource = NeosRulez.Bootstrap:Class.OpenStreetMap {
+        address = ${q(node).property('address')}
+        zip = ${q(node).property('zip')}
+        city = ${q(node).property('city')}
+        country = ${q(node).property('country')}
+    }
+    src = ${this.location && !node.properties.source ? this.openStreetMapSource : false}
+
+    renderer >
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <div @if.render={props.src} class="ratio ratio-16x9">
+                <iframe src={props.src} allowfullscreen></iframe>
+            </div>
+            <div @if.render={props.embedSrc} class="ratio ratio-16x9">
+                <iframe class="openstreet-map" src={props.embedSrc} allowfullscreen></iframe>
+            </div>
+            <code @if.render={!props.src && !props.embedSrc} >
+                {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.GoogleMaps:content.noProperties')}
+            </code>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}

@@ -1,0 +1,9 @@
+'NeosRulez.Bootstrap:Content.OpenStreetMap':
+  superTypes:
+    'NeosRulez.Bootstrap:Content.GoogleMaps': true
+  ui:
+    label: i18n
+    inspector:
+      groups:
+        neosrulezBootstrap:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.OpenStreetMap:ui.label
