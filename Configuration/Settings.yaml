@@ -44,4 +44,5 @@ NeosRulez:
 #    googleMapsApiKey: 'XyzaazaSyAEpcE4tniLTPaCDTm9e9-7h9dPBgHjfs'
     fontawesome:
       version: '5.15.2'
+#      version: '6.2.0'
 #      licence: pro

@@ -24,25 +24,33 @@ class FontAwesomeDataSource extends AbstractDataSource {
      * @param array $settings
      * @return void
      */
-    public function injectSettings(array $settings) {
+    public function injectSettings(array $settings): void
+    {
         $this->settings = $settings;
     }
 
-
     /**
      * @inheritDoc
+     * @return array
      */
-    public function getData(NodeInterface $node = null, array $arguments = array()) {
+    public function getData(NodeInterface $node = null, array $arguments = array()): array
+    {
         $options = [];
         $metadata = $this->loadMetaData();
+        $faVersion = $this->getFaVersion();
         if($metadata) {
             foreach ($metadata as $i => $option) {
                 if($option['styles'][0] != 'regular') {
                     $iconPrefix = $option['styles'][0] == 'solid' ? 'fas fa-' : 'fab fa-';
+                    $previewPath = false;
+                    if((float) $faVersion >= 6) {
+                        $iconPrefix = $option['styles'][0] == 'solid' ? 'fa-solid fa-' : 'fa-brands fa-';
+                        $previewPath = '/_Resources/Static/Packages/NeosRulez.Bootstrap/Assets/fontawesome-free-' . $this->getFaVersion() . '-web/svgs/' . ($option['styles'][0] == 'solid' ? 'solid' : 'brands') . '/' . $i . '.svg';
+                    }
                     $options[] = [
                         'label' => $option['label'],
                         'value' => $iconPrefix . $i,
-                        'icon' => $iconPrefix . $i,
+                        (float) $faVersion >= 6 ? 'preview' : 'icon' => (float) $faVersion >= 6 ? ($previewPath) : ($iconPrefix . $i),
                         'group' => $option['styles'][0]
                     ];
                 }
@@ -51,17 +59,21 @@ class FontAwesomeDataSource extends AbstractDataSource {
         return $options;
     }
 
-    function loadMetaData() {
-        $pr = 'free';
-        if(array_key_exists('fontawesome', $this->settings)) {
-            if(array_key_exists('licence', $this->settings['fontawesome'])) {
-                if($this->settings['fontawesome']['licence'] == 'pro') {
-                    $pr = 'pro';
-                }
-            }
-        }
-        $fileName = sprintf('resource://NeosRulez.Bootstrap/Private/Metadata/font-awesome/' . $this->settings['fontawesome']['version'] . '/font-awesome-icons-' . $pr . '.yml');
+    /**
+     * @return array
+     */
+    private function loadMetaData(): array
+    {
+        $fileName = 'resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-' . $this->getFaVersion() . '-web/metadata/icons.yml';
         return (array) Yaml::parseFile($fileName);
+    }
+
+    /**
+     * @return string
+     */
+    private function getFaVersion(): string
+    {
+        return $this->settings['fontawesome']['version'];
     }
 
 }
