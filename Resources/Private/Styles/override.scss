@@ -1,5 +1,11 @@
 @mixin transition($property) { transition: all $property; -webkit-transition: all $property; -moz-transition: all $property; }
 
+@if variable-exists(prefix) {
+  .navbar { padding-right: calc(var(--#{$prefix}gutter-x) * .5);
+    padding-left: calc(var(--#{$prefix}gutter-x) * .5);
+  }
+}
+
 #top__anchor { position: fixed; right:0; bottom:0; margin-right:2rem; margin-bottom:2rem; visibility:hidden; opacity:0; z-index:2024; @include transition(0.2s);
   &.show { visibility:visible; opacity:1; }
 }
