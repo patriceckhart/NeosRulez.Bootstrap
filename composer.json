@@ -3,11 +3,12 @@
   "type": "neos-package",
   "name": "neosrulez/bootstrap",
   "require": {
-    "neos/neos": "*",
+    "neos/neos": "^7.0 || ^8.0 || ^8.1",
     "neos/nodetypes": "*",
     "shel/neos-colorpicker": "^1.4",
     "neosrulez/bootstrap-formbuilder": "*",
-    "neosrulez/countrydatasource": "^1.0"
+    "neosrulez/countrydatasource": "^1.0",
+    "twbs/bootstrap": "^5.2"
   },
   "autoload": {
     "psr-4": {
