@@ -1,7 +1,9 @@
 prototype(NeosRulez.Bootstrap:Component.TopAnchorLink) < prototype(Neos.Fusion:Component) {
 
+    className = 'btn btn-primary'
+
     renderer = afx`
-        <button id="top__anchor" title={I18n.translate('NeosRulez.Bootstrap:NodeTypes.Component.TopAnchorLink:content.scrollToTop')} class="btn btn-primary" >
+        <button id="top__anchor" title={I18n.translate('NeosRulez.Bootstrap:NodeTypes.Component.TopAnchorLink:content.scrollToTop')} class={props.className} >
             <i class="fas fa-chevron-up"></i>
         </button>
     `
