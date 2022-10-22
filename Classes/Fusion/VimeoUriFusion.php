@@ -10,7 +10,8 @@ class VimeoUriFusion extends AbstractFusionObject {
     /**
      * @return string
      */
-    public function evaluate() {
+    public function evaluate(): string
+    {
         $link = $this->fusionValue('link');
         $result = false;
         if($link) {
@@ -18,7 +19,7 @@ class VimeoUriFusion extends AbstractFusionObject {
                 if(preg_match("/\/(\d+)$/",$link,$matches)) {
                     $vimeoId = $matches[1];
                 }
-                $result = 'https://player.vimeo.com/video/'.$vimeoId;
+                $result = 'https://player.vimeo.com/video/' . $vimeoId;
             }
         }
         return $result;

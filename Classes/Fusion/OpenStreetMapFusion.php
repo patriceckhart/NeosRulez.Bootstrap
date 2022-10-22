@@ -12,15 +12,15 @@ class OpenStreetMapFusion extends AbstractFusionObject
 {
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function evaluate()
+    public function evaluate(): string
     {
         $address = $this->fusionValue('address');
         $zip = $this->fusionValue('zip');
         $city = $this->fusionValue('city');
         $country = $this->fusionValue('country');
-        $string = false;
+        $string = '';
 
         if($address && $zip && $city && $country) {
             $wayFromOSMData = $this->getWayFromOSMData($address, $zip, $city, $country);
@@ -37,7 +37,7 @@ class OpenStreetMapFusion extends AbstractFusionObject
      * @param string $country
      * @return array
      */
-    private function getWayFromOSMData(string $address, string $zip, string $city, string $country):array
+    private function getWayFromOSMData(string $address, string $zip, string $city, string $country): array
     {
         $osmData = $this->fetchOSMData($address, $zip, $city, $country);
         $result = [];
@@ -59,7 +59,7 @@ class OpenStreetMapFusion extends AbstractFusionObject
      * @param string $country
      * @return array
      */
-    private function fetchOSMData(string $address, string $zip, string $city, string $country):array
+    private function fetchOSMData(string $address, string $zip, string $city, string $country): array
     {
         $client = new Client();
         $request = new Request('GET', 'https://nominatim.openstreetmap.org/search?street=' . $this->paramReplacement($address) . '&city=' . $this->paramReplacement($city) . '&country=' . $this->paramReplacement($country) . '&postalcode=' . $this->paramReplacement($zip) . '&format=json');
@@ -71,7 +71,7 @@ class OpenStreetMapFusion extends AbstractFusionObject
      * @param string $string
      * @return string
      */
-    private function paramReplacement(string $string):string
+    private function paramReplacement(string $string): string
     {
         return str_replace(' ', '+', $string);
     }

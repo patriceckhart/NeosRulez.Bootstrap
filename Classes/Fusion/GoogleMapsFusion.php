@@ -5,12 +5,14 @@ use Neos\Flow\Annotations as Flow;
 use Doctrine\ORM\Mapping as ORM;
 use Neos\Fusion\FusionObjects\AbstractFusionObject;
 
-class GoogleMapsFusion extends AbstractFusionObject {
+class GoogleMapsFusion extends AbstractFusionObject
+{
 
     /**
      * @return string
      */
-    public function evaluate() {
+    public function evaluate(): string
+    {
         $address = $this->fusionValue('address');
         $zip = $this->fusionValue('zip');
         $city = $this->fusionValue('city');
@@ -26,7 +28,14 @@ class GoogleMapsFusion extends AbstractFusionObject {
         return $result;
     }
 
-    function getStringBetween($string, $start, $end){
+    /**
+     * @param string $string
+     * @param string $start
+     * @param string $end
+     * @return string
+     */
+    private function getStringBetween(string $string, string $start, string $end): string
+    {
         $string = ' ' . $string;
         $ini = strpos($string, $start);
         if ($ini == 0) return '';

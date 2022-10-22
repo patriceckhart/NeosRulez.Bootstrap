@@ -16,17 +16,18 @@ class YouTubeUriFusion extends AbstractFusionObject {
      * @param array $settings
      * @return void
      */
-    public function injectSettings(array $settings) {
+    public function injectSettings(array $settings): void
+    {
         $this->settings = $settings;
     }
-
 
     /**
      * @return string
      */
-    public function evaluate() {
+    public function evaluate(): string
+    {
         $link = $this->fusionValue('link');
-        $result = false;
+        $result = '';
         if($link) {
             $youTubeUri = $this->settings['useYouTubeNoCookie'] ? 'https://www.youtube-nocookie.com' : 'https://www.youtube.com';
             if (strpos($link, 'watch') !== false) {
