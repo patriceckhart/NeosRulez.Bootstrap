@@ -7,7 +7,6 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     figureClassName = ${'d-flex w-100' + (node.properties.alignment == 'left' ? ' justify-content-start' : (node.properties.alignment == 'right' ? ' justify-content-end' : (node.properties.alignment == 'center' ? ' justify-content-center' : false)))}
     figcaptionClassName = ${'figure-caption' + (node.properties.alignment == 'left' ? ' text-start' : (node.properties.alignment == 'right' ? ' text-end' : (node.properties.alignment == 'center' ? ' text-center' : false)))}
     lightbox = ${node.properties.lightbox ? true : false}
-    block = ${node.properties.block ? ' w-100' : false}
     figureWrapperClassName = ${'figure-wrapper' + (this.lightbox ? ' lightbox' : false) + (this.block ? ' w-100' : false)}
 
     allowCropping = false
@@ -254,6 +253,8 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusi
     }
     inBackend = ${site.context.inBackend}
     tagName = ${this.inBackend ? 'div' : 'a'}
+
+    block = true
 
     renderer = afx`
         <Neos.Fusion:Tag tagName={props.tagName} attributes.href={props.inBackend ? false : props.lightboxImage} attributes.class="d-block" attributes.data-fslightbox={props.galleryId} >
