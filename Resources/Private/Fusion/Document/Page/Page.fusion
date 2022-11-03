@@ -9,10 +9,15 @@ prototype(Neos.Neos:Page) {
     }
     head {
         NeosRulezBootstrapMetadata = Neos.Fusion:Component {
+
+            publicResourcePath = ${Configuration.setting('NeosRulez.Bootstrap.fontawesome.publicResourcePath')}
+            license = ${Configuration.setting('NeosRulez.Bootstrap.fontawesome.licence') == 'pro' ? 'pro' : 'free'}
+            version = ${Configuration.setting('NeosRulez.Bootstrap.fontawesome.version')}
+
             renderer = afx`
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <Neos.Fusion:Tag tagName="link" attributes.rel="stylesheet" @children="attributes.href" >
-                    <Neos.Fusion:ResourceUri path={'resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-' + Configuration.setting('NeosRulez.Bootstrap.fontawesome.version') + '-web/css/all.css'} />
+                    <Neos.Fusion:ResourceUri path={props.publicResourcePath + '/fontawesome-' + props.license + '-' + props.version + '-web/css/all.css'} />
                 </Neos.Fusion:Tag>
             `
         }

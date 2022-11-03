@@ -7,6 +7,7 @@ use Neos\Utility\TypeHandling;
 use Neos\Neos\Service\DataSource\AbstractDataSource;
 use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Symfony\Component\Yaml\Yaml;
+use Neos\Flow\ResourceManagement\ResourceManager;
 
 class FontAwesomeDataSource extends AbstractDataSource {
 
@@ -14,6 +15,12 @@ class FontAwesomeDataSource extends AbstractDataSource {
      * @var string
      */
     protected static $identifier = 'neosrulez-bootstrap-fa';
+
+    /**
+     * @Flow\Inject
+     * @var ResourceManager
+     */
+    protected $resourceManager;
 
     /**
      * @var array
@@ -45,7 +52,7 @@ class FontAwesomeDataSource extends AbstractDataSource {
                     $previewPath = false;
                     if((float) $faVersion >= 6) {
                         $iconPrefix = $option['styles'][0] == 'solid' ? 'fa-solid fa-' : 'fa-brands fa-';
-                        $previewPath = '/_Resources/Static/Packages/NeosRulez.Bootstrap/Assets/fontawesome-free-' . $this->getFaVersion() . '-web/svgs/' . ($option['styles'][0] == 'solid' ? 'solid' : 'brands') . '/' . $i . '.svg';
+                        $previewPath = $this->resourceManager->getPublicPackageResourceUriByPath($this->getPublicResourcePath()) . '/fontawesome-' . $this->getLicense() . '-' . $this->getFaVersion() . '-web/svgs/' . ($option['styles'][0] == 'solid' ? 'solid' : 'brands') . '/' . $i . '.svg';
                     }
                     $options[] = [
                         'label' => $option['label'],
@@ -64,7 +71,7 @@ class FontAwesomeDataSource extends AbstractDataSource {
      */
     private function loadMetaData(): array
     {
-        $fileName = 'resource://NeosRulez.Bootstrap/Public/Assets/fontawesome-free-' . $this->getFaVersion() . '-web/metadata/icons.yml';
+        $fileName = $this->getPublicResourcePath() . '/fontawesome-' . $this->getLicense() . '-' . $this->getFaVersion() . '-web/metadata/icons.yml';
         return (array) Yaml::parseFile($fileName);
     }
 
@@ -74,6 +81,22 @@ class FontAwesomeDataSource extends AbstractDataSource {
     private function getFaVersion(): string
     {
         return $this->settings['fontawesome']['version'];
+    }
+
+    /**
+     * @return string
+     */
+    private function getPublicResourcePath(): string
+    {
+        return $this->settings['fontawesome']['publicResourcePath'];
+    }
+
+    /**
+     * @return string
+     */
+    private function getLicense(): string
+    {
+        return array_key_exists('licence', $this->settings['fontawesome']) ? ($this->settings['fontawesome']['licence'] == 'pro' ? 'pro' : 'free') : 'free';
     }
 
 }
