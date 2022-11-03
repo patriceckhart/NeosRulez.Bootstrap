@@ -10,6 +10,7 @@
     'NeosRulez.Bootstrap:Mixin.LinkTarget': true
     'NeosRulez.Bootstrap:Mixin.HidingElements': true
     'NeosRulez.Bootstrap:Mixin.Shadow': true
+    'NeosRulez.Bootstrap:Mixin.Display': true
   ui:
     group: neosrulezBootstrap
     inspector:

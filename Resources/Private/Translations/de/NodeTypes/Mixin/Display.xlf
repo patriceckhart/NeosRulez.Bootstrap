@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.display" xml:space="preserve">
+				<source>Art der Darstellung</source>
+			</trans-unit>
+            <trans-unit id="properties.display.selectBoxEditor.values.none" xml:space="preserve">
+                <source>d-none: Das Element wird vollständig entfernt.</source>
+            </trans-unit>
+            <trans-unit id="properties.display.selectBoxEditor.values.inline" xml:space="preserve">
+                <source>d-inline: Zeigt ein Element als Inline-Element an. Alle Höhen- und Breiteneigenschaften haben keine Auswirkung.</source>
+            </trans-unit>
+            <trans-unit id="properties.display.selectBoxEditor.values.inline-block" xml:space="preserve">
+                <source>d-inline-block: Zeigt ein Element als Blockcontainer auf Inline-Ebene an. Das Element selbst ist als Inline-Element formatiert, aber Sie können Höhen- und Breitenwerte anwenden.</source>
+            </trans-unit>
+            <trans-unit id="properties.display.selectBoxEditor.values.block" xml:space="preserve">
+                <source>d-block: Zeigt ein Element als Blockelement an. Es beginnt auf einer neuen Zeile und nimmt die gesamte Breite ein.</source>
+            </trans-unit>
+            <trans-unit id="properties.display.selectBoxEditor.values.grid" xml:space="preserve">
+                <source>d-grid: Zeigt ein Element als Grid-Container auf Blockebene an.</source>
+            </trans-unit>
+            <trans-unit id="properties.display.selectBoxEditor.values.table" xml:space="preserve">
+                <source>d-table: Das Element verhält sich wie ein table-Element.</source>
+            </trans-unit>
+            <trans-unit id="properties.display.selectBoxEditor.values.table-cell" xml:space="preserve">
+                <source>d-table-cell: Das Element verhält sich wie ein td-Element.</source>
+            </trans-unit>
+            <trans-unit id="properties.display.selectBoxEditor.values.table-row" xml:space="preserve">
+                <source>d-table-row: Das Element verhält sich wie ein tr-Element.</source>
+            </trans-unit>
+            <trans-unit id="properties.display.selectBoxEditor.values.flex" xml:space="preserve">
+                <source>d-flex: Zeigt ein Element als flexiblen Container auf Blockebene an.</source>
+            </trans-unit>
+            <trans-unit id="properties.display.selectBoxEditor.values.inline-flex" xml:space="preserve">
+                <source>d-inline-flex: Zeigt ein Element als Flex-Container auf Inline-Ebene an.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

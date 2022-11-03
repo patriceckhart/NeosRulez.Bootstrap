@@ -1,0 +1,35 @@
+'NeosRulez.Bootstrap:Mixin.Display':
+  abstract: true
+  properties:
+    display:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrapContainer
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          position: start
+          editorOptions:
+            allowEmpty: true
+            values:
+              'none':
+                label: i18n
+              'inline':
+                label: i18n
+              'inline-block':
+                label: i18n
+              'block':
+                label: i18n
+              'grid':
+                label: i18n
+              'table':
+                label: i18n
+              'table-cell':
+                label: i18n
+              'table-row':
+                label: i18n
+              'flex':
+                label: i18n
+              'inline-flex':
+                label: i18n

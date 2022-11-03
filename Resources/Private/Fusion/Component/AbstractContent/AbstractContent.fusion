@@ -4,6 +4,7 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
     isButton = ${this.nodetype == 'neosrulez-bootstrap-content-button' || this.nodetype == 'neosrulez-bootstrap-content-youtube' || this.nodetype == 'neosrulez-bootstrap-content-vimeo' ? true : false}
 
     containerType = ${q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1 ? (this.isContainerNodeType ? 'container-fluid px-0' : (node.properties.containerType ? node.properties.containerType : false)) : false}
+    displayClass = ${q(node).property('display') ? ' d-' + q(node).property('display') : false}
     cssClass = ${node.properties.class ? node.properties.class : false}
 
     marginClass = ${(node.properties.mt ? ' ' + node.properties.mt : '') + (node.properties.mb ? ' ' + node.properties.mb : '') + (node.properties.ml ? ' ' + node.properties.ml : '') + (node.properties.mr ? ' ' + node.properties.mr : '')}
@@ -41,7 +42,7 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
     shadowSize = ${q(node).property('shadow') && q(node).property('shadowSize')}
     shadowClass = ${this.shadowSize ? 'shadow' + (this.shadowSize ? (this.shadowSize == 'small' ? '-sm' : this.shadowSize == 'regular' ? '' : this.shadowSize == 'large' ? '-lg' : '') : '') : ''}
 
-    class = ${'neosrulez-bootstrap-content' + (this.nodetype ? ' ' + this.nodetype : false) + (this.containerType ? ' ' + this.containerType : false) + (this.marginClass ? this.marginClass : false) + (this.marginNegativeClass ? this.marginNegativeClass : false) + (this.paddingClass ? this.paddingClass : false) + (this.additionalClass ? ' ' + this.additionalClass : false) + (this.linkedClass ? this.linkedClass : false) + (this.valignmentClass ? this.valignmentClass : false) + (this.animation ? ' os-animation' : false) + (this.parallaxClass ? ' ' + this.parallaxClass : false) + (this.visibilityClasses ? ' ' + (this.inBackend ? ' hiding' : this.visibilityClasses) : false) + (this.isContainerNodeType ? (' ' + this.shadowClass) : '') + (this.cssClass ? ' ' + this.cssClass : false)}
+    class = ${'neosrulez-bootstrap-content' + (this.nodetype ? ' ' + this.nodetype : false) + (this.displayClass ? this.displayClass : (this.containerType ? ' ' + this.containerType : false)) + (this.marginClass ? this.marginClass : false) + (this.marginNegativeClass ? this.marginNegativeClass : false) + (this.paddingClass ? this.paddingClass : false) + (this.additionalClass ? ' ' + this.additionalClass : false) + (this.linkedClass ? this.linkedClass : false) + (this.valignmentClass ? this.valignmentClass : false) + (this.animation ? ' os-animation' : false) + (this.parallaxClass ? ' ' + this.parallaxClass : false) + (this.visibilityClasses ? ' ' + (this.inBackend ? ' hiding' : this.visibilityClasses) : false) + (this.isContainerNodeType ? (' ' + this.shadowClass) : '') + (this.cssClass ? ' ' + this.cssClass : false)}
 
     id = ${'node__' + node.identifier}
 
