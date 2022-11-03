@@ -16,6 +16,7 @@
         label: i18n
         reloadIfChanged: true
         inspector:
+          hidden: 'ClientEval:node.properties.display ? true : false'
           group: neosrulezBootstrapContainer
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           position: start
