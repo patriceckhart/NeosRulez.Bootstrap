@@ -7,7 +7,7 @@ prototype(NeosRulez.Bootstrap:Content.Video) < prototype(Neos.Neos:ContentCompon
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
-            <Neos.Fusion:Tag @if.render={props.video} tagName="video" attributes.width="100%" attributes.autoplay={props.autoplay} attributes.loop={props.loop} attributes.muted={props.muted} attributes.controls={props.controls} >
+            <Neos.Fusion:Tag @if.render={props.video} tagName="video" attributes.width="100%" attributes.autoplay={props.autoplay} attributes.loop={props.loop} attributes.muted={props.muted} attributes.controls={props.controls} attributes.playsinline={props.autoplay ? true : false} >
                 <Neos.Fusion:Tag tagName="source" @children="attributes.src" attributes.type="video/mp4">
                     <Neos.Fusion:ResourceUri resource={props.video.resource} />
                 </Neos.Fusion:Tag>
