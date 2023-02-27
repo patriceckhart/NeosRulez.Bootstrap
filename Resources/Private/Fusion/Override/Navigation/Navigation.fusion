@@ -64,8 +64,8 @@ prototype(Neos.NodeTypes.Navigation:Navigation) < prototype(Neos.Neos:ContentCom
                 documentNode = ${documentNode}
             }
             entryTags {
-                1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Content', node)}
-                2 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', documentNode)}
+                1 = ${Neos.Caching.nodeTypeTag('Neos.Neos:Document', node)}
+                2 = ${Neos.Caching.nodeTag(node)}
             }
         }
 
