@@ -14,3 +14,19 @@
         inspector:
           group: options
           position: end
+    layout:
+      defaultValue: 'column'
+      type: string
+      ui:
+        label: NeosRulez.Bootstrap:NodeTypes.Content.Navigation:properties.layout
+        reloadIfChanged: true
+        inspector:
+          group: options
+          position: before showHidden
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              'column':
+                label: NeosRulez.Bootstrap:NodeTypes.Content.Navigation:properties.layout.selectBoxEditor.values.column
+              'row':
+                label: NeosRulez.Bootstrap:NodeTypes.Content.Navigation:properties.layout.selectBoxEditor.values.row

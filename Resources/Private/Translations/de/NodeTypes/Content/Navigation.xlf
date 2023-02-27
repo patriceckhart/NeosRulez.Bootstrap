@@ -5,6 +5,15 @@
             <trans-unit id="properties.showHidden" xml:space="preserve">
 				<source>Verborgene Seiten anzeigen</source>
 			</trans-unit>
+            <trans-unit id="properties.layout" xml:space="preserve">
+				<source>Layout</source>
+			</trans-unit>
+            <trans-unit id="properties.layout.selectBoxEditor.values.column" xml:space="preserve">
+                <source>Untereinander</source>
+            </trans-unit>
+            <trans-unit id="properties.layout.selectBoxEditor.values.row" xml:space="preserve">
+                <source>Nebeneinander</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
