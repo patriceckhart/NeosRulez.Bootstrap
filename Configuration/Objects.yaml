@@ -1,0 +1,9 @@
+NeosRulez\Bootstrap\DataSource\FontAwesomeDataSource:
+  properties:
+    fontAwesomeIconCache:
+      object:
+        factoryObjectName: Neos\Flow\Cache\CacheManager
+        factoryMethodName: getCache
+        arguments:
+          1:
+            value: NeosRulez_Bootstrap_FontAwesomeIcons

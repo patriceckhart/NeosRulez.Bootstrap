@@ -8,6 +8,7 @@ use Neos\Neos\Service\DataSource\AbstractDataSource;
 use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Symfony\Component\Yaml\Yaml;
 use Neos\Flow\ResourceManagement\ResourceManager;
+use Neos\Cache\Frontend\StringFrontend;
 
 class FontAwesomeDataSource extends AbstractDataSource {
 
@@ -35,6 +36,12 @@ class FontAwesomeDataSource extends AbstractDataSource {
     {
         $this->settings = $settings;
     }
+
+    /**
+     * @var StringFrontend
+     * @Flow\Inject
+     */
+    protected $fontAwesomeIconCache;
 
     /**
      * @inheritDoc
@@ -71,8 +78,14 @@ class FontAwesomeDataSource extends AbstractDataSource {
      */
     private function loadMetaData(): array
     {
+        if ($this->fontAwesomeIconCache->has('icons' )) {
+             return json_decode($this->fontAwesomeIconCache->get('icons'), true);
+        }
+
         $fileName = $this->getPublicResourcePath() . '/fontawesome-' . $this->getLicense() . '-' . $this->getFaVersion() . '-web/metadata/icons.yml';
-        return (array) Yaml::parseFile($fileName);
+        $icons = (array) Yaml::parseFile($fileName);
+        $this->fontAwesomeIconCache->set('icons', json_encode($icons));
+        return $icons;
     }
 
     /**
