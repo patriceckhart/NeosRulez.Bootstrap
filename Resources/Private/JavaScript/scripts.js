@@ -115,7 +115,7 @@ if(window.fsLightboxInstances) {
 							if(lightboxItem.props.sources[k]) {
 								const src = lightboxItem.props.sources[k];
 								const lightBoxImage = document.querySelector(`img[src="${src}"]`);
-								if(!lightBoxImage.nextSibling) {
+								if(lightBoxImage && !lightBoxImage.nextSibling) {
 									const captionDiv = document.createElement('div');
 									captionDiv.classList.add('text-white');
 									captionDiv.classList.add('text-center');
