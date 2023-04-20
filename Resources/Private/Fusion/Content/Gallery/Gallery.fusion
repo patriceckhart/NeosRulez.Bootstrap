@@ -8,6 +8,9 @@ prototype(NeosRulez.Bootstrap:Content.Gallery) < prototype(Neos.Neos:ContentComp
     columns = ${'col-6 ' + (node.properties.columns == '4' ? 'col-md-3' : node.properties.columns == '3' ? 'col-md-4' : node.properties.columns == '2' ? 'col-md-6' : 'col')}
     galleryId = ${'lightbox__' + node.identifier}
 
+    showCaption = ${q(node).property('showCaption')}
+    caption = ${q(node).property('caption')}
+
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
             <code @if.render={!props.assets && props.inBackend} >
@@ -16,19 +19,25 @@ prototype(NeosRulez.Bootstrap:Content.Gallery) < prototype(Neos.Neos:ContentComp
             <div @if.render={props.assets} class={props.lightboxClassName} >
                 <Neos.Fusion:Loop items={props.assets} itemName="asset">
                     <div class={props.columns} >
-                        <NeosRulez.Bootstrap:Content.Gallery.Item image={asset} lightbox={props.lightbox} noCropping={props.noCropping} galleryId={props.galleryId} />
+                        <NeosRulez.Bootstrap:Content.Gallery.Item image={asset} lightbox={props.lightbox} noCropping={props.noCropping} galleryId={props.galleryId} caption={props.showCaption ? props.caption : false} />
                     </div>
                 </Neos.Fusion:Loop>
             </div>
+            <Neos.Fusion:Fragment @if.render={props.showCaption} >
+                <figcaption class="figure-caption text-start" itemprop={props.caption} >
+                    <Neos.Neos:Editable property="caption" />
+                </figcaption>
+            </Neos.Fusion:Fragment>
         </NeosRulez.Bootstrap:Component.AbstractContent>
     `
 }
 
 prototype(NeosRulez.Bootstrap:Content.Gallery.Item) < prototype(Neos.Fusion:Component) {
     allowCropping = ${this.noCropping ? false : true}
+    caption = false
 
     renderer = afx`
-        <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.lightbox} image={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} async="true" />
-        <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} image={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} galleryId={props.galleryId} async="true" />
+        <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.lightbox} image={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} caption={props.caption} async="true" />
+        <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} image={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} galleryId={props.galleryId} caption={props.caption} async="true" />
     `
 }

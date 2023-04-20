@@ -29,6 +29,12 @@
             <trans-unit id="content.emptyAssetList" xml:space="preserve">
 				<source>Empty photo gallery</source>
 			</trans-unit>
+            <trans-unit id="properties.showCaption" xml:space="preserve">
+				<source>Show caption</source>
+			</trans-unit>
+            <trans-unit id="properties.caption.placeholder" xml:space="preserve">
+				<source>Enter a caption here</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

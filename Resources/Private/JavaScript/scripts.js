@@ -96,3 +96,38 @@ if (iOS == true) {
         resize();
     });
 }
+
+const insertAfterEl = (referenceNode, newNode) => {
+	referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+}
+
+if(window.fsLightboxInstances) {
+	const lightboxes = window.fsLightboxInstances;
+	Object.keys(lightboxes).forEach((lightbox, i) => {
+		const lightboxItem = Object.values(lightboxes)[i];
+		lightboxItem.props.onOpen = () => {
+			const lightBoxElements = lightboxItem.elements.a;
+			if(lightBoxElements) {
+				lightBoxElements.forEach((lightboxEl, k) => {
+					if(lightboxEl.dataset.caption) {
+						const caption = lightboxEl.dataset.caption;
+						if(lightboxItem.props && lightboxItem.props.sources) {
+							if(lightboxItem.props.sources[k]) {
+								const src = lightboxItem.props.sources[k];
+								const lightBoxImage = document.querySelector(`img[src="${src}"]`);
+								if(!lightBoxImage.nextSibling) {
+									const captionDiv = document.createElement('div');
+									captionDiv.classList.add('text-white');
+									captionDiv.classList.add('text-center');
+									captionDiv.classList.add('my-2');
+									captionDiv.innerHTML = caption;
+									insertAfterEl(lightBoxImage, captionDiv);
+								}
+							}
+						}
+					}
+				});
+			}
+		}
+	});
+}

@@ -29,6 +29,12 @@
             <trans-unit id="content.emptyAssetList" xml:space="preserve">
 				<source>Leere Fotogalerie</source>
 			</trans-unit>
+            <trans-unit id="properties.showCaption" xml:space="preserve">
+				<source>Beschriftung anzeigen</source>
+			</trans-unit>
+            <trans-unit id="properties.caption.placeholder" xml:space="preserve">
+				<source>Geben Sie hier eine Bildunterschrift ein</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>
