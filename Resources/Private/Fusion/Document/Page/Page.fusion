@@ -63,5 +63,15 @@ prototype(Neos.Neos:Page) {
                 "}</script>
             </Neos.Fusion:Loop>
         `
+        @cache {
+            mode = 'cached'
+            entryIdentifier {
+                node = ${node}
+                documentNode = ${documentNode}
+            }
+            entryTags {
+                1 = ${Neos.Caching.nodeTypeTag('NeosRulez.Bootstrap:Content.Modal', documentNode)}
+            }
+        }
     }
 }
