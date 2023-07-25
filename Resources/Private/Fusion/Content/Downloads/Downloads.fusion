@@ -33,7 +33,7 @@ prototype(NeosRulez.Bootstrap:Content.Downloads.LinkItem) < prototype(Neos.Fusio
     }
 
     renderer = afx`
-        <a href={props.assetLink} class="list-group-item list-group-item-action">
+        <a href={props.assetLink} class="list-group-item list-group-item-action" target="_blank">
             <div class="row align-items-center">
                 <div class="col-md-1 col-2">
                     <img src={props.fileIcon} />
