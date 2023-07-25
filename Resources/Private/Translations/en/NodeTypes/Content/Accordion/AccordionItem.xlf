@@ -5,6 +5,9 @@
             <trans-unit id="ui.label" xml:space="preserve">
 				<source>Accordion item</source>
 			</trans-unit>
+            <trans-unit id="properties.opened" xml:space="preserve">
+				<source>Unfolded</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

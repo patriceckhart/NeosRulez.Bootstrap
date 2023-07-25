@@ -23,6 +23,14 @@
         inline:
           editorOptions:
             placeholder: 'Enter title here'
+    opened:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+          position: 1
   constraints:
     nodeTypes:
       '*': true

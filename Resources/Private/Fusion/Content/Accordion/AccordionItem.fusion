@@ -8,14 +8,16 @@ prototype(NeosRulez.Bootstrap:Content.Accordion.AccordionItem) < prototype(Neos.
 
     accordionId = ${'#neosrulez_bootstrap__accordion__' + node.parent.identifier}
 
+    opened = ${q(node).property('opened')}
+
     renderer = afx`
         <div class="accordion-item">
             <h2 class="accordion-header" id={props.accordionItemHeaderId} >
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={'#' + props.accordionItemId} aria-expanded="false" aria-controls={props.accordionItemId} >
+                <button class={'accordion-button' + (props.opened ? '' : ' collapsed')} type="button" data-bs-toggle="collapse" data-bs-target={'#' + props.accordionItemId} aria-expanded={props.opened ? 'true' : 'false'} aria-controls={props.accordionItemId} >
                     <Neos.Neos:Editable property="title" />
                 </button>
             </h2>
-            <div id={props.accordionItemId} class="accordion-collapse collapse" aria-labelledby={props.accordionItemHeaderId} data-bs-parent={props.accordionId} >
+            <div id={props.accordionItemId} class={'accordion-collapse collapse' + (props.opened ? ' show' : '')} aria-labelledby={props.accordionItemHeaderId} data-bs-parent={props.accordionId} >
                 <div class="accordion-body">
                     {props.nodes}
                 </div>
