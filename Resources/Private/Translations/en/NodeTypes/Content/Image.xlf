@@ -29,6 +29,9 @@
             <trans-unit id="content.noAlternativeImageSizesSupportForSvg" xml:space="preserve">
                 <source>SVG format images do not support alternate image sizes</source>
             </trans-unit>
+            <trans-unit id="properties.disableLazyLoading" xml:space="preserve">
+				<source>Disable lazy loading</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

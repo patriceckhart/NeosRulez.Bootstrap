@@ -6,6 +6,7 @@
     'NeosRulez.Bootstrap:Mixin.Rounded': true
     'NeosRulez.Bootstrap:Mixin.LinkTarget': true
     'NeosRulez.Bootstrap:Mixin.HorizontalAlignment': true
+    'NeosRulez.Bootstrap:Mixin.LazyLoading': true
   ui:
     group: general
     position: 300

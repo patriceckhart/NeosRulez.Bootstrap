@@ -1,0 +1,18 @@
+'NeosRulez.Bootstrap:Mixin.LazyLoading':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        lazyLoading:
+          label: NeosRulez.Bootstrap:NodeTypes.Content.Image:properties.disableLazyLoading
+          icon: fas fa-window-maximize
+          position: end
+  properties:
+    disableLazyLoading:
+      type: boolean
+      ui:
+        label: NeosRulez.Bootstrap:NodeTypes.Content.Image:properties.disableLazyLoading
+        reloadIfChanged: true
+        inspector:
+          group: lazyLoading
+          position: start

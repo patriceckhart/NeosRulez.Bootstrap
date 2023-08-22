@@ -13,6 +13,8 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     allowUpScaling = false
     image = ${q(node).property("image") ? q(node).property("image") : false}
 
+    disableLazyLoading = ${q(node).property('disableLazyLoading')}
+
     autoWidth = NeosRulez.Bootstrap:Helper.ImageAutoWidth {
         block = ${q(node).property('block')}
     }
@@ -28,7 +30,7 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 
     alternativeText = ${q(node).property("alternativeText")}
     link = ${q(node).property("link")}
-    loading = 'lazy'
+    loading = ${this.disableLazyLoading ? 'eager' : 'lazy'}
     async = true
     link.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
