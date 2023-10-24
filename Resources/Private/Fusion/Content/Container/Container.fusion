@@ -99,7 +99,7 @@ prototype(NeosRulez.Bootstrap:Component.Container.Html5VideoBackground) < protot
         <div @if.render={props.video} class="video-background">
             <div class="video-foreground">
                 <div class="ratio ratio-16x9" >
-                    <Neos.Fusion:Tag @if.render={props.video} tagName="video" attributes.width="100%" attributes.autoplay="true" attributes.loop="true" attributes.muted="true" attributes.controls="false" >
+                    <Neos.Fusion:Tag @if.render={props.video} tagName="video" attributes.width="100%" attributes.autoplay={true} attributes.loop={true} attributes.playsinline={true} attributes.muted={true} >
                         <Neos.Fusion:Tag tagName="source" @children="attributes.src" attributes.type="video/mp4">
                             <Neos.Fusion:ResourceUri resource={props.video.resource} />
                         </Neos.Fusion:Tag>
