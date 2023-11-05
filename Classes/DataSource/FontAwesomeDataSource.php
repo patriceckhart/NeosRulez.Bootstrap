@@ -65,6 +65,7 @@ class FontAwesomeDataSource extends AbstractDataSource {
                         'label' => $option['label'],
                         'value' => $iconPrefix . $i,
                         (float) $faVersion >= 6 ? 'preview' : 'icon' => (float) $faVersion >= 6 ? ($previewPath) : ($iconPrefix . $i),
+                        'icon' => $iconPrefix . $i,
                         'group' => $option['styles'][0]
                     ];
                 }
