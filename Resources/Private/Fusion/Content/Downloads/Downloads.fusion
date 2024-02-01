@@ -32,6 +32,8 @@ prototype(NeosRulez.Bootstrap:Content.Downloads.LinkItem) < prototype(Neos.Fusio
         decimalSeparator = ','
     }
 
+    showUploadDate = ${q(node).property('showUploadDate')}
+
     renderer = afx`
         <a href={props.assetLink} class="list-group-item list-group-item-action" target="_blank">
             <div class="row align-items-center">
@@ -42,6 +44,9 @@ prototype(NeosRulez.Bootstrap:Content.Downloads.LinkItem) < prototype(Neos.Fusio
                     {props.asset.title ? props.asset.title : props.asset.resource.filename}
                     <span class="d-block">
                         {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Downloads:content.filesize')}: {props.fileSize}
+                    </span>
+                    <span @if.render={props.showUploadDate} class="d-block">
+                        {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Downloads:content.lastModified')}: {Date.format(props.asset.lastModified, Configuration.setting('NeosRulez.Bootstrap.defaultDateFormat'))}
                     </span>
                 </div>
             </div>

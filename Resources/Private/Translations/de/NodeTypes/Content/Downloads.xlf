@@ -8,6 +8,12 @@
             <trans-unit id="content.filesize" xml:space="preserve">
 				<source>Dateigröße</source>
 			</trans-unit>
+            <trans-unit id="properties.showUploadDate" xml:space="preserve">
+				<source>Upload Datum anzeigen</source>
+			</trans-unit>
+            <trans-unit id="content.lastModified" xml:space="preserve">
+				<source>Zuletzt geändert</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

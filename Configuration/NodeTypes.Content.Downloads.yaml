@@ -17,3 +17,11 @@
       ui:
         inspector:
           group: neosrulezBootstrap
+    showUploadDate:
+      type: boolean
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+          position: end

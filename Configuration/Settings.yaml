@@ -42,6 +42,7 @@ NeosRulez:
     useYouTubeNoCookie: true
     navbarIdentifier: true
 #    googleMapsApiKey: 'XyzaazaSyAEpcE4tniLTPaCDTm9e9-7h9dPBgHjfs'
+    defaultDateFormat: 'd.m.Y'
     fontawesome:
       publicResourcePath: 'resource://NeosRulez.Bootstrap/Public/Assets'
       version: '5.15.2'
