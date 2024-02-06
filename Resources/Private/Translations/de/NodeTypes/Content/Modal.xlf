@@ -38,6 +38,12 @@
             <trans-unit id="content.autoOpenSeconds" xml:space="preserve">
 				<source>Sekunden</source>
 			</trans-unit>
+            <trans-unit id="properties.showOnlyOnce" xml:space="preserve">
+				<source>Nur einmal zeigen</source>
+			</trans-unit>
+            <trans-unit id="properties.showOnlyOnceLifetime" xml:space="preserve">
+				<source>Cookie lifetime (in Tagen)</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

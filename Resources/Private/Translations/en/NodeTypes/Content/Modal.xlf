@@ -38,6 +38,12 @@
             <trans-unit id="content.autoOpenSeconds" xml:space="preserve">
 				<source>seconds</source>
 			</trans-unit>
+            <trans-unit id="properties.showOnlyOnce" xml:space="preserve">
+				<source>Show only once</source>
+			</trans-unit>
+            <trans-unit id="properties.showOnlyOnceLifetime" xml:space="preserve">
+				<source>Show only once lifetime (in days)</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

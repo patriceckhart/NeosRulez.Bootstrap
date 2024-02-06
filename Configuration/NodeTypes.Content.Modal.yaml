@@ -36,7 +36,7 @@
     showOnlyOnce:
       type: boolean
       ui:
-        label: Show only one
+        label: i18n
         reloadIfChanged: true
         inspector:
           hidden: 'ClientEval:node.properties.autoOpen ? false : true'
@@ -46,7 +46,7 @@
       type: string
       defaultValue: '1'
       ui:
-        label: Show only one lifetime (days)
+        label: i18n
         reloadIfChanged: true
         inspector:
           hidden: 'ClientEval:node.properties.showOnlyOnce ? false : true'
