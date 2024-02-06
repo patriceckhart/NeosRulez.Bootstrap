@@ -54,11 +54,40 @@ prototype(Neos.Neos:Page) {
         renderer = afx`
             <Neos.Fusion:Loop items={props.modals} itemKey="modalKey">
                 <script @if.render={item.properties.autoOpen} >{"
+                    function setModalCookie(name, value, daysToExpire) {
+                        let expirationDate = new Date();
+                        expirationDate.setDate(expirationDate.getDate() + daysToExpire);
+                        let cookieValue = encodeURIComponent(name) + \"=\" + encodeURIComponent(value) + \";expires=\" + expirationDate.toUTCString() + \";path=/\";
+                        document.cookie = cookieValue;
+                    }
+                    function checkModalCookie(name, value) {
+                        let cookies = document.cookie.split(';');
+                        for(var i = 0; i < cookies.length; i++) {
+                            let cookie = cookies[i].trim();
+                            if (cookie.indexOf(name + \"=\") === 0) {
+                                let cookieValue = cookie.substring(name.length + 1);
+                                if (cookieValue === value) {
+                                    return true;
+                                }
+                            }
+                        }
+                        return false;
+                    }
                     if(document.getElementById('modal__" + item.identifier + "')) {
-                        var modal" + modalKey + " = new bootstrap.Modal(document.getElementById('modal__" + item.identifier + "'), {
+                        let modal" + modalKey + " = new bootstrap.Modal(document.getElementById('modal__" + item.identifier + "'), {
                             keyboard: " + props.keyboard + "
                         });
-                        var modalTimeOut" + modalKey + " = setTimeout(function(){ modal" + modalKey + ".toggle(); }, " + (item.properties.autoOpenTime ? String.toInteger(item.properties.autoOpenTime) : 0) + ");
+                        if(!checkModalCookie('modal" + modalKey + "_" + documentNode.identifier + "', '1')) {
+                            let modalTimeOut" + modalKey + " = setTimeout(function(){ modal" + modalKey + ".toggle(); }, " + (item.properties.autoOpenTime ? String.toInteger(item.properties.autoOpenTime) : 0) + ");
+                        }
+                        let showOnce = " + (item.properties.showOnlyOnce ? item.properties.showOnlyOnce : 'false') + ";
+                        if(showOnce) {
+                            let showOnceLifetime = " + (item.properties.showOnlyOnceLifetime ? item.properties.showOnlyOnceLifetime : 'false') + ";
+                            let modalEl" + modalKey + " = document.getElementById('modal__" + item.identifier + "');
+                            modalEl" + modalKey + ".addEventListener('hidden.bs.modal', event => {
+                                setModalCookie('modal" + modalKey + "_" + documentNode.identifier + "', '1', showOnceLifetime);
+                            });
+                        }
                     }
                 "}</script>
             </Neos.Fusion:Loop>
