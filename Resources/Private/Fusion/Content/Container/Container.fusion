@@ -34,7 +34,7 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
     bgColorPicker = ${node.properties.bgColorPicker ? node.properties.bgColorPicker : false}
 
     hasHtml5Video = ${node.properties.video}
-    styleAttribute = ${this.backgroundImageUri ? (!this.transparency ? 'background: url(' + this.backgroundImageUri + ') no-repeat ' + this.backgroundPosition + ', url(' + this.backgroundImageUriWebp + ') no-repeat ' + this.backgroundPosition + '; ' : '') + (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : '' ) + (!this.transparency ? '-webkit-background-size: ' + this.backgroundSize +'; -moz-background-size: ' + this.backgroundSize +'; -o-background-size: ' + this.backgroundSize +'; background-size: ' + this.backgroundSize + ';' : '') : (!this.transparency ? (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : '' ) : '') + (this.hasHtml5Video ? 'overflow:hidden;' : '')}
+    styleAttribute = ${(this.hasHtml5Video ? 'overflow:hidden;' : '')}
 
     bgColor = ${node.properties.bgColor ? 'bg-' + node.properties.bgColor : false}
     textColor = ${node.properties.textColor ? 'text-' + node.properties.textColor : false}
@@ -45,26 +45,70 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
     containerType = ${node.properties.containerType + (this.transparency ? ' bg-transparent__content-overlay' : false)}
 
     renderer = afx`
+        <NeosRulez.Bootstrap:Component.Container.BackgroundUrl @if.render={props.backgroundImageUri} transparency={props.transparency} backgroundImageUri={props.backgroundImageUri} backgroundImageUriWebp={props.backgroundImageUriWebp} backgroundSize={props.backgroundSize} backgroundPosition={props.backgroundPosition} bgColorPicker={props.bgColorPicker} />
         <NeosRulez.Bootstrap:Component.AbstractContent isContainerNodeType={true} styleAttribute={props.styleAttribute} backgroundImageUri={props.backgroundImageUri} additionalClass={props.additionalClass} >
             <div class={props.containerType} >
                 {props.nodes}
             </div>
-            <NeosRulez.Bootstrap:Component.Container.Transparency @if.render={props.transparency} transparency={props.transparency} backgroundImageUri={props.backgroundImageUri} backgroundImageUriWebp={props.backgroundImageUriWebp} backgroundPosition={props.backgroundPosition} backgroundSize={props.backgroundSize} bgColorPicker={props.bgColorPicker} />
             <NeosRulez.Bootstrap:Component.Container.VideoBackground />
             <NeosRulez.Bootstrap:Component.Container.Html5VideoBackground />
         </NeosRulez.Bootstrap:Component.AbstractContent>
     `
 }
 
-prototype(NeosRulez.Bootstrap:Component.Container.Transparency) < prototype(Neos.Fusion:Component) {
-    parallax = ${q(node).property('parallax')}
-    opacity = ${(String.toInteger(this.transparency) / 100)}
+prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neos.Fusion:Component) {
+
+    id = ${node.identifier}
     inBackend = ${site.context.inBackend}
-    styleAttribute = ${this.parallax && !this.inBackend ? false : (this.backgroundImageUri ? 'background: url(' + this.backgroundImageUri + '), url(' + this.backgroundImageUriWebp + ') no-repeat ' + this.backgroundPosition + '; ' + (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : false ) + '-webkit-background-size: ' + this.backgroundSize + '; -moz-background-size: ' + this.backgroundSize +'; -o-background-size: ' + this.backgroundSize +'; background-size: ' + this.backgroundSize + ';' + (this.opacity ? ' opacity: ' + this.opacity + ';' : '') : (this.bgColorPicker ? ' background-color: ' + this.bgColorPicker + '; ' : false ) + (this.opacity ? ' opacity: ' + this.opacity + ';' : false))}
-    inlineCss = ${'<style> #node__' + node.identifier + ':after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;z-index:1;' + this.styleAttribute + '} ' + (this.bgColorPicker ? 'div[mirror-parallax-id="' + node.identifier + '"] { background:' + this.bgColorPicker + '; }' : false ) + (this.opacity ? 'div[mirror-parallax-id="' + node.identifier + '"] img { opacity:' + this.opacity + ' !important; }' : false) + '</style>'}
+
+    parallax = ${q(node).property('parallax')}
+    transparency = false
+    opacity = ${this.transparency ? (String.toInteger(this.transparency) / 100) : false}
+    backgroundImageUri = false
+    backgroundImageUriWebp = false
+    backgroundSize = false
+    backgroundPosition = false
+    bgColorPicker = false
 
     renderer = afx`
-        {props.inlineCss}
+        <style @if.render={props.inBackend ? true : (props.parallax ? false : true)}>{"
+            @supports (background-image: url('" + props.backgroundImageUriWebp + "')) {
+                #node__" + props.id + (props.transparency ? ':after' : '') + " {
+                    " + (props.transparency ? ('position:absolute;left:0;top:0;width:100%;height:100%;content:"";z-index:1;opacity:' + props.opacity + ';') : '') + "
+                    background: url(" + props.backgroundImageUriWebp + ");
+                    -webkit-background-size: " + props.backgroundSize+ ";
+                    -moz-background-size: " + props.backgroundSize+ ";
+                    -o-background-size: " + props.backgroundSize+ ";
+                    background-size: " + props.backgroundSize+ ";
+                    background-position: " + props.backgroundPosition +";
+                    " + (!props.props.transparency && props.bgColorPicker ? ('background-color: ' + props.bgColorPicker + ';') : '') + "
+                }
+                " + (props.transparency ? ('#node__' + props.id + '{ background-color: ' + props.bgColorPicker + '; }') : '') + "
+            }
+            @supports not (background-image: url('" + props.backgroundImageUriWebp + "')) {
+                #node__" + props.id + (props.transparency ? ':after' : '') + " {
+                    " + (props.transparency ? ('position:absolute;left:0;top:0;width:100%;height:100%;content:"";z-index:1;opacity:' + props.opacity + ';') : '') + "
+                    background: url(" + props.backgroundImageUri + ");
+                    -webkit-background-size: " + props.backgroundSize+ ";
+                    -moz-background-size: " + props.backgroundSize+ ";
+                    -o-background-size: " + props.backgroundSize+ ";
+                    background-size: " + props.backgroundSize+ ";
+                    background-position: " + props.backgroundPosition +";
+                    " + (!props.props.transparency && props.bgColorPicker ? ('background-color: ' + props.bgColorPicker + ';') : '') + "
+                }
+                " + (props.transparency ? ('#node__' + props.id + '{ background-color: ' + props.bgColorPicker + '; }') : '') + "
+            }
+        "}</style>
+        <style @if.render={!props.inBackend && props.parallax && props.bgColorPicker}>{"
+            div[mirror-parallax-id=\"" + props.id + "\"] {
+                background: " + props.bgColorPicker + ";
+            }
+        "}</style>
+        <style @if.render={!props.inBackend && props.parallax && props.opacity}>{"
+            div[mirror-parallax-id=\"" + props.id + "\"] img {
+                opacity: " + props.opacity + " !important;
+            }
+        "}</style>
     `
 }
 
