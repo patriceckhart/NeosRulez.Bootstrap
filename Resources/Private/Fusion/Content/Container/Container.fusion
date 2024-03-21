@@ -81,6 +81,7 @@ prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neo
                     -o-background-size: " + props.backgroundSize+ ";
                     background-size: " + props.backgroundSize+ ";
                     background-position: " + props.backgroundPosition +";
+                    background-repeat: no-repeat;
                     " + (!props.props.transparency && props.bgColorPicker ? ('background-color: ' + props.bgColorPicker + ';') : '') + "
                 }
                 " + (props.transparency ? ('#node__' + props.id + '{ background-color: ' + props.bgColorPicker + '; }') : '') + "
@@ -94,6 +95,7 @@ prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neo
                     -o-background-size: " + props.backgroundSize+ ";
                     background-size: " + props.backgroundSize+ ";
                     background-position: " + props.backgroundPosition +";
+                    background-repeat: no-repeat;
                     " + (!props.props.transparency && props.bgColorPicker ? ('background-color: ' + props.bgColorPicker + ';') : '') + "
                 }
                 " + (props.transparency ? ('#node__' + props.id + '{ background-color: ' + props.bgColorPicker + '; }') : '') + "
