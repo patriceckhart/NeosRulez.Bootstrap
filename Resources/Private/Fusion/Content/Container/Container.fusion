@@ -45,7 +45,7 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
     containerType = ${node.properties.containerType + (this.transparency ? ' bg-transparent__content-overlay' : false)}
 
     renderer = afx`
-        <NeosRulez.Bootstrap:Component.Container.BackgroundUrl @if.render={props.backgroundImageUri} transparency={props.transparency} backgroundImageUri={props.backgroundImageUri} backgroundImageUriWebp={props.backgroundImageUriWebp} backgroundSize={props.backgroundSize} backgroundPosition={props.backgroundPosition} bgColorPicker={props.bgColorPicker} />
+        <NeosRulez.Bootstrap:Component.Container.BackgroundUrl transparency={props.transparency} backgroundImageUri={props.backgroundImageUri} backgroundImageUriWebp={props.backgroundImageUriWebp} backgroundSize={props.backgroundSize} backgroundPosition={props.backgroundPosition} bgColorPicker={props.bgColorPicker} />
         <NeosRulez.Bootstrap:Component.AbstractContent isContainerNodeType={true} styleAttribute={props.styleAttribute} backgroundImageUri={props.backgroundImageUri} additionalClass={props.additionalClass} >
             <div class={props.containerType} >
                 {props.nodes}
@@ -71,7 +71,7 @@ prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neo
     bgColorPicker = false
 
     renderer = afx`
-        <style @if.render={props.inBackend ? true : (props.parallax ? false : true)}>{"
+        <style @if.render={props.backgroundImageUri && props.inBackend ? true : (props.parallax ? false : true)}>{"
             @supports (background-image: url('" + props.backgroundImageUriWebp + "')) {
                 #node__" + props.id + (props.transparency ? ':after' : '') + " {
                     " + (props.transparency ? ('position:absolute;left:0;top:0;width:100%;height:100%;content:"";z-index:1;opacity:' + props.opacity + ';') : '') + "
@@ -82,7 +82,7 @@ prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neo
                     background-size: " + props.backgroundSize+ ";
                     background-position: " + props.backgroundPosition +";
                     background-repeat: no-repeat;
-                    " + (!props.props.transparency && props.bgColorPicker ? ('background-color: ' + props.bgColorPicker + ';') : '') + "
+                    " + (!props.transparency && props.bgColorPicker ? ('background-color: ' + props.bgColorPicker + ';') : '') + "
                 }
                 " + (props.transparency ? ('#node__' + props.id + '{ background-color: ' + props.bgColorPicker + '; }') : '') + "
             }
@@ -96,20 +96,23 @@ prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neo
                     background-size: " + props.backgroundSize+ ";
                     background-position: " + props.backgroundPosition +";
                     background-repeat: no-repeat;
-                    " + (!props.props.transparency && props.bgColorPicker ? ('background-color: ' + props.bgColorPicker + ';') : '') + "
+                    " + (!props.transparency && props.bgColorPicker ? ('background-color: ' + props.bgColorPicker + ';') : '') + "
                 }
                 " + (props.transparency ? ('#node__' + props.id + '{ background-color: ' + props.bgColorPicker + '; }') : '') + "
             }
         "}</style>
-        <style @if.render={!props.inBackend && props.parallax && props.bgColorPicker}>{"
+        <style @if.render={props.backgroundImageUri && !props.inBackend && props.parallax && props.bgColorPicker}>{"
             div[mirror-parallax-id=\"" + props.id + "\"] {
                 background: " + props.bgColorPicker + ";
             }
         "}</style>
-        <style @if.render={!props.inBackend && props.parallax && props.opacity}>{"
+        <style @if.render={props.backgroundImageUri && !props.inBackend && props.parallax && props.opacity}>{"
             div[mirror-parallax-id=\"" + props.id + "\"] img {
                 opacity: " + props.opacity + " !important;
             }
+        "}</style>
+        <style @if.render={!props.backgroundImageUri && props.bgColorPicker}>{"
+            #node__" + props.id + " { background-color:" + props.bgColorPicker +  ";}
         "}</style>
     `
 }
