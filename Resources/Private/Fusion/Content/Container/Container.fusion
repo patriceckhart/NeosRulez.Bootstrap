@@ -73,7 +73,7 @@ prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neo
     renderer = afx`
         <style @if.render={props.backgroundImageUri && props.inBackend ? true : (props.parallax ? false : true)}>{"
             @supports (background-image: url('" + props.backgroundImageUriWebp + "')) {
-                #node__" + props.id + (props.transparency ? ':after' : '') + " {
+                [data-node='" + props.id + "']" + (props.transparency ? ':after' : '') + " {
                     " + (props.transparency ? ('position:absolute;left:0;top:0;width:100%;height:100%;content:"";z-index:1;opacity:' + props.opacity + ';') : '') + "
                     background: url('" + props.backgroundImageUriWebp + "');
                     -webkit-background-size: " + props.backgroundSize+ ";
@@ -84,10 +84,10 @@ prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neo
                     background-repeat: no-repeat;
                     " + (!props.transparency && props.bgColorPicker ? ('background-color: ' + props.bgColorPicker + ';') : '') + "
                 }
-                " + (props.transparency ? ('#node__' + props.id + '{ background-color: ' + props.bgColorPicker + '; }') : '') + "
+                " + (props.transparency ? ('[data-node="' + props.id + '"] { background-color: ' + props.bgColorPicker + '; }') : '') + "
             }
             @supports not (background-image: url('" + props.backgroundImageUriWebp + "')) {
-                #node__" + props.id + (props.transparency ? ':after' : '') + " {
+                [data-node='" + props.id + "']" + (props.transparency ? ':after' : '') + " {
                     " + (props.transparency ? ('position:absolute;left:0;top:0;width:100%;height:100%;content:"";z-index:1;opacity:' + props.opacity + ';') : '') + "
                     background: url('" + props.backgroundImageUri + "');
                     -webkit-background-size: " + props.backgroundSize+ ";
@@ -98,7 +98,7 @@ prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neo
                     background-repeat: no-repeat;
                     " + (!props.transparency && props.bgColorPicker ? ('background-color: ' + props.bgColorPicker + ';') : '') + "
                 }
-                " + (props.transparency ? ('#node__' + props.id + '{ background-color: ' + props.bgColorPicker + '; }') : '') + "
+                " + (props.transparency ? ('[data-node="' + props.id + '"] { background-color: ' + props.bgColorPicker + '; }') : '') + "
             }
         "}</style>
         <style @if.render={props.backgroundImageUri && !props.inBackend && props.parallax && props.bgColorPicker}>{"
@@ -112,9 +112,10 @@ prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neo
             }
         "}</style>
         <style @if.render={!props.backgroundImageUri && props.bgColorPicker}>{"
-            #node__" + props.id + " { background-color:" + props.bgColorPicker +  ";}
+            [data-node='" + props.id + "'] { background-color:" + props.bgColorPicker +  ";}
         "}</style>
     `
+    renderer.@process.replacePunctuation = ${String.replace(value, "'", '"')}
 }
 
 prototype(NeosRulez.Bootstrap:Component.Container.VideoBackground) < prototype(Neos.Fusion:Component) {
