@@ -71,7 +71,7 @@ prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neo
     bgColorPicker = false
 
     renderer = afx`
-        <style @if.render={props.backgroundImageUri && props.inBackend ? true : (props.parallax ? false : true)}>{"
+        <style @if.render={props.backgroundImageUri && props.inBackend ? true : (props.parallax ? false : (props.backgroundImageUri ? true : false))}>{"
             @supports (background-image: url('" + props.backgroundImageUriWebp + "')) {
                 [data-node='" + props.id + "']" + (props.transparency ? ':after' : '') + " {
                     " + (props.transparency ? ('position:absolute;left:0;top:0;width:100%;height:100%;content:"";z-index:1;opacity:' + props.opacity + ';') : '') + "
