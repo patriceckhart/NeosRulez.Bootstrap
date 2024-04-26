@@ -1,0 +1,78 @@
+prototype(NeosRulez.Bootstrap:Component.Parallax) < prototype(Neos.Fusion:Component) {
+
+    desktopWidth = ${this.width ? this.width : 1920}
+    mobileWidth = ${(this.desktopWidth / 100) * 15}
+    tabletWidth = ${(this.desktopWidth / 100) * 40}
+
+    @context.image = ${this.image}
+
+    @context.desktopWidth = ${this.desktopWidth}
+    @context.mobileWidth = ${this.mobileWidth}
+    @context.tabletWidth = ${this.tabletWidth}
+
+    @context.allowCropping = ${this.allowCropping}
+    @context.allowUpScaling = ${this.allowUpScaling}
+    @context.async = ${this.async}
+
+    renderer = Neos.Fusion:DataStructure {
+        srcsetMobile = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
+            image = ${image}
+            width = ${mobileWidth}
+            allowCropping = ${allowCropping}
+            allowUpScaling = ${allowUpScaling}
+            async = ${async}
+        }
+        srcsetMobile.@if.condition = ${image}
+        srcsetTablet = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
+            image = ${image}
+            width = ${tabletWidth}
+            allowCropping = ${allowCropping}
+            allowUpScaling = ${allowUpScaling}
+            async = ${async}
+        }
+        srcsetTablet.@if.condition = ${image}
+        srcsetDesktop = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
+            image = ${image}
+            width = ${desktopWidth}
+            allowCropping = ${allowCropping}
+            allowUpScaling = ${allowUpScaling}
+            async = ${async}
+        }
+        srcsetTablet.@if.condition = ${image}
+        srcsetMobileWebp = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
+            image = ${image}
+            width = ${mobileWidth}
+            allowCropping = ${allowCropping}
+            allowUpScaling = ${allowUpScaling}
+            async = ${async}
+            webp = true
+        }
+        srcsetMobileWebp.@if.condition = ${image}
+        srcsetTabletWebp = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
+            image = ${image}
+            width = ${tabletWidth}
+            allowCropping = ${allowCropping}
+            allowUpScaling = ${allowUpScaling}
+            async = ${async}
+            webp = true
+        }
+        srcsetTabletWebp.@if.condition = ${image}
+        srcsetDesktopWebp = NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet {
+            image = ${image}
+            width = ${desktopWidth}
+            allowCropping = ${allowCropping}
+            allowUpScaling = ${allowUpScaling}
+            async = ${async}
+            webp = true
+        }
+        srcsetDesktopWebp.@if.condition = ${image}
+        originalImage = Neos.Neos:ImageUri {
+            asset = ${image}
+            width = ${desktopWidth}
+            allowCropping = ${allowCropping}
+            allowUpScaling = ${allowUpScaling}
+            async = ${async}
+        }
+        originalImage.@if.condition = ${image}
+    }
+}

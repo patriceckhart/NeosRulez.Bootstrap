@@ -26,6 +26,7 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
     parallaxClass = ${this.parallax && !this.inBackend ? 'parallax-window' : false}
     parallaxDataAttribute = ${this.parallax && !this.inBackend ? 'scroll' : false}
     parallaxImage = ${this.parallax && this.backgroundImageUri && !this.inBackend ? this.backgroundImageUri : false}
+    parallaxImageWebp = ${this.parallax && this.backgroundImageUriWebp && !this.inBackend ? this.backgroundImageUriWebp : false}
 
     @context.visibilities = ${node.properties.visibility}
     visibilityClasses = Neos.Fusion:Loop {
@@ -48,14 +49,27 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
 
     renderContentClass = ${this.shadow ? (this.isContainerNodeType ? false : true) : false}
 
+    @context.backgroundImage = ${this.backgroundImage}
+    @context.parallax = ${this.parallax}
+    parallaxValue = NeosRulez.Bootstrap:Component.Parallax {
+        image = ${backgroundImage}
+        width = NeosRulez.Bootstrap:Helper.ImageAutoWidth {
+            block = true
+        }
+        allowCropping = false
+        allowUpScaling = true
+        async = true
+    }
+    parallaxValue.@if.condition = ${backgroundImage && parallax}
+
     renderer = afx`
-        <div @if.render={!props.link && !props.isButton || props.link && props.inBackend && !props.isButton} id={props.id} data-node={node.identifier} class={props.class} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} data-parallax-id={props.parallax ? node.identifier : false} style={!props.parallaxImage ? props.styleAttribute : false} >
+        <div @if.render={!props.link && !props.isButton || props.link && props.inBackend && !props.isButton} id={props.id} data-node={node.identifier} class={props.class} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-webp-src={props.parallaxImageWebp} data-image-src={props.parallaxImage} data-parallax-id={props.parallax ? node.identifier : false} data-parallax-value={props.parallaxValue ? Json.stringify(props.parallaxValue) : false} style={!props.parallaxImage ? props.styleAttribute : false} >
             <NeosRulez.Bootstrap:Component.Content content={props.content} renderContentClass={props.renderContentClass} shadowClass={props.shadowClass} />
         </div>
-        <a @if.render={!props.inBackend && !props.isButton && props.link} id={props.id} data-node={node.identifier} class={props.class} href={props.link} target={props.linkTarget} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} data-parallax-id={props.parallax ? node.identifier : false} style={!props.parallaxImage ? props.styleAttribute : false} >
+        <a @if.render={!props.inBackend && !props.isButton && props.link} id={props.id} data-node={node.identifier} class={props.class} href={props.link} target={props.linkTarget} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} data-image-webp-src={props.parallaxImageWebp} data-parallax-id={props.parallax ? node.identifier : false} data-parallax-value={props.parallaxValue ? Json.stringify(props.parallaxValue) : false} style={!props.parallaxImage ? props.styleAttribute : false} >
             <NeosRulez.Bootstrap:Component.Content content={props.content} renderContentClass={props.renderContentClass} shadowClass={props.shadowClass} />
         </a>
-        <div @if.render={props.isButton} id={props.id} data-node={node.identifier} class={props.class} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} data-parallax-id={props.parallax ? node.identifier : false} style={!props.parallaxImage ? props.styleAttribute : false} >
+        <div @if.render={props.isButton} id={props.id} data-node={node.identifier} class={props.class} data-os-animation={props.animation} data-os-animation-delay={props.animationDelay} data-parallax={props.parallaxDataAttribute} data-image-src={props.parallaxImage} data-image-webp-src={props.parallaxImageWebp} data-parallax-id={props.parallax ? node.identifier : false} data-parallax-value={props.parallaxValue ? Json.stringify(props.parallaxValue) : false} style={!props.parallaxImage ? props.styleAttribute : false} >
             <NeosRulez.Bootstrap:Component.Content content={props.content} renderContentClass={props.renderContentClass} shadowClass={props.shadowClass} />
         </div>
     `

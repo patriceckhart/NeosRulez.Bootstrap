@@ -6,6 +6,8 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
     async = true
     @context.async = ${this.async}
 
+    backgroundImage = ${q(node).property('backgroundImage')}
+
     backgroundImageUri = Neos.Neos:ImageUri {
         asset = ${q(node).property('backgroundImage')}
         width = 2000
@@ -46,7 +48,7 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.Container.BackgroundUrl transparency={props.transparency} backgroundImageUri={props.backgroundImageUri} backgroundImageUriWebp={props.backgroundImageUriWebp} backgroundSize={props.backgroundSize} backgroundPosition={props.backgroundPosition} bgColorPicker={props.bgColorPicker} />
-        <NeosRulez.Bootstrap:Component.AbstractContent isContainerNodeType={true} styleAttribute={props.styleAttribute} backgroundImageUri={props.backgroundImageUri} additionalClass={props.additionalClass} >
+        <NeosRulez.Bootstrap:Component.AbstractContent isContainerNodeType={true} styleAttribute={props.styleAttribute} backgroundImageUri={props.backgroundImageUri} backgroundImageUriWebp={props.backgroundImageUriWebp} backgroundImage={props.backgroundImage} additionalClass={props.additionalClass} >
             <div class={props.containerType} >
                 {props.nodes}
             </div>
