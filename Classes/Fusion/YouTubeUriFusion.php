@@ -5,7 +5,8 @@ use Neos\Flow\Annotations as Flow;
 use Doctrine\ORM\Mapping as ORM;
 use Neos\Fusion\FusionObjects\AbstractFusionObject;
 
-class YouTubeUriFusion extends AbstractFusionObject {
+class YouTubeUriFusion extends AbstractFusionObject
+{
 
     /**
      * @var array
@@ -37,6 +38,9 @@ class YouTubeUriFusion extends AbstractFusionObject {
             if (strpos($link, 'youtu.be') !== false) {
                 $youtube_id = str_replace('https://youtu.be/', '', $link);
                 $result = $youTubeUri . '/embed/'.$youtube_id;
+            }
+            if (strpos($link, 'embed') !== false) {
+                $result = str_replace('https://www.youtube.com', $youTubeUri, $link);
             }
         }
         return $result;
