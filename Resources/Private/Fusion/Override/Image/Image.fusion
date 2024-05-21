@@ -70,6 +70,9 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 prototype(NeosRulez.Bootstrap:Content.Image) < prototype(Neos.NodeTypes:Image)
 
 prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Component) {
+
+    sourceSet = ${this.disableSourceSet ? (this.disableSourceSet ? false : true) : Configuration.setting('NeosRulez.Bootstrap.images.sourceSet')}
+
     @context.image = ${this.image}
     @context.imageMobile = ${this.imageMobile}
     @context.imageTablet = ${this.imageTablet}
@@ -154,7 +157,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
     }
 
     renderer = afx`
-        <picture>
+        <picture @if.render={props.sourceSet}>
             <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type="image/webp" srcset={props.srcsetDesktopWebp} media="(min-width: 1200px)" sizes="(min-width: 300px) 300px, 100vw" />
             <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type="image/webp" srcset={props.alternativeImageSizes ? (props.srcsetTabletWebp ? props.srcsetTabletWebp : props.srcsetDesktopWebp) : props.srcsetDesktopWebp} media="(min-width: 576px)" sizes="(min-width: 300px) 300px, 100vw" />
             <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type="image/webp" srcset={props.alternativeImageSizes ? (props.srcsetMobileWebp ? props.srcsetMobileWebp : props.srcsetDesktopWebp) : props.srcsetDesktopWebp} media="(max-width: 575px)" sizes="(min-width: 300px) 300px, 100vw" />
@@ -169,6 +172,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
                 {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Image:content.noAlternateImageSizesSupportForSvg')}
             </code>
         </picture>
+        <Neos.Neos:ImageTag @if.render={!props.sourceSet} attributes.class={props.imageClassName} asset={props.image} attributes.alt={props.alternativeText} attributes.title={props.imageTitle} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={loading} attributes.async={async} attributes.width={props.width ? props.width : node.properties.image.width} attributes.height={props.height ? props.height : node.properties.image.height} attributes.style={imageSizeStyleAttribute} />
     `
 }
 
@@ -259,9 +263,11 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusi
     block = true
     caption = false
 
+    disableSourceSet = false
+
     renderer = afx`
         <Neos.Fusion:Tag tagName={props.tagName} attributes.href={props.inBackend ? false : props.lightboxImage} attributes.class="d-block" attributes.data-fslightbox={props.galleryId} attributes.data-caption={props.caption} >
-            <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} image={props.image} block={props.block} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} imageWidth={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageWidth} imageHeight={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageHeight} />
+            <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.link && !props.lightbox} disableSourceSet={props.disableSourceSet} image={props.image} block={props.block} alternativeText={props.alternativeText} title={props.title} width={props.width} maximumWidth={props.maximumWidth} height={props.height} maximumHeight={props.maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} loading={props.loading} async={props.async} imageWidth={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageWidth} imageHeight={this.image.originalAsset.fileExtension != 'svg' ? false : node.properties.imageHeight} />
         </Neos.Fusion:Tag>
     `
 }

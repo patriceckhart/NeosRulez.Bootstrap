@@ -37,7 +37,7 @@ prototype(NeosRulez.Bootstrap:Content.Gallery.Item) < prototype(Neos.Fusion:Comp
     caption = false
 
     renderer = afx`
-        <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.lightbox} image={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} caption={props.caption} async="true" />
-        <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} image={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} galleryId={props.galleryId} caption={props.caption} async="true" />
+        <NeosRulez.Bootstrap:Component.ImageTag @if.render={!props.lightbox} sourceSet={false} image={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} caption={props.caption} async="true" />
+        <NeosRulez.Bootstrap:Component.ImageTag.Lightbox @if.render={props.lightbox} sourceSet={false} image={props.image} width="300" height="300" allowCropping={props.allowCropping} allowUpScaling={true} galleryId={props.galleryId} caption={props.caption} async="true" />
     `
 }

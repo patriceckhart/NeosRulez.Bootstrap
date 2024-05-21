@@ -43,6 +43,8 @@ NeosRulez:
     navbarIdentifier: true
 #    googleMapsApiKey: 'XyzaazaSyAEpcE4tniLTPaCDTm9e9-7h9dPBgHjfs'
     defaultDateFormat: 'd.m.Y'
+    images:
+      sourceSet: true
     fontawesome:
       publicResourcePath: 'resource://NeosRulez.Bootstrap/Public/Assets'
       version: '5.15.2'
