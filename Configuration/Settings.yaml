@@ -45,6 +45,9 @@ NeosRulez:
     defaultDateFormat: 'd.m.Y'
     images:
       sourceSet: true
+      maximumWidth: 2560
+      maximumHeight: 2560
+      quality: 80
     fontawesome:
       publicResourcePath: 'resource://NeosRulez.Bootstrap/Public/Assets'
       version: '5.15.2'
