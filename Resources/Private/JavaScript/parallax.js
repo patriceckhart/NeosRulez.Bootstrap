@@ -120,12 +120,12 @@
 		if (slider.length == 0)
 			this.$slider = $(`
 					<picture>
-						<source type="image/webp" media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw" />
-						<source type="image/webp" media="(min-width: 576px)" sizes="(min-width: 576px) 576px, 100vw" />
-						<source type="image/webp" media="(max-width: 575px)" sizes="(max-width: 575px) 575px, 100vw" />
-						<source type="image/jpeg" media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px, 100vw" />
-						<source type="image/jpeg" media="(min-width: 576px)" sizes="(min-width: 576px) 576px, 100vw" />
-						<source type="image/jpeg" media="(max-width: 575px)" sizes="(max-width: 575px) 575px, 100vw" />
+						<source type="image/webp" media="(min-width: 1200px)" sizes="(min-width: 1200px) elWidth, 100vw" />
+						<source type="image/webp" media="(min-width: 576px)" sizes="(min-width: 576px) elWidth, 100vw" />
+						<source type="image/webp" media="(max-width: 575px)" sizes="(max-width: 575px) elWidth, 100vw" />
+						<source type="image/jpeg" media="(min-width: 1200px)" sizes="(min-width: 1200px) elWidth, 100vw" />
+						<source type="image/jpeg" media="(min-width: 576px)" sizes="(min-width: 576px) elWidth, 100vw" />
+						<source type="image/jpeg" media="(max-width: 575px)" sizes="(max-width: 575px) elWidth, 100vw" />
 						<img />
 					</picture>
 				`).prependTo(this.$mirror);
@@ -169,6 +169,16 @@
 			this.$slider[0].querySelectorAll('source')[5].srcset = this.parallaxValue.srcsetMobile;
 			this.$slider[0].querySelector('img').src = this.imageSrc;
 			this.$slider[0].querySelector('img').alt = this.parallaxId;
+
+			const width = document.getElementById(`node__${this.parallaxId}`).getBoundingClientRect().width;
+
+			const sourceSets = this.$slider[0].querySelectorAll('source');
+			if(width && sourceSets && sourceSets.length > 0) {
+				sourceSets.forEach((element) => {
+					const sizes = element.sizes;
+					element.sizes = sizes.replaceAll('elWidth', `${width}px`);
+				});
+			}
 
 		if (this.naturalHeight && this.naturalWidth || this.$slider[0].querySelector('img').complete || slider.length > 0) {
 			this.$slider.trigger('load');
