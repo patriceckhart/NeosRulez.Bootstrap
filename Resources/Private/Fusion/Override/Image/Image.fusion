@@ -108,7 +108,6 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         allowCropping = ${allowCropping ? allowCropping : false}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
         async = ${async}
-//        maxWidth = 575
         maxWidth = 390
     }
 
@@ -119,7 +118,6 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         allowCropping = ${allowCropping ? allowCropping : false}
         allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
         async = ${async}
-//        maxWidth = 1200
         maxWidth = 920
     }
 
@@ -141,7 +139,6 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
         async = ${async}
         webp = true
-//        maxWidth = 575
         maxWidth = 390
     }
 
@@ -153,7 +150,6 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
         allowUpScaling = ${allowUpScaling ? allowUpScaling : false}
         async = ${async}
         webp = true
-//        maxWidth = 1200
         maxWidth = 920
     }
 
@@ -173,17 +169,17 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
 
     renderer = afx`
         <picture @if.render={props.sourceSet}>
-            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type="image/webp" srcset={props.srcsetDesktopWebp} media="(min-width: 1200px)" sizes={'(min-width: 1200px) ' + props.widthAttribute + 'px, 100vw'} />
-            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type="image/webp" srcset={props.srcsetTabletWebp} media="(min-width: 576px)" sizes={'(min-width: 576px) ' + props.widthAttribute + 'px, 100vw'} />
-            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type="image/webp" srcset={props.srcsetMobileWebp} media="(max-width: 575px)" sizes={'(max-width: 575px) ' + props.widthAttribute + 'px, 100vw'} />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' && props.image.originalAsset.fileExtension != 'gif' ? true : false} type="image/webp" srcset={props.srcsetDesktopWebp} media="(min-width: 1200px)" sizes={'(min-width: 1200px) ' + props.widthAttribute + 'px, 100vw'} />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' && props.image.originalAsset.fileExtension != 'gif' ? true : false} type="image/webp" srcset={props.srcsetTabletWebp} media="(min-width: 576px)" sizes={'(min-width: 576px) ' + props.widthAttribute + 'px, 100vw'} />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' && props.image.originalAsset.fileExtension != 'gif' ? true : false} type="image/webp" srcset={props.srcsetMobileWebp} media="(max-width: 575px)" sizes={'(max-width: 575px) ' + props.widthAttribute + 'px, 100vw'} />
 
-            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type={props.image.originalAsset.mediaType} srcset={props.srcsetDesktop} media="(min-width: 1200px)" sizes={'(min-width: 1200px) ' + props.widthAttribute + 'px, 100vw'} />
-            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type={props.image.originalAsset.mediaType} srcset={props.srcsetTablet} media="(min-width: 576px)" sizes={'(min-width: 576px) ' + props.widthAttribute + 'px, 100vw'} />
-            <source @if.render={props.image.originalAsset.fileExtension != 'svg' ? true : false} type={props.image.originalAsset.mediaType} srcset={props.srcsetMobile} media="(max-width: 575px)" sizes={'(max-width: 575px) ' + props.widthAttribute + 'px, 100vw'} />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' && props.image.originalAsset.fileExtension != 'gif' ? true : false} type={props.image.originalAsset.mediaType} srcset={props.srcsetDesktop} media="(min-width: 1200px)" sizes={'(min-width: 1200px) ' + props.widthAttribute + 'px, 100vw'} />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' && props.image.originalAsset.fileExtension != 'gif' ? true : false} type={props.image.originalAsset.mediaType} srcset={props.srcsetTablet} media="(min-width: 576px)" sizes={'(min-width: 576px) ' + props.widthAttribute + 'px, 100vw'} />
+            <source @if.render={props.image.originalAsset.fileExtension != 'svg' && props.image.originalAsset.fileExtension != 'gif' ? true : false} type={props.image.originalAsset.mediaType} srcset={props.srcsetMobile} media="(max-width: 575px)" sizes={'(max-width: 575px) ' + props.widthAttribute + 'px, 100vw'} />
 
             <Neos.Neos:ImageTag attributes.class={props.imageClassName} asset={props.image} attributes.alt={props.alternativeText} attributes.title={props.imageTitle} width={props.width} maximumWidth={maximumWidth} height={props.height} maximumHeight={maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={loading} attributes.async={async} attributes.width={props.widthAttribute} attributes.height={props.heightAttribute} attributes.style={imageSizeStyleAttribute} />
 
-            <code @if.render={props.image.originalAsset.fileExtension == 'svg' && props.alternativeImageSizes && site.context.inBackend ? true : false} class="d-block my-3" >
+            <code @if.render={props.image.originalAsset.fileExtension == 'svg' || props.image.originalAsset.fileExtension == 'gif' && props.alternativeImageSizes && site.context.inBackend ? true : false} class="d-block my-3" >
                 {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Image:content.noAlternateImageSizesSupportForSvg')}
             </code>
         </picture>
