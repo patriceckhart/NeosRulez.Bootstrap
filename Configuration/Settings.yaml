@@ -27,6 +27,10 @@ Neos:
               accept: 'image/png,image/jpeg,image/gif,image/svg+xml'
               features:
                 resize: false
+  Fusion:
+    defaultContext:
+      'ImageSize': 'NeosRulez\Bootstrap\Eel\ImageSizeHelper'
+
 NeosRulez:
   Bootstrap:
     headerLogoPath: 'Images/Logo.svg'

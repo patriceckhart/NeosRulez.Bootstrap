@@ -195,7 +195,7 @@ prototype(NeosRulez.Bootstrap:Component.AlternativeImageSizes.SourceSet) < proto
     @context.allowUpScaling = ${this.allowUpScaling}
 
     @context.width = ${this.width && String.toInteger(this.width) > String.toInteger(this.maxWidth) ? String.toInteger(this.maxWidth) : String.toInteger(this.width)}
-    @context.height = ${this.height && this.width && String.toInteger(this.width) > String.toInteger(this.maxWidth) ? String.toInteger((String.toInteger(this.height) * String.toInteger(width) / String.toInteger(this.width))) : String.toInteger(this.height)}
+    @context.height = ${ImageSize.getHeight(this.width, this.height, this.maxWidth)}
 
     @context.async = ${this.async}
 
