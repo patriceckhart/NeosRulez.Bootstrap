@@ -179,7 +179,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
 
             <Neos.Neos:ImageTag attributes.class={props.imageClassName} asset={props.image} attributes.alt={props.alternativeText} attributes.title={props.imageTitle} width={props.width} maximumWidth={maximumWidth} height={props.height} maximumHeight={maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={loading} attributes.async={async} attributes.width={props.widthAttribute} attributes.height={props.heightAttribute} attributes.style={imageSizeStyleAttribute} />
 
-            <code @if.render={props.image.originalAsset.fileExtension == 'svg' || props.image.originalAsset.fileExtension == 'gif' && props.alternativeImageSizes && site.context.inBackend ? true : false} class="d-block my-3" >
+            <code @if.render={(props.image.originalAsset.fileExtension == 'svg' || props.image.originalAsset.fileExtension == 'gif') && props.alternativeImageSizes && site.context.inBackend ? true : false} class="d-block my-3" >
                 {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Image:content.noAlternateImageSizesSupportForSvg')}
             </code>
         </picture>
