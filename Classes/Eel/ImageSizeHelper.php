@@ -8,20 +8,23 @@ class ImageSizeHelper implements ProtectedContextAwareInterface
 {
 
     /**
-     * @param string|int $width
-     * @param string|int $height
-     * @param string|int $maximumWidth
+     * @param string|int|null $width
+     * @param string|int|null $height
+     * @param string|int|null $maximumWidth
      * @return int
      */
-    public function getHeight(string|int $width, string|int $height, string|int $maximumWidth): int
+    public function getHeight(string|int|null $width = null, string|int|null $height = null, string|int|null $maximumWidth = null): int
     {
-        $width = (int) $width;
-        $height = (int) $height;
-        $maximumWidth = (int) $maximumWidth;
-        if($width <= $maximumWidth) {
-            $maximumWidth = $width;
+        if($width && $height && $maximumWidth) {
+            $width = (int) $width;
+            $height = (int) $height;
+            $maximumWidth = (int) $maximumWidth;
+            if($width <= $maximumWidth) {
+                $maximumWidth = $width;
+            }
+            return (int) ($maximumWidth / ($width / $height));
         }
-        return (int) ($maximumWidth / ($width / $height));
+        return 0;
     }
 
     /**
