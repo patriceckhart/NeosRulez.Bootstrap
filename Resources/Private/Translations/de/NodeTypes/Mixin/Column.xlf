@@ -5,6 +5,54 @@
             <trans-unit id="properties.nogutters" xml:space="preserve">
 				<source>Keine Spaltenabstände</source>
 			</trans-unit>
+            <trans-unit id="properties.gutters" xml:space="preserve">
+				<source>Spaltenabstände</source>
+			</trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.g-1" xml:space="preserve">
+                <source>Spaltenabstand 1</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.g-2" xml:space="preserve">
+                <source>Spaltenabstand 2</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.g-3" xml:space="preserve">
+                <source>Spaltenabstand 3</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.g-4" xml:space="preserve">
+                <source>Spaltenabstand 4</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.g-5" xml:space="preserve">
+                <source>Spaltenabstand 5</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.gx-1" xml:space="preserve">
+                <source>Spaltenabstand horizontal 1</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.gx-2" xml:space="preserve">
+                <source>Spaltenabstand horizontal 2</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.gx-3" xml:space="preserve">
+                <source>Spaltenabstand horizontal 3</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.gx-4" xml:space="preserve">
+                <source>Spaltenabstand horizontal 4</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.gx-5" xml:space="preserve">
+                <source>Spaltenabstand horizontal 5</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.gy-1" xml:space="preserve">
+                <source>Spaltenabstand vertikal 1</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.gy-2" xml:space="preserve">
+                <source>Spaltenabstand vertikal 2</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.gy-3" xml:space="preserve">
+                <source>Spaltenabstand vertikal 3</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.gy-4" xml:space="preserve">
+                <source>Spaltenabstand vertikal 4</source>
+            </trans-unit>
+            <trans-unit id="properties.gutters.selectBoxEditor.values.gy-5" xml:space="preserve">
+                <source>Spaltenabstand vertikal 5</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

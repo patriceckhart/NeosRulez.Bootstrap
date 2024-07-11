@@ -11,6 +11,50 @@
         reloadIfChanged: true
         inspector:
           group: column
+    gutters:
+      defaultValue: 'g-4'
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          hidden: 'ClientEval:node.properties.nogutters ? true : false'
+          group: column
+          position: after gutters
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: ''
+              'g-1':
+                label: i18n
+              'g-2':
+                label: i18n
+              'g-3':
+                label: i18n
+              'g-4':
+                label: i18n
+              'g-5':
+                label: i18n
+              'gx-1':
+                label: i18n
+              'gx-2':
+                label: i18n
+              'gx-3':
+                label: i18n
+              'gx-4':
+                label: i18n
+              'gx-5':
+                label: i18n
+              'gy-1':
+                label: i18n
+              'gy-2':
+                label: i18n
+              'gy-3':
+                label: i18n
+              'gy-4':
+                label: i18n
+              'gy-5':
+                label: i18n
     valignment:
       defaultValue: ''
       ui:
