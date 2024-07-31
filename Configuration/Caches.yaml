@@ -1,3 +1,7 @@
 NeosRulez_Bootstrap_FontAwesomeIcons:
   frontend: Neos\Cache\Frontend\StringFrontend
   backend: Neos\Cache\Backend\FileBackend
+
+NeosRulez_Bootstrap_OpenStreetMap:
+  frontend: Neos\Cache\Frontend\StringFrontend
+  backend: Neos\Cache\Backend\FileBackend

@@ -7,3 +7,12 @@ NeosRulez\Bootstrap\DataSource\FontAwesomeDataSource:
         arguments:
           1:
             value: NeosRulez_Bootstrap_FontAwesomeIcons
+NeosRulez\Bootstrap\Fusion\OpenStreetMapFusion:
+  properties:
+    openStreetMapCache:
+      object:
+        factoryObjectName: Neos\Flow\Cache\CacheManager
+        factoryMethodName: getCache
+        arguments:
+          1:
+            value: NeosRulez_Bootstrap_OpenStreetMap
