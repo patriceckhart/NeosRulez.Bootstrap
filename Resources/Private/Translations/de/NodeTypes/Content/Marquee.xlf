@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Bootstrap" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+				<source>Laufschrift</source>
+			</trans-unit>
+            <trans-unit id="properties.behavior" xml:space="preserve">
+				<source>Verhalten</source>
+			</trans-unit>
+            <trans-unit id="properties.behavior.selectBoxEditor.values.scroll" xml:space="preserve">
+                <source>Scroll</source>
+            </trans-unit>
+            <trans-unit id="properties.behavior.selectBoxEditor.values.slide" xml:space="preserve">
+                <source>Slide</source>
+            </trans-unit>
+            <trans-unit id="properties.behavior.selectBoxEditor.values.alternate" xml:space="preserve">
+                <source>Alternate</source>
+            </trans-unit>
+            <trans-unit id="properties.direction" xml:space="preserve">
+				<source>Richtung</source>
+			</trans-unit>
+            <trans-unit id="properties.direction.selectBoxEditor.values.left" xml:space="preserve">
+                <source>Links</source>
+            </trans-unit>
+            <trans-unit id="properties.direction.selectBoxEditor.values.right" xml:space="preserve">
+                <source>Rechts</source>
+            </trans-unit>
+            <trans-unit id="properties.direction.selectBoxEditor.values.up" xml:space="preserve">
+                <source>Nach oben</source>
+            </trans-unit>
+            <trans-unit id="properties.direction.selectBoxEditor.values.down" xml:space="preserve">
+                <source>Nach unten</source>
+            </trans-unit>
+            <trans-unit id="properties.loop" xml:space="preserve">
+				<source>Wiederholen</source>
+			</trans-unit>
+            <trans-unit id="properties.scrollAmount" xml:space="preserve">
+				<source>Geschwindigkeit</source>
+			</trans-unit>
+            <trans-unit id="properties.scrollDelay" xml:space="preserve">
+				<source>Verzögerung</source>
+			</trans-unit>
+            <trans-unit id="properties.trueSpeed" xml:space="preserve">
+				<source>Tatsächliche Geschwindigkeit erzwingen</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
