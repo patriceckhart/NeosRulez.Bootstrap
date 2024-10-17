@@ -1,0 +1,17 @@
+prototype(NeosRulez.Bootstrap:Content.Marquee) < prototype(Neos.Neos:ContentComponent) {
+
+    behavior = ${q(node).property('behavior')}
+    direction = ${q(node).property('direction')}
+    loop = ${q(node).property('loop')}
+    scrollAmount = ${q(node).property('scrollAmount')}
+    scrollDelay = ${q(node).property('scrollDelay')}
+    trueSpeed = ${q(node).property('trueSpeed')}
+
+    renderer = afx`
+        <NeosRulez.Bootstrap:Component.AbstractContent>
+            <marquee behavior={props.behavior} direction={props.direction} loop={props.loop} scrollamount={props.scrollAmount} scrolldelay={props.scrollDelay} truespeed={props.trueSpeed}>
+                <Neos.Neos:Editable property="text" block={false} />
+            </marquee>
+        </NeosRulez.Bootstrap:Component.AbstractContent>
+    `
+}
