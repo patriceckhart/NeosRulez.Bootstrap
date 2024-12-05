@@ -11,9 +11,6 @@ Neos:
         neosrulezBootstrapMultimedia:
           position: 'after neosrulezBootstrap'
           label: NeosRulez.Bootstrap:Main:neosrulezBootstrapMultimedia
-        table:
-          position: 'after neosrulezBootstrap'
-          label: NeosRulez.Bootstrap:NodeTypes.Content.Table:ui.label.table
     userInterface:
       translation:
         autoInclude:

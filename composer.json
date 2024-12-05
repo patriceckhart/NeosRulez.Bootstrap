@@ -8,7 +8,6 @@
     "shel/neos-colorpicker": "^1.4",
     "neosrulez/bootstrap-formbuilder": "*",
     "neosrulez/countrydatasource": "^1.0",
-    "neosrulez/neos-tablebuilder": "^1.0",
     "twbs/bootstrap": "^5.2"
   },
   "autoload": {
