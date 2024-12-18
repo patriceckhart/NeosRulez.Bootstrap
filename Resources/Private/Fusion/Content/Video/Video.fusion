@@ -1,13 +1,22 @@
 prototype(NeosRulez.Bootstrap:Content.Video) < prototype(Neos.Neos:ContentComponent) {
-    video = ${node.properties.video}
-    autoplay = ${node.properties.autoplay ? true : false}
-    controls = ${node.properties.controls ? true : false}
-    loop = ${node.properties.loop ? true : false}
-    muted = ${node.properties.muted ? true : false}
+    video = ${q(node).property('video')}
+    autoplay = ${q(node).property('autoplay') ? true : false}
+    controls = ${q(node).property('controls') ? true : false}
+    loop = ${q(node).property('loop') ? true : false}
+    muted = ${q(node).property('muted') ? true : false}
+
+    previewImage = ${q(node).property('previewImage')}
+    previewImageUrl = Neos.Neos:ImageUri {
+        asset = ${q(node).property('previewImage')}
+        absolute = true
+        async = true
+        width = 1280
+        height = 720
+    }
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
-            <Neos.Fusion:Tag @if.render={props.video} tagName="video" attributes.width="100%" attributes.autoplay={props.autoplay} attributes.loop={props.loop} attributes.muted={props.muted} attributes.controls={props.controls} attributes.playsinline={props.autoplay ? true : false} >
+            <Neos.Fusion:Tag @if.render={props.video} tagName="video" attributes.width="100%" attributes.autoplay={props.autoplay} attributes.loop={props.loop} attributes.muted={props.muted} attributes.controls={props.controls} attributes.playsinline={props.autoplay ? true : false} attributes.poster={props.previewImage ? props.previewImageUrl : false} >
                 <Neos.Fusion:Tag tagName="source" @children="attributes.src" attributes.type="video/mp4">
                     <Neos.Fusion:ResourceUri resource={props.video.resource} />
                 </Neos.Fusion:Tag>

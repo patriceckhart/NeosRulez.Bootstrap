@@ -23,6 +23,20 @@
           editorOptions:
             constraints:
               mediaTypes: [ 'video/mp4', 'video/ogg', 'video/webm' ]
+    previewImage:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: neosrulezBootstrap
+          position: 2
+          editorOptions:
+            features:
+              crop: true
+              upload: true
+              mediaBrowser: true
+              resize: false
     autoplay:
       type: boolean
       ui:
@@ -30,7 +44,7 @@
         reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
-          position: 2
+          position: 3
     controls:
       type: boolean
       ui:
@@ -38,7 +52,7 @@
         reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
-          position: 3
+          position: 4
     loop:
       type: boolean
       ui:
@@ -46,7 +60,7 @@
         reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
-          position: 4
+          position: 5
     muted:
       type: boolean
       ui:
@@ -54,4 +68,4 @@
         reloadIfChanged: true
         inspector:
           group: neosrulezBootstrap
-          position: 5
+          position: 6

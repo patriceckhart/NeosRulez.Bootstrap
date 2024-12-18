@@ -23,6 +23,9 @@
             <trans-unit id="content.noVideo" xml:space="preserve">
 				<source>Define the video in the Inspector</source>
 			</trans-unit>
+            <trans-unit id="properties.previewImage" xml:space="preserve">
+				<source>Preview image</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>
