@@ -48,7 +48,7 @@ prototype(NeosRulez.Bootstrap:Content.Modal.Button) < prototype(NeosRulez.Bootst
     link = false
     link.@process.convertUris >
 
-    btnlabel = ${q(node).property('btnLabel')}
+    btnlabel = ${q(node).property('btnlabel')}
 
     renderer >
     renderer = afx`
