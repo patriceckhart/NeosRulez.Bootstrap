@@ -1,6 +1,6 @@
 prototype(Neos.NodeTypes.Html:Html) < prototype(Neos.Neos:ContentComponent) {
-    source = ${node.properties.source}
-    showSource = ${node.properties.showSource}
+    source = ${q(node).property('source')}
+    showSource = ${q(node).property('showSource')}
     inBackend = ${site.context.inBackend}
 
     renderer = afx`

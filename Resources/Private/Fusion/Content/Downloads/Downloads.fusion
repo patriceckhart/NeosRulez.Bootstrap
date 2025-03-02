@@ -1,5 +1,5 @@
 prototype(NeosRulez.Bootstrap:Content.Downloads) < prototype(Neos.Neos:ContentComponent) {
-    assets = ${node.properties.assets}
+    assets = ${q(node).property('assets')}
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>

@@ -1,10 +1,10 @@
 prototype(NeosRulez.Bootstrap:Content.FontAwesomeIcon) < prototype(Neos.Neos:ContentComponent) {
     inBackend = ${site.context.inBackend}
-    faiconSize = ${node.properties.faiconSize}
-    faicon = ${node.properties.faicon + (this.faiconSize ? ' ' + this.faiconSize : false)}
+    faiconSize = ${q(node).property('faiconSize')}
+    faicon = ${q(node).property('faicon') + (this.faiconSize ? ' ' + this.faiconSize : false)}
 
-    horizontalAlignment = ${node.properties.alignment == 'left' ? 'text-start' : node.properties.alignment == 'center' ? 'text-center' : node.properties.alignment == 'right' ? 'text-end' : 'text-start'}
-    textColor = ${node.properties.textColor ? node.properties.textColor : false}
+    horizontalAlignment = ${q(node).property('alignment') == 'left' ? 'text-start' : q(node).property('alignment') == 'center' ? 'text-center' : q(node).property('alignment') == 'right' ? 'text-end' : 'text-start'}
+    textColor = ${q(node).property('textColor') ? q(node).property('textColor') : false}
 
     divClassName = ${(this.horizontalAlignment ? this.horizontalAlignment : false) + (this.textColor ? ' text-' + this.textColor : false)}
 

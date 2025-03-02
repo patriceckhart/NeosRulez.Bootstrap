@@ -2,17 +2,17 @@ prototype(NeosRulez.Bootstrap:Content.Card) < prototype(Neos.Neos:ContentCompone
     inBackend = ${site.context.inBackend}
     tagName = ${this.inBackend ? 'div' : 'a'}
 
-    cardTextColor = ${node.properties.textColor ? 'text-' + node.properties.textColor : false}
-    cardBgColor = ${node.properties.bgColor ? 'bg-' + node.properties.bgColor : false}
-    cardBorderColor = ${node.properties.borderColor ? 'border-' + node.properties.borderColor : false}
+    cardTextColor = ${q(node).property('textColor') ? 'text-' + q(node).property('textColor') : false}
+    cardBgColor = ${q(node).property('bgColor') ? 'bg-' + q(node).property('bgColor') : false}
+    cardBorderColor = ${q(node).property('borderColor') ? 'border-' + q(node).property('borderColor') : false}
 
     class = ${'card' + (this.cardTextColor ? ' ' + this.cardTextColor : false) + (this.cardBgColor ? ' ' + this.cardBgColor : false) + (this.cardBorderColor ? ' ' + this.cardBorderColor : false)}
 
-    link = ${node.properties.link}
+    link = ${q(node).property('link')}
     link.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
     }
-    linkTarget = ${node.properties.linktarget ? '_blank' : false}
+    linkTarget = ${q(node).property('linktarget') ? '_blank' : false}
 
     nodes = Neos.Neos:ContentCollection {
         @context.node = ${node}

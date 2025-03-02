@@ -2,25 +2,25 @@ prototype(NeosRulez.Bootstrap:Content.Button) < prototype(Neos.Neos:ContentCompo
     inBackend = ${site.context.inBackend}
     tagName = ${this.inBackend ? 'div' : 'a'}
 
-    btnColor = ${node.properties.bgColor ? 'btn-' + node.properties.bgColor : 'btn-primary'}
-    btnOutline = ${node.properties.outline ? 'btn-' + (node.properties.bgColor ? 'outline-' + node.properties.bgColor : 'outline-primary') : false}
-    btnBlock = ${node.properties.block ? 'w-100' : false}
-    btnSize = ${node.properties.size ? 'btn-' + node.properties.size : false}
-    btnAlignment = ${node.properties.alignment == 'left' ? 'text-start' : node.properties.alignment == 'right' ? 'text-end' : node.properties.alignment == 'center' ? 'text-center' : 'text-left'}
+    btnColor = ${q(node).property('bgColor') ? 'btn-' + q(node).property('bgColor') : 'btn-primary'}
+    btnOutline = ${q(node).property('outline') ? 'btn-' + (q(node).property('bgColor') ? 'outline-' + q(node).property('bgColor') : 'outline-primary') : false}
+    btnBlock = ${q(node).property('block') ? 'w-100' : false}
+    btnSize = ${q(node).property('size') ? 'btn-' + q(node).property('size') : false}
+    btnAlignment = ${q(node).property('alignment') == 'left' ? 'text-start' : q(node).property('alignment') == 'right' ? 'text-end' : q(node).property('alignment') == 'center' ? 'text-center' : 'text-left'}
 
     class = ${'btn' + (this.btnColor ? ' ' + (this.btnOutline ? ' ' + this.btnOutline : this.btnColor) : false) + (this.btnBlock ? ' ' + this.btnBlock : false) + (this.btnSize ? ' ' + this.btnSize : false)}
 
-    link = ${node.properties.link}
+    link = ${q(node).property('link')}
     link.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
     }
-    linkTarget = ${node.properties.linktarget ? '_blank' : false}
+    linkTarget = ${q(node).property('linktarget') ? '_blank' : false}
 
-    faicon = ${node.properties.faicon}
-    faiconSize = ${node.properties.faiconSize}
-    onlyIcon = ${node.properties.onlyicon}
+    faicon = ${q(node).property('faicon')}
+    faiconSize = ${q(node).property('faiconSize')}
+    onlyIcon = ${q(node).property('onlyicon')}
 
-    iconAlignment = ${node.properties.iconAlignment}
+    iconAlignment = ${q(node).property('iconAlignment')}
     iconAlignmentLeft = ${this.iconAlignment == 'left' ? true : false}
     iconAlignmentRight = ${this.iconAlignment == 'right' ? true : false}
 

@@ -6,7 +6,7 @@ prototype(NeosRulez.Bootstrap:Content.OpenStreetMap) < prototype(NeosRulez.Boots
         city = ${q(node).property('city')}
         country = ${q(node).property('country')}
     }
-    src = ${this.location && !node.properties.source ? this.openStreetMapSource : false}
+    src = ${this.location && !q(node).property('source') ? this.openStreetMapSource : false}
 
     renderer >
     renderer = afx`

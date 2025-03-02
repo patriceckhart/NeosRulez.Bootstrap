@@ -5,16 +5,16 @@ prototype(NeosRulez.Bootstrap:Content.Modal) < prototype(Neos.Neos:ContentCompon
 
     modalId = ${'modal__' + node.identifier}
 
-    modalSize = ${node.properties.modalsize ? ' modal-' + node.properties.modalsize : ''}
-    modalDialogClass = ${'modal-dialog' + (node.properties.modalcenter ? ' modal-dialog-centered' : '') + this.modalSize}
+    modalSize = ${q(node).property('modalsize') ? ' modal-' + q(node).property('modalsize') : ''}
+    modalDialogClass = ${'modal-dialog' + (q(node).property('modalcenter') ? ' modal-dialog-centered' : '') + this.modalSize}
 
-    autoOpen = ${node.properties.autoOpen ? true : false}
+    autoOpen = ${q(node).property('autoOpen') ? true : false}
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
             <NeosRulez.Bootstrap:Content.Modal.Button modalId={props.modalId} @if.render={!props.autoOpen} />
             <code @if.render={props.autoOpen && site.context.inBackend} >
-                {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Modal:content.autoOpen')} {(String.toInteger(node.properties.autoOpenTime) / 1000)} {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Modal:content.autoOpenSeconds')}
+                {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Modal:content.autoOpen')} {(String.toInteger(q(node).property('autoOpenTime')) / 1000)} {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Modal:content.autoOpenSeconds')}
             </code>
         </NeosRulez.Bootstrap:Component.AbstractContent>
         <NeosRulez.Bootstrap:Content.Modal.Modal modalId={props.modalId} modalDialogClass={props.modalDialogClass} nodes={props.nodes} />
@@ -48,7 +48,7 @@ prototype(NeosRulez.Bootstrap:Content.Modal.Button) < prototype(NeosRulez.Bootst
     link = false
     link.@process.convertUris >
 
-    btnlabel = ${node.properties.btnlabel}
+    btnlabel = ${q(node).property('btnLabel')}
 
     renderer >
     renderer = afx`

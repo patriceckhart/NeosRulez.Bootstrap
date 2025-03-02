@@ -3,32 +3,32 @@ prototype(NeosRulez.Bootstrap:Component.AbstractContent) < prototype(Neos.Fusion
     inBackend = ${site.context.inBackend}
     isButton = ${this.nodetype == 'neosrulez-bootstrap-content-button' || this.nodetype == 'neosrulez-bootstrap-content-youtube' || this.nodetype == 'neosrulez-bootstrap-content-vimeo' ? true : false}
 
-    containerType = ${q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1 ? (this.isContainerNodeType ? 'container-fluid px-0' : (node.properties.containerType ? node.properties.containerType : false)) : false}
+    containerType = ${q(node).parentsUntil('[instanceof Neos.Neos:Document]').count() == 1 ? (this.isContainerNodeType ? 'container-fluid px-0' : (q(node).property('containerType') ? q(node).property('containerType') : false)) : false}
     displayClass = ${q(node).property('display') ? ' d-' + q(node).property('display') : false}
-    cssClass = ${node.properties.class ? node.properties.class : false}
+    cssClass = ${q(node).property('class') ? q(node).property('class') : false}
 
-    marginClass = ${(node.properties.mt ? ' ' + node.properties.mt : '') + (node.properties.mb ? ' ' + node.properties.mb : '') + (node.properties.ml ? ' ' + node.properties.ml : '') + (node.properties.mr ? ' ' + node.properties.mr : '')}
-    paddingClass = ${(node.properties.pt ? ' ' + node.properties.pt : '') + (node.properties.pb ? ' ' + node.properties.pb : '') + (node.properties.pl ? ' ' + node.properties.pl : '') + (node.properties.pr ? ' ' + node.properties.pr : '')}
-    marginNegativeClass = ${(node.properties.mtn ? ' ' + node.properties.mtn : '') + (node.properties.mbn ? ' ' + node.properties.mbn : '') + (node.properties.mln ? ' ' + node.properties.mln : '') + (node.properties.mrn ? ' ' + node.properties.mrn : '')}
-    valignmentClass = ${node.properties.valignment ? ' ' + node.properties.valignment : ''}
+    marginClass = ${(q(node).property('mt') ? ' ' + q(node).property('mt') : '') + (q(node).property('mb') ? ' ' + q(node).property('mb') : '') + (q(node).property('ml') ? ' ' + q(node).property('ml') : '') + (q(node).property('mr') ? ' ' + q(node).property('mr') : '')}
+    paddingClass = ${(q(node).property('pt') ? ' ' + q(node).property('pt') : '') + (q(node).property('pb') ? ' ' + q(node).property('pb') : '') + (q(node).property('pl') ? ' ' + q(node).property('pl') : '') + (q(node).property('pr') ? ' ' + q(node).property('pr') : '')}
+    marginNegativeClass = ${(q(node).property('mtn') ? ' ' + q(node).property('mtn') : '') + (q(node).property('mbn') ? ' ' + q(node).property('mbn') : '') + (q(node).property('mln') ? ' ' + q(node).property('mln') : '') + (q(node).property('mrn') ? ' ' + q(node).property('mrn') : '')}
+    valignmentClass = ${q(node).property('valignment') ? ' ' + q(node).property('valignment') : ''}
 
-    animation = ${node.properties.animation ? node.properties.animation : false}
-    animationDelay = ${node.properties.animation && node.properties.delay ? node.properties.delay + 's' : (node.properties.animation ? '0s' : false)}
+    animation = ${q(node).property('animation') ? q(node).property('animation') : false}
+    animationDelay = ${q(node).property('animation') && q(node).property('delay') ? q(node).property('delay') + 's' : (q(node).property('animation') ? '0s' : false)}
 
-    link = ${node.properties.link}
+    link = ${q(node).property('link')}
     link.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
     }
-    linkTarget = ${node.properties.linktarget ? '_blank' : false}
+    linkTarget = ${q(node).property('linktarget') ? '_blank' : false}
     linkedClass = ${this.link ? (!this.isButton ? ' linked' : false) : false}
 
-    parallax = ${node.properties.parallax ? true : false}
+    parallax = ${q(node).property('parallax') ? true : false}
     parallaxClass = ${this.parallax && !this.inBackend ? 'parallax-window' : false}
     parallaxDataAttribute = ${this.parallax && !this.inBackend ? 'scroll' : false}
     parallaxImage = ${this.parallax && this.backgroundImageUri && !this.inBackend ? this.backgroundImageUri : false}
     parallaxImageWebp = ${this.parallax && this.backgroundImageUriWebp && !this.inBackend ? this.backgroundImageUriWebp : false}
 
-    @context.visibilities = ${node.properties.visibility}
+    @context.visibilities = ${q(node).property('visibility')}
     visibilityClasses = Neos.Fusion:Loop {
         items = ${visibilities}
         itemName = 'visibility'

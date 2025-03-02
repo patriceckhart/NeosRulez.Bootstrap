@@ -184,19 +184,24 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem) < prototype
     attrExpanded = ${this.subList ? 'false' : false}
 
     nodeType = ${item.node.nodetype.name}
-    linkTarget = ${this.nodeType == 'Neos.Neos:Shortcut' && item.node.properties.linktarget ? '_blank' : false}
+    linkTarget = ${this.nodeType == 'Neos.Neos:Shortcut' && q(item.node).property('linktarget') ? '_blank' : false}
 
-    link = ${item.node.properties.target ? item.node.properties.target : 'node://' + item.node.identifier}
+    link = ${q(item.node).property('target') ? q(item.node).property('target') : 'node://' + item.node.identifier}
     link.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
     }
 
     navbarIdentifier = ${Configuration.setting('NeosRulez.Bootstrap.navbarIdentifier')}
 
+    faicon = ${q(item.node).property('faicon')}
+    onlyicon = ${q(item.node).property('onlyicon')}
+    title = ${q(item.node).property('title')}
+    nodeIdentifier = ${item.node.identifier}
+
     renderer = afx`
-        <Neos.Fusion:Tag tagName="a" attributes.href={props.link} attributes.id={props.navbarIdentifier ? ('nav_link__' + item.node.identifier) : false} attributes.role={props.attrRole} attributes.data-toggle={props.attrDatatoggle} attributes.data-bs-toggle={props.attrBsToggle} attributes.aria-expanded={props.attrExpanded} attributes.class={props.linkItemClass} attributes.target={props.linkTarget} >
-            <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem.FontAwesomeIcon @if.render={item.node.properties.faicon} icon={item.node.properties.faicon} onlyicon={item.node.properties.onlyicon} />
-            {item.node.properties.onlyicon ? false : item.node.properties.title}
+        <Neos.Fusion:Tag tagName="a" attributes.href={props.link} attributes.id={props.navbarIdentifier ? ('nav_link__' + props.nodeIdentifier) : false} attributes.role={props.attrRole} attributes.data-toggle={props.attrDatatoggle} attributes.data-bs-toggle={props.attrBsToggle} attributes.aria-expanded={props.attrExpanded} attributes.class={props.linkItemClass} attributes.target={props.linkTarget} >
+            <NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem.FontAwesomeIcon @if.render={props.faicon} icon={props.faicon} onlyicon={props.onlyicon} />
+            {props.onlyicon ? false : props.title}
         </Neos.Fusion:Tag>
     `
 }

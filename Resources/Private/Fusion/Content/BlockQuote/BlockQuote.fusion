@@ -1,6 +1,6 @@
 prototype(NeosRulez.Bootstrap:Content.BlockQuote) < prototype(Neos.Neos:ContentComponent) {
     inBackend = ${site.context.inBackend}
-    alignmentClass = ${node.properties.alignment == 'left' ? 'text-start' : node.properties.alignment == 'center' ? 'text-center' : node.properties.alignment == 'right' ? 'text-end' : false}
+    alignmentClass = ${q(node).property('alignment') == 'left' ? 'text-start' : q(node).property('alignment') == 'center' ? 'text-center' : q(node).property('alignment') == 'right' ? 'text-end' : false}
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>

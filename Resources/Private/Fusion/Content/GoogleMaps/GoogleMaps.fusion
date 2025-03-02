@@ -1,16 +1,16 @@
 prototype(NeosRulez.Bootstrap:Content.GoogleMaps) < prototype(Neos.Neos:ContentComponent) {
     location = NeosRulez.Bootstrap:Class.GoogleMaps {
-        address = ${node.properties.address}
-        zip = ${node.properties.zip}
-        city = ${node.properties.city}
-        country = ${node.properties.country}
-        source = ${node.properties.source}
+        address = ${q(node).property('address')}
+        zip = ${q(node).property('zip')}
+        city = ${q(node).property('city')}
+        country = ${q(node).property('country')}
+        source = ${q(node).property('source')}
     }
 
     gMapsApiKey = ${Configuration.setting('NeosRulez.Bootstrap.googleMapsApiKey')}
 
-    src = ${this.location && !node.properties.source ? 'https://www.google.com/maps/embed/v1/place?key=' + this.gMapsApiKey + '&q=' +this.location : false}
-    embedSrc = ${this.location && node.properties.source ? this.location : false}
+    src = ${this.location && !q(node).property('source') ? 'https://www.google.com/maps/embed/v1/place?key=' + this.gMapsApiKey + '&q=' +this.location : false}
+    embedSrc = ${this.location && q(node).property('source') ? this.location : false}
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>

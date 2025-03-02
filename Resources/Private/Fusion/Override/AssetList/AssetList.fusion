@@ -1,5 +1,5 @@
 prototype(Neos.NodeTypes.AssetList:AssetList) < prototype(Neos.Neos:ContentComponent) {
-    assets = ${node.properties.assets}
+    assets = ${q(node).property('assets')}
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>
