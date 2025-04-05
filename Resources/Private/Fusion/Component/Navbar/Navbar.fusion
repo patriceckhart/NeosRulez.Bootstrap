@@ -95,7 +95,7 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.ListItem) < prototype
     navbarIdentifier = ${Configuration.setting('NeosRulez.Bootstrap.navbarIdentifier')}
 
     renderer = afx`
-        <Neos.Fusion:Tag attributes.id={props.navbarIdentifier ? ('nav_item__' + item.node.identifier) : false} tagName={props.tagName} attributes.class={props.class}>
+        <Neos.Fusion:Tag attributes.id={props.navbarIdentifier ? ('nav_item__' + item.node.aggregateId.value) : false} tagName={props.tagName} attributes.class={props.class}>
             {props.content}
         </Neos.Fusion:Tag>
     `
@@ -186,7 +186,7 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem) < prototype
     nodeType = ${item.node.nodetype.name}
     linkTarget = ${this.nodeType == 'Neos.Neos:Shortcut' && q(item.node).property('linktarget') ? '_blank' : false}
 
-    link = ${q(item.node).property('target') ? q(item.node).property('target') : 'node://' + item.node.identifier}
+    link = ${q(item.node).property('target') ? q(item.node).property('target') : 'node://' + item.node.aggregateId.value}
     link.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
     }
@@ -196,7 +196,7 @@ prototype(NeosRulez.Bootstrap:Component.Navbar.Navbar.List.LinkItem) < prototype
     faicon = ${q(item.node).property('faicon')}
     onlyicon = ${q(item.node).property('onlyicon')}
     title = ${q(item.node).property('title')}
-    nodeIdentifier = ${item.node.identifier}
+    nodeIdentifier = ${item.node.aggregateId.value}
 
     renderer = afx`
         <Neos.Fusion:Tag tagName="a" attributes.href={props.link} attributes.id={props.navbarIdentifier ? ('nav_link__' + props.nodeIdentifier) : false} attributes.role={props.attrRole} attributes.data-toggle={props.attrDatatoggle} attributes.data-bs-toggle={props.attrBsToggle} attributes.aria-expanded={props.attrExpanded} attributes.class={props.linkItemClass} attributes.target={props.linkTarget} >

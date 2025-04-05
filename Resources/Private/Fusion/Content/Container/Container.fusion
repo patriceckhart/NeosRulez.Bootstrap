@@ -60,8 +60,8 @@ prototype(NeosRulez.Bootstrap:Content.Container) < prototype(Neos.Neos:ContentCo
 
 prototype(NeosRulez.Bootstrap:Component.Container.BackgroundUrl) < prototype(Neos.Fusion:Component) {
 
-    id = ${node.identifier}
-    inBackend = ${site.context.inBackend}
+    id = ${node.aggregateId.value}
+    inBackend = ${renderingMode.isEdit}
 
     parallax = ${q(node).property('parallax')}
     transparency = false

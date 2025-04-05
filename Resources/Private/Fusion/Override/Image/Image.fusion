@@ -26,7 +26,7 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
     dummyImage = Neos.Fusion:ResourceUri {
         path = 'resource://Neos.Neos/Public/Images/dummy-image.svg'
     }
-    inBackend = ${site.context.inBackend}
+    inBackend = ${renderingMode.isEdit}
 
     alternativeText = ${q(node).property('alternativeText')}
     link = ${q(node).property('link')}
@@ -44,7 +44,7 @@ prototype(Neos.NodeTypes:Image) < prototype(Neos.Neos:ContentComponent) {
 
     linktarget = ${q(node).property('linktarget') ? '_blank' : false}
 
-    galleryId = ${'lightbox__' + node.identifier}
+    galleryId = ${'lightbox__' + node.aggregateId.value}
 
     block = ${q(node).property('block')}
 
@@ -179,7 +179,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag) < prototype(Neos.Fusion:Compon
 
             <Neos.Neos:ImageTag attributes.class={props.imageClassName} asset={props.image} attributes.alt={props.alternativeText} attributes.title={props.imageTitle} width={props.width} maximumWidth={maximumWidth} height={props.height} maximumHeight={maximumHeight} allowUpScaling={props.allowUpScaling} allowCropping={props.allowCropping} attributes.loading={loading} attributes.async={async} attributes.width={props.widthAttribute} attributes.height={props.heightAttribute} attributes.style={imageSizeStyleAttribute} />
 
-            <code @if.render={(props.image.originalAsset.fileExtension == 'svg' || props.image.originalAsset.fileExtension == 'gif') && props.alternativeImageSizes && site.context.inBackend ? true : false} class="d-block my-3" >
+            <code @if.render={(props.image.originalAsset.fileExtension == 'svg' || props.image.originalAsset.fileExtension == 'gif') && props.alternativeImageSizes && renderingMode.isEdit ? true : false} class="d-block my-3" >
                 {I18n.translate('NeosRulez.Bootstrap:NodeTypes.Content.Image:content.noAlternateImageSizesSupportForSvg')}
             </code>
         </picture>
@@ -273,7 +273,7 @@ prototype(NeosRulez.Bootstrap:Component.ImageTag.Lightbox) < prototype(Neos.Fusi
         allowUpScaling = true
         async = true
     }
-    inBackend = ${site.context.inBackend}
+    inBackend = ${renderingMode.isEdit}
     tagName = ${this.inBackend ? 'div' : 'a'}
 
     block = true

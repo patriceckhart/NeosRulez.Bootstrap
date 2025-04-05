@@ -1,12 +1,12 @@
 prototype(NeosRulez.Bootstrap:Content.Gallery) < prototype(Neos.Neos:ContentComponent) {
-    inBackend = ${site.context.inBackend}
+    inBackend = ${renderingMode.isEdit}
     assets = ${q(node).property('assets')}
     lightbox = ${q(node).property('lightbox') ? true : false}
     noGutters = ${q(node).property('noGutters') ? ' g-0' : false}
     lightboxClassName = ${this.lightbox ? 'gallery-row row' + this.noGutters + ' lightbox' : 'gallery-row row' + this.noGutters}
     noCropping = ${q(node).property('noCropping')}
     columns = ${'col-6 ' + (q(node).property('columns') == '4' ? 'col-md-3' : q(node).property('columns') == '3' ? 'col-md-4' : q(node).property('columns') == '2' ? 'col-md-6' : 'col')}
-    galleryId = ${'lightbox__' + node.identifier}
+    galleryId = ${'lightbox__' + node.aggregateId.value}
 
     showCaption = ${q(node).property('showCaption')}
     caption = ${q(node).property('caption')}

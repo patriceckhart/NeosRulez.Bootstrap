@@ -1,10 +1,11 @@
 prototype(Neos.NodeTypes.ColumnLayouts:MultiColumn) < prototype(Neos.Neos:ContentComponent) {
-    inBackend = ${site.context.inBackend}
+    inBackend = ${renderingMode.isEdit}
     gutters = ${q(node).property('gutters')}
 
     attributes = ${'row' + divattributes + (q(node).property('nogutters') ? ' g-0' : (this.gutters ? (' ' + this.gutters) : '') ) + (q(node).property('valignment') ? ' ' + q(node).property('valignment') : '' )}
     columns.iterationName = 'multiColumnIteration'
 
+    renderer >
     renderer = afx`
         <div @if.render={props.inBackend} class="d-block multi-column">
             <NeosRulez.Bootstrap:Component.MultiColumn.Renderer columns={props.columns} attributes={props.attributes} />

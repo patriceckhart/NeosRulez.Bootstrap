@@ -1,5 +1,5 @@
 prototype(NeosRulez.Bootstrap:Content.Card) < prototype(Neos.Neos:ContentComponent) {
-    inBackend = ${site.context.inBackend}
+    inBackend = ${renderingMode.isEdit}
     tagName = ${this.inBackend ? 'div' : 'a'}
 
     cardTextColor = ${q(node).property('textColor') ? 'text-' + q(node).property('textColor') : false}

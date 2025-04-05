@@ -1,11 +1,11 @@
 <?php
 namespace NeosRulez\Bootstrap\DataSource;
 
+use Neos\ContentRepository\Core\Projection\ContentGraph\Node;
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Persistence\PersistenceManagerInterface;
 use Neos\Utility\TypeHandling;
 use Neos\Neos\Service\DataSource\AbstractDataSource;
-use Neos\ContentRepository\Domain\Model\NodeInterface;
 use Symfony\Component\Yaml\Yaml;
 use Neos\Flow\ResourceManagement\ResourceManager;
 use Neos\Cache\Frontend\StringFrontend;
@@ -47,7 +47,7 @@ class FontAwesomeDataSource extends AbstractDataSource {
      * @inheritDoc
      * @return array
      */
-    public function getData(NodeInterface $node = null, array $arguments = array()): array
+    public function getData(Node $node = null, array $arguments = array()): array
     {
         $options = [];
         $metadata = $this->loadMetaData();

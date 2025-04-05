@@ -90,7 +90,7 @@ prototype(Neos.NodeTypes.Navigation:Navigation.NavItem) < prototype(Neos.Fusion:
     nodeType = ${item.node.nodetype.name}
     linkTarget = ${this.nodeType == 'Neos.Neos:Shortcut' && q(item.node).property('linktarget') ? '_blank' : false}
 
-    link = ${q(item.node).property('target') ? q(item.node).property('target') : 'node://' + item.node.identifier}
+    link = ${q(item.node).property('target') ? q(item.node).property('target') : 'node://' + item.node.aggregateId.value}
     link.@process.convertUris = Neos.Neos:ConvertUris {
         forceConversion = true
     }

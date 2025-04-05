@@ -1,7 +1,7 @@
 prototype(Neos.NodeTypes.Html:Html) < prototype(Neos.Neos:ContentComponent) {
     source = ${q(node).property('source')}
     showSource = ${q(node).property('showSource')}
-    inBackend = ${site.context.inBackend}
+    inBackend = ${renderingMode.isEdit}
 
     renderer = afx`
         <NeosRulez.Bootstrap:Component.AbstractContent>

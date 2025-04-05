@@ -23,7 +23,6 @@ prototype(Neos.Neos:Page) {
         }
         NeosRulezBootstrapBackendCss = Neos.Fusion:Tag {
             @position = 'end'
-            @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
             tagName = 'link'
             attributes {
                 media = 'all'
@@ -32,12 +31,12 @@ prototype(Neos.Neos:Page) {
                     path = 'resource://NeosRulez.Bootstrap/Public/Styles/Backend/backend.css'
                 }
             }
+            @if.condition = ${renderingMode.isEdit}
         }
     }
     NeosRulezBootstrapTopAnchorLink = NeosRulez.Bootstrap:Component.TopAnchorLink
     NeosRulezBootstrapBackendJs = Neos.Fusion:Tag {
         @position = 'end'
-        @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
         tagName = 'script'
         attributes {
             rel = 'text/javascript'
@@ -45,15 +44,16 @@ prototype(Neos.Neos:Page) {
                 path = 'resource://NeosRulez.Bootstrap/Public/JavaScript/Backend/backend.js'
             }
         }
+        @if.condition = ${renderingMode.isEdit}
     }
     NeosRulezBootstrapAutoModal = Neos.Fusion:Component {
         @position = 'end'
-        modals = ${q(documentNode).find('[instanceof NeosRulez.Bootstrap:Content.Modal]').get()}
+        modals = ${q(node).find('[instanceof NeosRulez.Bootstrap:Content.Modal]').get()}
         keyboard = 'true'
 
         renderer = afx`
-            <Neos.Fusion:Loop items={props.modals} itemKey="modalKey">
-                <script @if.render={q(item).property('autoOpen')} >{"
+            <Neos.Fusion:Loop items={props.modals} itemName="modal" itemKey="modalKey">
+                <script @if.render={q(modal).property('autoOpen')} >{"
                     function setModalCookie(name, value, daysToExpire) {
                         let expirationDate = new Date();
                         expirationDate.setDate(expirationDate.getDate() + daysToExpire);
@@ -73,34 +73,24 @@ prototype(Neos.Neos:Page) {
                         }
                         return false;
                     }
-                    if(document.getElementById('modal__" + item.identifier + "')) {
-                        let modal" + modalKey + " = new bootstrap.Modal(document.getElementById('modal__" + item.identifier + "'), {
+                    if(document.getElementById('modal__" + modal.aggregateId.value + "')) {
+                        let modal" + modalKey + " = new bootstrap.Modal(document.getElementById('modal__" + modal.aggregateId.value + "'), {
                             keyboard: " + props.keyboard + "
                         });
-                        if(!checkModalCookie('modal" + modalKey + "_" + documentNode.identifier + "', '1')) {
-                            let modalTimeOut" + modalKey + " = setTimeout(function(){ modal" + modalKey + ".toggle(); }, " + (q(item).property('autoOpenTime') ? String.toInteger(q(item).property('autoOpenTime')) : 0) + ");
+                        if(!checkModalCookie('modal" + modalKey + "_" + modal.aggregateId.value + "', '1')) {
+                            let modalTimeOut" + modalKey + " = setTimeout(function(){ modal" + modalKey + ".toggle(); }, " + (q(modal).property('autoOpenTime') ? String.toInteger(q(modal).property('autoOpenTime')) : 0) + ");
                         }
-                        let showOnce = " + (q(item).property('showOnlyOnce') ? q(item).property('showOnlyOnce') : 'false') + ";
+                        let showOnce = " + (q(modal).property('showOnlyOnce') ? q(modal).property('showOnlyOnce') : 'false') + ";
                         if(showOnce) {
-                            let showOnceLifetime = " + (q(item).property('showOnlyOnceLifetime') ? q(item).property('showOnlyOnceLifetime') : 'false') + ";
-                            let modalEl" + modalKey + " = document.getElementById('modal__" + item.identifier + "');
+                            let showOnceLifetime = " + (q(item).property('showOnlyOnceLifetime') ? q(modal).property('showOnlyOnceLifetime') : 'false') + ";
+                            let modalEl" + modalKey + " = document.getElementById('modal__" + modal.aggregateId.value + "');
                             modalEl" + modalKey + ".addEventListener('hidden.bs.modal', event => {
-                                setModalCookie('modal" + modalKey + "_" + documentNode.identifier + "', '1', showOnceLifetime);
+                                setModalCookie('modal" + modalKey + "_" + modal.aggregateId.value + "', '1', showOnceLifetime);
                             });
                         }
                     }
                 "}</script>
             </Neos.Fusion:Loop>
         `
-        @cache {
-            mode = 'cached'
-            entryIdentifier {
-                node = ${node}
-                documentNode = ${documentNode}
-            }
-            entryTags {
-                1 = ${Neos.Caching.nodeTypeTag('NeosRulez.Bootstrap:Content.Modal', documentNode)}
-            }
-        }
     }
 }

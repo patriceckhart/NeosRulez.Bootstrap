@@ -3,7 +3,7 @@ prototype(NeosRulez.Bootstrap:Content.Accordion) < prototype(Neos.Neos:ContentCo
         @context.node = ${node}
     }
 
-    accordionId = ${'neosrulez_bootstrap__accordion__' + node.identifier}
+    accordionId = ${'neosrulez_bootstrap__accordion__' + node.aggregateId.value}
 
     flushAccordion = ${q(node).property('flushAccordion')}
 

@@ -1,5 +1,5 @@
 prototype(NeosRulez.Bootstrap:Content.Divider) < prototype(Neos.Neos:ContentComponent) {
-    inBackend = ${site.context.inBackend}
+    inBackend = ${renderingMode.isEdit}
     class = ${q(node).property('noBorder') ? 'bg-transparent' : false}
 
     renderer = afx`

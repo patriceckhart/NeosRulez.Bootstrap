@@ -1,5 +1,5 @@
 prototype(NeosRulez.Bootstrap:Content.Button) < prototype(Neos.Neos:ContentComponent) {
-    inBackend = ${site.context.inBackend}
+    inBackend = ${renderingMode.isEdit}
     tagName = ${this.inBackend ? 'div' : 'a'}
 
     btnColor = ${q(node).property('bgColor') ? 'btn-' + q(node).property('bgColor') : 'btn-primary'}

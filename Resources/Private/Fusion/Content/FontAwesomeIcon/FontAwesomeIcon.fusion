@@ -1,5 +1,5 @@
 prototype(NeosRulez.Bootstrap:Content.FontAwesomeIcon) < prototype(Neos.Neos:ContentComponent) {
-    inBackend = ${site.context.inBackend}
+    inBackend = ${renderingMode.isEdit}
     faiconSize = ${q(node).property('faiconSize')}
     faicon = ${q(node).property('faicon') + (this.faiconSize ? ' ' + this.faiconSize : false)}
 

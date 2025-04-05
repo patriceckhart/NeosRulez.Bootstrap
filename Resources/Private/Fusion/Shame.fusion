@@ -8,7 +8,7 @@ prototype(NeosRulez.Bootstrap:Accordion) < prototype(NeosRulez.Bootstrap:Content
     accordionItems = Neos.Neos:ContentCollection {
         nodePath = 'nodes'
         attributes.class = 'accordion'
-        attributes.id = ${'accordion_' + node.identifier}
+        attributes.id = ${'accordion_' + node.aggregateId.value}
     }
 }
 prototype(NeosRulez.Bootstrap:Anchor) < prototype(NeosRulez.Bootstrap:Content.AnchorTarget)
